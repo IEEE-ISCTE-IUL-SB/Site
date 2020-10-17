@@ -3,7 +3,7 @@
 @section('content')
 
 
-<section style="margin-bottom:0%;background: url(img/fellowthree.png);background-size: cover;background-position: center;" id="companiesStories" >
+<section style="margin-bottom:0%;background: url(img/background4.png);background-size: cover;background-position: center;" id="companiesStories" >
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -28,8 +28,8 @@
     box-shadow: 0 1px 10px #989898;
     background-size: cover;
     background-position: center;
-    width: 46pc;
-    height: 30pc;
+    width: 48pc;
+    height: 32pc;
     margin-top: 0%;
     margin-left: -9px;
     padding-top: 17px;
@@ -63,8 +63,8 @@
     box-shadow: 0 5px 10px #777;
     background-size: cover;
     background-position: center;
-    width: 46pc;
-    height: 30pc;
+    width: 48pc;
+    height: 32pc;
     margin-top: 0%;
     margin-left: -9px;
     padding-top: 17px;
@@ -97,8 +97,8 @@
     box-shadow: 0 15px 10px #777;
     background-size: cover;
     background-position: center;
-    width: 46pc;
-    height: 30pc;
+    width: 48pc;
+    height: 32pc;
     margin-top: 0%;
     margin-left: -9px;
     padding-top: 17px;

@@ -54,8 +54,10 @@
                     <li class="nav-item">
                         <a class="nav-link  letter2" href="{{ url('/feed') }}">Projetos</a></li>
                         <li class="nav-item dropdown">
-	    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown large  </a>
-	    <div class="dropdown-menu dropdown-large">
+	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Dropdown large  </a>
+	    <div class="dropdown-menu dropdown-large" style="margin-left: -11pc; margin-top:1.7pc;
+    width: 34pc;
+    height: 22pc;">
            	The content of large dropdown menu. <br> lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
