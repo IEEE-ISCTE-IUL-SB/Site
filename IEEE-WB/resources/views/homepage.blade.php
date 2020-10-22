@@ -158,7 +158,7 @@ $(".slider").owlCarousel({
                 loop: true,
                 smartSpeed: 6000,
                 autoplay: true,
-                autoplayTimeout: 9000, //2000ms = 2s;
+                autoplayTimeout: 12000, //2000ms = 2s;
                 autoplayHoverPause: true,
                 loop: true,
                 margin:1,

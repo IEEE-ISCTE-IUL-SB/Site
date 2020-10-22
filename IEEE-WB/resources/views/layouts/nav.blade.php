@@ -46,13 +46,13 @@
 <header class="header sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light py-3 ">
         <div class="container"><a class="navbar-brand" style="margin-left:-70px;">
-        <a><img class="entity" src="{{asset('img/ieee.svg')}}" style="width:45%;margin-top:-40px;margin-bottom:-40px;"></a>
+        <a href="{{ url('/') }}" ><img class="entity" src="{{asset('img/ieee.svg')}}" style="width:45%;margin-top:-40px;margin-bottom:-40px;"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link  letter2" href="{{ url('/') }}">Eventos<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item active"><a class="nav-link  letter2" href="{{ url('/eventos') }}">Eventos<span class="sr-only">(current)</span></a></li>
                     <li class="nav-item">
-                        <a class="nav-link  letter2" href="{{ url('/feed') }}">Projetos</a></li>
+                        <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Dropdown large  </a>
 	    <div class="dropdown-menu dropdown-large" style="margin-left: -11pc; margin-top:1.7pc;

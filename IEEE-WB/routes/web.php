@@ -22,23 +22,27 @@ Route::get('/', function () {
 });
 
 Route::get('/RAS', function () {
-    return view('raspage');
+    return view('societies/raspage');
 });
 
 Route::get('/IMS', function () {
-    return view('imspage');
+    return view('societies/imspage');
 });
 
 Route::get('/CS', function () {
-    return view('cspage');
+    return view('societies/cspage');
 });
 
 Route::get('/WIE', function () {
-    return view('wiepage');
+    return view('societies/wiepage');
 });
 
-
-
+Route::get('/eventos', function () {
+    return view('eventos');
+});
+Route::get('/projetos', function () {
+    return view('projetos');
+});
 
 
 
