@@ -54,51 +54,55 @@
                     <li class="nav-item">
                         <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown">
-	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Dropdown large  </a>
-	    <div class="dropdown-menu dropdown-large" style="margin-left: -11pc; margin-top:1.7pc;
-    width: 34pc;
+	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Societies  </a>
+	    <div class="dropdown-menu dropdown-large" style="margin-left: -11pc;
+    margin-top: 1.7pc;
+    width: 33pc;
     height: 22pc;">
-           	The content of large dropdown menu. <br> lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.
-            </div> <!-- dropdown-large.// -->
-	</li>
-                    <li class="nav-item dropdown">
-                                <a id="navbarDropdown2"  class="nav-link letter2 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                 Societies
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right"  style="transition:all 2s  ease-in;
-  -moz-transition:    all 2s  ease-in;
-  -webkit-transition: all 2s  ease-in;
-  -o-transition:      all 2s  ease-in;
-  background:grey;
-  -ms-transition:     all 2s  ease.in ;;margin-top: 24px;margin-right: -53px;border-radius:0px !important;" id="drop" aria-labelledby="navbarDropdown2">
-                              
-                             
-                                <a class="dropdown-item  letter2" style="color:white;" href="{{ url('/RAS') }}">
+            <div class="row" style="margin-right: 24px;margin-left: 25px;margin-top:20px;">
+                <div class="col dropi letter2" >
+                    <h1 style="font-size:30px;color:#333333;">RAS</h1>
+                    <a class="" style="color:grey;" href="{{ url('/RAS') }}">
                                         R&A Society 
-                                </a>
-                                <a class="dropdown-item  letter2" style="color:white;" href="{{ url('/CS') }}">
-                                        Computer Society
-                                </a>
-                                <a class="dropdown-item  letter2" style="color:white;" href="{{ url('/IMS') }}">
+                    </a>
+                </div>
+                <div class="col dropi " >
+                    <h1 style="font-size:30px;color:#333333;">CS</h1>
+                    <a class="" style="color:grey;" href="{{ url('/CS') }}">
+                                        ComputerSociety
+                    </a>
+                </div>
+               <div class="col dropi" >
+                    <h1 style="font-size:30px;color:#333333;">IMS</h1>
+                    <a class="" style="color:grey;" href="{{ url('/IMS') }}">
                                         I&M Society
-                                </a>
-                                <a class="dropdown-item  letter2"  style="color:white;" href="{{ url('/WIE') }}">
-                                        WIE
-                                </a>
-                                <style>
-                                
-                                    .dropdown-item:hover,.dropdown-item:active{
-                                        background:#595959 !important;
-                                    }
+                    </a>
+                </div>
+                 <div class="col dropi" >
+                    <h1 style="font-size:30px;color:#333333;">MAE</h1>
+                    <a class=""  style="color:grey;" href="{{ url('/WIE') }}">
+                                        MAE
+                    </a>
+                </div>
+                <div class="col dropi" >
+                    <h1 style="font-size:30px;color:#333333;">WIE</h1>
+                    <a class=""  style="color:grey;" href="{{ url('/WIE') }}">
+                                       WIE
+                    </a>
+                </div>
+            </div>
 
-                                </style>
-
-                                </div>
-                            </li><!--
+            <style>
+            .dropi{
+                
+    padding-left: 14px;
+    padding-right: 90px;
+    padding-bottom: 42px;
+    font-family:"font-letter1";
+            }
+            
+            </style>
+            </div>
                     @guest
       @if (Route::has('register'))
       @if (Route::has('login'))
@@ -145,8 +149,7 @@
                                 </div>
                             </li>
                         @endguest
-                        -->
-                   
+                 
             </li>
             <li class="nav-item">
                         <a class="nav-link  letter2" href="{{ url('/WIE') }}">Sobre nós</a>

@@ -28,11 +28,10 @@
     box-shadow: 0 1px 10px #989898;
     background-size: cover;
     background-position: center;
-    width: 48pc;
-    height: 32pc;
+    width: auto;
     margin-top: 0%;
-    margin-left: -9px;
-    padding-top: 17px;
+    margin-left: 11px;
+    padding-top: 70%;
     padding-right: 59px;
     border-radius: 55%;
     padding-left: 101px;">
@@ -58,16 +57,15 @@
                 </div>
                 <div class="ml-xl-3 col-sm-6">
                 <div style="background-image: url(img/ieee1.jpg);
-    -webkit-box-shadow: 0 5px 10px #777;
-    -moz-box-shadow: 0 5px 10px #777;
-    box-shadow: 0 5px 10px #777;
+     -webkit-box-shadow: 0 1px 10px #989898;
+    -moz-box-shadow: 0 1px 10px #989898;
+    box-shadow: 0 1px 10px #989898;
     background-size: cover;
     background-position: center;
-    width: 48pc;
-    height: 32pc;
+    width: auto;
     margin-top: 0%;
-    margin-left: -9px;
-    padding-top: 17px;
+    margin-left: 11px;
+    padding-top: 70%;
     padding-right: 59px;
     border-radius: 55%;
     padding-left: 101px;">
@@ -92,16 +90,15 @@
                 </div>
                 <div class="ml-xl-3 col-sm-6">
                 <div style="background-image: url(img/ieee2.jpg);
-    -webkit-box-shadow: 0 15px 10px #777;
-    -moz-box-shadow: 0 15px 10px #777;
-    box-shadow: 0 15px 10px #777;
+     -webkit-box-shadow: 0 1px 10px #989898;
+    -moz-box-shadow: 0 1px 10px #989898;
+    box-shadow: 0 1px 10px #989898;
     background-size: cover;
     background-position: center;
-    width: 48pc;
-    height: 32pc;
+    width: auto;
     margin-top: 0%;
-    margin-left: -9px;
-    padding-top: 17px;
+    margin-left: 11px;
+    padding-top: 70%;
     padding-right: 59px;
     border-radius: 55%;
     padding-left: 101px;">
@@ -219,21 +216,25 @@ $(function () {
 background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%, rgba(79,79,79,1) 100%);padding-bottom:15%;">
     <div class="container">
     <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explora as nossas societies</h1>
-    <div class="row mx-auto" style="padding-top:10%;padding-left:70px;">
+    <div class="row mx-auto" style="padding-top:10%;padding-left:-10px;">
       
-        <div class="col-sm-3 share mx-auto">
+        <div class="col-lg-2 share mx-auto ">
+        <img class="entity1" src="{{asset('img/cslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;">
+        </div>
+        <div class="col-lg-2 share mx-auto ">
+        <img class="entity1" src="{{asset('img/MAE.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
+        </div>
+        <div class="col-lg-2 share mx-auto ">
+        <img class="entity" src="{{asset('img/raslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;">
+        </div>
         
-        <img class="entity1" src="{{asset('img/cslogo.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
+        <div class="col-lg-2 share mx-auto ">
+        <img class="entity" src="{{asset('img/imslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;">
         </div>
-        <div class="col-sm-3 share mx-auto">
-        <img class="entity" src="{{asset('img/raslogo.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
+        <div class="col-lg-2 share mx-auto">
+        <img class="entity" src="{{asset('img/wielogo.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
         </div>
-        <div class="col-sm-3 share mx-auto">
-        <img class="entity" src="{{asset('img/imslogo.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
-        </div>
-        <div class="col-sm-3 share mx-auto">
-        <img class="entity" src="{{asset('img/wielogo.png')}}" style="width:55%;margin-top:-40px;margin-bottom:-40px;">
-        </div>
+       
     </div>
         
     </div>
