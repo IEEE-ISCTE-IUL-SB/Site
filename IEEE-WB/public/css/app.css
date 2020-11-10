@@ -10913,7 +10913,7 @@ a.text-dark:focus {
   font-family: "font-letter1";
   src:url("../fonts/NHaasGroteskTXPro-55Rg.ttf") format("truetype");
     
-  font-weight: normal;
+  font-weight: lighter;
   font-style: normal;
 }
 
@@ -10923,6 +10923,14 @@ a.text-dark:focus {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "font-letter4";
+  src:url("../fonts/NeueHaasDisplay-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 @font-face {

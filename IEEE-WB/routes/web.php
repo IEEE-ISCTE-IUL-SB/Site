@@ -44,6 +44,10 @@ Route::get('/projetos', function () {
     return view('projetos');
 });
 
+Route::get('/sobrenos', function () {
+    return view('aboutus');
+});
+
 
 
 

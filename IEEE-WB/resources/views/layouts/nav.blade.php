@@ -16,6 +16,12 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        
+        <script href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js"></script>
+        <script href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.js" ></script>
+        <script href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.module.js" ></script>
+        <script href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.module.min.js" ></script>
 
         <!-- Styles -->
         <style>
@@ -44,7 +50,7 @@
 
 <!-- Sticky navbar-->
 <header class="header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light py-3 ">
+    <nav class="navbar navbar-expand-lg navbar-light py-3 " style="transition:0.2s;">
         <div class="container"><a class="navbar-brand" style="margin-left:-70px;">
         <a href="{{ url('/') }}" ><img class="entity" src="{{asset('img/ieee.svg')}}" style="width:45%;margin-top:-40px;margin-bottom:-40px;"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -55,44 +61,57 @@
                         <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Societies  </a>
-	    <div class="dropdown-menu dropdown-large" style="margin-left: -11pc;
+	    <div class="dropdown-menu dropdown-large" style="margin-left: -15pc;
     margin-top: 1.7pc;
     width: 33pc;
-    height: 22pc;">
+    height: 22pc;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;">
             <div class="row" style="margin-right: 24px;margin-left: 25px;margin-top:20px;">
                 <div class="col dropi letter2" >
                     <h1 style="font-size:30px;color:#333333;">RAS</h1>
-                    <a class="" style="color:grey;" href="{{ url('/RAS') }}">
+                    <a class="soc"  href="{{ url('/RAS') }}">
                                         R&A Society 
                     </a>
                 </div>
                 <div class="col dropi " >
                     <h1 style="font-size:30px;color:#333333;">CS</h1>
-                    <a class="" style="color:grey;" href="{{ url('/CS') }}">
+                    <a class="soc" href="{{ url('/CS') }}">
                                         ComputerSociety
                     </a>
                 </div>
                <div class="col dropi" >
                     <h1 style="font-size:30px;color:#333333;">IMS</h1>
-                    <a class="" style="color:grey;" href="{{ url('/IMS') }}">
+                    <a class="soc"  href="{{ url('/IMS') }}">
                                         I&M Society
                     </a>
                 </div>
                  <div class="col dropi" >
                     <h1 style="font-size:30px;color:#333333;">MAE</h1>
-                    <a class=""  style="color:grey;" href="{{ url('/WIE') }}">
+                    <a class="soc"  href="{{ url('/WIE') }}">
                                         MAE
                     </a>
                 </div>
                 <div class="col dropi" >
                     <h1 style="font-size:30px;color:#333333;">WIE</h1>
-                    <a class=""  style="color:grey;" href="{{ url('/WIE') }}">
+                    <a class="soc"   href="{{ url('/WIE') }}">
                                        WIE
                     </a>
                 </div>
             </div>
 
+        
             <style>
+            .soc{
+                color:grey;
+                text-decoration-line: none;
+            }
+
+            .soc:hover, .soc:active{
+                color:#808080c7;
+                text-decoration-line: none;
+            }
+
             .dropi{
                 
     padding-left: 14px;
@@ -152,7 +171,7 @@
                  
             </li>
             <li class="nav-item">
-                        <a class="nav-link  letter2" href="{{ url('/WIE') }}">Sobre nós</a>
+                        <a class="nav-link  letter2" href="{{ url('/sobrenos') }}">Sobre nós</a>
                     </li>
                 </ul>
             </div>
@@ -162,24 +181,26 @@
 
 @yield('content')
 
-<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+<footer id="sticky-footer" style="margin-top:10%;"class="py-4 bg-dark text-white-50">
     <div class="container text-center">
       <small>Copyright &copy; Your Website</small>
     </div>
   </footer>
-
+  
 <script>
 
 $(function () {
     $(window).on('scroll', function () {
-        if ( $(window).scrollTop() < 100 ) {
-            $('.navbar').removeClass('shadow-sm bg-white');
+        if ( $(window).scrollTop() < 50 ) {
+            $('.navbar').removeClass('shadow-sm bg-white ');
         } else {
-            $('.navbar').addClass('shadow-sm bg-white');
+            $('.navbar').addClass('shadow-sm bg-white ');
         }
     });
 });
 
 </script>
+
+
     </body>
 </html>
