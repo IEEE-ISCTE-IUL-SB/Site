@@ -3,6 +3,162 @@
 @section('content')
 
 
+<section>
+
+<!--
+      WebGL particle head for a clients website. 
+      See the full result on fremtidenshoder.no. 
+      Made with three.js
+-->
+
+<div class="particlehead" style="width:100%;">
+
+
+</div>
+
+<h1 class="letter2 workshop" style="background: url(img/title5.png);background-size: cover;background-position: center;padding-bottom: 139px;
+    padding-top: 86px;
+    padding-left:80px;font-size:3.8pc;margin-left:3%;-webkit-background-clip: text;margin-bottom:30%;margin-top:-10%;
+  color: transparent;
+  position:relative;">
+                    Vem<br>conhecer-nos
+                </h1>
+
+
+</section>
+<script>
+
+var site = site || {};
+site.window = $(window);
+site.document = $(document);
+site.Width = site.window.width();
+site.Height = site.window.height();
+
+var Background = function() {
+
+};
+
+Background.headparticle = function() {   
+
+   if ( !Modernizr.webgl ) {
+      alert('Your browser dosent support WebGL');
+   }
+
+   var camera, scene, renderer;
+   var mouseX = 0, mouseY = 0;
+   var p;
+
+   var windowHalfX = site.Width / 2;
+   var windowHalfY = site.Height / 2;
+
+   Background.camera = new THREE.PerspectiveCamera( 35, site.Width / site.Height, 1, 2000 );
+   Background.camera.position.z = 300;
+
+   // scene
+   Background.scene = new THREE.Scene();
+
+   // texture
+   var manager = new THREE.LoadingManager();
+   manager.onProgress = function ( item, loaded, total ) {
+      //console.log('webgl, twice??');
+      //console.log( item, loaded, total );
+   };
+
+
+   // particles
+   var p_geom = new THREE.Geometry();
+   var p_material = new THREE.ParticleBasicMaterial({
+      color: 0x0B355D,
+      size: 2
+      
+      
+   });
+   
+
+   // model
+   var loader = new THREE.OBJLoader( manager );
+   loader.load( 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/40480/head.obj', function ( object ) {
+
+      object.traverse( function ( child ) {
+
+         if ( child instanceof THREE.Mesh ) {
+
+            // child.material.map = texture;
+
+            var scale = 6;
+
+            $(child.geometry.vertices).each(function() {
+               p_geom.vertices.push(new THREE.Vector3(this.x * 1.2* scale, this.y * scale *1.2, this.z * scale*1.2));
+            })
+         }
+      });
+
+      Background.scene.add(p)
+   });
+
+   p = new THREE.ParticleSystem(
+      p_geom,
+      p_material
+   );
+
+   Background.renderer = new THREE.WebGLRenderer({ alpha: true });
+   Background.renderer.setSize( site.Width, site.Height );
+   Background.renderer.setClearColor(0xFFFFFF, 0);
+
+   $('.particlehead').append(Background.renderer.domElement);
+   $('.particlehead').on('mousemove', onDocumentMouseMove);
+  
+   site.window.on('resize', onWindowResize);
+
+   function onWindowResize() {
+      windowHalfX = site.Width / 2;
+      windowHalfY = site.Height / 2;
+      //console.log(windowHalfX);
+
+      Background.camera.aspect = site.Width / site.Height;
+      Background.camera.updateProjectionMatrix();
+
+      Background.renderer.setSize( site.Width, site.Height );
+   }
+
+   function onDocumentMouseMove( event ) {
+      mouseX = ( event.clientX - windowHalfX ) / 2;
+      mouseY = ( event.clientY - windowHalfY ) / 2;
+   }
+
+   Background.animate = function() { 
+
+      Background.ticker = TweenMax.ticker;
+      Background.ticker.addEventListener("tick", Background.animate);
+
+      render();
+   }
+
+   function render() {
+      Background.camera.position.x += ( (mouseX * .5) - Background.camera.position.x ) * .05;
+      Background.camera.position.y += ( -(mouseY * .5) - Background.camera.position.y ) * .05;
+
+      Background.camera.lookAt( Background.scene.position );
+
+      Background.renderer.render( Background.scene, Background.camera );
+   }
+
+   render();
+
+   Background.animate();
+};
+
+
+Background.headparticle();
+
+</script>
+
+
+
+
+
+
+
 <section style="margin-bottom:0%;background: url(img/background4.png);background-size: cover;background-position: center;" id="companiesStories" >
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

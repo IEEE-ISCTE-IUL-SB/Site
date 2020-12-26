@@ -37,71 +37,57 @@ margin-top:10%;margin-bottom:20%;">
             
                 <div class="" style="margin-top:10%;">
                     <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-6 " id="project1" style="display: none;">
-                    <h1 style="color:white;">Articles</h1>
-                    <br>
+                        <h1 style="color:white;">Articles</h1>
+                        <br>
                         <a href="display:none;" style="
-    margin-top: auto;
-"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-    justify-content: center;
-    text-align: center;
-    
-    width: 100%;
-   
-"></a>  </div>
-                    <div class="  col-lg-4 col-md-4 col-sm-4 col-xs-6 " id="project2" style="display: block;">
-                        <h1 style="color:white;
-">Articles</h1>
-<br>
-    <a href="display:none;" style="
-    justify-content: center;
-    text-align: center;
-     margin-top: auto;"> 
-     <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-    justify-content: center;
-    text-align: center;
-    width: 100%;"></a> 
-                    </div><br>
-                    <div class="  col-lg-4 col-md-4 col-sm-4 col-xs-6 " id="project2" style="display: block;">
-                        <h1 style="color:white;
-">Articles</h1>
-<br>
-    <a href="display:none;" style="
-    justify-content: center;
-    text-align: center;
-     margin-top: auto;"> 
-     <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-    justify-content: center;
-    text-align: center;
-    width: 100%;"></a> 
+                            margin-top: auto;
+                        "> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
+                            justify-content: center;
+                            text-align: center;
+                            
+                            width: 100%;
+                        
+                        "></a>
                     </div>
-                    <br>
                     <div class="  col-lg-4 col-md-4 col-sm-4 col-xs-6 " id="project2" style="display: block;">
                         <h1 style="color:white;
-">Articles</h1>
-<br>
-    <a href="display:none;" style="
-    justify-content: center;
-    text-align: center;
-     margin-top: auto;"> 
-     <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-    justify-content: center;
-    text-align: center;
-    width: 100%;"></a> 
+                        ">Articles</h1>
+                        <br>
+                            <a href="display:none;" style="
+                            justify-content: center;
+                            text-align: center;
+                            margin-top: auto;"> 
+                            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
+                            justify-content: center;
+                            text-align: center;
+                            width: 100%;"></a> 
+
+
+                        <h1 style="color:white;">Inside Members</h1>
+                        <br>
+                            <a href="display:none;" style="
+                            justify-content: center;
+                            text-align: center;
+                            margin-top: auto;"> 
+                            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
+                            justify-content: center;
+                            text-align: center;
+                            width: 100%;"></a> 
+
+
+                        <h1 style="color:white;">Extras</h1>
+                        <br>
+                            <a href="display:none;" style="
+                            justify-content: center;
+                            text-align: center;
+                            margin-top: auto;"> 
+                            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
+                            justify-content: center;
+                            text-align: center;
+                            width: 100%;"></a> 
                     </div>
-                    <br>
-                    <div class="  col-lg-4 col-md-4 col-sm-4 col-xs-6 " id="project2" style="display: block;">
-                        <h1 style="color:white;
-">Articles</h1>
-<br>
-    <a href="display:none;" style="
-    justify-content: center;
-    text-align: center;
-     margin-top: auto;"> 
-     <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-    justify-content: center;
-    text-align: center;
-    width: 100%;"></a> 
-                    </div>
+                   
+                    
                 </div>
           
   
