@@ -38,7 +38,7 @@ Route::get('/WIE', function () {
 });
 
 Route::get('/eventos', function () {
-    return view('eventos');
+    return view('eventspage');
 });
 Route::get('/projetos', function () {
     return view('projetos');
