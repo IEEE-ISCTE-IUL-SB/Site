@@ -16,7 +16,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        
+
         <script src='http://cdnjs.cloudflare.com/ajax/libs/three.js/r61/three.min.js'></script>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js'></script>
         <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/40480/OBJLoader.js'></script>
@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
         <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
-        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic'>  
+        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic'>
 
         <link rel="stylesheet" href="css/style.css">
 
@@ -52,7 +52,7 @@
 }
 
 .header {
-  
+
 }
         </style>
     </head>
@@ -84,7 +84,7 @@
                 <div class="col dropi letter2" >
                     <h1 style="font-size:30px;color:#333333;">RAS</h1>
                     <a class="soc"  href="{{ url('/RAS') }}">
-                                        R&A Society 
+                                        R&A Society
                     </a>
                 </div>
                 <div class="col dropi " >
@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-        
+
             <style>
             .soc{
                 color:grey;
@@ -126,20 +126,20 @@
             }
 
             .dropi{
-                
+
     padding-left: 14px;
     padding-right: 90px;
     padding-bottom: 42px;
     font-family:"font-letter1";
             }
-            
+
             </style>
             </div>
                     @guest
       @if (Route::has('register'))
       @if (Route::has('login'))
                  @auth
-                       
+
                     @else
                         <a href="{{ route('login') }}" class="nav-link  letter2" >Login</a>
                         </li>
@@ -147,11 +147,11 @@
                         <li class="nav-item">
                             <a href="{{ route('register') }}" class="nav-link  letter2" >Register</a>
                             </li>
-                        
+
                         @endif
-                        
+
                     @endif
-                
+
             @endif
                             @endif
                         @else
@@ -171,7 +171,7 @@
                                     Administração
                                 </a>
                                 @endcan
-                              
+
                                 <a class="dropdown-item  letter1" href="{{ route('minhaconta', Auth::user()->uuid) }}">
                                         Minha Conta
                                     </a>
@@ -181,7 +181,7 @@
                                 </div>
                             </li>
                         @endguest
-                 
+
             </li>
             <li class="nav-item">
                         <a class="nav-link  letter2" href="{{ url('/sobrenos') }}">Sobre nós</a>
@@ -194,12 +194,12 @@
 
 @yield('content')
 
-<footer id="sticky-footer" style="margin-top:10%;"class="py-4 bg-dark text-white-50">
+<footer id="sticky-footer" style="" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
       <small>Copyright &copy; Your Website</small>
     </div>
   </footer>
-  
+
 <script>
 
 $(function () {
