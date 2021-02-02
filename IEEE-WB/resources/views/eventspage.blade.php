@@ -481,6 +481,10 @@
                         items: 3,
                         center: true,
                         mouseDrag: false,
+                       /* responsive:{
+                            0 : {items:1},
+                            1360:{items:2},
+                        }*/
                     });
                 }, 10);
 
