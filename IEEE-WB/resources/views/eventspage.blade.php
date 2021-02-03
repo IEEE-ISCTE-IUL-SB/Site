@@ -3,48 +3,68 @@
 @section('content')
 
 <section id="eventTitleBlock" class="eventTitleBlock">
-    <div style="text-align: left;">
+    <div style="text-align: left">
         <div id="mainEventTitle">
             Eventos
         </div>
     </div>
 
+    <div class="ellipse-transition">
+        <a href="#section1"><i id="scrollButton" class="fa fa-chevron-down"></i></a>
+    </div>
 
     <style>
         #mainEventTitle {
             color: white;
             font-size: 75px;
             padding-left: 10rem;
-            padding-top: 6%;
             text-align: center;
             font-weight: bolder;
             display: inline-block;
         }
 
         .eventTitleBlock {
+            position: relative;
             background-image: url('{{asset('img/IscteEventTitleBlock.jpg')}}');
             background-size: 100%;
-            padding-bottom:29%;
+            padding-bottom:30%;
             padding-top:10%;
+            overflow: hidden;
+        }
+
+        .ellipse-transition {
+            background: white;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            padding-top:15px;
+            height:200px;
+            transform: translateY(50%) translateX(-5%);
+            width:110%;
+        }
+
+        #scrollButton {
+            font-size: 60px;
+            color: #5e5e5e;
+            transform: scale(1.1, 1);
+            transition: .2s;
+        }
+
+        #scrollButton:hover {
+            transform: scale(1.2, 1.1) translateY(8px);
+            transition: .2s;
         }
 
         html { scroll-behavior: smooth; }
     </style>
 </section>
 
-<div style="clip-path: ellipse(68% 56% at 49% 97%);margin-top: -20%;padding-top: 20%;background: white ;text-align: center">
-        <a href="#section1"><i id="scrollButton" class="fa fa-chevron-down"></i></a>
-</div>
 <section id="section1">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
-    <div style="position: absolute;top:90%;left:49%">
-
-
-
-    </div>
     <h2 id="novidadesScreen" class="letter3" style="font-size:70px; text-align:center;color:#26233C; margin-bottom: 75px;">
         Novidades
     </h2>
@@ -164,18 +184,6 @@
                     -ms-transition:     all 0.15s  ease-in
                 }
 
-                #scrollButton {
-                    font-size: 60px;
-                    color: #5e5e5e;
-                    transform: scale(1.1, 1);
-                    transition: .2s;
-                }
-
-                #scrollButton:hover {
-                    transform: scale(1.2, 1.1) translateY(8px);
-                    transition: .2s;
-                }
-
                 .owl-carousel{
                     display: flex;
                     align-items: center;
@@ -193,11 +201,11 @@
                     margin-bottom:10%;
                     background-color:transparent;
                     border-color: transparent;
-                    width:750px;
-                    height:500px;
                     display: flex;
                     border-radius:8px;
                     position:relative;
+                    max-height:500px;
+                    max-width: 750px;
                     transform: scale(0.7, 0.7);
                     transition: .3s;
                 }
@@ -326,144 +334,6 @@
                     transition: .3s;
                 }
 
-            /*.carousel-trapezoid {
-                position: absolute;
-                transition: .3s;
-                background-color: #1b4b72;
-                transform: skewX(6deg);
-                transform-origin: bottom left;
-                height: 100%;
-                width: 38%;
-                left: 0;
-                -webkit-box-shadow: 7px 0 30px 5px #333;
-                box-shadow: 7px 0 30px 5px #333;
-            }
-
-            .highlighted-event-container {
-                width: 100%;
-                height:550px;
-                margin-bottom: 100px;
-            }
-
-            .highlighted-event-card {
-                outline: none;
-                overflow: hidden;
-                margin-bottom:10%;
-                background-color:transparent;
-                border-color: transparent;
-                width:750px;
-                height:500px;
-                display: flex;
-                border-radius:8px;
-                position:relative;
-                transform: scale(0.7, 0.7);
-                transition: .3s;
-            }
-
-            .center > .highlighted-event-card {
-                transform: scale(1, 1);
-                transition: .3s;
-            }
-
-
-            .highlighted-event-card-body {
-                background:transparent;
-                position: absolute;
-                height:100%;
-                width:28%;
-                margin-top:2rem;
-                margin-left:2rem;
-                left:0;
-                transition: .2s;
-            }
-
-            .highlighted-event-img {
-                max-width: 70%;
-                position: absolute;
-                height: 100%;
-                right:0;
-                object-fit: cover;
-                transition: .2s;
-            }
-
-            .highlighted-event-slider {
-                max-height: 450px;
-            }
-
-            .highlighted-event-body-title {
-                color:#fff;
-                font-size: 48px;
-                height:10%;
-                transition: .2s;
-                font-weight: bold;
-            }
-
-            .highlighted-event-body-description {
-                color:#fff;
-                text-align: left;
-                font-size: 20px;
-                padding-top: 1.5rem;
-                margin-bottom:2.3rem;
-                -webkit-line-clamp: 12;
-                overflow : hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                height:70%;
-            }
-
-            .date-time-location-carousel {
-                color:#fff;
-                height:7%;
-                margin-left: 0.3rem;
-                transition: .2s;
-                justify-content: space-between;
-            }
-
-            .date-time-col {
-                width: 45%;
-                transition:.2s;
-            }
-
-            .location-carousel {
-                overflow: hidden;
-                max-width:1.3rem;
-                max-height: 1.3rem;
-                transition:.2s;
-            }
-
-            .highlighted-event-card:hover > .highlighted-event-card-body > .date-time-location-carousel > .location-carousel{
-                max-width: 60%;
-                transition:.2s;
-            }
-
-            .highlighted-event-card:hover > .highlighted-event-card-body > .date-time-location-carousel > .date-time-col{
-                width: 20%;
-                transition: .2s;
-            }
-
-            .highlighted-event-card:hover > .carousel-trapezoid{
-                width: 70%;
-                transition: .2s;
-            }
-
-            .highlighted-event-card:hover > .highlighted-event-card-body{
-                width: 60%;
-                transition: .2s;
-            }
-
-
-            .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description{
-                transition: .2s;
-                padding-top: 2rem;
-            }
-
-            .highlighted-event-card:hover > .highlighted-event-img{
-                filter: brightness(50%);
-                transform: translateX(50px);
-                transition: .2s;
-            }*/
-
             </style>
 
             <script>
@@ -478,9 +348,19 @@
                         autoplayHoverPause: true,
                         loop: true,
                         margin: 10,
-                        items: 3,
                         center: true,
                         mouseDrag: false,
+                        items: 3,
+                        responsive:{
+                            0:{
+                                items:1,
+                                mouseDrag: true,
+                            },
+                            1300:{
+                                items:3,
+                                mouseDrag: false,
+                            },
+                        },
                     });
                 }, 10);
 
@@ -712,6 +592,17 @@
                     margin: 30,
                     nav: false,
                     items: 3,
+                    responsive:{
+                        0:{
+                            items:1,
+                        },
+                        1000:{
+                            items:2,
+                        },
+                        1300:{
+                            items:3,
+                        },
+                    },
                 });
             }, 10);
 
@@ -735,6 +626,7 @@
             }
 
             #section1 {
+                padding-top: 7%;
                 background: linear-gradient(0deg, rgba(248,248,255,1) 0%, rgba(248,248,255,1) 25%, rgba(255,255,255,1) 100%);
                 background-size: cover;
                 background-position: center;
@@ -755,9 +647,8 @@
             }
 
             .event-container {
-                max-width:72%;
-                padding-left: 2%;
-                padding-top: 60px;
+                max-width: 72%;
+                padding: 5%;
             }
 
             .event-card {
