@@ -1,0 +1,358 @@
+/*-- Body Reset --*/
+body {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Open Sans";
+    color: #616971;
+  }
+  a:link
+{
+text-decoration:none;
+}
+  
+  /*============= NAVIGATION =============*/
+  .navbar-brand img{
+      height: 3rem;
+  }
+
+  .navbar {
+      font-size: .9rem;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      font-family: "Open Sans";
+      box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
+      z-index: 1;
+  }
+  .nav-item{
+      padding: .5rem;
+      text-align: center;
+  }
+  .nav-link{
+      color: #000000!important;
+  }
+
+  .nav-link:hover{
+      color: #E1A042!important;
+  }
+
+  main{
+    display: block;
+  }
+  .py-4 {
+    padding-top: 1.2rem !important;
+  }
+
+  .py-4 {
+    padding-bottom: 1.2rem !important;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+ 
+  /*============= FOOTER =============*/
+  footer {
+    position: relative;
+    background-color: #E1A042; 
+  }
+
+  footer p{
+      text-align: center;
+      color: white;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      font-size: 12px;
+  }
+
+  /*======POST SLIDER============*/
+ 
+
+    
+  /*============= MEDIA QUERIES =============*/
+  
+  /* Devices under 1199px (xl) */
+  @media (max-width: 1199.98px) {
+  
+  }
+  /* Devices under 768px (md) */
+  @media (max-width: 767.98px) {
+  
+  }
+
+  
+ 
+  
+  /*============ BOOTSTRAP BREAK POINTS:
+  
+  Extra small (xs) devices (portrait phones, less than 576px)
+  No media query since this is the default in Bootstrap
+  
+  Small (sm) devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { ... }
+  
+  Medium (md) devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+  
+  Large (lg) devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+  
+  Extra (xl) large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }
+  
+  =============*/
+  
+  /*-- Bootstrap Mobile Gutter Fix --*/
+  .row, .container-fluid {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  
+  /*-- Fixed Background Image --*/
+  .fixed-background {
+    position: relative;
+    width: 100%;
+    z-index: 1000!important;
+  }
+  .fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999 !important;
+  }
+  .fixed {
+    z-index: -999!important;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /*MEMBERS**/
+  @import url(//fonts.googleapis.com/css?family=Montserrat:300,500);
+.team4 {
+  font-family: "Open Sans";
+	color: #8d97ad;
+  font-weight: 300;
+  justify-content:center;
+}
+
+.team4 h2, .team4 h3, .team4 h4, .team4 h5, .team4 h6 {
+  color: #3e4555;
+}
+.team4 .font-weight-medium {
+   font-family: "Open Sans";
+   font-weight: 40px;
+   line-height: 22px;
+   
+}
+
+.team4 h5 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.team4 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+		font-size: 13px;
+}
+
+.team4 ul li a {
+  color: #acacac;
+  padding-right: 15px;
+  line-height: 22px;
+  -webkit-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.team4 ul li a:hover {
+  -webkit-transform: translate3d(0px, -5px, 0px);
+  transform: translate3d(0px, -5px, 0px);
+	color: #f8dd42;
+}
+.slider-title {
+  text-align: center;
+  margin: 30px auto;
+  color: #E1A042;
+}
+
+
+/*********************Contact Form AND Newsletter*************************/
+@media (max-width: 767px) { 
+  .submit{
+    margin-top:4%;
+    margin-bottom:8%;
+  }
+  #riscos{
+    display: none;
+  }
+}
+
+
+
+@media screen and (max-width: 1199px) and (min-width: 768px ) { 
+.shadow{
+  width:16rem;
+  height:18rem;
+}
+#riscos{
+  display: none;
+}
+.submit{
+    margin-top:8%;
+    margin-bottom:8%;
+  }
+  #textt{
+    font-size:25px;
+  }
+}
+
+
+
+
+@media (min-width: 1200px) { 
+.shadow{
+  width:auto;
+  height:17.5rem;
+}
+#textt{
+  font-size:33px;
+  }
+
+
+}
+.form-net {
+border-color:#E1A042;
+border-radius: 0;
+border-width: 0.1rem;
+}
+
+.form-net:focus {
+border-color: #E1A042;
+box-shadow: 0 0 0 0.1rem rgba(255, 136, 0, 0.6) !important;
+}
+
+.newsletter{
+text-align: center;
+padding: 6px 10px;
+min-width: 177px;
+border-radius: 10px;
+display: inline-block;
+border: solid 2px white;
+background: transparent;
+color:white;
+outline:none;
+
+}
+
+.subscribe{
+display: inline-block;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+border: solid 2px white;
+padding: 0.375rem 0.75rem;
+font-size: 1rem;
+line-height: 1.5;
+border-radius: 25px;
+transition: none;
+border: solid 2px white;
+color:white;
+background:transparent;
+}
+.subscribe:hover {
+border-radius: 25px;
+color:#E1A042 ;
+border: solid 2px white;
+background-color: white;
+outline:none;
+}
+
+/***************ARTICLE PAGE Submit -Type 1*****************/
+
+input{
+    
+}
+label{
+    color:black;
+}
+#yourBtn {
+    font-family: "Open Sans";
+    width: 200px;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 25px;
+    color: black;
+    background-color:white ;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;  
+}
+#yourBtn:hover{
+    font-family: "Open Sans";
+    width: 200px;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 25px;
+    color: white;
+    background-color:#E1A042 ;
+    border:1px solid #E1A042;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;  
+
+}
+
+.form-control{
+    font-size:15px;
+  font-family: "Open Sans";
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 1px solid black;
+  text-align: left;
+  background-color: white;
+}
+.form-control:focus {
+   box-shadow:none;
+   border:1px solid #E1A042
+}
+.title{
+    text-align:center;
+}
+.col-4{
+    text-align:center;
+}
+.sub{
+    font-family: "Open Sans";
+    width: 150px;
+    -webkit-border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    -moz-border-radius: 20px;
+    border: 1px Solid black;
+    text-align: center;
+    background-color: white;
+}
+
+
+
+
