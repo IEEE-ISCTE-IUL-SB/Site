@@ -15,21 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index')->name('home');
 Route::get('/team', 'PageController@team')->name('team');
-Route::post('/', 'ArticleController@store');
-Route::get('/', 'ArticleController@indexhome');
 
 
-//Article
-Route::get('/article/submit', 'ArticleController@create');
-Route::post('/article', 'ArticleController@store');
-
-
-//all
-Route::get('/article', 'ArticleController@indexadmin');
-Route::get('/article/all/{id}','ArticleController@show');
-Route::get('/article/download/{file}','ArticleController@download');
-Route::get('/about','PageController@about');
-Route::post('/subscription','PageController@newsletter');
 
 
 Route::group(['prefix' => 'admin'], function () {
