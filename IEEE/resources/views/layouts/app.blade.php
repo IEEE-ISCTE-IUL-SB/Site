@@ -116,7 +116,7 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link  letter2" href="{{ url('/eventos') }}">Eventos<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link  letter2" href="{{ url('/eventos') }}">Eventos</a></li>
                     <li class="nav-item">
                         <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown">
@@ -251,11 +251,13 @@
         </div>
     </nav>
 </header>
-    <main>
-        @yield('content')
-    </main>
+   
 
-    <footer class="footer" style="background-color:#333333;">
+<main>
+        @yield('content')
+</main>
+
+<footer class="footer" style="background-color:#333333;">
         <div class="container" >
             <div class="row text-light text-center py-4">
             <div class="container text-center">
@@ -266,7 +268,7 @@
             </div>
         </div>
         </div>
-    </footer>
+</footer>
     </div>
     
 
@@ -284,6 +286,20 @@
         	$( '#app .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
 	        $( this ).parent( 'li' ).addClass( 'active' );
 });
+    </script>
+        <script>
+        if ($('#app').height() < $(window).height()) {
+            $('footer').addClass('fixed-bottom');
+        } else {
+            $('footer').removeClass('fixed-bottom');
+        }
+        $(window).resize(function() {
+            if ($('#app').height() < $(window).height()) {
+                $('footer').addClass('fixed-bottom');
+            } else {
+                $('footer').removeClass('fixed-bottom');
+            }
+        });
     </script>
     <script>
         var hamburger = document.querySelector(".hamburger");

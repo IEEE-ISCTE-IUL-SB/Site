@@ -14,16 +14,17 @@
 <section id="missionsection">
     <div class="row mission-row">
         <div class="col">
-            Quem somos?
+            <a class="letter2">Quem somos?<a>
         </div>
         <div class="col">
-            Workshops
+        <a class="letter2">Workshops<a>
         </div>   
         <div class="col">
-         Repositório de Ideias 
+        <a class="letter2">  Repositório de Ideias <a>
+        
         </div>
         <div class="col">
-            Media
+        <a class="letter2"> Media<a>
         </div>
      
     </div>
@@ -35,12 +36,12 @@
     <div class="row">
     <div class="column" style="
   width: 50%">
-          <div style="margin-left:3.5%;margin-right:0.9%;margin-top:0.4%;padding:center;height:98.3%;-webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.24);
+          <div style="margin-left:3.5%;margin-right:0.9%;margin-top:0.2%;padding:center;height:98.5%;-webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.24);
                 box-shadow:0px 0px 16px 4px rgba(0,0,0,0.24);
                 background-color:white;justify-content:center;">
                 <div style="padding-top: 25%; text-align:center;">
-                <h1 style="font-size: 160%" > kfkifviodksoskcdo</h1>
-                <h1  style="font-size: 130%"> olal</h1>
+                <h1 class="letter2" style="font-size: 160%" > kfkifviodksoskcdo</h1>
+                <h1 class="letter2" style="font-size: 130%"> olal</h1>
                 </div>
         </div>
         </div>
@@ -91,10 +92,39 @@
   
   
 </section>
-<section id="section2" class="py-5 section-2">
-    
-</section>
+<section id="section2" class="py-5 section-2"><h2 class="letter2" style="text-align:center;font-size:250%;">Quem Somos?</h2>
+    <div class="container py-5 text-center">
 
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+           
+                <p class="text-muted lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section2" class="py-5 section-2"><h2 class="letter2" style="text-align:center;font-size:250%;">Workshops</h2>
+    <div class="container py-5 text-center">
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+           
+                <p class="text-muted lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section2" class="py-5 section-2"><h2 class="letter2" style="text-align:center;font-size:250%;">Repositório de ideias</h2>
+    <div class="container py-5 text-center">
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+           
+                <p class="text-muted lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <style>
@@ -130,7 +160,7 @@
         font-size: 120%;
         color:dimgrey;
         overflow:hidden;
-        font-weight: bolder;
+      
         margin-bottom: 1%;
     }
 

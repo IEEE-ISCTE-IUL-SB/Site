@@ -7,7 +7,7 @@ margin-top:10%;margin-bottom:20%;">
 
         <div
       style="color:rgb(78 81 97);margin-left:10%;">
-                <h2 style="font-family:'font-letter2';font-size:4pc;letter-spacing:0.1px;">Projetos</h2>
+                <h2 style="font-family:'font-letter2';font-size:370%;letter-spacing:0.1px;">Projetos</h2>
         </div>
      
 
@@ -19,7 +19,7 @@ margin-top:10%;margin-bottom:20%;">
         </div>
         
         <div style="color:white;position: relative;padding-top: 11%;margin-bottom: 10%;">
-                <h2 style="margin-left: -2%;font-family:'font-letter2';font-size:3pc;letter-spacing:1px;margin-top: -20%;text-align:center;position: relative;margin-bottom: -17%;">Descobre o que temos para ti</h2>
+                <h2 style="margin-left: -2%;font-family:'font-letter2';font-size:270%;letter-spacing:1px;margin-top: -20%;text-align:center;position: relative;margin-bottom: -17%;">Descobre o que temos para ti</h2>
         </div>
        
             
@@ -93,12 +93,7 @@ margin-top:10%;margin-bottom:20%;">
   
         </div>
 
-<style>
 
-
-
-
- </style>
 
  <script>
 
