@@ -148,7 +148,7 @@
     }
 
     .sections-description{
-        overflow:hidden;text-align:center;font-size:100%;
+        overflow:hidden;text-align:center;font-size:120%;
     }
 
     
@@ -179,7 +179,7 @@
     }
 
     .sections-description{
-        overflow:hidden;text-align:center;font-size:20%;
+        overflow:hidden;text-align:center;font-size:120%;
     }
   
   .side1{
