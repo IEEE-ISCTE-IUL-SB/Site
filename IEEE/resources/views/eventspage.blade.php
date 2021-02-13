@@ -2,8 +2,8 @@
 
 @section('content')
 
-<section id="eventTitleBlock" class="eventTitleBlock">
-    <div style="text-align: left">
+<section class="event-title-block">
+    <div class="main-title-container">
         <div id="mainEventTitle">
             Eventos
         </div>
@@ -16,20 +16,34 @@
     <style>
         #mainEventTitle {
             color: white;
-            font-size: 75px;
-            padding-left: 10rem;
+            font-size: 5vw;
+            padding-left: 15vw;
+            padding-top: 5vh;
             text-align: center;
             font-weight: bolder;
             display: inline-block;
         }
 
-        .eventTitleBlock {
+        .event-title-block {
             position: relative;
-            background-image: url('{{asset('img/IscteEventTitleBlock.jpg')}}');
-            background-size: 100%;
-            padding-bottom:30%;
+            padding-bottom:25%;
             padding-top:10%;
             overflow: hidden;
+        }
+
+        .event-title-block:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('{{asset('img/IscteEventTitleBlock.jpg')}}');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: brightness(1);
         }
 
         .ellipse-transition {
@@ -38,7 +52,7 @@
             border-radius: 50%;
             position: absolute;
             bottom: 0;
-            padding-top:15px;
+            padding-top:25px;
             height:200px;
             transform: translateY(50%) translateX(-5%);
             width:110%;
@@ -65,7 +79,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
-    <h2 id="novidadesScreen" class="letter3" style="font-size:70px; text-align:center;color:#26233C; margin-bottom: 75px;">
+    <h2 id="novidadesScreen" class="letter3">
         Novidades
     </h2>
     <div class="highlighted-event-container">
@@ -127,23 +141,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!--<div class="highlighted-event-card">
-                    <img class="highlighted-event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="carousel-trapezoid">
-                    </div>
-                    <div class="highlighted-event-card-body">
-                        <div class="highlighted-event-body-title">
-                            Destaque3
-                        </div>
-                        <div class="highlighted-event-body-description text-wrap text-truncate">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique nulla eu mi pellentesque, eget placerat eros commodo. Fusce cursus ipsum ac vestibulum rhoncus. Morbi sed sollicitudin mi. Quisque placerat eros sit amet lorem interdum, nec facilisis tortor lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras hendrerit tellus elit. Nullam sit amet ante lectus. Etiam maximus tincidunt nibh vitae commodo. Donec placerat, elit in placerat tempus, libero risus tincidunt arcu, ac condimentum felis justo at risus. Etiam posuere erat vel vulputate placerat. Suspendisse nec aliquam nisl, et lacinia dolor. Vestibulum nisl ligula, gravida ac maximus vitae, egestas nec tellus.
-                        </div>
-                        <div class="date-time-location-carousel row">
-                            <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map"></i> Av. das Forças Armadas, 1649-026 Lisboa</div>
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </div>
     </div>
@@ -184,14 +181,25 @@
                     -ms-transition:     all 0.15s  ease-in
                 }
 
-                .owl-carousel{
-                    display: flex;
+                .owl-carousel {
+                    display: flex !important;
                     align-items: center;
+                }
+
+                .main-title-container {
+                    text-align: left;
+                }
+
+                #novidadesScreen {
+                    font-size:70px;
+                    text-align:center;
+                    color:#26233C;
+                    margin-bottom: 75px;
                 }
 
                 .highlighted-event-container {
                     width: 100%;
-                    height:550px;
+                    height: 50%;
                     margin-bottom: 100px;
                 }
 
@@ -202,10 +210,13 @@
                     background-color:transparent;
                     border-color: transparent;
                     display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    align-self: center;
                     border-radius:8px;
                     position:relative;
-                    max-height:500px;
-                    max-width: 750px;
+                    height:45vh;
+                    max-width: 60vw;
                     transform: scale(0.7, 0.7);
                     transition: .3s;
                 }
@@ -259,7 +270,7 @@
                 }
 
                 .highlighted-event-slider {
-                    max-height: 450px;
+                    max-height: 45%;
                 }
 
                 .highlighted-event-body-title {
@@ -275,12 +286,12 @@
                     text-align: left;
                     font-size: 20px;
                     margin-bottom:1rem;
-                    -webkit-line-clamp: 3;
+                    -webkit-line-clamp: 2;
                     overflow : hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
-                    height:67%;
+                    height:65%;
                     opacity:0;
                     transition: .3s;
                 }
@@ -347,18 +358,16 @@
                         autoplayTimeout: 9000, //2000ms = 2s;
                         autoplayHoverPause: true,
                         loop: true,
-                        margin: 10,
+                        margin: 0,
                         center: true,
-                        mouseDrag: false,
-                        items: 3,
+                        mouseDrag: true,
                         responsive:{
                             0:{
                                 items:1,
-                                mouseDrag: true,
+                                margin:0,
                             },
                             1300:{
                                 items:3,
-                                mouseDrag: false,
                             },
                         },
                     });
@@ -405,13 +414,13 @@
     <div class="cardDivider"></div>
 
     <div class="container event-container text-center">
-        <h2 class="letter3" style="font-size:300%;text-align:left;color:#26233C;">
+        <h2 class="letter3 carousel-title">
             Esta semana
         </h2>
 
-        <div class="mx-auto" >
-            <div class="event-slider owl-carousel mx-auto">
-                <div class="event-card">
+        <div>
+            <div class="event-slider owl-carousel">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -427,7 +436,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -443,7 +452,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -459,7 +468,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -505,13 +514,13 @@
     <div class="cardDivider" style="margin-left: 10%;margin-top: 5rem;"></div>
 
     <div class="container event-container text-center">
-        <h2 class="letter3" style="font-size:300%;text-align:left;color:#26233C;">
+        <h2 class="letter3 carousel-title">
             Últimos eventos
         </h2>
 
-        <div class="mx-auto" >
-            <div class="event-slider owl-carousel mx-auto">
-                <div class="event-card">
+        <div>
+            <div class="event-slider owl-carousel">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -527,7 +536,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -543,7 +552,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -559,7 +568,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="event-card">
+                <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
                     <div class="card-ellipse">
                     </div>
@@ -582,6 +591,8 @@
 
         <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
+                var halfCardWidth = document.getElementsByClassName('event-card').item(0).clientWidth / 2;
+
                 $(".event-slider").owlCarousel({
                     loop: true,
                     smartSpeed: 1000,
@@ -589,17 +600,14 @@
                     autoplayTimeout: 9000, //2000ms = 2s;
                     autoplayHoverPause: true,
                     loop: true,
-                    margin: 30,
+                    margin: 25,
                     nav: false,
                     items: 3,
                     responsive:{
                         0:{
                             items:1,
                         },
-                        1000:{
-                            items:2,
-                        },
-                        1300:{
+                        1024:{
                             items:3,
                         },
                     },
@@ -646,6 +654,12 @@
                 padding-left:10px;
             }
 
+            .carousel-title {
+                text-align: left;
+                font-size:300%;
+                color:#26233C;
+            }
+
             .event-container {
                 max-width: 72%;
                 padding: 5%;
@@ -655,15 +669,15 @@
                 overflow: hidden;
                 height:30rem;
                 transition:0.6s;
-                border-radius:3px;
+                border-radius:1px;
                 position:relative;
-                display:flex;
+                display:block;
                 outline: none;
                 margin-bottom: 16%;
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-                width:85%;
+                width:90%;
              }
 
             .event-card:hover {
@@ -749,8 +763,8 @@
                 opacity:0;
                 transition: .3s;
                 -webkit-line-clamp: 2;
-                overflow : hidden;
                 text-overflow: ellipsis;
+                overflow : hidden;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
             }
@@ -796,6 +810,124 @@
                 width:90%;
                 height:8px;
                 background: #26233C;
+            }
+
+            @media (max-width: 1500px) {
+
+                .event-container {
+                    max-width: 95%;
+                }
+            }
+
+            @media (max-width: 1200px) {
+
+                .highlighted-event-slider {
+                    padding: 0 8% 0 8%;
+                }
+
+                #mainEventTitle {
+                    font-size: 6vw;
+                    padding-left: 10vw;
+                }
+
+                .event-container {
+                    max-width: 100%;
+                }
+
+                .carousel-title {
+                    font-size: 5vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 5vw;
+                }
+            }
+
+            @media (max-width: 1024px) {
+
+                #mainEventTitle {
+                    font-size: 8vw;
+                }
+
+                .event-title-block {
+                    padding-bottom: 20%;
+                }
+
+                .ellipse-transition {
+                    opacity: 0;
+                }
+
+                #section1 {
+                    padding-top: 12%;
+                }
+
+                .event-card {
+                    height: 24rem;
+                }
+
+                .event-container {
+                    max-width: 75%;
+                }
+
+                .carousel-title {
+                    font-size: 6vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 6vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+
+                .highlighted-event-slider {
+                    padding: 0 3% 0 3%;
+                }
+
+                .event-container {
+                    padding-top: 8%;
+                }
+
+                #section1 {
+                    padding-top: 15%;
+                }
+
+                .carousel-title {
+                    text-align: center;
+                    font-size: 7vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 7vw;
+                }
+            }
+
+            @media (max-width: 570px) {
+
+                .event-container {
+                    max-width: 95%;
+                }
+
+                .event-title-block::before {
+                    filter: brightness(0.6);
+                }
+
+                #mainEventTitle {
+                    font-size: 12vw;
+                    padding-left: 0;
+                }
+
+                .carousel-title {
+                    font-size: 11vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 11vw;
+                }
+
+                .main-title-container {
+                    text-align: center;
+                }
             }
         </style>
 

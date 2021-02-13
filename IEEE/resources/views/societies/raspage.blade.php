@@ -6,7 +6,8 @@
 
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <section id="societylogosection">
     <img src="{{asset('img/raslogo2.png')}}" class="societylogo">
 </section>
@@ -141,8 +142,83 @@
                 </div>
             </div>
 
-<style>
-.event-card {
+            <script>
+            setTimeout(function() { //items number only activates after window resize unless activated through timeout
+                var halfCardWidth = document.getElementsByClassName('event-card').item(0).clientWidth / 2;
+
+                $(".event-slider").owlCarousel({
+                    loop: true,
+                    smartSpeed: 1000,
+                    autoplay: true,
+                    autoplayTimeout: 9000, //2000ms = 2s;
+                    autoplayHoverPause: true,
+                    loop: true,
+                    margin: 25,
+                    nav: false,
+                    items: 3,
+                    responsive:{
+                        0:{
+                            items:1,
+                        },
+                        1024:{
+                            items:3,
+                        },
+                    },
+                });
+            }, 10);
+
+            $("a.owl-prev ").click(function() {
+                    $("div.owl-prev").click();
+                })
+                $("a.owl-next ").click(function() {
+                    $("div.owl-next").click();
+                })
+
+        </script>
+
+        <style>
+            div.owl-next, div.owl-prev{
+                visibility: hidden;
+                outline:none !important;
+            }
+
+            #section2, #section3 {
+                background: white;
+            }
+
+            #section1 {
+                padding-top: 7%;
+                background: linear-gradient(0deg, rgba(248,248,255,1) 0%, rgba(248,248,255,1) 25%, rgba(255,255,255,1) 100%);
+                background-size: cover;
+                background-position: center;
+                padding-bottom:2rem;
+            }
+
+            #section2 {
+                padding-bottom: 60px;
+            }
+
+            #section3 {
+
+            }
+
+            .padding-10{
+                padding-right:10px;
+                padding-left:10px;
+            }
+
+            .carousel-title {
+                text-align: left;
+                font-size:300%;
+                color:#26233C;
+            }
+
+            .event-container {
+                max-width: 72%;
+                padding: 5%;
+            }
+
+            .event-card {
                 overflow: hidden;
                 height:30rem;
                 transition:0.6s;
@@ -281,7 +357,132 @@
                outline:none !important;
                right: -30px;
             }
-            </style>
+
+            .cardDivider {
+                box-sizing:border-box;
+                width:90%;
+                height:8px;
+                background: #26233C;
+            }
+
+            @media (max-width: 1500px) {
+
+                .event-container {
+                    max-width: 95%;
+                }
+            }
+
+            @media (max-width: 1200px) {
+
+                .highlighted-event-slider {
+                    padding: 0 8% 0 8%;
+                }
+
+                #mainEventTitle {
+                    font-size: 6vw;
+                    padding-left: 10vw;
+                }
+
+                .event-container {
+                    max-width: 100%;
+                }
+
+                .carousel-title {
+                    font-size: 5vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 5vw;
+                }
+            }
+
+            @media (max-width: 1024px) {
+
+                #mainEventTitle {
+                    font-size: 8vw;
+                }
+
+                .event-title-block {
+                    padding-bottom: 20%;
+                }
+
+                .ellipse-transition {
+                    opacity: 0;
+                }
+
+                #section1 {
+                    padding-top: 12%;
+                }
+
+                .event-card {
+                    height: 24rem;
+                }
+
+                .event-container {
+                    max-width: 75%;
+                }
+
+                .carousel-title {
+                    font-size: 6vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 6vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+
+                .highlighted-event-slider {
+                    padding: 0 3% 0 3%;
+                }
+
+                .event-container {
+                    padding-top: 8%;
+                }
+
+                #section1 {
+                    padding-top: 15%;
+                }
+
+                .carousel-title {
+                    text-align: center;
+                    font-size: 7vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 7vw;
+                }
+            }
+
+            @media (max-width: 570px) {
+
+                .event-container {
+                    max-width: 95%;
+                }
+
+                .event-title-block::before {
+                    filter: brightness(0.6);
+                }
+
+                #mainEventTitle {
+                    font-size: 12vw;
+                    padding-left: 0;
+                }
+
+                .carousel-title {
+                    font-size: 11vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 11vw;
+                }
+
+                .main-title-container {
+                    text-align: center;
+                }
+            }
+        </style>
     </div>
 </section>
 
