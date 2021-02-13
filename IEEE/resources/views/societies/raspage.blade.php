@@ -36,8 +36,9 @@
     <div class="row" style="overflow:hidden;">
     <div class="column side1" >
             
-                <div style="margin-left:3.5%;margin-right:0.9%;margin-top:0.2%;padding:center;height:98.5%;-webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.24);
-                        box-shadow:0px 0px 16px 4px rgba(0,0,0,0.24);
+                <div style="border-radius:10px;margin-left:4.5%;margin-right:2%;margin-top:1%;padding:center;height:96%;
+                -webkit-box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
+                        box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
                         background-color:white;justify-content:center;">
                         <div style="padding-top: 25%; text-align:center;">
                         <h1 class="letter2" style="font-size: 160%" > kfkifviodksoskcdo</h1>
@@ -125,7 +126,7 @@
    
     }
  
-
+    
 
     @media only screen and (max-width: 900px) {
   .showw {

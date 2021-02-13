@@ -46,6 +46,7 @@
             body {
                 font-family: 'Nunito';
                 width:100%;
+             
             }
 
             .text-small {
@@ -58,13 +59,25 @@
     width : 34%;
     margin-left:auto;
     margin-top:-40px;margin-bottom:-40px;
+    overflow:hidden;
+    
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .phone {
+    width :64%;
+    margin-right:-150px;
+    margin-top:-40px;margin-bottom:-40px;
+
     
   }
 }
 
 @media only screen and (min-width: 900px) {
   .phone {
-    width:43%;margin-top:-40px;margin-bottom:-40px;
+    width:34%;margin-top:-40px;margin-bottom:-40px;
+    overflow:hidden;
   }
 }
 .btnn1,
@@ -81,7 +94,7 @@
     <nav class="navbar navbar-expand-lg navbar-light py-3 " style="transition:0.2s;">
         <div class="container">
 
-        <a href="{{ url('/') }}"class="navbar-brand" > <img alt="Logo" class="entity phone" src="{{asset('img/ieee.svg')}}" ></a>
+        <a href="{{ url('/') }}" > <img class="phone" alt="Logo" src="{{asset('img/ieee.svg')}}" ></a>
         <button class="navbar-toggler hamburger hamburger--collapse btn btn-light btnn1"data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" >
     <span class="navbar-toggler-icon"></span>
   </button>
