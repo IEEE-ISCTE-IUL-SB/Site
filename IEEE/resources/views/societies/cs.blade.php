@@ -64,12 +64,13 @@
     #missionsection {
         margin-top: 2rem;
         overflow: hidden;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     #descriptionsection {
         padding: 1rem 4rem;
-        font-size: 18px;
+        margin-bottom: 2rem;
+        font-size: 22px;
     }
 
     .societylogo {
@@ -137,6 +138,11 @@
     @media (max-width: 768px) {
         .mission-row {
             font-size: 22px;
+        }
+
+        #descriptionsection {
+            padding: 1rem 1.5rem;
+            font-size: 18px;
         }
     }
 

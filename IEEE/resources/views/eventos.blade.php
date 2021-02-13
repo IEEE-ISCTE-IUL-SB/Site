@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="event-title-block">
-    <div style="text-align: left">
+    <div class="main-title-container">
         <div id="mainEventTitle">
             Eventos
         </div>
@@ -26,12 +26,24 @@
 
         .event-title-block {
             position: relative;
+            padding-bottom:25%;
+            padding-top:10%;
+            overflow: hidden;
+        }
+
+        .event-title-block:before {
+            position: absolute;
+            top: 0;
+            left: 0;
             background-image: url('{{asset('img/IscteEventTitleBlock.jpg')}}');
             background-size: 100%;
-            padding-bottom:28%;
-            padding-top:10%;
             background-repeat: no-repeat;
-            overflow: hidden;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: brightness(1);
         }
 
         .ellipse-transition {
@@ -67,7 +79,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
-    <h2 id="novidadesScreen" class="letter3" style="font-size:70px; text-align:center;color:#26233C; margin-bottom: 75px;">
+    <h2 id="novidadesScreen" class="letter3">
         Novidades
     </h2>
     <div class="highlighted-event-container">
@@ -172,6 +184,17 @@
                 .owl-carousel {
                     display: flex !important;
                     align-items: center;
+                }
+
+                .main-title-container {
+                    text-align: left;
+                }
+
+                #novidadesScreen {
+                    font-size:70px;
+                    text-align:center;
+                    color:#26233C;
+                    margin-bottom: 75px;
                 }
 
                 .highlighted-event-container {
@@ -391,7 +414,7 @@
     <div class="cardDivider"></div>
 
     <div class="container event-container text-center">
-        <h2 class="letter3" style="font-size:300%;text-align:left;color:#26233C;">
+        <h2 class="letter3 carousel-title">
             Esta semana
         </h2>
 
@@ -491,7 +514,7 @@
     <div class="cardDivider" style="margin-left: 10%;margin-top: 5rem;"></div>
 
     <div class="container event-container text-center">
-        <h2 class="letter3" style="font-size:300%;text-align:left;color:#26233C;">
+        <h2 class="letter3 carousel-title">
             Últimos eventos
         </h2>
 
@@ -584,10 +607,7 @@
                         0:{
                             items:1,
                         },
-                        1300:{
-                            items:1,
-                        },
-                        1500:{
+                        1024:{
                             items:3,
                         },
                     },
@@ -634,6 +654,12 @@
                 padding-left:10px;
             }
 
+            .carousel-title {
+                text-align: left;
+                font-size:300%;
+                color:#26233C;
+            }
+
             .event-container {
                 max-width: 72%;
                 padding: 5%;
@@ -651,7 +677,7 @@
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-                width:85%;
+                width:90%;
              }
 
             .event-card:hover {
@@ -786,7 +812,12 @@
                 background: #26233C;
             }
 
+            @media (max-width: 1500px) {
 
+                .event-container {
+                    max-width: 95%;
+                }
+            }
 
             @media (max-width: 1200px) {
 
@@ -798,31 +829,76 @@
                     font-size: 6vw;
                     padding-left: 10vw;
                 }
+
+                .event-container {
+                    max-width: 100%;
+                }
+
+                .carousel-title {
+                    font-size: 5vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 5vw;
+                }
             }
 
             @media (max-width: 1024px) {
 
                 #mainEventTitle {
-                    font-size: 7vw;
+                    font-size: 8vw;
+                }
+
+                .event-title-block {
+                    padding-bottom: 20%;
+                }
+
+                .ellipse-transition {
+                    opacity: 0;
                 }
 
                 #section1 {
                     padding-top: 12%;
                 }
+
+                .event-card {
+                    height: 24rem;
+                }
+
+                .event-container {
+                    max-width: 75%;
+                }
+
+                .carousel-title {
+                    font-size: 6vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 6vw;
+                }
             }
 
             @media (max-width: 768px) {
-
-                #mainEventTitle {
-                    font-size: 7vw;
-                }
 
                 .highlighted-event-slider {
                     padding: 0 3% 0 3%;
                 }
 
+                .event-container {
+                    padding-top: 8%;
+                }
+
                 #section1 {
                     padding-top: 15%;
+                }
+
+                .carousel-title {
+                    text-align: center;
+                    font-size: 7vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 7vw;
                 }
             }
 
@@ -832,6 +908,26 @@
                     max-width: 95%;
                 }
 
+                .event-title-block::before {
+                    filter: brightness(0.6);
+                }
+
+                #mainEventTitle {
+                    font-size: 12vw;
+                    padding-left: 0;
+                }
+
+                .carousel-title {
+                    font-size: 11vw;
+                }
+
+                #novidadesScreen {
+                    font-size: 11vw;
+                }
+
+                .main-title-container {
+                    text-align: center;
+                }
             }
         </style>
 
