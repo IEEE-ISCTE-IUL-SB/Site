@@ -40,9 +40,9 @@
                 -webkit-box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
                         box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
                         background-color:white;justify-content:center;">
-                        <div style="padding-top: 25%; text-align:center;">
-                        <h1 class="letter2" style="font-size: 160%" > kfkifviodksoskcdo</h1>
-                        <h1 class="letter2" style="font-size: 130%"> olal</h1>
+                        <div style="padding-top: 23%; text-align:center;">
+                        <h1 class="letter2" style="color:#333333;font-size: 250%" > kfkifviodksoskcdo</h1>
+                        <h1 class="letter2" style="color:#333333;font-size: 130%"> olal</h1>
                 </div>
          
         </div>

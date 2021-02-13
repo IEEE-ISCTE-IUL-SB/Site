@@ -53,6 +53,28 @@
     font-size: 0.9rem !important;
 }
 
+@media only screen and (min-width: 901px) and (max-width: 1000px) {
+    .phone {
+    width:34%;margin-top:-40px;margin-bottom:-40px;
+    overflow:hidden;
+  }
+
+  .dropdownfont{
+    font-size:170%;
+   
+  }
+
+   .dropdownH{
+    margin-left:0%;
+    margin-top: 1.7pc;
+    width:100%;
+    height: 22pc;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  
+
+}
+}
 
 @media only screen and (max-width: 900px) {
   .phone {
@@ -62,6 +84,21 @@
     overflow:hidden;
     
   }
+  .dropdownH{
+    margin-left:0%;
+    margin-top: 1.7pc;
+    width:100%;
+    height: 22pc;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  }
+  .dropdownS{
+    width:60%;
+  }
+
+  .dropdownfont{
+      font-size:120%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -69,19 +106,50 @@
     width :64%;
     margin-right:-150px;
     margin-top:-40px;margin-bottom:-40px;
+  }
+  .dropdownH{
+    margin-top: 1.7pc;
+    width:100%;
+    height:auto;
+    margin-left:0%;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  }
+  .dropdownS{
+    width:60%;
+  }
 
-    
+  .dropdownfont{
+    font-size:120%;
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
   .phone {
     width:34%;margin-top:-40px;margin-bottom:-40px;
     overflow:hidden;
   }
+
+  .dropdownfont{
+    font-size:170%;
+
+   
+  }
+
+  .dropdownH{
+    margin-left: -15pc;
+    margin-top: 1.7pc;
+    width:480%;
+    height: 18pc;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  }
+  .dropdownS{
+    width :80%;margin-right: 20%;margin-left: 25px;margin-top:20px;
+  }
 }
-.btnn1,
-.navbar-toggler-icon:active{  border: 0px solid black ;   color: #fff; }
+
+
         </style>
     </head>
     <body >
@@ -105,43 +173,39 @@
                         <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Societies  </a>
-	    <div class="dropdown-menu dropdown-large" style="margin-left: -15pc;
-    margin-top: 1.7pc;
-    width: 33pc;
-    height: 22pc;
-    border:none;
-    box-shadow:0px 17px 20px 12px #00000024;">
-            <div class="row" style="margin-right: 24px;margin-left: 25px;margin-top:20px;">
+	    <div class="dropdown-menu dropdown-large dropdownH d">
+            <div class="row" style="   margin-right: 24px;margin-left: 25px;margin-top:20px;" >
                 <div class="col dropi letter2" >
                  
                     <a style=" text-decoration-line: none;"href="{{ url('/RAS') }}">
-                    <h1 class="soc2" style="font-size:30px;">RAS             
+                    <h1 class="soc2 dropdownfont" >RAS             
                     <h1 style="color:#808080c7;">R&A Society</h1>
                     </h1>             
                     </a>
                 </div>
-                <div class="col dropi " >
-                <a style=" text-decoration-line: none;"href="{{ url('/CS') }}">
-                    <h1 class="soc2" style="font-size:30px;">CS            
-                    <h1 style="color:#808080c7;">Computer Society</h1>
-                    </a>
-                </div>
+               
                <div class="col dropi" >
                <a style=" text-decoration-line: none;"href="{{ url('/IMS') }}">
-                    <h1 class="soc2" style="font-size:30px;">IMS          
+                    <h1 class="soc2 dropdownfont">IMS          
                     <h1 style="color:#808080c7;">I&M Society</h1>
                     </a>
                 </div>
                  <div class="col dropi" >
                  <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2" style="font-size:30px;">WIE            
+                    <h1 class="soc2 dropdownfont" >WIE            
                     <h1 style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
                 <div class="col dropi" >
                 <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2" style="font-size:30px;">MAE           
+                    <h1 class="soc2 dropdownfont" >MAE           
                     <h1 style="color:#808080c7;">MAE Society</h1>
+                    </a>
+                </div>
+                <div class="col dropi " >
+                <a style=" text-decoration-line: none;"href="{{ url('/CS') }}">
+                    <h1 class="soc2 dropdownfont" >CS            
+                    <h1 style="color:#808080c7;">Computer Society</h1>
                     </a>
                 </div>
             </div>
@@ -169,11 +233,13 @@
             }
 
 
+
+
             .dropi{
 
     padding-left: 14px;
     padding-right: 90px;
-    padding-bottom: 42px;
+    padding-bottom: 23px;
     font-family:"font-letter1";
             }
 
