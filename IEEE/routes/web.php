@@ -17,23 +17,23 @@ Route::get('/', function () {
 });
 
 Route::get('/RAS', function () {
-    return view('societies/raspage');
+    return view('societies/ras');
 });
 
 Route::get('/IMS', function () {
-    return view('societies/imspage');
+    return view('societies/ims');
 });
 
 Route::get('/CS', function () {
-    return view('societies/cspage');
+    return view('societies/cs');
 });
 
 Route::get('/WIE', function () {
-    return view('societies/wiepage');
+    return view('societies/wie');
 });
 
 Route::get('/eventos', function () {
-    return view('eventspage');
+    return view('eventos');
 });
 Route::get('/projetos', function () {
     return view('projetos');

@@ -13,7 +13,7 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -58,7 +58,7 @@
     width : 34%;
     margin-left:auto;
     margin-top:-40px;margin-bottom:-40px;
-    
+
   }
 }
 
@@ -100,34 +100,34 @@
     box-shadow:0px 17px 20px 12px #00000024;">
             <div class="row" style="margin-right: 24px;margin-left: 25px;margin-top:20px;">
                 <div class="col dropi letter2" >
-                 
+
                     <a style=" text-decoration-line: none;"href="{{ url('/RAS') }}">
-                    <h1 class="soc2" style="font-size:30px;">RAS             
+                    <h1 class="soc2" style="font-size:30px;">RAS
                     <h1 style="color:#808080c7;">R&A Society</h1>
-                    </h1>             
+                    </h1>
                     </a>
                 </div>
                 <div class="col dropi " >
                 <a style=" text-decoration-line: none;"href="{{ url('/CS') }}">
-                    <h1 class="soc2" style="font-size:30px;">CS            
+                    <h1 class="soc2" style="font-size:30px;">CS
                     <h1 style="color:#808080c7;">Computer Society</h1>
                     </a>
                 </div>
                <div class="col dropi" >
                <a style=" text-decoration-line: none;"href="{{ url('/IMS') }}">
-                    <h1 class="soc2" style="font-size:30px;">IMS          
+                    <h1 class="soc2" style="font-size:30px;">IMS
                     <h1 style="color:#808080c7;">I&M Society</h1>
                     </a>
                 </div>
                  <div class="col dropi" >
                  <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2" style="font-size:30px;">WIE            
+                    <h1 class="soc2" style="font-size:30px;">WIE
                     <h1 style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
                 <div class="col dropi" >
                 <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2" style="font-size:30px;">MAE           
+                    <h1 class="soc2" style="font-size:30px;">MAE
                     <h1 style="color:#808080c7;">MAE Society</h1>
                     </a>
                 </div>
@@ -192,21 +192,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" id="drop" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                    <a class="dropdown-item" href=""</a>
                                     @can('browse_admin')
                                 <a class="dropdown-item  letter1" href="{{ url('/admin') }}">
                                     Administração
                                 </a>
                                 @endcan
 
-                                <a class="dropdown-item  letter1" href="{{ route('minhaconta', Auth::user()->uuid) }}">
+                                <a class="dropdown-item  letter1" href="">
                                         Minha Conta
                                     </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;color:black;">
+                                    <form id="logout-form" action="" method="POST" style="display: none;color:black;">
                                         @csrf
                                     </form>
                                 </div>
