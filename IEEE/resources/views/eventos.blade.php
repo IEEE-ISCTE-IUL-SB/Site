@@ -101,6 +101,9 @@
                         <div class="date-time-location-carousel row">
                             <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> Av. das Forças Armadas, 1649-026 Lisboa</div>
                         </div>
+                        <div class="highlighted-event-card-body-seemore">
+                            See more ⇀
+                        </div>
                     </div>
                 </div>
 
@@ -343,6 +346,21 @@
                 .highlighted-event-card:hover > .highlighted-event-img{
                     transform: scale(1.1, 1.1);
                     transition: .3s;
+                }
+
+                .highlighted-event-card-body-seemore {
+                    color: white;
+                    text-align: right;
+                    font-size: 18px;
+                    padding-top: 2rem;
+                    opacity:0;
+                    transition: .3s;
+                    overflow : hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
                 }
 
             </style>
@@ -713,6 +731,7 @@
                 transition: .3s;
                 background-color: white;
                 clip-path: ellipse(90% 56% at 49% 57%);
+                /*clip-path: polygon(13% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);*/
                 height: 45%;
                 width: 100%;
                 bottom: 0;
@@ -854,7 +873,7 @@
                 }
 
                 .ellipse-transition {
-                    opacity: 0;
+                    visibility: hidden;
                 }
 
                 #section1 {
@@ -884,6 +903,15 @@
                     padding: 0 3% 0 3%;
                 }
 
+                .highlighted-event-card {
+                    max-width: 90%;
+                    height: 60vh;
+                }
+
+                .highlighted-event-container {
+                    margin-bottom: 0;
+                }
+
                 .event-container {
                     padding-top: 8%;
                 }
@@ -897,8 +925,36 @@
                     font-size: 7vw;
                 }
 
+                .date-time-location-carousel {
+                    visibility: hidden;
+                }
+
+                .highlighted-event-card-body {
+                    margin: 1rem;
+                }
+
+                .highlighted-event-body-title {
+                    margin-top: 1rem;
+                    font-size: 10vw;
+                }
+
+                .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
+                    opacity: 0;
+                }
+
+                .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-card-body-seemore{
+                    transition: .3s;
+                    padding-right: 3%;
+                    opacity:1;
+                }
+
+                .highlighted-event-card:hover > .highlighted-event-card-body{
+                    height: 25%;
+                }
+
                 #novidadesScreen {
                     font-size: 7vw;
+                    margin-bottom: 30px;
                 }
             }
 
