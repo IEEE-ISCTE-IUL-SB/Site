@@ -239,7 +239,7 @@
 
     padding-left: 14px;
     padding-right: 90px;
-    padding-bottom: 23px;
+    padding-bottom: 23px;   
     font-family:"font-letter1";
             }
 
