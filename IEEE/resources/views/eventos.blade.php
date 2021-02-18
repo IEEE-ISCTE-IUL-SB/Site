@@ -717,7 +717,8 @@
                 border: 2px solid rgba(0, 0, 0, 0.01);
                 outline: none;
                 font-size: 16px;
-                box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.06);
+                -webkit-box-shadow: 0px 0px 24px 12px rgba(0,0,0,0.2);
+                box-shadow: 0px 0px 24px 12px rgba(0,0,0,0.2);
                 color: #A7A8A7;
                 font-weight: bold;
                 letter-spacing: 0.5px;
@@ -732,11 +733,11 @@
 
             .search-input:focus + label {
                 transform: scale(1.05) translatey(-50%);
-                color: :#A7A8A7;
+                color: :#7e7e7e;
             }
 
             .search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                color: #A7A8A7;
+                color: #7e7e7e;
                 opacity: 1; /* Firefox */
             }
 
@@ -744,7 +745,7 @@
                 margin-left: auto;
                 margin-right:none;
                 position:relative;
-                width:35vw;
+                width:40vw;
                 height:50px;
                 margin-top:-12%;
                 margin-bottom:auto;

@@ -345,7 +345,6 @@
             count = 0;
         }
 
-        console.log(count);
         items[count].classList.add('active');
     }
 
