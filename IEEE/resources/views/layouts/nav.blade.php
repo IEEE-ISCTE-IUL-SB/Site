@@ -13,7 +13,7 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+        
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -46,29 +46,110 @@
             body {
                 font-family: 'Nunito';
                 width:100%;
+             
             }
 
             .text-small {
     font-size: 0.9rem !important;
 }
 
+@media only screen and (min-width: 901px) and (max-width: 1000px) {
+    .phone {
+    width:34%;margin-top:-40px;margin-bottom:-40px;
+    overflow:hidden;
+  }
+
+  .dropdownfont{
+    font-size:170%;
+   
+  }
+
+   .dropdownH{
+    margin-left:0%;
+    margin-top: 1.7pc;
+    width:100%;
+    height: 22pc;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  
+
+}
+}
 
 @media only screen and (max-width: 900px) {
   .phone {
     width : 34%;
     margin-left:auto;
     margin-top:-40px;margin-bottom:-40px;
+    overflow:hidden;
+    
+  }
+  .dropdownH{
+    margin-left:0%;
+    margin-top: 1.7pc;
+    width:100%;
+    height: 22pc;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  }
+  .dropdownS{
+    width:60%;
+  }
 
+  .dropdownfont{
+      font-size:120%;
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (max-width: 400px) {
   .phone {
-    width:43%;margin-top:-40px;margin-bottom:-40px;
+    width :64%;
+    margin-right:-150px;
+    margin-top:-40px;margin-bottom:-40px;
+  }
+  .dropdownH{
+    margin-top: 1.7pc;
+    width:100%;
+    height:auto;
+    margin-left:0%;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  }
+  .dropdownS{
+    width:60%;
+  }
+
+  .dropdownfont{
+    font-size:120%;
   }
 }
-.btnn1,
-.navbar-toggler-icon:active{  border: 0px solid black ;   color: #fff; }
+
+@media only screen and (min-width: 1000px) {
+  .phone {
+    width:34%;margin-top:-40px;margin-bottom:-40px;
+    overflow:hidden;
+  }
+
+  .dropdownfont{
+    font-size:170%;
+
+   
+  }
+
+  .dropdownH{
+    margin-left: -15pc;
+    margin-top: 1.7pc;
+    width:480%;
+    height: 18pc;
+    border:none;
+    box-shadow:0px 17px 20px 12px #00000024;
+  }
+  .dropdownS{
+    width :80%;margin-right: 20%;margin-left: 25px;margin-top:20px;
+  }
+}
+
+
         </style>
     </head>
     <body >
@@ -81,7 +162,7 @@
     <nav class="navbar navbar-expand-lg navbar-light py-3 " style="transition:0.2s;">
         <div class="container">
 
-        <a href="{{ url('/') }}"class="navbar-brand" > <img alt="Logo" class="entity phone" src="{{asset('img/ieee.svg')}}" ></a>
+        <a href="{{ url('/') }}" > <img class="phone" alt="Logo" src="{{asset('img/ieee.svg')}}" ></a>
         <button class="navbar-toggler hamburger hamburger--collapse btn btn-light btnn1"data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" >
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -92,43 +173,39 @@
                         <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Societies  </a>
-	    <div class="dropdown-menu dropdown-large" style="margin-left: -15pc;
-    margin-top: 1.7pc;
-    width: 33pc;
-    height: 22pc;
-    border:none;
-    box-shadow:0px 17px 20px 12px #00000024;">
-            <div class="row" style="margin-right: 24px;margin-left: 25px;margin-top:20px;">
+	    <div class="dropdown-menu dropdown-large dropdownH d">
+            <div class="row" style="   margin-right: 24px;margin-left: 25px;margin-top:20px;" >
                 <div class="col dropi letter2" >
-
+                 
                     <a style=" text-decoration-line: none;"href="{{ url('/RAS') }}">
-                    <h1 class="soc2" style="font-size:30px;">RAS
+                    <h1 class="soc2 dropdownfont" >RAS             
                     <h1 style="color:#808080c7;">R&A Society</h1>
-                    </h1>
+                    </h1>             
                     </a>
                 </div>
-                <div class="col dropi " >
-                <a style=" text-decoration-line: none;"href="{{ url('/CS') }}">
-                    <h1 class="soc2" style="font-size:30px;">CS
-                    <h1 style="color:#808080c7;">Computer Society</h1>
-                    </a>
-                </div>
+               
                <div class="col dropi" >
                <a style=" text-decoration-line: none;"href="{{ url('/IMS') }}">
-                    <h1 class="soc2" style="font-size:30px;">IMS
+                    <h1 class="soc2 dropdownfont">IMS          
                     <h1 style="color:#808080c7;">I&M Society</h1>
                     </a>
                 </div>
                  <div class="col dropi" >
                  <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2" style="font-size:30px;">WIE
+                    <h1 class="soc2 dropdownfont" >WIE            
                     <h1 style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
                 <div class="col dropi" >
                 <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2" style="font-size:30px;">MAE
+                    <h1 class="soc2 dropdownfont" >MAE           
                     <h1 style="color:#808080c7;">MAE Society</h1>
+                    </a>
+                </div>
+                <div class="col dropi " >
+                <a style=" text-decoration-line: none;"href="{{ url('/CS') }}">
+                    <h1 class="soc2 dropdownfont" >CS            
+                    <h1 style="color:#808080c7;">Computer Society</h1>
                     </a>
                 </div>
             </div>
@@ -156,11 +233,13 @@
             }
 
 
+
+
             .dropi{
 
     padding-left: 14px;
     padding-right: 90px;
-    padding-bottom: 42px;
+    padding-bottom: 23px;   
     font-family:"font-letter1";
             }
 
@@ -192,17 +271,21 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" id="drop" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href=""</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
                                     @can('browse_admin')
                                 <a class="dropdown-item  letter1" href="{{ url('/admin') }}">
                                     Administração
                                 </a>
                                 @endcan
 
-                                <a class="dropdown-item  letter1" href="">
+                                <a class="dropdown-item  letter1" href="{{ route('minhaconta', Auth::user()->uuid) }}">
                                         Minha Conta
                                     </a>
-                                    <form id="logout-form" action="" method="POST" style="display: none;color:black;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;color:black;">
                                         @csrf
                                     </form>
                                 </div>

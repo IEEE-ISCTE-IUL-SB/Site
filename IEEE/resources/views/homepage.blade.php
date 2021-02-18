@@ -240,69 +240,7 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
     </div>
 </section>
 
-<section id="section2" class="py-5 section-2">
 
-    <div class="container py-5 text-center">
-    <h2 class="letter3" style="font-size:300%;text-align:left;color:#575858;">Eventos</h2>
-    <div class="mx-auto " style="margin-top:12%;" >
-    <div class="slider owl-carousel mx-auto" style="width:100%;">
-        <div class="card" style="outline: none;border-color:#86BD55;padding-top: 4%;margin-top: 5%;margin-bottom: 16%;width:95%;">
-        <div class="" style="padding-bottom: 264px;">
-                    <h1 class="workshop" style="text-align: center;font-size: 50px;color:#86BD55;">
-                        Card
-                    </h1>
-        </div>
-        </div>
-        <div class="card" style="outline: none;border-color:#86BD55;padding-top: 4%;margin-top: 5%;margin-bottom: 16%;width:95%;">
-        <div class="" style="padding-bottom: 264px;">
-                    <h1 class="workshop" style="text-align: center;font-size: 50px;color:#86BD55;">
-                        Card
-                    </h1>
-        </div>
-        </div>
-        <div class="card" style="outline: none;border-color:#86BD55;padding-top: 4%;margin-top: 5%;margin-bottom: 16%;width:95%;">
-        <div class="" style="padding-bottom: 264px;">
-                    <h1 class="workshop" style="text-align: center;font-size: 50px;color:#86BD55;">
-                        Card
-                    </h1>
-        </div>
-        </div>
-      </div>
-
-
-
-    <script>
-
-    $(".slider").owlCarousel({
-                loop: true,
-                smartSpeed: 6000,
-                autoplay: true,
-                autoplayTimeout: 9000, //2000ms = 2s;
-                autoplayHoverPause: true,
-                loop: true,
-                margin: 10,
-                nav: true,
-                items:3,
-                navText: [
-                "<i class='fa fa-caret-left' style='outline:none !important;font-size:200%;color:rgba(108, 183, 67, 0.4);'></i>",
-                "<i class='fa fa-caret-right'  style='outline:none !important;font-size:200%;color:rgba(108, 183, 67, 0.4);'></i>"
-                ],
-                autoplay: true,
-                autoplayHoverPause: true
-               
-             
-                                                
-            });
-
-            $("a.owl-prev ").click(function() {
-                    $("div.owl-prev").click();
-                })
-                $("a.owl-next ").click(function() {
-                    $("div.owl-next").click();
-                })
-
-
-    </script> 
 
     <style>
       
@@ -332,39 +270,6 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
   
   
 </section>
-
-
-
-<section id="section2" class="py-5 section-2">
-
-    <div class="container py-5 text-center">
-    <h2 class="letter3" style="font-size:300%;text-align:left;color:#575858;">Projetos</h2>
-    <div class="mx-auto " style="margin-top:12%;" >
-    <div class="slider owl-carousel mx-auto" style="width:100%;">
-        <div class="card" style="outline: none;border-color:#86BD55;;padding-top: 4%;margin-top: 5%;margin-bottom: 16%;width:95%;">
-        <div class="" style="padding-bottom: 264px;">
-                    <h1 class="workshop" style="text-align: center;font-size: 50px;color:#86BD55;">
-                        Card
-                    </h1>
-        </div>
-        </div>
-        <div class="card" style="outline: none;border-color:#86BD55;padding-top: 4%;margin-top: 5%;margin-bottom: 16%;width:95%;">
-        <div class="" style="padding-bottom: 264px;">
-                    <h1 class="workshop" style="text-align: center;font-size: 50px;color:#86BD55;">
-                        Card
-                    </h1>
-        </div>
-        </div>
-        <div class="card" style="outline: none;border-color:#86BD55;padding-top: 4%;margin-top: 5%;margin-bottom: 16%;width:95%;">
-        <div class="" style="padding-bottom: 264px;">
-                    <h1 class="workshop" style="text-align: center;font-size: 50px;color:#86BD55;">
-                        Card
-                    </h1>
-        </div>
-        </div>
-    </div>
-    </div>
-
 
     <script>
 
@@ -426,7 +331,7 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
 
   
   
-</section>
+
 <section id="section2" class="py-5 section-2">
     <div class="container py-5 text-center">
         <div class="row">
