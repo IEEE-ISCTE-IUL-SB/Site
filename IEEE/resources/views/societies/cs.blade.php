@@ -7,9 +7,7 @@
 </section>
 
 
-<section id="bannersection" class="banner-bg">
-<!--    <img src="{{asset('img/csocietybackgroundbackup.jpg')}}" class="banner">-->
-</section>
+<section id="bannersection"></section>
 
 <section id="missionsection">
     <div class="row mission-row" >

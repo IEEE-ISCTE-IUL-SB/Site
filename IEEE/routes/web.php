@@ -43,6 +43,10 @@ Route::get('/sobrenos', function () {
     return view('aboutus');
 });
 
+Route::get('/eventodetalhe', function () { //TODO turn into different route for each event
+    return view('eventodetalhe');
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

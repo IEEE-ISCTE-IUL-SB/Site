@@ -294,7 +294,7 @@
                     text-overflow: ellipsis;
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
-                    height:65%;
+                    height:2.5rem;
                     opacity:0;
                     transition: .3s;
                 }
@@ -339,6 +339,7 @@
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description{
                     padding-top: 2.5rem;
                     margin-bottom: 1.5rem;
+                    height: 5rem;
                     opacity: 1;
                     transition: .3s;
                 }
@@ -510,21 +511,23 @@
 
 <section id="newsletterSection" style="background: #23384f;padding-bottom:6%">
     <div class="container" style="text-align:center;">
-        <h1 class="letter2" style="font-size:44px;color:white;padding-top:10%;padding-bottom:10%;letter-spacing:1px;"> QUERES SABER MAIS? RECEBE A NOSSA NEWSLETTER!</h1>
-        <form class="" action="#" id="subscribe-form" method="get" novalidate="true">
+        <h1 class="letter2" style="font-size:44px;color:white;padding-top:10%;padding-bottom:10%;letter-spacing:1px;"> PROCURA POR MAIS EVENTOS </h1>
+
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-10 col-sm-12 form-group padding-10">
-                    <input type="email" class="form-control input-subscribe" id="NEWSLETTER-EMAIL" name="NEWSLETTEREMAIL" placeholder="O teu Email..." required="">
-                    <label for="NEWSLETTER-EMAIL"></label>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-12 button-container padding-10">
-                    <button style="width:100%" type="submit" class="btn-primary btn">⇀</button>
-                </div>
+
+                <form class="search-form">
+                    <div class="input-group search-group-align">
+                        <input type="text" class="search-input" id="search" placeholder="Workshops..." autocomplete="off">
+                        <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
+                    </div>
+                </form>
             </div>
-            <p style="padding-top:10px;">
-                <small style="color:white;">Podes terminar a subscrição a qualquer momento!</small>
-            </p>
-        </form>
+            <div class="event-tag-row row">
+                <btn class="event-tag-button wedge-tag" href=""> CS </btn>
+                <btn class="event-tag-button wedge-tag"> Workshop </btn>
+                <btn class="event-tag-button wedge-tag"> Git </btn>
+            </div>
+
     </div>
 </section>
 
@@ -598,7 +601,7 @@
                             Event4 caption
                         </div>
                         <div class="event-card-body-seemore">
-                            See more ⇀
+                            <a href="{{ url('/eventodetalhe') }}">See more ⇀</a>
                         </div>
                     </div>
                 </div>
@@ -607,9 +610,9 @@
 
     </div>
 
+
         <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
-                var halfCardWidth = document.getElementsByClassName('event-card').item(0).clientWidth / 2;
 
                 $(".event-slider").owlCarousel({
                     loop: true,
@@ -665,6 +668,86 @@
 
             #section3 {
 
+            }
+
+            .event-tag-row {
+                margin: .3rem 0 1.5rem;
+                justify-content: center;
+            }
+
+            .event-tag-button {
+                border-radius: 1px;
+                padding: .5rem .6rem;
+                margin: .3rem;
+                color:white;
+                background: #6d89a4;
+                transition: .2s;
+            }
+
+            .event-tag-button:hover {
+                background: #48748f;
+                transform: scale(1.1);
+                margin: .3rem .5rem;
+                transition: .2s;
+            }
+
+            .wedge-tag {
+                -webkit-clip-path: polygon(calc(100% - 10px) 0, 100% 0, 100% 100% , 0 100%,  100% 10px);
+                clip-path: polygon(10px 0, 100% 0, 100% 100% , 0 100%, 0 10px);
+            }
+
+            .search-form {
+                max-width: 80%;
+                margin-top: 2%;
+                position: relative;
+            }
+
+            .search-label {
+                position: absolute;
+                right: 2%;
+                top: 50%;
+                transform: translatey(-50%);
+                color: #A7A8A7;
+                transition: all 0.2s ease;
+            }
+
+            .search-input {
+                width: 100%;
+                padding: 8px 30px 8px 12px;
+                border: 2px solid rgba(0, 0, 0, 0.01);
+                outline: none;
+                font-size: 16px;
+                box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.06);
+                color: #A7A8A7;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+                border-radius: 40px;
+                transition: all 0.2s ease;
+                padding-left:5%;
+            }
+
+            .search-input:focus {
+                border-color:white;
+            }
+
+            .search-input:focus + label {
+                transform: scale(1.05) translatey(-50%);
+                color: :#A7A8A7;
+            }
+
+            .search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #A7A8A7;
+                opacity: 1; /* Firefox */
+            }
+
+            .search-group-align {
+                margin-left: auto;
+                margin-right:none;
+                position:relative;
+                width:35vw;
+                height:50px;
+                margin-top:-12%;
+                margin-bottom:auto;
             }
 
             .padding-10{
@@ -895,6 +978,16 @@
                 #novidadesScreen {
                     font-size: 6vw;
                 }
+
+                .search-group-align {
+                    position:relative;
+                    width:100%;
+                    height:50px;
+                    margin-top:auto;
+                    margin-bottom:auto;
+                    margin-left: auto;
+                    margin-right:auto;
+                }
             }
 
             @media (max-width: 768px) {
@@ -940,6 +1033,7 @@
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
                     opacity: 0;
+                    height:0;
                 }
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-card-body-seemore{
