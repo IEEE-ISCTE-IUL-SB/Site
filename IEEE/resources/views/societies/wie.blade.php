@@ -3,7 +3,7 @@
 @section('content')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<section id="section1" style="overflow:hidden;margin-top:5%;margin-bottom:10%;       overflow:hidden;">
+<section id="section1" style="overflow:hidden;margin-top:1%;margin-bottom:2%;       overflow:hidden;">
 <div class="row">
 <h1 class="letter2"style=" 
         width:45%;
