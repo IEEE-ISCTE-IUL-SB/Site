@@ -126,7 +126,7 @@
 
 @media only screen and (min-width: 1000px) {
   .phone {
-    width:34%;margin-top:-40px;margin-bottom:-40px;
+    width:40%;margin-top:-40px;margin-bottom:-40px;
     overflow:hidden;
   }
 

@@ -34,23 +34,23 @@
 <section id="section2" class="py-5 section-2" style="overflow:hidden;">
 
  
-    <div class="row" style="overflow:hidden;">
+    <div class="row" style="overflow:hidden;padding-bottom:10%;padding-top:1%;">
     <div class="column side1" >
             
-                <div style="border-radius:10px;margin-left:4.5%;margin-right:2%;margin-top:1%;padding:center;height:96%;
-                -webkit-box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
-                        box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
+                <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;padding:center;height:99%;
+-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13); 
+box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                         <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#333333;font-size: 250%" > kfkifviodksoskcdo</h1>
+                        <h1 class="letter2" style="color:#333333;font-size: 250%" >kfkifviodksoskcdo</h1>
                         <h1 class="letter2" style="color:#333333;font-size: 130%"> olal</h1>
                 </div>
          
         </div>
         </div>
         <div class="column side2" >
-            <img src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.24);
-                box-shadow:0px 0px 16px 4px rgba(0,0,0,0.24);height:auto;width:100%">
+            <img src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
+                box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);height:auto;width:94%;">
         </div>
     </div>
    
@@ -67,12 +67,12 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
            
-                <p class="text-muted lead sections-description ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                <p class="text-muted lead sections-description ">É um chapter da IEEE Portugal criado em 2005 cujos seus principais objetivos são promover pesquisa, educação, empreendedorismo e interesse público em Robótica e Automação em Portugal através  de organização de conferências e workshops científicos, competições de robôs educacionais e de pesquisa, reuniões entre empresas e academia e sessões de divulgação de Ciência e Tecnologia aos estudantes.</p>
             </div>
         </div>
     </div>
 </section>
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title" >Workshops</h2>
+<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title">Workshops</h2>
     <div class="container py-5 text-center">
 
     <div class="event-slider owl-carousel">

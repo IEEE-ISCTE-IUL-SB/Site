@@ -10909,6 +10909,10 @@ a.text-dark:focus {
   font-family:'font-letter3';
 }
 
+.letter4{
+  font-family:'font-letter4';
+}
+
 @font-face {
   font-family: "font-letter1";
   src:url("../fonts/NHaasGroteskTXPro-55Rg.ttf") format("truetype");
