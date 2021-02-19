@@ -47,6 +47,10 @@ Route::get('/eventodetalhe', function () { //TODO turn into different route for 
     return view('eventodetalhe');
 });
 
+Route::get('/search', function () { //TODO turn into different route for each search
+    return view('resultadosprocura');
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

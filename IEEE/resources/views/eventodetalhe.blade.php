@@ -198,7 +198,7 @@
 
     .slider-description {
         position: relative;
-        height: 10vh;
+        min-height: 10vh;
         z-index: 1;
         font-size: 1rem;
         opacity: 0;
@@ -297,7 +297,7 @@
 
     .slider-img {
         width: 100%;
-        height: 43vh;
+        height: 55vh;
         object-fit: cover;
     }
 
@@ -318,6 +318,14 @@
         position: absolute;
         white-space: nowrap;
         width: 1px;
+    }
+
+    @media (max-width: 768px) {
+
+        .slider-controls {
+            margin: 0 1rem 0 0;
+        }
+
     }
 
 
