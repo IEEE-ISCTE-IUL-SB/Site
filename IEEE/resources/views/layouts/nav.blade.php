@@ -170,7 +170,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" href="{{ url('/eventos') }}">Eventos</a></li>
                     <li class="nav-item"style="margin:auto;">
-                        <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
+                        <a class="nav-link  letter2" style="margin:auto;"href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown"style="margin:auto;">
 	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Societies  </a>
 	    <div class="dropdown-menu dropdown-large dropdownH d">
@@ -269,7 +269,7 @@
                         @endguest
 
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="margin:auto;">
                         <a class="nav-link  letter2" href="{{ url('/sobrenos') }}">Sobre nós</a>
                     </li>
                 </ul>

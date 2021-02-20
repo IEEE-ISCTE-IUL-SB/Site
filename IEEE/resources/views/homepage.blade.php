@@ -3,113 +3,39 @@
 @section('content')
 
 
-<section style="margin-bottom:0%;background: url(img/background4.png);background-size: cover;background-position: center;" id="companiesStories" >
+<section style="margin-bottom:0%;background:white;padding-top:0%;padding-bottom:5.2%;background-size: cover;background-position: center;" id="companiesStories" >
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     
-    <div class="mx-auto " style="width:95%;">
-    <div class="slider owl-carousel mx-auto" style="padding-bottom:1%;" >
-    
-    <div class="card" style="outline: none;background-color:transparent;border-color:transparent;padding-top: 4%;margin-top: 1%;margin-bottom:2%;width:98%;margin-bottom:10%;">
-      <div class="row" style="">
-                <div class="col-sm-5 ml-xl-4" style="margin-top:auto;margin-bottom:auto;">
-                <h1 class="letter2 workshop" style="background: url(img/title5.png);background-size: cover;background-position: center;padding-bottom: 139px;
-    padding-top: 86px;
-    padding-left:80px;font-size:3.8pc;margin-left:3%;-webkit-background-clip: text;
-  color: transparent;">
-                    Vem<br>conhecer-nos
-                </h1>
-                </div>
-                <div class="ml-xl-3 col-sm-6">
-                <div style="background-image: url(img/ieee3.jpg);
-    -webkit-box-shadow: 0 1px 10px #989898;
-    -moz-box-shadow: 0 1px 10px #989898;
-    box-shadow: 0 1px 10px #989898;
-    background-size: cover;
-    background-position: center;
-    width: auto;
-    margin-top: 0%;
-    margin-left: 11px;
-    padding-top: 70%;
-    padding-right: 59px;
-    border-radius: 55%;
-    padding-left: 101px;">
-                </div>
-                </div>
-      </div>
-    </div>
-
-
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: -3px 15px 18px -8px rgba(0,0,0,0.19); 
+box-shadow: -3px 15px 18px -8px rgba(0,0,0,0.19);">
+                <div class="row">
+                    <div style="margin-top:0%;width:40%;">
+                        <div style="width:100%;">
+                            <div class="letter2 workshop" style="
+                       padding-top:30%;
+                            padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
+                        background-color: white;text-align:left;">
+                                            <h1 style=" opacity:60%;">Advancing Technology for Humanity</h1>
+                                            <a ><p href="{{ url('/') }}" class="butpro letter2">Ver mais</p></a>
+                            </div>
+                            
+                        </div>
+                    </div>            
+                    <div style="width:60%;"> 
+                        <img src="{{asset('img/ieee3.jpg')}}"  style="
+                    height:auto;
+                        width:100%;;
+                        border-radius:0px;
+                        padding-bottom:0%;
+                        margin-bottom:-0.3%;"/>
+                    </div>
+                </div>  
+            </div>
+        </div>
 
     
-    <div class="card" style="outline: none;margin-bottom:10%;background-color:transparent;border-color:transparent;padding-top: 4%;margin-top: 1%;margin-bottom:2%;width:98%;">
-      <div class="row" style="">
-                <div class="col-sm-5 ml-xl-4" style="margin-top:auto;margin-bottom:auto;">
-                <h1 class=" letter2 workshop" style="background: url(img/title6.png);background-size: cover;background-position: center;padding-bottom: 139px;
-    padding-top: 86px;
-    padding-left:80px;font-size:55px;margin-left:3%;-webkit-background-clip: text;
-  color: transparent;">
-                     Vê os projetos que temos para ti
-                     <a><p href="{{ url('/') }}" class="butpro letter2">Ver mais</p></a>
-                </h1>
-              
-                </div>
-                <div class="ml-xl-3 col-sm-6">
-                <div style="background-image: url(img/ieee1.jpg);
-     -webkit-box-shadow: 0 1px 10px #989898;
-    -moz-box-shadow: 0 1px 10px #989898;
-    box-shadow: 0 1px 10px #989898;
-    background-size: cover;
-    background-position: center;
-    width: auto;
-    margin-top: 0%;
-    margin-left: 11px;
-    padding-top: 70%;
-    padding-right: 59px;
-    border-radius: 55%;
-    padding-left: 101px;">
-                </div>
-               </div>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="card" style="outline: none;margin-bottom:10%;background-color:transparent;border-color:transparent;padding-top: 4%;margin-top: 1%;margin-bottom:2%;width:98%;">
-      <div class="row" style="">
-                <div class="col-sm-5 ml-xl-4" style="margin-top:auto;margin-bottom:auto;">
-                <h1 class="workshop letter2" style="background: url(img/ieee2.jpg);background-size: cover;background-position: center;padding-bottom:139px;
-    padding-top: 86px;
-    padding-left:80px;font-size:57px;margin-left:0%;-webkit-background-clip: text;
-  color: transparent;">
-                    Qualquer coisa
-                </h1>
-                </div>
-                <div class="ml-xl-3 col-sm-6">
-                <div style="background-image: url(img/ieee2.jpg);
-     -webkit-box-shadow: 0 1px 10px #989898;
-    -moz-box-shadow: 0 1px 10px #989898;
-    box-shadow: 0 1px 10px #989898;
-    background-size: cover;
-    background-position: center;
-    width: auto;
-    margin-top: 0%;
-    margin-left: 11px;
-    padding-top: 70%;
-    padding-right: 59px;
-    border-radius: 55%;
-    padding-left: 101px;">
-                </div> </div>
-      </div>
-    </div>
-
-
-
-
-    </div>
 
 
     <style>
@@ -149,46 +75,13 @@
 
     }
     </style>
-    <script>
+    
 
-$(".slider").owlCarousel({
-                loop: true,
-                smartSpeed: 6000,
-                autoplay: true,
-                autoplayTimeout: 12000, //2000ms = 2s;
-                autoplayHoverPause: true,
-                loop: true,
-                margin:1,
-                nav: true,
-                items:1,
-                autoplay: true,
-                autoplayHoverPause: true,
-                navText: [
-                "<i class='fa fa-caret-left' style='outline:transparent!important;font-size:300%;color:rgba(31, 73, 133, 0.05);margin-right:10%;'></i>",
-                "<i class='fa fa-caret-right'  style='outline:transparent !important;font-size:300%;color:rgba(31, 73, 133, 0.05);margin-left:10%;'></i>"
-                ],
-                                                
-            });
+    
+
 
          
-
-
-    </script> 
-
-    
-
-  
-        </div> 
-    </div> 
- 
-         
-    <style>
-
-
-
-    
-    
-    </style>        
+        
 
 <script>
 
@@ -209,7 +102,7 @@ $(function () {
 
 
 
-</div>
+
 </section>
 
 <section id="section1" style="background: rgb(123,143,131);
