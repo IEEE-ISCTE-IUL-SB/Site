@@ -4,11 +4,11 @@
 
 <section id="result-section">
     <div class="container row title-row">
-        <div class="result-title col-12 col-lg-7"> Resultados da procura por "asdasdasd": </div>
+        <div class="result-title col-12 col-lg-7"> Resultados da procura por "{{$searchtext}}": </div>
         <div class="justify-content-center col-12 col-lg-5">
             <form class="search-form">
                 <div class="input-group search-group-align">
-                    <input type="text" class="search-input" id="search" placeholder="Workshops..." autocomplete="off">
+                    <input type="text" class="search-input" id="search" placeholder="Eventos..." autocomplete="off">
                     <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
                 </div>
             </form>
@@ -17,80 +17,30 @@
 
     <div class="container event-container row justify-content-center mx-auto">
 
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
-                </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
-                </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
+        @if(count($searchresults) != 0)
+            @foreach($searchresults as $event)
+                <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
+                    <div class="event-card mx-auto">
+                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <div class="card-ellipse">
+                        </div>
+                        <div class="event-card-body">
+                            <div class="event-card-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="event-card-body-caption">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="event-card-body-seemore">
+                                See more ⇀
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
-                </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
-                </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </div>
-
+            @endforeach
+        @else
+        <div>Sem resultados para a tua procura</div>
+        @endif
 
     </div>
 
@@ -137,8 +87,8 @@
         border: 2px solid rgba(0, 0, 0, 0.01);
         outline: none;
         font-size: 16px;
-        -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.35);
-        box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.35);
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.15);
         color: #A7A8A7;
         font-weight: bold;
         letter-spacing: 0.5px;

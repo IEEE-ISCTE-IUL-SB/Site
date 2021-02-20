@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,12 +44,24 @@ Route::get('/sobrenos', function () {
     return view('aboutus');
 });
 
-Route::get('/eventodetalhe', function () { //TODO turn into different route for each event
-    return view('eventodetalhe');
+Route::get('/evento/{id}', function ($id) { //TODO turn into different route for each event
+    $event = App\Event::all()->where('id', $id)->first();
+    return View::make('eventodetalhe')->with('event', $event);
 });
 
-Route::get('/search', function () { //TODO turn into different route for each search
-    return view('resultadosprocura');
+Route::get('/search/{searchtext}', function ($searchtext) { //TODO turn into different route for each search
+
+    $searchresults = App\Event::all()->filter(function($event) use($searchtext) {
+        foreach($event->tags as $tag) {
+            if (strcmp(strtolower($tag->tag_name), $searchtext) != 0)
+            {
+                return true;
+            }
+        }
+        return (str_contains(strtolower($event->event_name), $searchtext));
+    });
+    return View::make('resultadosprocura')->with('searchtext', $searchtext)->with('searchresults', $searchresults);
+
 });
 
 

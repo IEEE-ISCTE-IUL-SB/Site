@@ -5,37 +5,50 @@
 <section id="description-section">
     <div class="container">
         <div class="event-title letter3">
-            Workshop Git/Github
+            {{$event->event_name}}
         </div>
         <div class="event-tag-row row">
-            <btn class="event-tag-button wedge-tag" href=""> CS </btn>
-            <btn class="event-tag-button wedge-tag"> Workshop </btn>
-            <btn class="event-tag-button wedge-tag"> Git </btn>
+            @foreach ($event->tags as $tag)
+                <btn class="event-tag-button wedge-tag" href=""> {{$tag->tag_name}} </btn>
+
+            @endforeach
         </div>
-        <div class="event-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lobortis libero. Sed sodales faucibus diam, ut tristique urna pulvinar consequat. Mauris dui purus, gravida id urna in, pharetra sagittis ante. Quisque congue quam diam, vitae pharetra arcu eleifend quis. Vestibulum aliquam justo a tincidunt aliquam. Nullam porttitor nisi et elit dictum gravida. Cras feugiat, ex in varius sagittis, odio purus lobortis elit, eu rhoncus nunc tellus vel libero. Donec eleifend quam ut neque tristique iaculis. Duis nec tincidunt nisl. Proin id blandit odio. Vestibulum ullamcorper lorem in arcu bibendum tincidunt.
+        <div class="event-description"> {{$event->event_description}}
         </div>
     </div>
 </section>
 
 <section id="detail-section">
-    <div class="detail-row row">
-        <div class="detail-col col">
-            <div class="row" style="justify-content: center">
-                <div class="detail-title">
-                    <i class="fa fa-calendar-o"></i>
-                </div>
-                <div class="detail-info">
-                    Data1
+    <div class="container">
+        <div class="detail-row row">
+            <div class="detail-col col-3">
+                <div class="row" style="justify-content: center">
+                    <div class="detail-title">
+                        <i class="fa fa-calendar-o"></i>
+                    </div>
+                    <div class="detail-info">
+                        {{$event->event_date}}
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="detail-col col">
-            <div class="row" style="justify-content: center">
-                <div class="detail-title">
-                    <i class="fa fa-map icon"> </i>
+            <div class="detail-col col-3">
+                <div class="row" style="justify-content: center">
+                    <div class="detail-title">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="detail-info">
+                        {{$event->event_time}}
+                    </div>
                 </div>
-                <div class="detail-info">
-                    Localização
+            </div>
+            <div class="detail-col col-6">
+                <div class="row" style="justify-content: center">
+                    <div class="detail-title">
+                        <i class="fa @if(strcasecmp($event->event_location, 'Online') != 0) fa-map @else fa-globe @endif icon"> </i>
+                    </div>
+                    <div class="detail-info">
+                        {{$event->event_location}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,48 +60,52 @@
         <div>
             <div class="col-xs-12">
                 <ul class="slider slider-ul">
-                    <li class="slider-item">
-                        <div class=" vertical">
-                            <div class="col-xs-12 col-md-12 slider-item-col">
-                                <div class="image-holder">
-                                    <img class="slider-img" src="{{asset('img/ieee2.jpg')}}">
-                                </div>
-                                <div>
-                                    <div class="col-xs-9 col-md-9">
-                                        <p class="slider-description">Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                     <li class="slider-item active">
                         <div class=" vertical">
                             <div class="col-xs-12 col-md-12 slider-item-col">
                                 <div class="image-holder">
-                                    <img class="slider-img" src="{{asset('img/ieee1.jpg')}}">
+                                    <img class="slider-img" src="{{asset($event->image1)}}">
                                 </div>
                                 <div>
                                     <div class="col-xs-9 col-md-9">
-                                        <p class="slider-description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
+                                        <p class="slider-description">{{$event->image1_description}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    @if(!is_null($event->image2))
+                    <li class="slider-item">
+                        <div class=" vertical">
+                            <div class="col-xs-12 col-md-12 slider-item-col">
+                                <div class="image-holder">
+                                    <img class="slider-img" src="{{asset($event->image2)}}">
+                                </div>
+                                <div>
+                                    <div class="col-xs-9 col-md-9">
+                                        <p class="slider-description">{{$event->image2_description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    @endif
+                    @if(!is_null($event->image3))
                     <li class="slider-item">
                         <div class="vertical">
                             <div class="col-xs-12 col-md-12 slider-item-col">
                                 <div class="image-holder">
-                                    <img class="slider-img" src="{{asset('img/ieee3.jpg')}}">
+                                    <img class="slider-img" src="{{asset($event->image3)}}">
                                 </div>
                                 <div>
                                     <div class="col-xs-9 col-md-9">
-                                        <p class="slider-description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
+                                        <p class="slider-description">{{$event->image1_description}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    @endif
                 </ul>
 
                 <div class="row justify-content-end" style="margin: 0">
@@ -336,8 +353,7 @@
     const itemCount = items.length;
     const nextItem = document.querySelector('.slider-next');
     const previousItem = document.querySelector('.slider-previous');
-    var count;
-    setTimeout( function() { let count = 0; }, 10);
+    var count = 0;
 
     nextItem.addEventListener('click', showNextItem);
     previousItem.addEventListener('click', showPreviousItem);
