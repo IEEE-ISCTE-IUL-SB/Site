@@ -44,16 +44,16 @@ Route::get('/sobrenos', function () {
     return view('aboutus');
 });
 
-Route::get('/evento/{id}', function ($id) { //TODO turn into different route for each event
+Route::get('/evento/{id}', function ($id) {
     $event = App\Event::all()->where('id', $id)->first();
     return View::make('eventodetalhe')->with('event', $event);
 });
 
-Route::get('/search/{searchtext}', function ($searchtext) { //TODO turn into different route for each search
-
+Route::post('/search', function (Request $request) {
+    $searchtext = $request->searchtext;
     $searchresults = App\Event::all()->filter(function($event) use($searchtext) {
         foreach($event->tags as $tag) {
-            if (strcmp(strtolower($tag->tag_name), $searchtext) != 0)
+            if (strcmp(strtolower($tag->tag_name), $searchtext) == 0)
             {
                 return true;
             }

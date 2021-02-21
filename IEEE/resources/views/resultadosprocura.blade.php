@@ -6,10 +6,11 @@
     <div class="container row title-row">
         <div class="result-title col-12 col-lg-7"> Resultados da procura por "{{$searchtext}}": </div>
         <div class="justify-content-center col-12 col-lg-5">
-            <form class="search-form">
+            <form class="search-form" id="search-form" method="post" action="/search">
+                @csrf
                 <div class="input-group search-group-align">
-                    <input type="text" class="search-input" id="search" placeholder="Eventos..." autocomplete="off">
-                    <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
+                    <input type="text" class="search-input" id="search" name="searchtext" placeholder="Eventos..." autocomplete="off">
+                    <label onclick="submitSearchForm()" class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
                 </div>
             </form>
         </div>
@@ -20,26 +21,28 @@
         @if(count($searchresults) != 0)
             @foreach($searchresults as $event)
                 <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-                    <div class="event-card mx-auto">
-                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
-                        <div class="card-ellipse">
+                    <a href="/evento/{{$event->id}}">
+                        <div class="event-card mx-auto">
+                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                            <div class="card-ellipse">
+                            </div>
+                            <div class="event-card-body">
+                                <div class="event-card-body-title">
+                                    {{$event->event_name}}
+                                </div>
+                                <div class="event-card-body-caption">
+                                    {{$event->event_description}}
+                                </div>
+                                <div class="event-card-body-seemore">
+                                    See more ⇀
+                                </div>
+                            </div>
                         </div>
-                        <div class="event-card-body">
-                            <div class="event-card-body-title">
-                                {{$event->event_name}}
-                            </div>
-                            <div class="event-card-body-caption">
-                                {{$event->event_description}}
-                            </div>
-                            <div class="event-card-body-seemore">
-                                See more ⇀
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             @endforeach
         @else
-        <div>Sem resultados para a tua procura</div>
+            <div class="no-results-message">Sem resultados para a tua procura</div>
         @endif
 
     </div>
@@ -129,6 +132,11 @@
 
     .card-wrapper {
         padding: 3% 1%;
+    }
+
+    .no-results-message {
+        margin-top: 10%;
+        font-size: 25px;
     }
 
     .event-card {
@@ -328,4 +336,10 @@
     }
 
 </style>
+
+<script>
+    function submitSearchForm() {
+        document.getElementById("search-form").submit();
+    }
+</script>
 @endsection

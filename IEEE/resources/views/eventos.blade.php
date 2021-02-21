@@ -515,10 +515,11 @@
 
             <div class="row justify-content-center">
 
-                <form class="search-form">
+                <form class="search-form" id="search-form" method="post" action="/search">
+                    @csrf
                     <div class="input-group search-group-align">
-                        <input type="text" class="search-input" id="search" placeholder="Workshops..." autocomplete="off">
-                        <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
+                        <input type="text" class="search-input" id="search" name="searchtext" placeholder="Workshops..." autocomplete="off">
+                        <label onclick="submitSearchForm()" class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
                     </div>
                 </form>
             </div>
@@ -641,6 +642,11 @@
                 $("a.owl-next ").click(function() {
                     $("div.owl-next").click();
                 })
+
+
+            function submitSearchForm() {
+                document.getElementById("search-form").submit();
+            }
 
         </script>
 
