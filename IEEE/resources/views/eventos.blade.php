@@ -85,65 +85,32 @@
     <div class="highlighted-event-container">
         <div class="mx-auto">
             <div class="highlighted-event-slider owl-carousel mx-auto">
-                <div class="highlighted-event-card">
 
-                    <img class="highlighted-event-img" src="{{asset('img/ieee1.jpg')}}">
+                @foreach($highlights as $event)
+                <a href="/evento/{{$event->id}}">
+                    <div class="highlighted-event-card">
 
-                    <div class="highlighted-event-body-bg"></div>
+                        <img class="highlighted-event-img" src="{{$event->image1}}">
 
-                    <div class="highlighted-event-card-body">
-                        <div class="highlighted-event-body-title">
-                            Destaque1
-                        </div>
-                        <div class="highlighted-event-body-description text-wrap text-truncate">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique nulla eu mi pellentesque, eget placerat eros commodo. Fusce cursus ipsum ac vestibulum rhoncus. Morbi sed sollicitudin mi. Quisque placerat eros sit amet lorem interdum, nec facilisis tortor lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras hendrerit tellus elit. Nullam sit amet ante lectus. Etiam maximus tincidunt nibh vitae commodo. Donec placerat, elit in placerat tempus, libero risus tincidunt arcu, ac condimentum felis justo at risus. Etiam posuere erat vel vulputate placerat. Suspendisse nec aliquam nisl, et lacinia dolor. Vestibulum nisl ligula, gravida ac maximus vitae, egestas nec tellus.
-                        </div>
-                        <div class="date-time-location-carousel row">
-                            <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> Av. das Forças Armadas, 1649-026 Lisboa</div>
-                        </div>
-                        <div class="highlighted-event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
+                        <div class="highlighted-event-body-bg"></div>
 
-                <div class="highlighted-event-card">
-
-                    <img class="highlighted-event-img" src="{{asset('img/ieee2.jpg')}}">
-
-                    <div class="highlighted-event-body-bg"></div>
-
-                    <div class="highlighted-event-card-body">
-                        <div class="highlighted-event-body-title">
-                            Destaque2
-                        </div>
-                        <div class="highlighted-event-body-description text-wrap text-truncate">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique nulla eu mi pellentesque, eget placerat eros commodo. Fusce cursus ipsum ac vestibulum rhoncus. Morbi sed sollicitudin mi. Quisque placerat eros sit amet lorem interdum, nec facilisis tortor lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras hendrerit tellus elit. Nullam sit amet ante lectus. Etiam maximus tincidunt nibh vitae commodo. Donec placerat, elit in placerat tempus, libero risus tincidunt arcu, ac condimentum felis justo at risus. Etiam posuere erat vel vulputate placerat. Suspendisse nec aliquam nisl, et lacinia dolor. Vestibulum nisl ligula, gravida ac maximus vitae, egestas nec tellus.
-                        </div>
-                        <div class="date-time-location-carousel row">
-                            <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> Av. das Forças Armadas, 1649-026 Lisboa</div>
+                        <div class="highlighted-event-card-body">
+                            <div class="highlighted-event-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="highlighted-event-body-description text-wrap text-truncate">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="date-time-location-carousel row">
+                                <div class="date-time-col"><i class="fa fa-clock-o"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> {{ date('d-m-y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> {{$event->event_location}}</div>
+                            </div>
+                            <div class="highlighted-event-card-body-seemore">
+                                See more ⇀
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="highlighted-event-card">
-
-                    <img class="highlighted-event-img" src="{{asset('img/ieee3.jpg')}}">
-
-                    <div class="highlighted-event-body-bg"></div>
-
-                    <div class="highlighted-event-card-body">
-                        <div class="highlighted-event-body-title">
-                            Destaque3
-                        </div>
-                        <div class="highlighted-event-body-description text-wrap text-truncate">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique nulla eu mi pellentesque, eget placerat eros commodo. Fusce cursus ipsum ac vestibulum rhoncus. Morbi sed sollicitudin mi. Quisque placerat eros sit amet lorem interdum, nec facilisis tortor lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras hendrerit tellus elit. Nullam sit amet ante lectus. Etiam maximus tincidunt nibh vitae commodo. Donec placerat, elit in placerat tempus, libero risus tincidunt arcu, ac condimentum felis justo at risus. Etiam posuere erat vel vulputate placerat. Suspendisse nec aliquam nisl, et lacinia dolor. Vestibulum nisl ligula, gravida ac maximus vitae, egestas nec tellus.
-                        </div>
-                        <div class="date-time-location-carousel row">
-                            <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> Av. das Forças Armadas, 1649-026 Lisboa</div>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
         </div>
     </div>
@@ -224,18 +191,18 @@
                     transition: .3s;
                 }
 
-                .center > .highlighted-event-card {
+                .center > a >.highlighted-event-card {
                     transform: scale(1, 1);
                     transition: .3s;
                 }
 
-                .center > .highlighted-event-card > .highlighted-event-body-bg,
-                .center > .highlighted-event-card > .highlighted-event-card-body {
+                .center > a > .highlighted-event-card > .highlighted-event-body-bg,
+                .center > a > .highlighted-event-card > .highlighted-event-card-body {
                     opacity: 1;
                     transition: .3s;
                 }
 
-                .center > .highlighted-event-card > .highlighted-event-img {
+                .center > a > .highlighted-event-card > .highlighted-event-img {
                     filter: brightness(1);
                     transition: .3s;
                 }
@@ -434,75 +401,31 @@
 
     <div class="container event-container text-center">
         <h2 class="letter3 carousel-title">
-            Esta semana
+            Próximos Eventos
         </h2>
 
         <div>
             <div class="event-slider owl-carousel">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event1
+                @foreach($nextevents as $event)
+                    <a href="/evento/{{$event->id}}">
+                        <div class="event-card mx-auto">
+                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                            <div class="card-ellipse">
+                            </div>
+                            <div class="event-card-body">
+                                <div class="event-card-body-title">
+                                    {{$event->event_name}}
+                                </div>
+                                <div class="event-card-body-caption">
+                                    {{$event->event_description}}
+                                </div>
+                                <div class="event-card-body-seemore">
+                                    See more ⇀
+                                </div>
+                            </div>
                         </div>
-                        <div class="event-card-body-caption">
-                            Event1 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event2
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event2 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event3
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event3
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event4
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event4 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                @endforeach
             </div>
         </div>
 
@@ -524,9 +447,9 @@
                 </form>
             </div>
             <div class="event-tag-row row">
-                <btn class="event-tag-button wedge-tag" href=""> CS </btn>
-                <btn class="event-tag-button wedge-tag"> Workshop </btn>
-                <btn class="event-tag-button wedge-tag"> Git </btn>
+                @foreach ($highlightedtags as $tag)
+                <a class="event-tag-button wedge-tag" href="/search/{{$tag->tag_name}}"> {{$tag->tag_name}} </a>
+                @endforeach
             </div>
 
     </div>
@@ -542,70 +465,28 @@
 
         <div>
             <div class="event-slider owl-carousel">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event1
+
+                @foreach($pastevents as $event)
+                <a href="/evento/{{$event->id}}">
+                    <div class="event-card mx-auto">
+                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <div class="card-ellipse">
                         </div>
-                        <div class="event-card-body-caption">
-                            Event1 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event2
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event2 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
+                        <div class="event-card-body">
+                            <div class="event-card-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="event-card-body-caption">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="event-card-body-seemore">
+                                See more ⇀
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event3
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event3
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event4
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event4 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            <a href="{{ url('/eventodetalhe') }}">See more ⇀</a>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                @endforeach
+
             </div>
         </div>
 
@@ -695,6 +576,16 @@
                 transform: scale(1.1);
                 margin: .3rem .5rem;
                 transition: .2s;
+            }
+
+
+            a.event-tag-button{
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                appearance: button;
+
+                text-decoration: none;
+                color: white;
             }
 
             .wedge-tag {

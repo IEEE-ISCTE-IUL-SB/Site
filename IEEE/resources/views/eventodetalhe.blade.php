@@ -26,7 +26,7 @@
                         <i class="fa fa-calendar-o"></i>
                     </div>
                     <div class="detail-info">
-                        {{$event->event_date}}
+                        {{ date('d-m-y', strtotime($event->event_date))}}
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                         <i class="fa fa-clock-o"></i>
                     </div>
                     <div class="detail-info">
-                        {{$event->event_time}}
+                        {{ date('H:i', strtotime($event->event_time)) }} GMT
                     </div>
                 </div>
             </div>

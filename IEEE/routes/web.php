@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +44,19 @@ Route::get('/sobrenos', function () {
 
 
 Route::get('/eventos', function () {
-    return view('eventos');
+    $highlights = App\Event::all()->where('highlighted', 1);
+
+    $nextevents = App\Event::whereDate('event_date', '>', Carbon::yesterday())->get();
+
+    $pastevents = App\Event::whereDate('event_date', '<', Carbon::today())->paginate(5);
+
+    $highlightedtags = collect(new App\Tag);
+
+    foreach($highlights as $event) {
+        $highlightedtags = $highlightedtags->merge($event->tags);
+    }
+
+    return View::make('eventos')->with('highlights', $highlights)->with('nextevents', $nextevents)->with('pastevents', $pastevents)->with('highlightedtags', $highlightedtags);
 });
 
 
