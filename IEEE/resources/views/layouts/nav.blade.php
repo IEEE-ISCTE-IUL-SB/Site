@@ -44,9 +44,9 @@
 
         <style>
             body {
-                font-family: 'Nunito';
-                width:100%;
 
+                width:100%;
+                font-family:'font-letter1';
             }
 
             .text-small {
@@ -97,7 +97,7 @@
   }
 
   .dropdownfont{
-      font-size:120%;
+      font-size:120%;font-family:'font-letter1';
   }
 }
 
@@ -120,7 +120,7 @@
   }
 
   .dropdownfont{
-    font-size:120%;
+    font-size:120%;font-family:'font-letter1';
   }
 }
 
@@ -131,7 +131,7 @@
   }
 
   .dropdownfont{
-    font-size:170%;
+    font-size:170%;font-family:'font-letter1';
 
 
   }

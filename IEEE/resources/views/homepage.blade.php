@@ -8,8 +8,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     
-            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: -3px 15px 18px -8px rgba(0,0,0,0.19); 
-box-shadow: -3px 15px 18px -8px rgba(0,0,0,0.19);">
+    <div class="pc" >
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08); 
+box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);">
                 <div class="row">
                     <div style="margin-top:0%;width:40%;">
                         <div style="width:100%;">
@@ -18,9 +19,8 @@ box-shadow: -3px 15px 18px -8px rgba(0,0,0,0.19);">
                             padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
                         background-color: white;text-align:left;">
                                             <h1 style=" opacity:60%;">Advancing Technology for Humanity</h1>
-                                            <a ><p href="{{ url('/') }}" class="butpro letter2">Ver mais</p></a>
+                                            <a ><p href="{{ url('/') }}" class="butpro letter2">Junte-te a nós</p></a>
                             </div>
-                            
                         </div>
                     </div>            
                     <div style="width:60%;"> 
@@ -33,25 +33,70 @@ box-shadow: -3px 15px 18px -8px rgba(0,0,0,0.19);">
                     </div>
                 </div>  
             </div>
-        </div>
+     </div>
+        <div class="mobile">
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08); 
+                box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);">
+               
+                   
+                        <div style="width:100%;">
+                            <div class="letter2 workshop" style="
+                       padding-top:10%;padding-bottom:10%;
+                            padding-left:5%;padding-right:5%;font-size:310%;margin-left:0%;-webkit-background-clip: text;
+                        background-color: white;text-align:center;">
+                                            <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
+                                            <a style="text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro letter2">Junte-te a nós</p></a>
+                            </div>
+                        </div>
+                    
 
-    
+                
+                        <img src="{{asset('img/ieee3.jpg')}}"  
+                        style="
+                             height:auto;
+                            width:100%;
+                            border-radius:0px;
+                            padding-bottom:0%;
+                            margin-bottom:-0.3%;"/>
+                 
+            </div>  
+        
+         </div>
+  
 
 
     <style>
-        .butpro{
-        margin-top: 30px;
-    color: white;
-    -webkit-background-clip: text;
-    background-size: cover;background-position: center;
-    background: url(img/ieee3.jpg);
-    font-size: 17px;
-    width: 114px;
+
+@media (min-width: 100px) {
+
+.pc {
+    display: block;
+}
+.mobile {
+    display: none;
+}
+}
+
+@media (max-width: 1000px) {
+
+.pc {
+    display: none;
+}
+.mobile {
+    display: block;
+}
+}
+
+
+
+    
+
+.butpro:hover, .butpro:active{
+;
+
     border:1px solid white;
-    padding-left: 19px;
-    padding-right: 0px;
-    padding-top: 11px;
-    padding-bottom: 12px;
+    background: url(img/ieee3.jpg);
+    color: white;
     transition:0.1s ease-in all;
     -moz-transition:    all 0.1s  ease-in;
   -webkit-transition: all 0.1s  ease-in;
@@ -59,19 +104,27 @@ box-shadow: -3px 15px 18px -8px rgba(0,0,0,0.19);">
   -ms-transition:     all 0.1s  ease-in 
     }
 
-    .butpro:hover, .butpro:active{
-        border:1px solid 
-#585A5C
-;
+    .butpro{
+      
+        margin-top: 30px;
+        
+        -webkit-background-clip: text;
+        background-size: cover;background-position: center;
+        font-size: 17px;
+        width: 10pc;
+        padding-left:1%;
+        padding-right:1%;
+        padding-top: 11px;
+        padding-bottom: 12px;
+        text-align:center;
+        border:1px solid #585A5C;
         background:transparent;
-        color:
-#585A5C
-;
+        color:#585A5C;
         transition:0.15s ease-in all;
         -moz-transition:    all 0.15s  ease-in;
-  -webkit-transition: all 0.15s ease-in;
-  -o-transition:      all 0.15s  ease-in;
-  -ms-transition:     all 0.15s  ease-in 
+        -webkit-transition: all 0.15s ease-in;
+        -o-transition:      all 0.15s  ease-in;
+        -ms-transition:     all 0.15s  ease-in ;
 
     }
     </style>
@@ -105,9 +158,11 @@ $(function () {
 
 </section>
 
+
 <section id="section1" style="background: rgb(123,143,131);
 background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%, rgba(79,79,79,1) 100%);padding-bottom:15%;">
-    <div class="container">
+    
+    <div class="pc container" >
     <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explora as nossas societies</h1>
     <div class="row mx-auto" style="padding-top:10%;padding-left:-10px;">
       
@@ -126,6 +181,32 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
         </div>
         <div class="col-lg-2 share mx-auto">
         <img class="entity" src="{{asset('img/wielogo.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
+        </div>
+       
+    </div>
+        
+    </div>
+
+     
+    <div class="mobile container">
+    <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:20%;letter-spacing:1px;"> Explora as nossas societies</h1>
+    <div class="row mx-auto" style="padding-top:10%;text-align:center;">
+      
+        <div class="col-lg-2 share mx-auto">
+        <img class="entity1" src="{{asset('img/cslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
+        </div>
+        <div class="col-lg-2 share mx-auto ">
+        <img class="entity1" src="{{asset('img/MAE.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
+        </div>
+        <div class="col-lg-2 share mx-auto ">
+        <img class="entity" src="{{asset('img/raslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
+        </div>
+        
+        <div class="col-lg-2 share mx-auto ">
+        <img class="entity" src="{{asset('img/imslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
+        </div>
+        <div class="col-lg-2 share mx-auto">
+        <img class="entity" src="{{asset('img/wielogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
         </div>
        
     </div>
@@ -237,7 +318,78 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
 </section>
 
 
+<div class="container" style="margin-bottom:10%;">
+<h2 style="font-family:'font-letter2';font-size:3.5pc;letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;">Membros</h2>
+  <div class="members">
+    <div class="member">
+      <img class="member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033344/itc-web-course-flexbox/richard.png">
+      <h2 class="member-name">Richard Hendricks</h2>
+      <span class="member-role">Founder & CEO</span>
+    </div>
+    <div class="member">
+      <img  class="member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033285/itc-web-course-flexbox/dinesh.png">
+      <h2 class="member-name">Dinesh Chugtai</h2>
+      <span class="member-role">Senior Programmer</span>
+    </div>
+    <div class="member">
+      <img  class="member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033357/itc-web-course-flexbox/gilfoyle.png">
+      <h2 class="member-name">Bertram Gilfoyle</h2>
+      <span class="member-role">Chief Systems Architect</span>
+    </div>
+    <div class="member"><img  class="member-image"  src="https://res.cloudinary.com/mlshv/image/upload/v1544033291/itc-web-course-flexbox/jared.png">
+      <h2 class="member-name">Jared Dunn</h2>
+      <span class="member-role">Chief Operating Officer</span>
+    </div>
+    <div class="member">
+      <img  class="member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033291/itc-web-course-flexbox/monica.png">
+      <h2 class="member-name">Monica Hall</h2>
+      <span class="member-role">Chief Financial Officer</span>
+    </div>
+    <div class="member">
+      <img  class="member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033300/itc-web-course-flexbox/big-head.png">
+      <h2 class="member-name">Nelson Bighetti</h2>
+      <span class="member-role">Majority Investor</span>
 
+    </div>
+  </div>
+</div>
 
+<style>
 
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  width: 98%;
+}
+
+.member-image{
+    box-shadow: 0 0 black;
+    border-radius:100px;
+}
+
+.member {
+  text-align: center;
+  flex-basis: 7%;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.member-name {
+  margin: 0;
+  margin-top: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+  font-family:'font-letter4';
+  letter-spacing:1px;
+}
+
+.member-role {
+  font-style: normal;
+  font-size: 16px;
+  font-family:'font-letter4';
+  letter-spacing:1px;
+}
+</style>
 @endsection

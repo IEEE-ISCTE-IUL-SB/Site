@@ -22,136 +22,37 @@ margin-top:10%;margin-bottom:20%;">
                 <h2 style="margin-left: -2%;font-family:'font-letter2';font-size:270%;letter-spacing:1px;margin-top: -20%;text-align:center;position: relative;margin-bottom: -17%;">Descobre o que temos para ti</h2>
         </div>
        
-            
-        <div class="container mx-auto" style="
-            position:relative; margin-top: -18%;
-        ">
-            <div class="row mx-auto">
-                <div class="col-sm-4" style="margin-left: 24%;width:72%;"> 
-                    <button id="t1" style="background-color: transparent; color: rgba(210, 210, 210, 0.67); outline: none; margin-top: auto; margin-right: 0%; font-size: 153%;" onclick="myFunction1()">Sala Inteligente</button>
-                </div>
-                <div class="col-sm-4" style="margin-left:-10%;width:72%;"> 
-                    <button id="t2" style="background-color: transparent; color: white; outline: none; margin-top: auto; font-size: 184%;" onclick="myFunction2()">Condução Inteligente</button> 
-                </div>
-            </div>
-            
-                <div class="" style="margin-top:10%;">
-                    <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-6 " id="project1" style="display: none;">
-                        <h1 style="color:white;">Articles</h1>
-                        <br>
-                        <a href="display:none;" style="
-                            margin-top: auto;
-                        "> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-                            justify-content: center;
-                            text-align: center;
-                            
-                            width: 100%;
-                        
-                        "></a>
-                    </div>
-                    <div class="  col-lg-4 col-md-4 col-sm-4 col-xs-6 " id="project2" style="display: block;">
-                        <h1 style="color:white;
-                        ">Articles</h1>
-                        <br>
-                            <a href="display:none;" style="
-                            justify-content: center;
-                            text-align: center;
-                            margin-top: auto;"> 
-                            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-                            justify-content: center;
-                            text-align: center;
-                            width: 100%;"></a> 
+        <div class="container mx-auto gridd">
 
-
-                        <h1 style="color:white;">Inside Members</h1>
-                        <br>
-                            <a href="display:none;" style="
-                            justify-content: center;
-                            text-align: center;
-                            margin-top: auto;"> 
-                            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-                            justify-content: center;
-                            text-align: center;
-                            width: 100%;"></a> 
-
-
-                        <h1 style="color:white;">Extras</h1>
-                        <br>
-                            <a href="display:none;" style="
-                            justify-content: center;
-                            text-align: center;
-                            margin-top: auto;"> 
-                            <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" style="
-                            justify-content: center;
-                            text-align: center;
-                            width: 100%;"></a> 
-                    </div>
-                   
-                    
-                </div>
-          
-  
-        </div>
-
-
-
- <script>
-
- function myFunction1(){
-
-    var x = document.getElementById("project1");
-    var y = document.getElementById("project2");
-    var t1 = document.getElementById("t1");
-    var t2 = document.getElementById("t2");
-    if (x.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-        t1.style.fontSize="184%" 
-        t2.style.fontSize="153%" 
-        t2.style.color = "#d2d2d2ab";
-        t1.style.color = "white";
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
         
-    }
-    else{
-        x.style.display = "block";
-        y.style.display = "none";
-        t1.style.fontSize="184%" 
-        t2.style.fontSize="153%" 
-        t2.style.color = "#d2d2d2ab";
-        t1.style.color = "white";
-    }
+        
+  </div>
+</div>
 
-}
-function myFunction2(){
-
-    var a = document.getElementById("project1");
-    var b = document.getElementById("project2");
-    var t1 = document.getElementById("t1");
-    var t2 = document.getElementById("t2");
-    if (b.style.display === "block") {
-        a.style.display = "none";
-        t1.style.color = "#d2d2d2ab";
-        t2.style.color = "white";
-        b.style.display = "block";
-        t1.style.fontSize="153%" 
-        t2.style.fontSize="184%" 
-    }
-    else{
-        a.style.display = "none";
-        b.style.display = "block";
-        t1.style.fontSize="153%" 
-        t2.style.color = "white";
-        t1.style.color = "#d2d2d2ab";
-        t2.style.fontSize="184%" 
-    }
-
-    
+<style>
+    .gridd {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
-
-
+.card {
+  height:20pc;
+  background-color: rebeccapurple;
+  width: 100%;
+}
+</style>>
  
- </script>
  
 </section>
 
@@ -171,7 +72,7 @@ function myFunction2(){
                 <p class="text-muted lead" style="margin-top:10%;"></p>
          
         </div>
-    
+        
 </section>
 
 

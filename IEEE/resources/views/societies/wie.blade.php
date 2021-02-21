@@ -462,9 +462,9 @@
 
 <section id="section2" class="py-5 " style="margin-bottom:10%;">
 <div class="container">
-<h2 class="letter2" style="font-size:260%;margin-left:10%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
+<h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
         <div class="row">
-            <div style="width:40%;margin-left:11.25%;">
+            <div style="width:47%;margin-left:0.25%;">
            
                 <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">O WiE ISCTE-IUL (Mulheres em Engenharia do ISCTE-IUL, Lisboa) é um grupo sem fins lucrativos com afinidade WiE do Ramo de Estudantes do IEEE ISCTE-IUL. Este grupo nasceu oficialmente por iniciativa de um grupo de alunas do ISCTE-IUL, de diferentes áreas de estudo relacionadas à tecnologia.</p>
                 <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">Tivemos a aprovação oficial para criá-lo em 1º de janeiro de 2013. A missão do IEEE WIE é facilitar o recrutamento e retenção global de mulheres em disciplinas técnicas.</p>
@@ -472,9 +472,9 @@
                  <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">WiE não é apenas para mulheres, é para todos que acreditam na igualdade de direitos, independentemente do gênero e que as mulheres também podem ser grandes engenheiras.</p>
               
             </div>
-            <div style="margin:auto;width:40%;">
+            <div style="margin:auto;width:46%;">
            
-            <img style="width:110%;margin-top:-13%;"src="{{asset('img/wiebola.png')}}" />
+            <img style="width:110%;margin-top:-28%;"src="{{asset('img/wiebola.png')}}" />
        </div>
             </div>
             </div>
