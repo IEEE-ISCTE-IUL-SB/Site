@@ -509,7 +509,7 @@
     </div>
 </section>
 
-<section id="newsletterSection" style="background: #23384f;padding-bottom:6%">
+<section id="search-section" style="background: #23384f;padding-bottom:6%">
     <div class="container" style="text-align:center;">
         <h1 class="letter2" style="font-size:44px;color:white;padding-top:10%;padding-bottom:10%;letter-spacing:1px;"> PROCURA POR MAIS EVENTOS </h1>
 
@@ -699,6 +699,7 @@
             .search-form {
                 max-width: 80%;
                 margin-top: 2%;
+                margin-top: 2%;
                 position: relative;
             }
 
@@ -743,7 +744,7 @@
 
             .search-group-align {
                 margin-left: auto;
-                margin-right:none;
+                margin-right:0;
                 position:relative;
                 width:40vw;
                 height:50px;
