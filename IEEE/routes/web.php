@@ -33,9 +33,6 @@ Route::get('/WIE', function () {
     return view('societies/wie');
 });
 
-Route::get('/eventos', function () {
-    return view('eventos');
-});
 Route::get('/projetos', function () {
     return view('projetos');
 });
@@ -44,24 +41,44 @@ Route::get('/sobrenos', function () {
     return view('aboutus');
 });
 
+
+Route::get('/eventos', function () {
+    return view('eventos');
+});
+
+
 Route::get('/evento/{id}', function ($id) {
     $event = App\Event::all()->where('id', $id)->first();
     return View::make('eventodetalhe')->with('event', $event);
 });
 
+
 Route::post('/search', function (Request $request) {
     $searchtext = $request->searchtext;
     $searchresults = App\Event::all()->filter(function($event) use($searchtext) {
         foreach($event->tags as $tag) {
-            if (strcmp(strtolower($tag->tag_name), $searchtext) == 0)
+            if (strcmp(strtolower($tag->tag_name), strtolower($searchtext)) == 0)
             {
                 return true;
             }
         }
-        return (str_contains(strtolower($event->event_name), $searchtext));
+        return (str_contains(strtolower($event->event_name), strtolower($searchtext)));
     });
     return View::make('resultadosprocura')->with('searchtext', $searchtext)->with('searchresults', $searchresults);
 
+});
+
+
+Route::get('/search/{searchtext}', function ($searchtext) {
+    $searchresults = App\Event::all()->filter(function($event) use($searchtext) {
+        foreach($event->tags as $tag) {
+            if (strcmp(strtolower($tag->tag_name), strtolower($searchtext)) == 0)
+            {
+                return true;
+            }
+        }
+    });
+    return View::make('resultadosprocura')->with('searchtext', $searchtext)->with('searchresults', $searchresults);
 });
 
 

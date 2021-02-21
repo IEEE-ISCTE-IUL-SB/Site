@@ -9,8 +9,7 @@
         </div>
         <div class="event-tag-row row">
             @foreach ($event->tags as $tag)
-                <btn class="event-tag-button wedge-tag" href=""> {{$tag->tag_name}} </btn>
-
+               <a class="event-tag-button wedge-tag" href="/search/{{$tag->tag_name}}"> {{$tag->tag_name}} </a>
             @endforeach
         </div>
         <div class="event-description"> {{$event->event_description}}
@@ -154,7 +153,7 @@
     }
 
     .event-tag-row {
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
         padding-left: 1rem;
     }
 
@@ -165,6 +164,15 @@
         color:white;
         background: #ecac44;
         transition: .2s;
+    }
+
+    a.event-tag-button{
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+
+        text-decoration: none;
+        color: white;
     }
 
     .event-tag-button:hover {
