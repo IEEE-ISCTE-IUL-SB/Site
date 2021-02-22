@@ -19,14 +19,14 @@
 
 <section id="detail-section">
     <div class="container">
-        <div class="detail-row row">
+        <div class="detail-row row" id="detail-row">
             <div class="detail-col col-3">
                 <div class="row" style="justify-content: center">
                     <div class="detail-title">
                         <i class="fa fa-calendar-o"></i>
                     </div>
                     <div class="detail-info">
-                        {{ date('d-m-y', strtotime($event->event_date))}}
+                        {{ date('d/m/y', strtotime($event->event_date))}}
                     </div>
                 </div>
             </div>
@@ -134,13 +134,11 @@
     }
 
     #detail-section {
-        background: whitesmoke;
-        padding: 1rem 15%;
+        margin-top: 1rem;
     }
 
     #banner-section {
         height: auto;
-        background: whitesmoke;
         padding-bottom: 1rem;
     }
 
@@ -188,14 +186,23 @@
         margin-bottom: 1.5rem;
     }
 
+    .detail-row {
+        color: white;
+        align-content: center;
+        padding: .8rem 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+        -webkit-clip-path: polygon(calc(100% - 15px) 0, 100% 0, 100% 100% , 0 100%,  100% 15px);
+        clip-path: polygon(15px 0, 100% 0, 100% 100% , 0 100%, 0 15px);
+    }
+
     .detail-col {
         font-size: 18px;
     }
 
     .detail-title {
-        font-size: 120%;
         margin-right: .5rem;
-        transition: .2s;
     }
 
     .wedge-tag {
@@ -231,6 +238,7 @@
 
     .slider-item-col {
         padding: 0;
+        background-color: whitesmoke;
     }
 
     .slider-item {
@@ -345,18 +353,18 @@
     }
 
     .CS {
-        background-color: #ecac44;
+        background-color: #fab23e;
     }
 
-    .CS:hover {
-        background-color: #b78736;
+    a.CS:hover {
+        background-color: #de9e38;
     }
 
     .RAS {
         background-color: #001fb0;
     }
 
-    .RAS:hover {
+    a.RAS:hover {
         background-color: #00178a;
     }
 
@@ -364,7 +372,7 @@
         background-color: #af1e2a;
     }
 
-    .IMS:hover {
+    a.IMS:hover {
         background-color: #83161f;
     }
 
@@ -372,7 +380,7 @@
         background-color: #593f73;
     }
 
-    .WIE:hover {
+    a.WIE:hover {
         background-color: #422d54;
     }
 
@@ -380,7 +388,7 @@
         background-color: #001fb0;
     }
 
-    .MAE:hover {
+    a.MAE:hover {
         background-color: #00178a;
     }
 
@@ -388,7 +396,7 @@
         background-color: #00629B;
     }
 
-    .defaultSociety:hover {
+    a.defaultSociety:hover {
         background-color: #004970;
     }
 
@@ -466,6 +474,7 @@
         items.forEach(item => {
             item.classList.add(societyColor);
         });
+        document.getElementById("detail-row").classList.add(societyColor)
     })
 
 

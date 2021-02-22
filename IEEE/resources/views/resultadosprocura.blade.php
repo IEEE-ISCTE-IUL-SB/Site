@@ -132,6 +132,7 @@
 
     .card-wrapper {
         padding: 3% 1%;
+        margin-bottom: 3%;
     }
 
     .no-results-message {
@@ -142,7 +143,7 @@
     .event-card {
         overflow: hidden;
         padding: 0;
-        height:24rem;
+        height:25rem;
         transition:0.6s;
         border-radius:1px;
         position:relative;
@@ -202,11 +203,14 @@
 
     .event-card:hover > .event-card-body > .event-card-body-seemore{
         transition: .3s;
-        padding-right: 3%;
+        margin-right: 3%;
         opacity:1;
     }
 
     .event-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         object-fit: cover;
         transition: .3s;
         height:65%;
@@ -231,12 +235,14 @@
 
     .event-card-body-caption {
         text-align: left;
-        font-size: 25px;
-        padding-bottom: 0.5rem;
-        padding-top: 1.5rem;
+        font-size: 20px;
+        line-height: 21px;
+        height: 66px;
+        margin-bottom: 0.5rem;
+        margin-top: 1.5rem;
         opacity:0;
         transition: .3s;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         text-overflow: ellipsis;
         overflow : hidden;
         display: -webkit-box;
