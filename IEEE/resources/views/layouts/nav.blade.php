@@ -168,16 +168,16 @@
   </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" href="{{ url('/eventos') }}">Eventos</a></li>
+                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Eventos</a></li>
                     <li class="nav-item"style="margin:auto;">
-                        <a class="nav-link  letter2" style="margin:auto;"href="{{ url('/projetos') }}">Projetos</a></li>
+                        <a class="nav-link  letter2" style="margin:auto;transition:0.4s!important;"href="{{ url('/projetos') }}">Projetos</a></li>
                         <li class="nav-item dropdown"style="margin:auto;">
-	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Societies  </a>
+	    <a class="nav-link dropdown-toggle letter2" style="transition:0.4s!important;"href="#" data-toggle="dropdown"> Societies  </a>
 	    <div class="dropdown-menu dropdown-large dropdownH d">
             <div class="row" style="   margin-right: 24px;margin-left: 25px;margin-top:20px;" >
                 <div class="col dropi letter2" >
 
-                    <a style=" text-decoration-line: none;"href="{{ url('/RAS') }}">
+                    <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/RAS') }}">
                     <h1 class="soc2 dropdownfont" >RAS
                     <h1 style="color:#808080c7;">R&A Society</h1>
                     </h1>
@@ -185,25 +185,25 @@
                 </div>
 
                <div class="col dropi" >
-               <a style=" text-decoration-line: none;"href="{{ url('/IMS') }}">
+               <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/IMS') }}">
                     <h1 class="soc2 dropdownfont">IMS
                     <h1 style="color:#808080c7;">I&M Society</h1>
                     </a>
                 </div>
                  <div class="col dropi" >
-                 <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
+                 <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/WIE') }}">
                     <h1 class="soc2 dropdownfont" >WIE
                     <h1 style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
                 <div class="col dropi" >
-                <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
+                <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/WIE') }}">
                     <h1 class="soc2 dropdownfont" >MAE
                     <h1 style="color:#808080c7;">MAE Society</h1>
                     </a>
                 </div>
                 <div class="col dropi " >
-                <a style=" text-decoration-line: none;"href="{{ url('/CS') }}">
+                <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/CS') }}">
                     <h1 class="soc2 dropdownfont" >CS
                     <h1 style="color:#808080c7;">Computer Society</h1>
                     </a>
@@ -213,22 +213,22 @@
 
             <style>
             .soc{
-                color:grey;
+                color:grey;transition:0.4s;
                 text-decoration-line: none;
             }
 
             .soc:hover, .soc:active{
-                color:#808080c7;
+                color:#808080c7;transition:0.4s;
                 text-decoration-line: none;
             }
 
             .soc2{
-                color:#333333;
+                color:#333333;transition:0.4s;
                 text-decoration-line: none;
             }
 
             .soc2:hover, .soc2:active{
-                color:#808080c7;
+                color:#808080c7;transition:0.4s;
                 text-decoration-line: none;
             }
 
