@@ -9,7 +9,7 @@
         </div>
         <div class="event-tag-row row">
             @foreach ($event->tags as $tag)
-               <a class="event-tag-button wedge-tag" href="/search/{{$tag->tag_name}}"> {{$tag->tag_name}} </a>
+               <a class="event-tag-button wedge-tag" href="/search/{{$tag->tag_name}}">{{$tag->tag_name}}</a>
             @endforeach
         </div>
         <div class="event-description"> {{$event->event_description}}
@@ -162,7 +162,7 @@
         padding: .5rem .6rem;
         margin: .3rem;
         color:white;
-        background: #ecac44;
+        background-color: #00629B;
         transition: .2s;
     }
 
@@ -176,7 +176,6 @@
     }
 
     .event-tag-button:hover {
-        background: #cf9740;
         font-weight: bold;
         transition: .2s;
     }
@@ -345,6 +344,54 @@
         width: 1px;
     }
 
+    .CS {
+        background-color: #ecac44;
+    }
+
+    .CS:hover {
+        background-color: #b78736;
+    }
+
+    .RAS {
+        background-color: #001fb0;
+    }
+
+    .RAS:hover {
+        background-color: #00178a;
+    }
+
+    .IMS {
+        background-color: #af1e2a;
+    }
+
+    .IMS:hover {
+        background-color: #83161f;
+    }
+
+    .WIE {
+        background-color: #593f73;
+    }
+
+    .WIE:hover {
+        background-color: #422d54;
+    }
+
+    .MAE {
+        background-color: #001fb0;
+    }
+
+    .MAE:hover {
+        background-color: #00178a;
+    }
+
+    .defaultSociety {
+        background-color: #00629B;
+    }
+
+    .defaultSociety:hover {
+        background-color: #004970;
+    }
+
     @media (max-width: 768px) {
 
         .slider-controls {
@@ -393,6 +440,33 @@
 
         items[count].classList.add('active');
     }
+
+    $(document).ready(function() {
+        const items = document.querySelectorAll('.event-tag-button');
+        var societyColor = "defaultSociety";
+        items.forEach(item => {
+            switch (item.textContent) {
+                case "CS":
+                    societyColor = "CS";
+                    break;
+                case "RAS":
+                    societyColor = "RAS";
+                    break;
+                case "IMS":
+                    societyColor = "IMS";
+                    break;
+                case "WIE":
+                    societyColor = "WIE";
+                    break;
+                case "MAE":
+                    societyColor = "MAE";
+                    break;
+            }
+        });
+        items.forEach(item => {
+            item.classList.add(societyColor);
+        });
+    })
 
 
 </script>
