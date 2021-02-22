@@ -24,65 +24,19 @@ margin-top:10%;margin-bottom:20%;">
         <div class="container" style="text-align:center;justify-content:center;margin-top:0%;margin-bottom:10%; ">
 
   <div class="projects">
+  @foreach($projects as $project)
+  <a  class="card project" href="{{ route('single', $project->id )}}" >
 
-  <div class="card project" >
         <div class="row mx-auto" >
         <div id="wrapper"><div class="project-image"></div> 
-        <h2 class="card project-name" style="">Nelson vssssssssahetti</h2>
+        <h2 class="card project-name" style="">{{$project->name}}</h2>
       </div>
       
         
-        </div> 
-    </div>
-
-    <div class="card project" >
-        <div class="row mx-auto" >
-        <div id="wrapper"><div class="project-image"></div> 
-        <h2 class="card project-name" style="">Nelson vss wdahetti</h2>
-      </div>
-      
-        
-        </div> 
-    </div>
-    
-    <div class="card project" >
-        <div class="row mx-auto" >
-        <div id="wrapper"><div class="project-image"></div> 
-        <h2 class="card project-name" style="">Nelson vssss ahetti</h2>
-      </div>
-      
-        
-        </div> 
-    </div>
-
-    <div class="card project" >
-        <div class="row mx-auto" >
-        <div id="wrapper"><div class="project-image"></div> 
-        <h2 class="card project-name" style="">Nelson vsss dahetti</h2>
-      </div>
-      
-        
-        </div> 
-    </div>
-    <div class="card project" >
-        <div class="row mx-auto" >
-        <div id="wrapper"><div class="project-image"></div> 
-        <h2 class="card project-name" style="">Projeto A</h2>
-      </div>
-      
-        
-        </div> 
-    </div>
-
-    <div class="card project" >
-        <div class="row mx-auto" >
-        <div id="wrapper"><div class="project-image"></div> 
-        <h2 class="card project-name" style="">Nelson vsss adahetti</h2>
-      </div>
-      
-        
-        </div> 
-    </div>
+     
+    </div></a>
+@endforeach
+   
 
   </div>
 </div>
@@ -98,7 +52,7 @@ margin-top:10%;margin-bottom:20%;">
   justify-content:center;
   
 }
-
+a{}
 
 .project {
 background-color:transparent;

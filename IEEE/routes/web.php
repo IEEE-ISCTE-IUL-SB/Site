@@ -22,6 +22,11 @@ Route::get('/RAS', function () {
     return view('societies/ras');
 });
 
+Route::get('/MAE', function () {
+    return view('societies/mae');
+});
+
+
 Route::get('/IMS', function () {
     return view('societies/ims');
 });
@@ -34,9 +39,10 @@ Route::get('/WIE', function () {
     return view('societies/wie');
 });
 
-Route::get('/projetos', function () {
-    return view('projetos');
-});
+Route::get('/projetos', 'ProjectController@index');
+Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);
+
+
 
 Route::get('/sobrenos', function () {
     return view('aboutus');
