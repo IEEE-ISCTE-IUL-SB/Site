@@ -9,16 +9,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
-<section id="section1" style="overflow:hidden;margin-top:1%;margin-bottom:2%;       overflow:hidden;">
+<section  class="py-5 section-2"  style="overflow:hidden;margin-top:1%;margin-bottom:2%;">
 <div class="row">
 <h1 class="letter2"style=" 
         width:45%;
-        padding-top:3%;
+        padding-top:7%;
         display: block;
         margin-right:0%;
         color:#333333;
         font-size:330%;
-        overflow:hidden;
         margin-left: auto;">MAE Societies</h1>
             <img class="societylogo"src="{{asset('img/MAE2.png')}}" />
             </div>
@@ -613,7 +612,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
   .societylogo {
          
 
-    width:16%;
+    width:20%;
         display: block;
      margin-right:21%;
      margin-top:1%;
