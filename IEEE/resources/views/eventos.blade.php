@@ -59,7 +59,7 @@
         }
 
         #scrollButton {
-            font-size: 60px;
+            font-size: 3vw;
             color: #5e5e5e;
             transform: scale(1.1, 1);
             transition: .2s;
@@ -87,7 +87,7 @@
             <div class="highlighted-event-slider owl-carousel mx-auto">
 
                 @foreach($highlights as $event)
-                <a href="/evento/{{$event->id}}">
+                <a class="highlighted-event-link" onclick="highlightedEventLink(this, {{$event->id}})">
                     <div class="highlighted-event-card">
 
                         <img class="highlighted-event-img" src="{{$event->image1}}">
@@ -102,7 +102,7 @@
                                 {{$event->event_description}}
                             </div>
                             <div class="date-time-location-carousel row">
-                                <div class="date-time-col"><i class="fa fa-clock-o"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> {{ date('d-m-y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> {{$event->event_location}}</div>
+                                <div class="date-time-col"><i class="fa fa-clock-o"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> {{ date('d/m/y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> {{$event->event_location}}</div>
                             </div>
                             <div class="highlighted-event-card-body-seemore">
                                 See more ⇀
@@ -233,6 +233,9 @@
                 }
 
                 .highlighted-event-img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
                     filter: blur(2px) grayscale(25%);
                     width: 100%;
                     object-fit: cover;
@@ -364,10 +367,16 @@
                     $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
                 });
 
-                $(document).on('click', '.owl-item>div', function() {
+                $(document).on('click', '.owl-item>a', function() {
                     // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
                     $eventSlider.trigger('to.owl.carousel', [$(this).data("position"), $eventSlider.smartSpeed] );
                 });
+
+                function highlightedEventLink(element, event_id) {
+                    if (element.parentElement.classList.contains("center")) {
+                        window.location.href = ("evento/".concat(event_id))
+                    }
+                }
 
             </script>
 
@@ -649,11 +658,6 @@
                 margin-bottom:auto;
             }
 
-            .padding-10{
-                padding-right:10px;
-                padding-left:10px;
-            }
-
             .carousel-title {
                 text-align: left;
                 font-size:300%;
@@ -729,7 +733,7 @@
 
             .event-card:hover > .event-card-body > .event-card-body-seemore{
                 transition: .3s;
-                padding-right: 3%;
+                margin-right: 3%;
                 opacity:1;
             }
 
@@ -744,26 +748,29 @@
                 color: black;
                 transition: .3s;
                 height:35%;
-                width:95%;
+                width:100%;
                 padding-left:2rem;
+                padding-right:2rem;
                 position:absolute;
                 bottom:0;
             }
 
             .event-card-body-title {
                 text-align: left;
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: bold;
             }
 
             .event-card-body-caption {
                 text-align: left;
-                font-size: 25px;
-                padding-bottom: 0.5rem;
-                padding-top: 1.5rem;
+                font-size: 20px;
+                margin-bottom: 0.5rem;
+                margin-top: 1.5rem;
+                line-height: 21px;
+                height: 66px;
                 opacity:0;
                 transition: .3s;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 text-overflow: ellipsis;
                 overflow : hidden;
                 display: -webkit-box;
@@ -774,14 +781,12 @@
                 text-align: right;
                 font-size: 18px;
                 margin-bottom: 1rem;
-                padding-top: 2rem;
+                padding-top: 1.8rem;
                 border-bottom: 1px solid black;
                 padding-bottom: 1px;
                 opacity:0;
                 transition: .3s;
-                -webkit-line-clamp: 2;
                 overflow : hidden;
-                text-overflow: ellipsis;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 position: absolute;
@@ -937,7 +942,7 @@
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-card-body-seemore{
                     transition: .3s;
-                    padding-right: 3%;
+                    margin-right: 3%;
                     opacity:1;
                 }
 
