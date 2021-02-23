@@ -506,7 +506,6 @@
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
 
                 $(".event-slider").owlCarousel({
-                    loop: true,
                     smartSpeed: 1000,
                     autoplay: true,
                     autoplayTimeout: 9000, //2000ms = 2s;

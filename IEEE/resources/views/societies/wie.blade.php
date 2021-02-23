@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <section id="section1" style="overflow:hidden;margin-top:1%;margin-bottom:2%;       overflow:hidden;">
 <div class="row">
-<h1 class="letter2"style=" 
+<h1 class="letter2"style="
         width:45%;
         padding-top:10%;
         display: block;
@@ -25,15 +25,15 @@
         </div>
         <div class="col">
         <a class="letter2" style="font-weight:300;color:#4F4263;font-size:115%;">Workshops<a>
-        </div>   
+        </div>
         <div class="col">
         <a class="letter2" style="font-weight:300;color:#4F4263;font-size:115%;">Repositório de Ideias <a>
-        
+
         </div>
         <div class="col">
         <a class="letter2" style="font-weight:300;color:#4F4263;font-size:115%;">Media<a>
         </div>
-     
+
     </div>
 </section>
 
@@ -47,78 +47,32 @@
     <div class="container py-5 text-center">
 
     <div class="event-slider owl-carousel">
+        @foreach($events as $event)
+            <a href="/evento/{{$event->id}}">
                 <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
+                    <img class="event-card-img-top event-img" src="{{$event->image1}}">
                     <div class="card-ellipse">
                     </div>
                     <div class="event-card-body">
-                        <div class="event-card-body-title letter1">
-                            Event1
+                        <div class="event-card-body-title">
+                            {{$event->event_name}}
                         </div>
-                        <div class="event-card-body-caption letter1">
-                            Event1 caption
+                        <div class="event-card-body-caption">
+                            {{$event->event_description}}
                         </div>
                         <div class="event-card-body-seemore">
                             See more ⇀
                         </div>
                     </div>
                 </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title letter1">
-                            Event2
-                        </div>
-                        <div class="event-card-body-caption letter1">
-                            Event2 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title letter1">
-                            Event3
-                        </div>
-                        <div class="event-card-body-caption letter1">
-                            Event3
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title letter1">
-                            Event4
-                        </div>
-                        <div class="event-card-body-caption letter1 ">
-                            Event4 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </a>
+        @endforeach
 
             <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
                 var halfCardWidth = document.getElementsByClassName('event-card').item(0).clientWidth / 2;
 
                 $(".event-slider").owlCarousel({
-                    loop: true,
                     smartSpeed: 1000,
                     autoplay: true,
                     autoplayTimeout: 9000, //2000ms = 2s;
@@ -159,7 +113,7 @@
 
             #section1 {
                 padding-top: 7%;
-                
+
                 background-size: cover;
                 background-position: center;
                 padding-bottom:2rem;
@@ -279,7 +233,7 @@
                 font-size: 40px;
                 font-weight: bold;
                 letter-spacing:2px;
-                
+
             }
 
             .event-card-body-caption {
@@ -465,15 +419,15 @@
 <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
         <div class="row">
             <div style="width:47%;margin-left:0.25%;">
-           
+
                 <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">O WiE ISCTE-IUL (Mulheres em Engenharia do ISCTE-IUL, Lisboa) é um grupo sem fins lucrativos com afinidade WiE do Ramo de Estudantes do IEEE ISCTE-IUL. Este grupo nasceu oficialmente por iniciativa de um grupo de alunas do ISCTE-IUL, de diferentes áreas de estudo relacionadas à tecnologia.</p>
                 <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">Tivemos a aprovação oficial para criá-lo em 1º de janeiro de 2013. A missão do IEEE WIE é facilitar o recrutamento e retenção global de mulheres em disciplinas técnicas.</p>
                  <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">No ISCTE-IUL, desejamos promover o papel das mulheres como engenheiras e inspirar e cativar as mulheres ao redor do mundo a abraçar um carreira em ciência e engenharia.</p>
                  <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">WiE não é apenas para mulheres, é para todos que acreditam na igualdade de direitos, independentemente do gênero e que as mulheres também podem ser grandes engenheiras.</p>
-              
+
             </div>
             <div style="margin:auto;width:46%;">
-           
+
             <img style="width:110%;margin-top:-28%;"src="{{asset('img/wiebola.png')}}" />
        </div>
             </div>
@@ -484,12 +438,12 @@
 <script>
 $('.banner-bg').css({'webkit-filter':'blur(7px)', 'filter':'blur(7px) brightness(0.5) saturate(1.3)'});
 $(window).on('scroll', function () {
-   
+
         var pixs = $(document).scrollTop()
         pixs =7 * (240-pixs)/240;
         $('.banner-bg').css({'webkit-filter':"blur("+pixs+"px)", 'filter':"blur("+pixs+"px) brightness(0.7) saturate(1.3)"});
-   
-    
+
+
 });;
 </script>
 <style>
@@ -503,12 +457,12 @@ $(window).on('scroll', function () {
         background-position: 10% 20%;
         background-repeat: no-repeat;
         background-attachment: fixed;
-     
+
         background-image: url('{{asset('img/wiemeet2.jpg')}}');
         filter: brightness(0.7) saturate(1.3);
         height: 54vh;
         background-size: cover;
-       
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -524,21 +478,17 @@ $(window).on('scroll', function () {
         margin-bottom: 1%;
     }
 
-    @media only screen and (max-width: 900px) {
-  .showw {
-    display : none;
-    overflow:hidden;overflow:hidden;width:100%;
-  }
+  @media only screen and (max-width: 900px) {
+        .showw {
+            display : none;
+            overflow:hidden;overflow:hidden;width:100%;
+        }
 
-  .societylogo {
-    
-       
-        display: block;
-        
-        overflow:hidden;width:100%;
-        margin-top:10%;
-        
-    }
+      .societylogo {
+            display: block;
+            overflow:hidden;width:100%;
+            margin-top:10%;
+      }
 
     .sections-title{
         overflow:hidden;text-align:center;font-size:220%;overflow:hidden;width:100%;
@@ -546,19 +496,18 @@ $(window).on('scroll', function () {
 
     .sections-description{
         overflow:hidden;text-align:center;font-size:120%;
-    } 
+    }
 
-    
+
     .side1{
         display:none;
         overflow:hidden;
     }
 
     .side2{
-       
-  width: 100%;
-  padding: 0px;
-  overflow:hidden;
+        width: 100%;
+        padding: 0px;
+        overflow:hidden;
     }
 }
 
@@ -568,7 +517,7 @@ $(window).on('scroll', function () {
     margin-top: 0;
         overflow: hidden;
         margin-bottom: 2rem;
-    
+
   }
 
   .sections-title{
@@ -578,11 +527,11 @@ $(window).on('scroll', function () {
     .sections-description{
         overflow:hidden;text-align:center;font-size:120%;
     }
-  
+
   .side1{
     display:block;
   width: 50%;
-  
+
     }
 
     .side2{

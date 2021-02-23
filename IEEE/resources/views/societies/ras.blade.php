@@ -19,33 +19,33 @@
         </div>
         <div class="col">
         <a class="letter2">Workshops<a>
-        </div>   
+        </div>
         <div class="col">
         <a class="letter2">  Repositório de Ideias <a>
-        
+
         </div>
         <div class="col">
         <a class="letter2"> Media<a>
         </div>
-     
+
     </div>
 </section>
 
 <section id="section2" class="py-5 section-2" style="overflow:hidden;">
 
- 
+
     <div class="row" style="overflow:hidden;padding-bottom:10%;padding-top:1%;">
     <div class="column side1" >
-            
+
                 <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;padding:center;height:99%;
--webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13); 
+-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                         <div style="padding-top: 23%; text-align:center;">
                         <h1 class="letter2" style="color:#333333;font-size: 250%" >kfkifviodksoskcdo</h1>
                         <h1 class="letter2" style="color:#333333;font-size: 130%"> olal</h1>
                 </div>
-         
+
         </div>
         </div>
         <div class="column side2" >
@@ -53,20 +53,20 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);height:auto;width:94%;">
         </div>
     </div>
-   
 
 
-    
 
-  
-  
+
+
+
+
 </section>
 <section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title" >Quem Somos?</h2>
     <div class="container py-5 text-center">
 
         <div class="row">
             <div class="col-lg-8 mx-auto">
-           
+
                 <p class="text-muted lead sections-description ">É um chapter da IEEE Portugal criado em 2005 cujos seus principais objetivos são promover pesquisa, educação, empreendedorismo e interesse público em Robótica e Automação em Portugal através  de organização de conferências e workshops científicos, competições de robôs educacionais e de pesquisa, reuniões entre empresas e academia e sessões de divulgação de Ciência e Tecnologia aos estudantes.</p>
             </div>
         </div>
@@ -76,71 +76,27 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     <div class="container py-5 text-center">
 
     <div class="event-slider owl-carousel">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event1
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event1 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
+        @foreach($events as $event)
+        <a href="/evento/{{$event->id}}">
+            <div class="event-card mx-auto">
+                <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                <div class="card-ellipse">
                 </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
+                <div class="event-card-body">
+                    <div class="event-card-body-title">
+                        {{$event->event_name}}
                     </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event2
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event2 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
+                    <div class="event-card-body-caption">
+                        {{$event->event_description}}
                     </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event3
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event3
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event4
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event4 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
+                    <div class="event-card-body-seemore">
+                        See more ⇀
                     </div>
                 </div>
             </div>
+        </a>
+        @endforeach
+    </div>
 
             <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
@@ -491,7 +447,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 
         <div class="row">
             <div class="col-lg-8 mx-auto">
-           
+
                 <p class="text-muted lead sections-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
             </div>
         </div>
@@ -509,7 +465,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     }
 
 
- 
+
 
     .mission-row {
         text-align: center;
@@ -517,7 +473,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         font-size: 120%;
         color:dimgrey;
         overflow:hidden;
-      
+
         margin-bottom: 1%;
     }
 
@@ -527,10 +483,10 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         object-fit: cover;
 
 
-   
+
     }
- 
-    
+
+
 
     @media only screen and (max-width: 900px) {
   .showw {
@@ -556,14 +512,14 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         overflow:hidden;text-align:center;font-size:120%;
     }
 
-    
+
     .side1{
         display:none;
         overflow:hidden;
     }
 
     .side2{
-       
+
   width: 100%;
   padding: 0px;
   overflow:hidden;
@@ -576,7 +532,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     margin-top: 2rem;
         overflow: hidden;
         margin-bottom: 2rem;
-    
+
   }
 
   .sections-title{
@@ -586,11 +542,11 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     .sections-description{
         overflow:hidden;text-align:center;font-size:120%;
     }
-  
+
   .side1{
     display:block;
   width: 50%;
-  
+
     }
 
     .side2{

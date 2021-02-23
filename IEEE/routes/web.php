@@ -19,16 +19,19 @@ Route::get('/', function () {
 });
 
 Route::get('/RAS', function () {
-    return view('societies/ras');
+    $events = getSocietyEvents("RAS");
+    return View::make('societies/ras')->with('events', $events);
 });
 
 Route::get('/MAE', function () {
-    return view('societies/mae');
+    $events = getSocietyEvents("MAE");
+    return View::make('societies/mae')->with('events', $events);
 });
 
 
 Route::get('/IMS', function () {
-    return view('societies/ims');
+    $events = getSocietyEvents("IMS");
+    return View::make('societies/ims')->with('events', $events);
 });
 
 Route::get('/CS', function () {
@@ -36,8 +39,20 @@ Route::get('/CS', function () {
 });
 
 Route::get('/WIE', function () {
-    return view('societies/wie');
+    $events = getSocietyEvents("WIE");
+    return View::make('societies/wie')->with('events', $events);
 });
+
+function getSocietyEvents($societyname) {
+    $events = App\Event::all()->filter(function($event) use($societyname) {
+        foreach($event->tags as $tag) {
+                if (strcmp(strtolower($tag->tag_name), strtolower($societyname)) == 0) {
+                    return true;
+                }
+        }
+    });
+    return $events;
+}
 
 Route::get('/projetos', 'ProjectController@index');
 Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);
