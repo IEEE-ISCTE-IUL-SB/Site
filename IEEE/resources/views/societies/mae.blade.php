@@ -18,7 +18,7 @@
         margin-right:0%;
         color:#333333;
         font-size:330%;
-        margin-left: auto;">MAE Societies</h1>
+        margin-left:auto;">MAE Societies</h1>
             <img class="societylogo"src="{{asset('img/MAE2.png')}}" />
             </div>
 </section>
