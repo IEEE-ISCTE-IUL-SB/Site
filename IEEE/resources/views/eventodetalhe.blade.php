@@ -20,32 +20,26 @@
 <section id="detail-section">
     <div class="container">
         <div class="detail-row row" id="detail-row">
-            <div class="detail-col col-3">
+            <div class="detail-col col-12 col-lg-3">
                 <div class="row" style="justify-content: center">
-                    <div class="detail-title">
-                        <i class="fa fa-calendar-o"></i>
-                    </div>
                     <div class="detail-info">
+                        <i class="fa fa-calendar-o"></i>
                         {{ date('d/m/y', strtotime($event->event_date))}}
                     </div>
                 </div>
             </div>
-            <div class="detail-col col-3">
+            <div class="detail-col col-12 col-lg-3">
                 <div class="row" style="justify-content: center">
-                    <div class="detail-title">
-                        <i class="fa fa-clock-o"></i>
-                    </div>
                     <div class="detail-info">
+                        <i class="fa fa-clock-o"></i>
                         {{ date('H:i', strtotime($event->event_time)) }} GMT
                     </div>
                 </div>
             </div>
-            <div class="detail-col col-6">
+            <div class="detail-col col-12 col-lg-6">
                 <div class="row" style="justify-content: center">
-                    <div class="detail-title">
-                        <i class="fa @if(strcasecmp($event->event_location, 'Online') != 0) fa-map @else fa-globe @endif icon"> </i>
-                    </div>
                     <div class="detail-info">
+                        <i class="fa @if(strcasecmp($event->event_location, 'Online') != 0) fa-map @else fa-globe @endif icon"> </i>
                         {{$event->event_location}}
                     </div>
                 </div>
@@ -131,15 +125,18 @@
 
     #description-section {
         padding: 3% 15px 0;
+        overflow: hidden;
     }
 
     #detail-section {
         margin-top: 1rem;
+        overflow: hidden;
     }
 
     #banner-section {
         height: auto;
         padding-bottom: 1rem;
+        overflow: hidden;
     }
 
     .event-title {
@@ -168,7 +165,6 @@
         -webkit-appearance: button;
         -moz-appearance: button;
         appearance: button;
-
         text-decoration: none;
         color: white;
     }
@@ -201,8 +197,8 @@
         font-size: 18px;
     }
 
-    .detail-title {
-        margin-right: .5rem;
+    .detail-info {
+        text-align: center;
     }
 
     .wedge-tag {
@@ -329,13 +325,13 @@
 
     .slider-img {
         width: 100%;
-        height: 55vh;
+        height: 60vh;
         object-fit: cover;
     }
 
     .slider-description {
         font-size: 1.25rem;
-        margin: 1rem 0 0 0;
+        margin: 1rem 0 0 1rem;
     }
 
     .slider-previous, .slider-next {
@@ -404,6 +400,14 @@
 
         .slider-controls {
             margin: 0 1rem 0 0;
+        }
+
+    }
+
+    @media (max-width: 992px) {
+
+        .detail-info {
+            margin-top: .5rem
         }
 
     }
