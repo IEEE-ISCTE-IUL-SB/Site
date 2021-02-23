@@ -143,7 +143,7 @@
     .event-card {
         overflow: hidden;
         padding: 0;
-        height:25rem;
+        height:27rem;
         transition:0.6s;
         border-radius:1px;
         position:relative;
@@ -239,7 +239,7 @@
         line-height: 21px;
         height: 66px;
         margin-bottom: 0.5rem;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         opacity:0;
         transition: .3s;
         -webkit-line-clamp: 3;
@@ -320,6 +320,14 @@
 
         .event-container, .title-row{
             max-width:65%;
+        }
+    }
+
+    @media (max-width: 520px) {
+
+        .event-card:hover > .event-card-body > .event-card-body-caption{
+            height: 0;
+            opacity:0;
         }
     }
 

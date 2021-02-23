@@ -248,7 +248,7 @@
 
                 .highlighted-event-body-title {
                     color:#fff;
-                    font-size: 48px;
+                    font-size: 38px;
                     height:10%;
                     font-weight: bold;
                     transition: .3s;
@@ -291,12 +291,12 @@
                 }
 
                 .highlighted-event-card:hover,  > .highlighted-event-card-body > .date-time-location-carousel > .location-carousel{
-                    width: 60%;
+                    width: 40%;
                     transition:.3s;
                 }
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .date-time-location-carousel > .date-time-col{
-                    width: 20%;
+                    width: 30%;
                     transition: .3s;
                 }
 
@@ -836,6 +836,10 @@
                     padding-left: 10vw;
                 }
 
+                .highlighted-event-body-title {
+                    font-size: 36px;
+                }
+
                 .event-container {
                     max-width: 100%;
                 }
@@ -863,12 +867,22 @@
                     visibility: hidden;
                 }
 
+                .highlighted-event-body-title {
+                    font-size: 32px;
+                }
+
+                .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
+                    height: 4rem;
+                    margin-bottom: 0.5rem;
+                    padding-top: 1.5rem;
+                }
+
                 #section1 {
                     padding-top: 12%;
                 }
 
                 .event-card {
-                    height: 24rem;
+                    height: 25rem;
                 }
 
                 .event-container {
@@ -930,11 +944,6 @@
                     margin: 1rem;
                 }
 
-                .highlighted-event-body-title {
-                    margin-top: 1rem;
-                    font-size: 10vw;
-                }
-
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
                     opacity: 0;
                     height:0;
@@ -942,7 +951,7 @@
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-card-body-seemore{
                     transition: .3s;
-                    margin-right: 3%;
+                    border-bottom: 1px solid white;
                     opacity:1;
                 }
 
@@ -972,15 +981,23 @@
                 }
 
                 .carousel-title {
-                    font-size: 11vw;
+                    font-size: 10vw;
                 }
 
                 #novidadesScreen {
-                    font-size: 11vw;
+                    font-size: 10vw;
                 }
 
                 .main-title-container {
                     text-align: center;
+                }
+            }
+
+            @media (max-width: 478px) {
+
+                .event-card:hover > .event-card-body > .event-card-body-caption{
+                    height: 0;
+                    opacity:0;
                 }
             }
         </style>
