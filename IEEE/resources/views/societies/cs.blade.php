@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
 <section id="societylogosection">
-    <img src="{{asset('img/csblack.png')}}" class="societylogo">
+    <img src="{{asset('img/csblack.png')}}" class="societylogo mx-auto">
 </section>
 
 
@@ -125,6 +125,7 @@
 
 <style>
     #societylogosection {
+        display:flex;
         position: relative;
         min-width: 100%;
         margin-bottom: 3.5%;
@@ -165,8 +166,6 @@
         width: 25%;
         min-width:200px;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .mission-row {
@@ -365,7 +364,8 @@
 
         .societylogo {
             display: block;
-            overflow:hidden;width:100%;
+            overflow:hidden;
+            width:100%;
             margin-top:10%;
         }
 
@@ -398,9 +398,7 @@
             max-width: 40%;
             width:26%;
             display: block;
-            margin-right:11%;
             overflow:hidden;
-            margin-left: auto;
         }
 
     }
