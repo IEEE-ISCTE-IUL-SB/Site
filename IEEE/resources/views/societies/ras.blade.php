@@ -33,7 +33,7 @@
     <div class="row" style="overflow:hidden;padding-top:1%;">
     <div class="column side1" >
 
-                <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;padding:center;height:99%;
+                <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;height:99%;
 -webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
