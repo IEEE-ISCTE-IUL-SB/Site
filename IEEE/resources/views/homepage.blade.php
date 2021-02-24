@@ -45,7 +45,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:5%;padding-right:5%;font-size:310%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
                                             <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
-                                            <a style="text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro letter2">Junte-te a nós</p></a>
+                                            <a style="text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junte-te a nós</p></a>
                             </div>
                         </div>
 
@@ -73,14 +73,12 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
 
 
     .butpro:hover, .butpro:active{
-        border:1px solid white;
-        background: url(img/ieee3.jpg);
-        color: white;
+        border:1px solid  rgb(133,133,133);
+        background: rgb(133,133,133);
+background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1) 100%);
+        color: white;font-size: 17px;
         transition:0.2s ease-in all;
-        -moz-transition:    all 0.2s  ease-in;
-        -webkit-transition: all 0.2s  ease-in;
-        -o-transition:      all 0.2s  ease-in;
-        -ms-transition:     all 0.2s  ease-in
+  
 }
 
     .butpro{
@@ -88,20 +86,18 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
         -webkit-background-clip: text;
         background-size: cover;background-position: center;
         font-size: 17px;
+        font-family:'font-letter2';
         width: 10pc;
-        padding-left:1%;
-        padding-right:1%;
-        padding-top: 11px;
-        padding-bottom: 12px;
+        padding-left:1vw;
+        padding-right:1vw;
+        padding-top: 1.3vh;
+        padding-bottom: 1.3vh;
         text-align:center;
         border:1px solid #585A5C;
         background:transparent;
         color:#585A5C;
-        transition:0.3s ease-in all;
-        -moz-transition:    all 0.3s  ease-in;
-        -webkit-transition: all 0.3s ease-in;
-        -o-transition:      all 0.3s  ease-in;
-        -ms-transition:     all 0.3s  ease-in ;
+        transition:0.2s ;
+       
 
 
 }

@@ -20,10 +20,7 @@
         <div class="col">
             <a class="letter2">Workshops<a>
         </div>
-        <div class="col">
-            <a class="letter2">  Repositório de Ideias <a>
-
-        </div>
+      
         <div class="col">
             <a class="letter2"> Media<a>
         </div>
@@ -36,13 +33,13 @@
 
     <div class="row" style="overflow:hidden;padding-bottom:10%;padding-top:1%;">
         <div class="column side1" >
-            <img src="{{asset('img/ieee1.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
-                box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);height:auto;width:94%;margin-left:2.5%;margin-right:0.1%;">
+            <img src="{{asset('img/ieee1.jpg')}}" style="-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+                        box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);height:auto;width:100%;;margin-right:0.1%;">
         </div>
         <div class="column side2" >
 
-            <div style="height:99%;
-                        -webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+            <div style="height:99.5%;
+                        --webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                 <div style="padding-top: 23%; text-align:center;">
@@ -58,20 +55,28 @@
 
 
 
-
-
-</section>
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title" >Quem Somos?</h2>
-    <div class="container py-5 text-center">
-
+    <section id="section2" class="" style="margin-bottom:10%;">
+    <div class="container">
+        <h2 class="letter2" style="font-size:280%;margin-left:0%;margin-top:5%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
         <div class="row">
-            <div class="col-lg-8 mx-auto">
+        
+            <div class="column"style="width:55%;">
 
-                <p class="text-muted lead sections-description ">É um chapter da IEEE Portugal criado em 2005 cujos seus principais objetivos são promover pesquisa, educação, empreendedorismo e interesse público em Robótica e Automação em Portugal através  de organização de conferências e workshops científicos, competições de robôs educacionais e de pesquisa, reuniões entre empresas e academia e sessões de divulgação de Ciência e Tecnologia aos estudantes.</p>
+                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;margin-right:10vw;">A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos. Os campos de interesse incluem metrologia, instrumentos eletrônicos analógicos e digitais, sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo), instrumentação e transdutores para medição de variáveis não elétricas, calibração e incerteza, instrumentos com controle automatizado e funções de análise, instrumentação de segurança e novas aplicações de tecnologia.</p>
+               
             </div>
+
+            <div class="column"style="display:block;
+            width:45%;margin-top:0vh;">
+                <img style="width:100%;border-radius:30pc;"src="{{asset('img/imsmeet.jpg')}}" />
+            </div>
+
         </div>
     </div>
 </section>
+
+</section>
+
 <section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title">Workshops</h2>
     <div class="container py-5 text-center">
 
@@ -365,7 +370,7 @@
     </div>
 </section>
 
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title">Repositório de ideias</h2>
+<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title"></h2>
     <div class="container py-5 text-center">
 
         <div class="row">
@@ -383,6 +388,8 @@
 
     </div>
 </section>
+
+
 
 <style>
     #societylogosection {
@@ -426,7 +433,7 @@
         }
 
         .societylogo {
-            max-width: 60%;
+            text-align:center;
             width:100%;
             display: block;
             margin-left:auto;
@@ -492,7 +499,7 @@
             max-width: 40%;
             width:20%;
             display: block;
-            margin-left:7%;
+            margin-left:auto;
             overflow:hidden;
             margin-right: auto;
         }
