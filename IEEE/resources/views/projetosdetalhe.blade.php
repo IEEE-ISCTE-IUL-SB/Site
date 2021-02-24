@@ -15,12 +15,12 @@ margin-top:10%;margin-bottom:10%;height:100%;">
 
 
 <section id="section1" style="
-margin-top:5%;margin-bottom:10%;height:100%;margin-left:5%;margin-right:5%;">
+margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
 <div class="row">
                 <div style="width:20%;margin-left:6.5%;margin-right:2%;"> 
                 <div style="padding-top:10%;padding-bottom:5%;border-bottom: 1px solid #e6e6e6;border-top: 1px solid #e6e6e6;"> 
-                        <h2 class="card"style="margin-bottom:2%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Visão</h2>
-                        <h2 class="card"style="margin-bottom:2%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2>
+                        <h2 class="card"style="margin-bottom:5.5%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Visão</h2>
+                        <a href="#fases-section"><h2 class="card" style="margin-bottom:5.5%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2></a>
                         <h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Colaboradores</h2>
                 </div>
                 <div style="padding-top:10%;padding-bottom:5%;"> 
@@ -49,15 +49,15 @@ margin-top:5%;margin-bottom:10%;height:100%;margin-left:5%;margin-right:5%;">
 
 </section>
 
-<section id="section1" style="
-margin-top:0%;margin-bottom:20%;height:100%;margin-left:5%;margin-right:5%;">
+<section id="fases-section" style="
+padding-top:15%;margin-bottom:20%;height:100%;margin-left:5%;margin-right:5%;">
 
 <div class="row">
                 <div style="width:20%;margin-left:6.5%;margin-right:2%;"> 
                 </div>
                 <div style="width:60%;">
                         <div style="color:rgb(78 81 97);margin-bottom:3%;margin-left:5%;margin-right:25%;">
-                        <h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2>
+                        <h2 class="card"  style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2>
                                 <h2 class="card"style="   display: list-item;                                       
     list-style-type: disc;       
     list-style-position: inside;color:grey;font-family:'font-letter1';justify-content:center;border:none;text-align:justify;font-size:120%;letter-spacing:0.1px;line-height:1.5pc;">
@@ -205,6 +205,13 @@ margin-top:0%;margin-bottom:20%;height:100%;margin-left:5%;margin-right:5%;">
         font-size:2.5pc;
     }
 }
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
 </style>
 
 @endsection
