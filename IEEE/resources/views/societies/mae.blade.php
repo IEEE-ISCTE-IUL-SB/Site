@@ -48,7 +48,7 @@
 
     <div class="row" style="overflow:hidden;padding-bottom:10%;padding-top:1%;">
         <div class="column side2" >
-            <img src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
+            <img src="{{asset('img/telescope.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
                 box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);width:100%;">
         </div>
     </div>
