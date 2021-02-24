@@ -15,11 +15,14 @@
         width:45%;
         padding-top:7%;
         display: block;
-        margin-right:0%;
-        color:#333333;
+        margin-right:auto;
+        padding-right:6vw;
+        text-align:center;
+        color:#4a5259;
         font-size:330%;
+
         margin-left:auto;">MAE Societies</h1>
-            <img class="societylogo"src="{{asset('img/MAE2.png')}}" />
+            <img class="societylogo"src="{{asset('img/MAE3.png')}}" />
             </div>
 </section>
 
@@ -35,9 +38,7 @@
         <a class="letter2">  Repositório de Ideias <a>
 
         </div>
-        <div class="col">
-        <a class="letter2"> Media<a>
-        </div>
+      
 
     </div>
 </section>
@@ -46,22 +47,9 @@
 
 
     <div class="row" style="overflow:hidden;padding-bottom:10%;padding-top:1%;">
-    <div class="column side1" >
-
-                <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;padding:center;height:99%;
--webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
-                        background-color:white;justify-content:center;">
-                        <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#333333;font-size: 250%" >kfkifviodksoskcdo</h1>
-                        <h1 class="letter2" style="color:#333333;font-size: 130%"> olal</h1>
-                </div>
-
-        </div>
-        </div>
         <div class="column side2" >
             <img src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
-                box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);height:auto;width:94%;">
+                box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);width:100%;">
         </div>
     </div>
 
@@ -561,7 +549,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     .side2{
         display:block;
         float: left;
-        width: 50%;
+        width: 100%;
         padding: 0px;
     }
 

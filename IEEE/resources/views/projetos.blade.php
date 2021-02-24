@@ -178,8 +178,8 @@ filter: blur(3px) brightness(0.6) saturate(1.3);
 </section>
 
 <section id="section3">
-      <div  style="color:white;margin-left:10%;margin-top:-10%;position: relative; ">
-                <h2 style="font-family:'font-letter2';font-size:4pc;letter-spacing:0.1px;color:rgb(78 81 97);"> </h2>
+      <div  style="color:white;margin-left:0%;margin-top:-10%;position: relative; ">
+                <h2 style="font-family:'font-letter2';font-size:2pc;text-align:center;letter-spacing:0.1px;color:rgb(78 81 97);">Tem alguma proposta ? <span style="color:#5E666E;font-size:1.8pc;padding-left:2vw;">   Envia mail para ieee@iscte-iul.pt </span></h2>
                 <p class="text-muted lead" style="margin-top:10%;"></p>
          
         </div>
