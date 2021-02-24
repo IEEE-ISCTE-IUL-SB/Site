@@ -229,17 +229,17 @@
 
     .event-card-body-title {
         text-align: left;
-        font-size: 40px;
+        font-size: 32px;
         font-weight: bold;
     }
 
     .event-card-body-caption {
         text-align: left;
         font-size: 20px;
-        line-height: 21px;
-        height: 66px;
         margin-bottom: 0.5rem;
         margin-top: 1rem;
+        line-height: 21px;
+        height: 66px;
         opacity:0;
         transition: .3s;
         -webkit-line-clamp: 3;
@@ -278,22 +278,11 @@
     @media (max-width: 1500px) {
 
         .event-container, .title-row{
-            max-width: 90%;
-        }
-    }
-
-    @media (min-width: 1200px) and (max-width: 1350px) {
-
-        .event-container, .title-row{
             max-width: 95%;
         }
     }
 
     @media (max-width: 1200px) {
-
-        .event-container, .title-row{
-            max-width:85%;
-        }
 
         .card-wrapper {
             padding: 3% 2%;
@@ -312,6 +301,14 @@
 
         .card-wrapper {
             padding: 3%;
+        }
+
+        event-card {
+            height: 25rem;
+        }
+
+        .event-container {
+            max-width: 75%;
         }
 
     }
@@ -346,6 +343,14 @@
 
         .result-title {
             font-size: 20px;
+        }
+    }
+
+    @media (max-width: 478px) {
+
+        .event-card:hover > .event-card-body > .event-card-body-caption{
+            height: 0;
+            opacity:0;
         }
     }
 

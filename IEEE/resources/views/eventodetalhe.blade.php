@@ -24,7 +24,7 @@
                 <div class="row" style="justify-content: center">
                     <div class="detail-info">
                         <i class="fa fa-calendar-o"></i>
-                        {{ date('d/m/y', strtotime($event->event_date))}}
+                        {{ date('d/m/y', strtotime($event->event_date)) }}
                     </div>
                 </div>
             </div>
@@ -396,6 +396,14 @@
         background-color: #004970;
     }
 
+    @media (max-width: 992px) {
+
+        .detail-info {
+            margin-top: .5rem
+        }
+
+    }
+
     @media (max-width: 768px) {
 
         .slider-controls {
@@ -404,13 +412,6 @@
 
     }
 
-    @media (max-width: 992px) {
-
-        .detail-info {
-            margin-top: .5rem
-        }
-
-    }
 
 
 </style>

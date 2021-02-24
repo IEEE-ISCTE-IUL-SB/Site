@@ -15,26 +15,22 @@
 <section id="missionsection" class="showw">
     <div class="row mission-row">
         <div class="col">
-            <a class="letter2 ">Quem somos?<a>
+            <a href="#section3" class="letter2 mission-link">Quem somos?<a>
         </div>
         <div class="col">
-        <a class="letter2">Workshops<a>
+            <a href="#section4" class="letter2 mission-link">Workshops<a>
         </div>
         <div class="col">
-        <a class="letter2">  Repositório de Ideias <a>
-
-        </div>
-        <div class="col">
-        <a class="letter2"> Media<a>
+            <a href="#section5" class="letter2 mission-link">  Repositório de Ideias <a>
         </div>
 
     </div>
 </section>
 
-<section id="section2" class="py-5 section-2" style="overflow:hidden;">
+<section id="section2" class="section-2" style="overflow:hidden;">
 
 
-    <div class="row" style="overflow:hidden;padding-bottom:10%;padding-top:1%;">
+    <div class="row" style="overflow:hidden;padding-top:1%;">
     <div class="column side1" >
 
                 <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;padding:center;height:99%;
@@ -54,16 +50,11 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         </div>
     </div>
 
-
-
-
-
-
-
 </section>
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title" >Quem Somos?</h2>
-    <div class="container py-5 text-center">
 
+<section id="section3">
+    <h2 class="letter2 sections-title" >Quem Somos?</h2>
+    <div class="container py-5 text-center">
         <div class="row">
             <div class="col-lg-8 mx-auto">
 
@@ -72,7 +63,8 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         </div>
     </div>
 </section>
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title">Workshops</h2>
+
+<section id="section4"><h2 class="letter2 sections-title">Workshops</h2>
     <div class="container py-5 text-center">
 
     <div class="event-slider owl-carousel">
@@ -133,45 +125,27 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         </script>
 
         <style>
-            div.owl-next, div.owl-prev{
-                visibility: hidden;
-                outline:none !important;
-            }
 
-            #section2, #section3 {
+            #section2 {
+                padding-top: 3rem;
                 background: white;
             }
 
-            #section1 {
-                padding-top: 7%;
-                background: linear-gradient(0deg, rgba(248,248,255,1) 0%, rgba(248,248,255,1) 25%, rgba(255,255,255,1) 100%);
-                background-size: cover;
-                background-position: center;
-                padding-bottom:2rem;
+            #section3, #section4, section5 {
+                padding-top: 8rem;
+                background: white;
             }
 
-            #section2 {
-                padding-bottom: 60px;
+            .mission-link {
+                color:dimgrey;
+                transition: .1s;
             }
 
-            #section3 {
-
-            }
-
-            .padding-10{
-                padding-right:10px;
-                padding-left:10px;
-            }
-
-            .carousel-title {
-                text-align: left;
-                font-size:300%;
-                color:#26233C;
-            }
-
-            .event-container {
-                max-width: 72%;
-                padding: 5%;
+            .mission-link:hover {
+                color:dimgrey;
+                text-decoration: none;
+                font-size: 110%;
+                transition: .1s;
             }
 
             .event-card {
@@ -187,7 +161,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 width:90%;
-             }
+            }
 
             .event-card:hover {
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
@@ -211,12 +185,6 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 filter:brightness(50%);
             }
 
-            .event-card:hover > .event-card-body > .event-card-body-description{
-                transition: .3s;
-                transform:translateY(-50px);
-                opacity:1;
-            }
-
             .card-ellipse {
                 position: absolute;
                 transition: .3s;
@@ -237,7 +205,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 
             .event-card:hover > .event-card-body > .event-card-body-seemore{
                 transition: .3s;
-                padding-right: 3%;
+                margin-right: 3%;
                 opacity:1;
             }
 
@@ -252,26 +220,30 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 color: black;
                 transition: .3s;
                 height:35%;
-                width:95%;
+                width:100%;
                 padding-left:2rem;
                 position:absolute;
                 bottom:0;
+                letter-spacing:1px;
             }
 
             .event-card-body-title {
                 text-align: left;
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: bold;
+
             }
 
             .event-card-body-caption {
                 text-align: left;
-                font-size: 25px;
-                padding-bottom: 0.5rem;
-                padding-top: 1.5rem;
+                font-size: 20px;
+                margin-bottom: 0.5rem;
+                margin-top: 1.5rem;
+                line-height: 21px;
+                height: 66px;
                 opacity:0;
                 transition: .3s;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 text-overflow: ellipsis;
                 overflow : hidden;
                 display: -webkit-box;
@@ -297,152 +269,25 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 right: 0;
             }
 
-           .owl-prev, .owl-next{
-               position: absolute !important;
-               outline:none !important;
-           }
-
-            .owl-prev{
-               top: 40%;
-               outline:none !important;
-               left: -30px;
-            }
-
-            .owl-next{
-               top: 40%;
-               outline:none !important;
-               right: -30px;
-            }
-
-            .cardDivider {
-                box-sizing:border-box;
-                width:90%;
-                height:8px;
-                background: #26233C;
-            }
-
-            @media (max-width: 1500px) {
-
-                .event-container {
-                    max-width: 95%;
-                }
-            }
-
-            @media (max-width: 1200px) {
-
-                .highlighted-event-slider {
-                    padding: 0 8% 0 8%;
-                }
-
-                #mainEventTitle {
-                    font-size: 6vw;
-                    padding-left: 10vw;
-                }
-
-                .event-container {
-                    max-width: 100%;
-                }
-
-                .carousel-title {
-                    font-size: 5vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 5vw;
-                }
-            }
-
             @media (max-width: 1024px) {
-
-                #mainEventTitle {
-                    font-size: 8vw;
-                }
-
-                .event-title-block {
-                    padding-bottom: 20%;
-                }
-
-                .ellipse-transition {
-                    opacity: 0;
-                }
-
-                #section1 {
-                    padding-top: 12%;
-                }
-
                 .event-card {
-                    height: 24rem;
-                }
-
-                .event-container {
-                    max-width: 75%;
-                }
-
-                .carousel-title {
-                    font-size: 6vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 6vw;
+                    height: 25rem;
                 }
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 478px) {
 
-                .highlighted-event-slider {
-                    padding: 0 3% 0 3%;
-                }
-
-                .event-container {
-                    padding-top: 8%;
-                }
-
-                #section1 {
-                    padding-top: 15%;
-                }
-
-                .carousel-title {
-                    text-align: center;
-                    font-size: 7vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 7vw;
+                .event-card:hover > .event-card-body > .event-card-body-caption{
+                    height: 0;
+                    opacity:0;
                 }
             }
 
-            @media (max-width: 570px) {
-
-                .event-container {
-                    max-width: 95%;
-                }
-
-                .event-title-block::before {
-                    filter: brightness(0.6);
-                }
-
-                #mainEventTitle {
-                    font-size: 12vw;
-                    padding-left: 0;
-                }
-
-                .carousel-title {
-                    font-size: 11vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 11vw;
-                }
-
-                .main-title-container {
-                    text-align: center;
-                }
-            }
         </style>
     </div>
 </section>
 
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title">Repositório de ideias</h2>
+<section id="section5" class="py-5 section-2"><h2 class="letter2 sections-title">Repositório de ideias</h2>
     <div class="container py-5 text-center">
 
         <div class="row">
@@ -471,19 +316,9 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         text-align: center;
         overflow:hidden;
         font-size: 120%;
-        color:dimgrey;
         overflow:hidden;
 
         margin-bottom: 1%;
-    }
-
-    .banner {
-        height:100%;
-        background-color:red;
-        object-fit: cover;
-
-
-
     }
 
 

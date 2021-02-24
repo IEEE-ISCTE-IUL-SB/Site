@@ -212,6 +212,12 @@
 
 
             <style>
+
+
+                html {
+                    scroll-behavior: smooth;
+                }
+
             .soc{
                 color:grey;transition:0.4s;
                 text-decoration-line: none;

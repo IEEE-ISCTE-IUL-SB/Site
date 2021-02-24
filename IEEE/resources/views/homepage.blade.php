@@ -7,9 +7,9 @@
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    
+
     <div class="pc" >
-            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08); 
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);
 box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                 <div class="row">
                     <div style="margin-top:0%;width:40%;">
@@ -18,12 +18,12 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                        padding-top:30%;
                             padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
                         background-color: white;text-align:left;">
-                                            <h1 style=" opacity:60%;">Advancing Technology for Humanity</h1>
+                                            <h1 style=" opacity:60%;padding-right:2vw;">Advancing Technology for Humanity</h1>
                                             <a><p href="{{ url('/') }}" class="butpro letter2">Junta-te a nós</p></a>
                             </div>
                         </div>
-                    </div>            
-                    <div style="width:60%;"> 
+                    </div>
+                    <div style="width:60%;">
                         <img src="{{asset('img/ieee3.jpg')}}"  style="
                     height:auto;
                         width:100%;;
@@ -31,14 +31,14 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                         padding-bottom:0%;
                         margin-bottom:-0.3%;"/>
                     </div>
-                </div>  
+                </div>
             </div>
      </div>
         <div class="mobile">
-            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08); 
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);
                 box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);">
-               
-                   
+
+
                         <div style="width:100%;">
                             <div class="letter2 workshop" style="
                        padding-top:10%;padding-bottom:10%;
@@ -48,21 +48,21 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                                             <a style="text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro letter2">Junte-te a nós</p></a>
                             </div>
                         </div>
-                    
 
-                
-                        <img src="{{asset('img/ieee3.jpg')}}"  
+
+
+                        <img src="{{asset('img/ieee3.jpg')}}"
                         style="
                              height:auto;
                             width:100%;
                             border-radius:0px;
                             padding-bottom:0%;
                             margin-bottom:-0.3%;"/>
-                 
-            </div>  
-        
+
+            </div>
+
          </div>
-  
+
 
 </section>
     <style>
@@ -70,7 +70,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
 
 
 
-    
+
 
     .butpro:hover, .butpro:active{
         border:1px solid white;
@@ -102,8 +102,8 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
         -webkit-transition: all 0.3s ease-in;
         -o-transition:      all 0.3s  ease-in;
         -ms-transition:     all 0.3s  ease-in ;
- 
- 
+
+
 }
 
     .member-image{
@@ -128,10 +128,10 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
         display: none;
     }
 
-    
+
     .member-image{
         width: 10pc;
-      
+
     }
     .member-title{
             font-size:3.5pc;
@@ -142,21 +142,21 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
 
         .pc {
             display: none;
-        
+
         }
         .mobile {
             display: block;
         }
         .member-image{
         width: 9pc;
-        }   
+        }
 
         .member-title{
             font-size:2.5pc;
         }
     }
     </style>
-    
+
 
 
 
@@ -166,37 +166,37 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
 
 <section id="section1" style="background: rgb(123,143,131);
 background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%, rgba(79,79,79,1) 100%);padding-bottom:15%;">
-    
+
     <div class="pc container" >
     <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explora as nossas societies</h1>
     <div class="row mx-auto" style="padding-top:10%;padding-left:-10px;">
-      
+
         <div class="col-lg-2 share mx-auto ">
-        <img class="entity1" src="{{asset('img/cslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;">
+            <a href="{{ url('/CS') }}"> <img class="entity1" src="{{asset('img/cslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;"> </a>
         </div>
         <div class="col-lg-2 share mx-auto ">
-        <img class="entity1" src="{{asset('img/MAE.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
+            <a href="{{ url('/MAE') }}"> <img class="entity1" src="{{asset('img/MAE.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;"> </a>
         </div>
         <div class="col-lg-2 share mx-auto ">
-        <img class="entity" src="{{asset('img/raslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;">
+            <a href="{{ url('/RAS') }}"> <img class="entity" src="{{asset('img/raslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;"> </a>
         </div>
-        
+
         <div class="col-lg-2 share mx-auto ">
-        <img class="entity" src="{{asset('img/imslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;">
+            <a href="{{ url('/IMS') }}"> <img class="entity" src="{{asset('img/imslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;"> </a>
         </div>
         <div class="col-lg-2 share mx-auto">
-        <img class="entity" src="{{asset('img/wielogo.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;">
+            <a href="{{ url('/WIE') }}"> <img class="entity" src="{{asset('img/wielogo.png')}}" style="width:85%;margin-top:-40px;margin-bottom:-40px;"> </a>
         </div>
-       
-    </div>
-        
+
     </div>
 
-     
+    </div>
+
+
     <div class="mobile container">
     <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:20%;letter-spacing:1px;"> Explora as nossas societies</h1>
     <div class="row mx-auto" style="padding-top:10%;text-align:center;">
-      
+
         <div class="col-lg-2 share mx-auto">
         <img class="entity1" src="{{asset('img/cslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
         </div>
@@ -206,16 +206,16 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
         <div class="col-lg-2 share mx-auto ">
         <img class="entity" src="{{asset('img/raslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
         </div>
-        
+
         <div class="col-lg-2 share mx-auto ">
         <img class="entity" src="{{asset('img/imslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
         </div>
         <div class="col-lg-2 share mx-auto">
         <img class="entity" src="{{asset('img/wielogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;">
         </div>
-       
+
     </div>
-        
+
     </div>
 </section>
 
@@ -223,15 +223,15 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
 
 
 
-  
 
 
-   
 
-    
 
-  
-  
+
+
+
+
+
 
 <section id="section2" class="py-5 section-2">
     <div class="container py-5 text-center">
@@ -305,7 +305,7 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
   box-sizing: border-box;
   margin-bottom: 30px;
   margin:auto;text-align: center;
- 
+
 }
 
 .member-name {
