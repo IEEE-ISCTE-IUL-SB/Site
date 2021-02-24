@@ -19,6 +19,7 @@
             font-size: 5vw;
             padding-left: 15vw;
             padding-top: 5vh;
+            letter-spacing: 3px;
             text-align: center;
             font-weight: bolder;
             display: inline-block;
@@ -69,8 +70,6 @@
             transform: scale(1.2, 1.1) translateY(8px);
             transition: .2s;
         }
-
-        html { scroll-behavior: smooth; }
     </style>
 </section>
 
@@ -102,7 +101,7 @@
                                 {{$event->event_description}}
                             </div>
                             <div class="date-time-location-carousel row">
-                                <div class="date-time-col"><i class="fa fa-clock-o"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> {{ date('d/m/y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> {{$event->event_location}}</div>
+                                <div class="date-time-col"><i class="fa fa-clock-o"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> {{ date('d/m/y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fa @if(strcasecmp($event->event_location, 'Online') != 0) fa-map @else fa-globe @endif icon"> </i> {{$event->event_location}}</div>
                             </div>
                             <div class="highlighted-event-card-body-seemore">
                                 See more ⇀
@@ -118,38 +117,6 @@
 
 
             <style>
-
-                .butpro{
-                    margin-top: 30px;
-                    color: white;
-                    -webkit-background-clip: text;
-                    background-size: cover;
-                    background-position: center;
-                    background: url(img/ieee3.jpg);
-                    font-size: 17px;
-                    width: 114px;
-                    border:1px solid white;
-                    padding-left: 19px;
-                    padding-right: 0px;
-                    padding-top: 11px;
-                    padding-bottom: 12px;
-                    transition:0.1s ease-in all;
-                    -moz-transition:    all 0.1s  ease-in;
-                  -webkit-transition: all 0.1s  ease-in;
-                  -o-transition:      all 0.1s  ease-in;
-                  -ms-transition:     all 0.1s  ease-in
-                }
-
-                .butpro:hover, .butpro:active{
-                    border:1px solid #585A5C;
-                    background:transparent;
-                    color: #585A5C;
-                    transition:0.15s ease-in all;
-                    -moz-transition:    all 0.15s  ease-in;
-                    -webkit-transition: all 0.15s ease-in;
-                    -o-transition:      all 0.15s  ease-in;
-                    -ms-transition:     all 0.15s  ease-in
-                }
 
                 .owl-carousel {
                     display: flex !important;
@@ -390,7 +357,7 @@
                     $('.entity1').addClass('animate__animated', 'animate__bounce');
 
             });
-        }));
+        }))
     </script>
 
 
@@ -443,7 +410,7 @@
 
 <section id="search-section" style="background: #23384f;padding-bottom:6%">
     <div class="container" style="text-align:center;">
-        <h1 class="letter2" style="font-size:44px;color:white;padding-top:10%;padding-bottom:10%;letter-spacing:1px;"> PROCURA POR MAIS EVENTOS </h1>
+        <h1 class="search-title"> PROCURA POR MAIS EVENTOS </h1>
 
             <div class="row justify-content-center">
 
@@ -565,6 +532,15 @@
 
             }
 
+            .search-title {
+                font-weight: bold;
+                color:white;
+                font-size:2.5vw;
+                padding-top:10%;
+                padding-bottom:10%;
+                letter-spacing:1px;
+            }
+
             .event-tag-row {
                 margin: .3rem 0 1.5rem;
                 justify-content: center;
@@ -659,7 +635,7 @@
 
             .carousel-title {
                 text-align: left;
-                font-size:300%;
+                font-size:3.5vw;
                 color:#26233C;
             }
 
@@ -793,23 +769,6 @@
                 right: 0;
             }
 
-           .owl-prev, .owl-next{
-               position: absolute !important;
-               outline:none !important;
-           }
-
-            .owl-prev{
-               top: 40%;
-               outline:none !important;
-               left: -30px;
-            }
-
-            .owl-next{
-               top: 40%;
-               outline:none !important;
-               right: -30px;
-            }
-
             .cardDivider {
                 box-sizing:border-box;
                 width:90%;
@@ -843,7 +802,7 @@
                     max-width: 100%;
                 }
 
-                .carousel-title {
+                .carousel-title, .search-title {
                     font-size: 5vw;
                 }
 
@@ -888,7 +847,7 @@
                     max-width: 75%;
                 }
 
-                .carousel-title {
+                .carousel-title, .search-title {
                     font-size: 6vw;
                 }
 
@@ -930,7 +889,7 @@
                     padding-top: 15%;
                 }
 
-                .carousel-title {
+                .carousel-title, .search-title {
                     text-align: center;
                     font-size: 7vw;
                 }
@@ -979,7 +938,7 @@
                     padding-left: 0;
                 }
 
-                .carousel-title {
+                .carousel-title, .search-title {
                     font-size: 10vw;
                 }
 

@@ -35,7 +35,8 @@ Route::get('/IMS', function () {
 });
 
 Route::get('/CS', function () {
-    return view('societies/cs');
+    $events = getSocietyEvents("CS");
+    return View::make('societies/CS')->with('events', $events);
 });
 
 Route::get('/WIE', function () {

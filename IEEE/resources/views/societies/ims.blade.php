@@ -155,22 +155,6 @@
                 overflow: hidden;
             }
 
-            .padding-10{
-                padding-right:10px;
-                padding-left:10px;
-            }
-
-            .carousel-title {
-                text-align: left;
-                font-size:300%;
-                color:#26233C;
-            }
-
-            .event-container {
-                max-width: 72%;
-                padding: 5%;
-            }
-
             .event-card {
                 overflow: hidden;
                 height:30rem;
@@ -208,12 +192,6 @@
                 filter:brightness(50%);
             }
 
-            .event-card:hover > .event-card-body > .event-card-body-description{
-                transition: .3s;
-                transform:translateY(-50px);
-                opacity:1;
-            }
-
             .card-ellipse {
                 position: absolute;
                 transition: .3s;
@@ -234,7 +212,7 @@
 
             .event-card:hover > .event-card-body > .event-card-body-seemore{
                 transition: .3s;
-                padding-right: 3%;
+                margin-right: 3%;
                 opacity:1;
             }
 
@@ -249,26 +227,30 @@
                 color: black;
                 transition: .3s;
                 height:35%;
-                width:95%;
+                width:100%;
                 padding-left:2rem;
                 position:absolute;
                 bottom:0;
+                letter-spacing:1px;
             }
 
             .event-card-body-title {
                 text-align: left;
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: bold;
+
             }
 
             .event-card-body-caption {
                 text-align: left;
-                font-size: 25px;
-                padding-bottom: 0.5rem;
-                padding-top: 1.5rem;
+                font-size: 20px;
+                margin-bottom: 0.5rem;
+                margin-top: 1.5rem;
+                line-height: 21px;
+                height: 66px;
                 opacity:0;
                 transition: .3s;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 text-overflow: ellipsis;
                 overflow : hidden;
                 display: -webkit-box;
@@ -294,147 +276,91 @@
                 right: 0;
             }
 
-            .owl-prev, .owl-next{
-                position: absolute !important;
-                outline:none !important;
-            }
 
-            .owl-prev{
-                top: 40%;
-                outline:none !important;
-                left: -30px;
-            }
-
-            .owl-next{
-                top: 40%;
-                outline:none !important;
-                right: -30px;
-            }
-
-            .cardDivider {
-                box-sizing:border-box;
-                width:90%;
-                height:8px;
-                background: #26233C;
-            }
-
-            @media (max-width: 1500px) {
-
-                .event-container {
-                    max-width: 95%;
-                }
-            }
-
-            @media (max-width: 1200px) {
-
-                .highlighted-event-slider {
-                    padding: 0 8% 0 8%;
-                }
-
-                #mainEventTitle {
-                    font-size: 6vw;
-                    padding-left: 10vw;
-                }
-
-                .event-container {
-                    max-width: 100%;
-                }
-
-                .carousel-title {
-                    font-size: 5vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 5vw;
+            @media (max-width:1200px) {
+                .mission-row {
+                    font-size: 30px;
                 }
             }
 
             @media (max-width: 1024px) {
-
-                #mainEventTitle {
-                    font-size: 8vw;
-                }
-
-                .event-title-block {
-                    padding-bottom: 20%;
-                }
-
-                .ellipse-transition {
-                    opacity: 0;
-                }
-
-                #section1 {
-                    padding-top: 12%;
+                .mission-row {
+                    font-size: 26px;
                 }
 
                 .event-card {
-                    height: 24rem;
+                    height: 25rem;
                 }
 
-                .event-container {
-                    max-width: 75%;
+            }
+
+            @media only screen and (max-width: 900px) {
+
+
+                .societylogo {
+                    display: block;
+                    overflow:hidden;width:100%;
+                    margin-top:10%;
                 }
 
-                .carousel-title {
-                    font-size: 6vw;
+                .sections-title{
+                    overflow:hidden;text-align:center;font-size:220%;overflow:hidden;width:100%;
                 }
 
-                #novidadesScreen {
-                    font-size: 6vw;
+                .sections-description{
+                    overflow:hidden;
+                    text-align:center;
+                    font-size:135%;
                 }
+            }
+
+            @media only screen and (min-width: 900px) {
+
+                .sections-title{
+                    overflow:hidden;
+                    text-align:center;
+                    font-size:270%;
+                }
+
+                .sections-description{
+                    overflow:hidden;
+                    text-align:center;
+                    font-size:120%
+                }
+
+                .societylogo {
+                    max-width: 40%;
+                    width:26%;
+                    display: block;
+                    margin-right:11%;
+                    overflow:hidden;
+                    margin-left: auto;
+                }
+
             }
 
             @media (max-width: 768px) {
-
-                .highlighted-event-slider {
-                    padding: 0 3% 0 3%;
+                .mission-row {
+                    font-size: 22px;
                 }
 
-                .event-container {
-                    padding-top: 8%;
-                }
-
-                #section1 {
-                    padding-top: 15%;
-                }
-
-                .carousel-title {
-                    text-align: center;
-                    font-size: 7vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 7vw;
+                #description-section {
+                    padding: 1rem 1.5rem;
+                    font-size: 18px;
                 }
             }
 
-            @media (max-width: 570px) {
-
-                .event-container {
-                    max-width: 95%;
+            @media (max-width: 480px) {
+                .mission-row {
+                    font-size: 18px;
                 }
 
-                .event-title-block::before {
-                    filter: brightness(0.6);
-                }
-
-                #mainEventTitle {
-                    font-size: 12vw;
-                    padding-left: 0;
-                }
-
-                .carousel-title {
-                    font-size: 11vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 11vw;
-                }
-
-                .main-title-container {
-                    text-align: center;
+                .event-card:hover > .event-card-body > .event-card-body-caption{
+                    height: 0;
+                    opacity:0;
                 }
             }
+
         </style>
     </div>
 </section>
