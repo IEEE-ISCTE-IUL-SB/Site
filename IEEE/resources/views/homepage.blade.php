@@ -164,8 +164,8 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
 
 
 
-<section id="section1" style="background: rgb(123,143,131);
-background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%, rgba(79,79,79,1) 100%);padding-bottom:15%;">
+<section id="section1" style="background: rgb(94,97,103);
+background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, rgba(72,80,99,1) 50%, rgba(65,75,98,1) 97%, rgba(52,59,77,1) 100%);padding-bottom:15%;">
     
     <div class="pc container" >
     <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explora as nossas societies</h1>
@@ -233,16 +233,7 @@ background: linear-gradient(0deg, rgba(123,143,131,1) 5%, rgba(56,99,111,1) 98%,
   
   
 
-<section id="section2" class="py-5 section-2">
-    <div class="container py-5 text-center">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Newsletter</h2>
-                <p class="text-muted lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 
 <div class="container" style="margin-bottom:10%; ">

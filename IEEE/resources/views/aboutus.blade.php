@@ -4,9 +4,13 @@
 
 
 <section id="section1" style="background:white;padding-bottom:20%;padding-top:10%;">
-        <div  style="color:white;margin-left:10%;">
+        <div  style="color:white;width:70%;margin-right:auto;margin-left:auto;">
                 <h2 style="font-family:'font-letter2';font-size:4pc;letter-spacing:0.1px;color:rgb(78 81 97);">Sobre Nós</h2>
-                <p class="text-muted lead" style="margin-top:10%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                <p class="text-muted lead" style="letter-spacing:0.1px;line-height:1.6pc;font-family:'font-letter1';width:95%;margin-top:10%;">
+                Com mais de 400.000 membros em todo o mundo, o IEEE é a maior associação de engenharia do mundo. Um mundo no qual estudantes, pesquisadores e profissionais colaboram para um objetivo comum, o avanço tecnológico para a humanidade.
+Fundado a 31 de agosto de 2012, o Branch de Estudantes do IEEE ISCTE-IUL tem desempenhado um importante papel na promoção e divulgação dos cursos do DCTI e do ISTA, servindo de alavanca para o desenvolvimento técnico e profissional dos alunos do escola.
+Nos últimos anos, o student branch esteve representado em vários encontros internacionais e foi responsável pela organização de mais de uma dezena de eventos e workshops técnicos, colocando o ISCTE na vanguarda da tecnologia.
+                </p>
          
         </div>
 
