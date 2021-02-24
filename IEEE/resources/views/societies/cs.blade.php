@@ -29,12 +29,12 @@
 </section>
 
 <section id="description-section">
-    <div class="description-title">
+    <div class="description-title sections-title letter2">
         Quem somos?
     </div>
     <div class="description-group">
         <div class="row justify-content-center description-row">
-            <div class="col-lg-6 col-md-8 col-sm-10 col-12 text-muted sections-description">
+            <div class="col-lg-8 col-sm-10 col-12 text-muted sections-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae velit imperdiet magna molestie malesuada. Etiam eu congue nisi, vel vulputate velit. Sed luctus augue at lacus consectetur sollicitudin. Nullam dolor ipsum, consequat at metus sed, ultricies malesuada arcu. Pellentesque magna ex, tempus et feugiat eget, tempus ut magna. Ut mi augue, pharetra id dapibus non, tempor quis ex.
             </div>
         </div>
@@ -111,7 +111,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
 
-                <p class="text-muted sections-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                <p class="text-muted sections-description" style="font-size: 18px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
             </div>
         </div>
 
@@ -186,10 +186,6 @@
     }
 
     .description-title {
-        color: black;
-        font-weight: bolder;
-        text-align: center;
-        font-size:260%;
         margin: 2% auto 2% 0;
     }
 
@@ -344,13 +340,13 @@
 
     @media (max-width:1200px) {
         .mission-row {
-            font-size: 30px;
+            font-size: 18px;
         }
     }
 
     @media (max-width: 1024px) {
         .mission-row {
-            font-size: 26px;
+            font-size: 15px;
         }
 
         .event-card {
@@ -359,39 +355,19 @@
 
     }
 
-    @media only screen and (max-width: 900px) {
-
-
-        .societylogo {
-            display: block;
-            overflow:hidden;
-            width:100%;
-            margin-top:10%;
-        }
-
-        .sections-title{
-            overflow:hidden;text-align:center;font-size:220%;overflow:hidden;width:100%;
-        }
-
-        .sections-description{
-            overflow:hidden;
-            text-align:center;
-            font-size:135%;
-        }
-    }
 
     @media only screen and (min-width: 900px) {
 
-        .sections-title{
-            overflow:hidden;
-            text-align:center;
-            font-size:270%;
+        .sections-title {
+            overflow: hidden;
+            text-align: center;
+            font-size: 270%;
         }
 
-        .sections-description{
-            overflow:hidden;
-            text-align:center;
-            font-size:120%
+        .sections-description {
+            overflow: hidden;
+            text-align: center;
+            font-size: 130%
         }
 
         .societylogo {
@@ -403,10 +379,31 @@
 
     }
 
-    @media (max-width: 768px) {
-        .mission-row {
-            font-size: 22px;
+    @media only screen and (max-width: 900px) {
+
+
+        .societylogo {
+            display: block;
+            overflow:hidden;
+            width:60%;
         }
+
+        .sections-title{
+            overflow:hidden;
+            text-align:center;
+            font-size:220%;
+            overflow:hidden;
+            width:100%;
+        }
+
+        .sections-description{
+            overflow:hidden;
+            text-align:center;
+            font-size:135%;
+        }
+    }
+
+    @media (max-width: 768px) {
 
         #description-section {
             padding: 1rem 1.5rem;
@@ -414,9 +411,25 @@
         }
     }
 
+    @media (max-width: 576px) {
+        #missionsection {
+            height: 0;
+            margin-bottom: 1rem;
+            margin-top: 0;
+            visibility: hidden;
+        }
+    }
+
     @media (max-width: 480px) {
+
         .mission-row {
-            font-size: 18px;
+            font-size: 16px;
+        }
+
+
+
+        .sections-description{
+            font-size:100%;
         }
 
         .event-card:hover > .event-card-body > .event-card-body-caption{
