@@ -197,6 +197,7 @@
     .mission-link {
         color:#4F4263;
         font-size:145%;
+        line-height: 25px;
         transition: .1s;
     }
 
