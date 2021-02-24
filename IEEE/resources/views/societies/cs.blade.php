@@ -35,8 +35,11 @@
     <div class="description-group">
         <div class="row justify-content-center description-row">
             <div class="col-lg-8 col-sm-10 col-12 text-muted sections-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae velit imperdiet magna molestie malesuada. Etiam eu congue nisi, vel vulputate velit. Sed luctus augue at lacus consectetur sollicitudin. Nullam dolor ipsum, consequat at metus sed, ultricies malesuada arcu. Pellentesque magna ex, tempus et feugiat eget, tempus ut magna. Ut mi augue, pharetra id dapibus non, tempor quis ex.
-            </div>
+                With the desire to do better, innovate, discover, (re) learn and contribute the IEEE Computer Society was born. Throughout the years the computer society has been responsible for actively supporting events around the globe, allowing computer science to go further beyond.
+
+                The Computer Society @ ISCTE-IUL aims to evolve by facing problems and by constantly learning. If you are someone who has the desire to integrate teams that aim high or if you are just looking for the right time and place to give birth to your own project, look no further. We want to help you achieving your tech goals while learning along the way.
+
+                Your ideas matter, and so does your help!            </div>
         </div>
     </div>
 </section>
@@ -175,6 +178,7 @@
     .mission-link {
         color:dimgrey;
         font-size:145%;
+        line-height: 26px;
         transition: .1s;
     }
 
