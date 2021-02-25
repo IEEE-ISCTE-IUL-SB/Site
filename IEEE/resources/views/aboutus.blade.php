@@ -20,6 +20,41 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 </section>
 
 
+<section id="section2" style="background:white;padding-bottom:20%;padding-top:10%;">
+        <div  style="color:white;width:80%;;margin-right:auto;margin-left:auto;">
+                <h2 style="margin-left:auto;margin-right:auto;font-family:'font-letter2';font-size:4pc;letter-spacing:0.1px;color:rgb(78 81 97);margin-bottom:10%;">Sobre Nós</h2>
+                <div class="members m-auto">
+               <div class="row mx-auto">
+               <div class="col m-auto " style="width:50%;padding:0px;text-align:center;justify-content:center;">
+                  <div class="card branch">
+                    <h1>Hello</h1>
+                  </div>
+               </div>   
+               <div class="col m-auto" style="padding:0px;text-align:center;justify-content:center;">
+                  <div class="card branch">
+                    <h1>Hello</h1>
+                  </div>
+               </div>   
+               <div class="col m-auto" style="padding:0px;text-align:center;justify-content:center;">
+                  <div class="card branch" >
+                    <h1>Hello</h1>
+                  </div>
+               </div>   
+               <div class="col m-auto" style="padding:0px;text-align:center;justify-content:center;">
+                  <div class="card branch" >
+                    <h1>Hello</h1>
+                  </div>
+               </div>   
+              </div>
+         
+        </div>
+
+        </div>
+
+ 
+</section>
+
+
 
 
 <div class="container" style="margin-bottom:10%;">
@@ -59,6 +94,29 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 </div>
 
 <style>
+.branches {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align:center;
+ 
+}
+
+.branch {
+  -webkit-box-shadow: 0px 0px 33px -3px rgba(0,0,0,0.38); 
+box-shadow: 0px 0px 33px -3px rgba(0,0,0,0.38);
+  text-align: center;
+  width:11pc;
+  height:11pc;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  margin-left:2pc;
+  margin-right:2pc;
+  margin-top:5pc;
+  margin-bottom:1pc;
+  transform: rotate(-45deg); 
+}
+
 
 .members {
   display: flex;
