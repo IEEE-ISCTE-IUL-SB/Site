@@ -285,17 +285,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     </div>
 </section>
 
-<section id="section5" class="py-5 section-2"><h2 class="letter2 sections-title">Repositório de ideias</h2>
-    <div class="container py-5 text-center">
 
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-
-                <p class="text-muted lead sections-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <style>
     #societylogosection {

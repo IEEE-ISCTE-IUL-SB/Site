@@ -28,7 +28,26 @@ margin-top:10%;margin-bottom:20%;">
   <a  class="card project" href="{{ route('single', $project->id )}}" >
 
         <div class="row mx-auto" >
-        <div id="wrapper"><div class="project-image"></div> 
+        <div id="wrapper"><div style=" 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        overflow:hidden;
+
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px); 
+        justify-content:center;
+        box-sizing: border-box;
+
+        width:15pc;
+        height:12pc;
+        filter: blur(3px) brightness(0.6) saturate(1.3);
+
+        background-size: cover;
+        
+        background-image: url('{{asset($project->imageB)}}');  "></div> 
         <h2 class="card project-name" style="">{{$project->nome}}</h2>
       </div>
       
@@ -77,28 +96,7 @@ box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.45);
 border-radius:10px;
 transition:0.3s;
 }
-.project-image{
-        
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
- overflow:hidden;
 
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px); 
-justify-content:center;
-box-sizing: border-box;
-
-width:15pc;
-height:12pc;
-filter: blur(3px) brightness(0.6) saturate(1.3);
-
-         background-size: cover;
-  
-  background-image: url('{{asset('img/rasSplash.jpg')}}');  
-}
 
 .project-name  {
         margin-left:1px;margin-right:1px;
@@ -179,7 +177,7 @@ filter: blur(3px) brightness(0.6) saturate(1.3);
 
 <section id="section3">
       <div  style="color:white;margin-left:0%;margin-top:-10%;position: relative; ">
-                <h2 style="font-family:'font-letter2';font-size:2pc;text-align:center;letter-spacing:0.1px;color:rgb(78 81 97);">Tem alguma proposta ? <span style="color:#5E666E;font-size:1.8pc;padding-left:2vw;">   Envia mail para ieee@iscte-iul.pt </span></h2>
+                <h2 style="font-family:'font-letter2';font-size:2pc;text-align:center;letter-spacing:0.1px;color:rgb(78 81 97);">Tens alguma proposta ? <span style="color:#5E666E;font-size:1.8pc;padding-left:2vw;">   Envia mail para ieee@iscte-iul.pt </span></h2>
                 <p class="text-muted lead" style="margin-top:10%;"></p>
          
         </div>

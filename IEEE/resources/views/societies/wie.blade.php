@@ -27,10 +27,7 @@
         <div class="col">
             <a class="letter2 mission-link" href="#section3">Workshops<a>
         </div>
-        <div class="col">
-            <a class="letter2 mission-link" href="#section4">Repositório de Ideias <a>
-        </div>
-
+        
     </div>
 </section>
 
@@ -124,16 +121,7 @@
 
 </section>
 
-<section id="section4"><h2 class="letter2 sections-title">Repositório de ideias</h2>
-    <div class="container py-5 text-center">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
 
-                <p class="text-muted lead sections-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 
     <script>

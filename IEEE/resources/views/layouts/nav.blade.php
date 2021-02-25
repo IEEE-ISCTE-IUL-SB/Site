@@ -68,7 +68,7 @@
     margin-left:0%;
     margin-top: 1.7pc;
     width:100%;
-    height: 22pc;
+    height: 10pc;
     border:none;
     box-shadow:0px 17px 20px 12px #00000024;
 
@@ -88,7 +88,7 @@
     margin-left:0%;
     margin-top: 1.7pc;
     width:100%;
-    height: 22pc;
+    height:10pc;
     border:none;
     box-shadow:0px 17px 20px 12px #00000024;
   }
@@ -140,7 +140,7 @@
     margin-left: -15pc;
     margin-top: 1.7pc;
     width:480%;
-    height: 18pc;
+    height: 12pc;
     border:none;
     box-shadow:0px 17px 20px 12px #00000024;
   }
@@ -199,7 +199,7 @@
                 <div class="col dropi " >
                 <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/CS') }}">
                     <h1 class="soc2 dropdownfont" >CS
-                    <h1 style="color:#808080c7;">Computer Society</h1>
+                    <h1 style="width: 130%;color:#808080c7;">Computer Society</h1>
                     </a>
                 </div>
             </div>
@@ -238,7 +238,7 @@
             .dropi{
 
     padding-left: 14px;
-    padding-right: 90px;
+    padding-right: 100px;
     padding-bottom: 23px;
     font-family:"font-letter1";
             }
