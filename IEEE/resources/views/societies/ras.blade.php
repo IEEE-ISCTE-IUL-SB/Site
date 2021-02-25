@@ -67,28 +67,36 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 <section id="section4"><h2 class="letter2 sections-title">Workshops</h2>
     <div class="container py-5 text-center">
 
-    <div class="event-slider owl-carousel">
-        @foreach($events as $event)
-        <a href="/evento/{{$event->id}}">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{$event->image1}}">
-                <div class="card-ellipse">
+        @if(count($events) > 0)
+        <div class="event-slider owl-carousel">
+
+            @foreach($events as $event)
+            <a href="/evento/{{$event->id}}">
+                <div class="event-card mx-auto">
+                    <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                    <div class="card-ellipse">
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-card-body-title">
+                            {{$event->event_name}}
+                        </div>
+                        <div class="event-card-body-caption">
+                            {{$event->event_description}}
+                        </div>
+                        <div class="event-card-body-seemore">
+                            See more ⇀
+                        </div>
+                    </div>
                 </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        {{$event->event_name}}
-                    </div>
-                    <div class="event-card-body-caption">
-                        {{$event->event_description}}
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </a>
-        @endforeach
-    </div>
+            </a>
+            @endforeach
+
+        </div>
+        @else
+        <div class="no-event-warning mx-auto">
+            Ainda não temos workshops para te mostrar
+        </div>
+        @endif
 
             <script>
                 setTimeout(function() { //items number only activates after window resize unless activated through timeout
@@ -144,6 +152,17 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 text-decoration: none;
                 font-size: 110%;
                 transition: .1s;
+            }
+
+            .event-slider-container {
+                display: flex;
+                min-height: 25rem;
+            }
+
+            .no-event-warning {
+                font-size: 1.3vw;
+                margin-top: 8%;
+                color: dimgrey;
             }
 
             .event-card {
