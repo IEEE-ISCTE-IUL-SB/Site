@@ -77,7 +77,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
         background: rgb(133,133,133);
 background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1) 100%);
         color: white;font-size: 17px;
-        transition:0.2s ease-in all;
+        transition:0.2s;
   
 }
 

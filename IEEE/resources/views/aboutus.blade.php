@@ -14,31 +14,12 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
          
         </div>
 
+        <img  src="{{asset('img/ieee2.jpg')}}" style="width:60%;margin-left:20%;margin-top:10%;">
 
  
 </section>
 
 
-<div class="parallax" style="height:600px;"></div>
-
-<style>
-.parallax {
-  /* The image used */
-  background-image: url('img/ieee2.jpg');
-
-  /* Full height */
-  height: 100%; 
-
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(0.5px);
-}
-
-</style>
 
 
 <div class="container" style="margin-bottom:10%;">

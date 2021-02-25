@@ -27,7 +27,44 @@
 
     </div>
 </section>
+<style>
 
+.request{
+    outline: none;
+    border-radius: 40px;
+    font-size: 17px;
+    padding-top: 19px;
+    font-family:'font-letter1';
+    padding-bottom: 16px;
+    padding-left: 33px;
+    padding-right: 31px;
+    color: white;
+    background:rgb(189,100,86);
+    border: 2px transparent;
+    transition:0.2s ease;
+    box-shadow: 1px 6px 20px #00000014;
+  }
+
+  .request:hover ,.request:active{
+    outline: none;
+    border-radius: 40px;
+    font-size: 17px;
+    font-family:'font-letter1';
+    transition:0.2s ease;
+    padding-top: 19px;
+    padding-bottom: 16px;
+    padding-left: 33px;
+    padding-right: 31px;
+    color: rgb(189,100,86)!important;
+    background:white;
+    border-color: #8B5148;
+    box-shadow: 1px 6px 20px #00000014;
+  }
+
+
+
+
+</style>
 <section id="section2" class="py-5 section-2" style="overflow:hidden;">
 
 
@@ -43,9 +80,8 @@
                         box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                 <div style="padding-top: 23%; text-align:center;">
-                    <h1 class="letter2" style="color:#333333;font-size: 250%" >kfkifviodksoskcdo</h1>
-                    <h1 class="letter2" style="color:#333333;font-size: 130%"> olal</h1>
-                </div>
+                    <h1 class="letter2" style="color:#8B5148;font-size: 210%" >Tens curiosidade por esta área?</h1>
+                    <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button></div>
 
             </div>
         </div>
@@ -370,24 +406,7 @@
     </div>
 </section>
 
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title"></h2>
-    <div class="container py-5 text-center">
-
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-
-                <p class="text-muted lead sections-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-            </div>
-        </div>
-
-        <div class="row justify-content-center description-row">
-            <div class="col-lg-6 col-md-8 col-sm-10 col-12">
-                <button type="button" class="btn btn-imsociety">Junta-te a nós</button>
-            </div>
-        </div>
-
-    </div>
-</section>
+>
 
 
 
@@ -505,9 +524,9 @@
         }
 
         .btn-imsociety {
-            color: #fff;
-            background-color: #af1e2a;
-            border-color: #af1e2a;
+            color: #92353D;
+            background-color: white;
+            border-color: #92353D;
             font-weight: bold;
             letter-spacing: 0.05em;
             border-radius: 0.3rem;
@@ -517,7 +536,7 @@
         .btn-imsociety:active,
         .btn-imsociety:focus,
         .btn-imsociety.active {
-            background: #831720;
+            background: #92353D;
             color: #ffffff;
             border-color: #831720;
         }

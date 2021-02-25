@@ -196,12 +196,6 @@
                     <h1 style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
-                <div class="col dropi" >
-                <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/MAE') }}">
-                    <h1 class="soc2 dropdownfont" >MAE
-                    <h1 style="color:#808080c7;">MAE Society</h1>
-                    </a>
-                </div>
                 <div class="col dropi " >
                 <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/CS') }}">
                     <h1 class="soc2 dropdownfont" >CS

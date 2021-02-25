@@ -7,24 +7,36 @@ margin-top:10%;margin-bottom:10%;height:100%;">
 
         <div
       style="color:rgb(78 81 97);margin-left:auto;margin-right:auto;text-align:center;">
-                <h2 style="font-family:'font-letter2';font-size:380%;letter-spacing:0.1px;">{{$project->name}}</h2>
+                <h2 style="font-family:'font-letter2';font-size:380%;letter-spacing:0.1px;">{{$project->nome}}</h2>
         </div>
      
 
 </section>
+<style>
+ .soc3{
+                color:#333333;transition:0.4s;
+                text-decoration-line: none;
+            }
 
+            .soc3:hover, .soc3:active{
+                color:#616171;transition:0.4s;
+                text-decoration-line: none;
+            }
+</style>
 
 <section id="section1" style="
 margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
 <div class="row">
                 <div style="width:20%;margin-left:6.5%;margin-right:2%;"> 
                 <div style="padding-top:10%;padding-bottom:5%;border-bottom: 1px solid #e6e6e6;border-top: 1px solid #e6e6e6;"> 
-                        <h2 class="card"style="margin-bottom:5.5%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Visão</h2>
-                        <a href="#fases-section"><h2 class="card" style="margin-bottom:5.5%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2></a>
-                        <h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Colaboradores</h2>
+                       <h2 class="card"style="margin-bottom:5.5%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Visão</h2>
+                        <a class="soc3" href="#fases-section"><h2 class="card" style="margin-bottom:5.5%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2></a>
+                        <a class="soc3" href="#colaboradores-section"><h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Colaboradores</h2></a>
                 </div>
                 <div style="padding-top:10%;padding-bottom:5%;"> 
-                        <h2 class="card"style="color:grey;margin-bottom:2%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:100%;letter-spacing:0.1px;">Contacto</h2>
+                        <h2 class="card"style="color:#4D5965;margin-bottom:2%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:100%;letter-spacing:0.1px;">Informações</h2>
+                        <h2 class="card"style="color:grey;margin-bottom:2%;margin-top:4%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:95%;letter-spacing:0.1px;">jmspa3@iscte-iul.pt</h2>
+               
                 </div>
                 </div>
                 <div style="width:60%;">
@@ -50,7 +62,7 @@ margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
 </section>
 
 <section id="fases-section" style="
-padding-top:15%;margin-bottom:20%;height:100%;margin-left:5%;margin-right:5%;">
+padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
 
 <div class="row">
                 <div style="width:20%;margin-left:6.5%;margin-right:2%;"> 
@@ -58,16 +70,14 @@ padding-top:15%;margin-bottom:20%;height:100%;margin-left:5%;margin-right:5%;">
                 <div style="width:60%;">
                         <div style="color:rgb(78 81 97);margin-bottom:3%;margin-left:5%;margin-right:25%;">
                         <h2 class="card"  style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2>
+                      @foreach($project->fases as $fase  )
                                 <h2 class="card"style="   display: list-item;                                       
     list-style-type: disc;       
     list-style-position: inside;color:grey;font-family:'font-letter1';justify-content:center;border:none;text-align:justify;font-size:120%;letter-spacing:0.1px;line-height:1.5pc;">
-                                Lorem ipsum dolor sit amet,modo consequat.  
-                                </h2>
+                              {{$fase->texto}} </h2>
 
-                                <h2 class="card"style="   display: list-item;                                       
-    list-style-type: disc;       
-    list-style-position: inside;color:grey;font-family:'font-letter1';justify-content:center;border:none;text-align:justify;font-size:120%;letter-spacing:0.1px;line-height:1.5pc;">
-                              Lorem ipsum dolor sit amet,modo consequat. 
+                      @endforeach
+
                         </div>
                 </div>
  </div>
@@ -75,7 +85,7 @@ padding-top:15%;margin-bottom:20%;height:100%;margin-left:5%;margin-right:5%;">
      
 
 </section>
-<div class="container" style="margin-bottom:10%; ">
+<div id="colaboradores-section"class="container" style="margin-bottom:10%;padding-top:10% ">
 <h2 class="member-title">Colaboradores</h2>
   <div class="members">
     <div class="member">

@@ -23,11 +23,6 @@ Route::get('/RAS', function () {
     return View::make('societies/ras')->with('events', $events);
 });
 
-Route::get('/MAE', function () {
-    $events = getSocietyEvents("MAE");
-    return View::make('societies/mae')->with('events', $events);
-});
-
 
 Route::get('/IMS', function () {
     $events = getSocietyEvents("IMS");

@@ -29,7 +29,7 @@ margin-top:10%;margin-bottom:20%;">
 
         <div class="row mx-auto" >
         <div id="wrapper"><div class="project-image"></div> 
-        <h2 class="card project-name" style="">{{$project->name}}</h2>
+        <h2 class="card project-name" style="">{{$project->nome}}</h2>
       </div>
       
         
