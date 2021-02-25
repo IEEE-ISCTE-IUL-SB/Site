@@ -100,24 +100,22 @@
 
         <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
-                var halfCardWidth = document.getElementsByClassName('event-card').item(0).clientWidth / 2;
 
                 $(".event-slider").owlCarousel({
-                    loop: true,
                     smartSpeed: 1000,
                     autoplay: true,
                     autoplayTimeout: 9000, //2000ms = 2s;
                     autoplayHoverPause: true,
-                    loop: true,
                     margin: 25,
                     nav: false,
-                    items: 3,
                     responsive:{
                         0:{
                             items:1,
+                            loop: ( $('.owl-carousel > *').length > 1),
                         },
                         1024:{
                             items:3,
+                            loop: ( $('.owl-carousel > *').length > 3),
                         },
                     },
                 });
