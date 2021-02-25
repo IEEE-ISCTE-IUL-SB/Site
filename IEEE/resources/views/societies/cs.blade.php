@@ -16,13 +16,10 @@
     <div class="row mission-row" >
 
         <div class="col">
-            <a class="letter2 mission-link" href="#description-section">Quem somos?<a>
+            <a class="letter2 mission-link" href="#description-section">Quem somos?</a>
         </div>
         <div class="col">
-            <a class="letter2 mission-link" href="#workshop-section">Workshops<a>
-        </div>
-        <div class="col">
-            <a class="letter2 mission-link" href="#idea-section">Repositório de Ideias <a>
+            <a class="letter2 mission-link" href="#workshop-section">Workshops</a>
         </div>
 
     </div>
@@ -46,7 +43,7 @@
 
 <section id="workshop-section">
     <h2 class="letter2 sections-title">Workshops</h2>
-    <div class="container py-5 text-center">
+    <div class="container py-5 text-center event-slider-container">
         @if(count($events) > 0)
         <div class="event-slider owl-carousel">
 

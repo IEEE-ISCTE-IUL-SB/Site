@@ -14,14 +14,12 @@
 
 <section id="missionsection" class="showw">
     <div class="row mission-row">
+
         <div class="col">
-            <a href="#section3" class="letter2 mission-link">Quem somos?<a>
+            <a href="#section3" class="letter2 mission-link">Quem somos?</a>
         </div>
         <div class="col">
-            <a href="#section4" class="letter2 mission-link">Workshops<a>
-        </div>
-        <div class="col">
-            <a href="#section5" class="letter2 mission-link">  Repositório de Ideias <a>
+            <a href="#section4" class="letter2 mission-link">Workshops</a>
         </div>
 
     </div>
@@ -65,38 +63,40 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 </section>
 
 <section id="section4"><h2 class="letter2 sections-title">Workshops</h2>
-    <div class="container py-5 text-center">
+    <div class="container py-5 text-center event-slider-container">
 
         @if(count($events) > 0)
-        <div class="event-slider owl-carousel">
+            <div class="event-slider owl-carousel">
 
-            @foreach($events as $event)
-            <a href="/evento/{{$event->id}}">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{$event->image1}}">
-                    <div class="card-ellipse">
+                @foreach($events as $event)
+                <a href="/evento/{{$event->id}}">
+                    <div class="event-card mx-auto">
+                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <div class="card-ellipse">
+                        </div>
+                        <div class="event-card-body">
+                            <div class="event-card-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="event-card-body-caption">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="event-card-body-seemore">
+                                See more ⇀
+                            </div>
+                        </div>
                     </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            {{$event->event_name}}
-                        </div>
-                        <div class="event-card-body-caption">
-                            {{$event->event_description}}
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-            </a>
-            @endforeach
+                </a>
+                @endforeach
 
-        </div>
+            </div>
         @else
-        <div class="no-event-warning mx-auto">
-            Ainda não temos workshops para te mostrar
-        </div>
+            <div class="no-event-warning mx-auto">
+                Ainda não temos workshops para te mostrar
+            </div>
         @endif
+
+    </div>
 
             <script>
                 setTimeout(function() { //items number only activates after window resize unless activated through timeout
@@ -144,6 +144,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 
             .mission-link {
                 color:dimgrey;
+                line-height: 26px;
                 transition: .1s;
             }
 

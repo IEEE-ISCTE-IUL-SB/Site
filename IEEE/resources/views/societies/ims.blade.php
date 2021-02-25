@@ -14,15 +14,12 @@
 
 <section id="missionsection" class="showw">
     <div class="row mission-row">
+
         <div class="col">
-            <a class="letter2 ">Quem somos?<a>
+            <a href="#description-section" class="letter2 mission-link">Quem somos?</a>
         </div>
         <div class="col">
-            <a class="letter2">Workshops<a>
-        </div>
-      
-        <div class="col">
-            <a class="letter2"> Media<a>
+            <a href="#workshop-section" class="letter2 mission-link">Workshops</a>
         </div>
 
     </div>
@@ -69,19 +66,22 @@
 
 
     <div class="row" style="overflow:hidden;padding-bottom:10%;padding-top:1%;">
-        <div class="column side1" >
+
+        <div class="col-6 side1">
             <img src="{{asset('img/ieee1.jpg')}}" style="-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);height:auto;width:100%;;margin-right:0.1%;">
         </div>
-        <div class="column side2" >
 
+        <div class="col-6 side2">
             <div style="height:99.5%;
                         --webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
-                        background-color:white;justify-content:center;">
+                        background-color:white;
+                        justify-content:center;">
                 <div style="padding-top: 23%; text-align:center;">
                     <h1 class="letter2" style="color:#8B5148;font-size: 210%" >Tens curiosidade por esta área?</h1>
-                    <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button></div>
+                    <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
+                </div>
 
             </div>
         </div>
@@ -91,15 +91,15 @@
 
 
 
-    <section id="section2" class="" style="margin-bottom:10%;">
+    <section id="description-section">
     <div class="container">
         <h2 class="letter2" style="font-size:280%;margin-left:0%;margin-top:5%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
         <div class="row">
-        
+
             <div class="column"style="width:55%;">
 
                 <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;margin-right:10vw;">A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos. Os campos de interesse incluem metrologia, instrumentos eletrônicos analógicos e digitais, sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo), instrumentação e transdutores para medição de variáveis não elétricas, calibração e incerteza, instrumentos com controle automatizado e funções de análise, instrumentação de segurança e novas aplicações de tecnologia.</p>
-               
+
             </div>
 
             <div class="column"style="display:block;
@@ -113,10 +113,12 @@
 
 </section>
 
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title">Workshops</h2>
-    <div class="container py-5 text-center">
+<section id="workshop-section" class="py-5 section-2"><h2 class="letter2 sections-title">Workshops</h2>
 
+    <div class="container py-5 text-center event-slider-container">
+        @if(count($events) > 0)
         <div class="event-slider owl-carousel">
+
             @foreach($events as $event)
             <a href="/evento/{{$event->id}}">
                 <div class="event-card mx-auto">
@@ -137,7 +139,15 @@
                 </div>
             </a>
             @endforeach
+
         </div>
+        @else
+        <div class="no-event-warning mx-auto">
+            Ainda não temos workshops para te mostrar
+        </div>
+        @endif
+
+    </div>
 
         <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
@@ -192,6 +202,29 @@
 
             #missionsection {
                 overflow: hidden;
+            }
+
+            #description-section {
+                padding: 4rem 4rem;
+            }
+
+            #workshop-section, #idea-section {
+                padding-top: 7rem;
+                background: white;
+            }
+
+            .mission-link {
+                color:dimgrey;
+                font-size:145%;
+                line-height: 28px;
+                transition: .1s;
+            }
+
+            .mission-link:hover {
+                text-decoration: none;
+                color:dimgrey;
+                font-size: 160%;
+                transition: .1s;
             }
 
             .event-card {
@@ -401,10 +434,7 @@
             }
 
         </style>
-    </div>
 </section>
-
->
 
 
 
@@ -417,8 +447,6 @@
         overflow:hidden;
         margin-bottom: 1%;
     }
-
-
 
 
     .mission-row {

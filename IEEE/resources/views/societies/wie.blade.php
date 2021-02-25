@@ -22,12 +22,12 @@
     <div class="row mission-row">
 
         <div class="col">
-            <a class="letter2 mission-link" href="#section2">Quem somos?<a>
+            <a class="letter2 mission-link" href="#section2">Quem somos?</a>
         </div>
         <div class="col">
-            <a class="letter2 mission-link" href="#section3">Workshops<a>
+            <a class="letter2 mission-link" href="#section3">Workshops</a>
         </div>
-        
+
     </div>
 </section>
 
@@ -91,6 +91,8 @@
                 Ainda não temos workshops para te mostrar
             </div>
         @endif
+
+    </div>
 
             <script>
                 setTimeout(function() { //items number only activates after window resize unless activated through timeout
