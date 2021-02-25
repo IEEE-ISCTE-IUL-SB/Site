@@ -47,6 +47,7 @@
 <section id="workshop-section">
     <h2 class="letter2 sections-title">Workshops</h2>
     <div class="container py-5 text-center">
+        @if(count($events) > 0)
         <div class="event-slider owl-carousel">
 
             @foreach($events as $event)
@@ -71,6 +72,11 @@
             @endforeach
 
         </div>
+        @else
+        <div class="no-event-warning mx-auto">
+            Ainda não temos workshops para te mostrar
+        </div>
+        @endif
     </div>
 
         <script>
@@ -179,6 +185,17 @@
         font-size:145%;
         line-height: 26px;
         transition: .1s;
+    }
+
+    .event-slider-container {
+        display: flex;
+        min-height: 25rem;
+    }
+
+    .no-event-warning {
+        font-size: 1.3vw;
+        margin-top: 8%;
+        color: dimgrey;
     }
 
     .mission-link:hover {

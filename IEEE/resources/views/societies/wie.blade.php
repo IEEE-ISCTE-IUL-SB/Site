@@ -63,32 +63,37 @@
 
 
 <section id="section3"><h2 class="letter2 sections-title">Workshops</h2>
-    <div class="container py-5 text-center">
+    <div class="container py-5 text-center event-slider-container">
+        @if(count($events) > 0)
+            <div class="event-slider owl-carousel">
 
-        <div class="event-slider owl-carousel">
-
-            @foreach($events as $event)
-            <a href="/evento/{{$event->id}}">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{$event->image1}}">
-                    <div class="card-ellipse">
+                @foreach($events as $event)
+                <a href="/evento/{{$event->id}}">
+                    <div class="event-card mx-auto">
+                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <div class="card-ellipse">
+                        </div>
+                        <div class="event-card-body">
+                            <div class="event-card-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="event-card-body-caption">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="event-card-body-seemore">
+                                See more ⇀
+                            </div>
+                        </div>
                     </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            {{$event->event_name}}
-                        </div>
-                        <div class="event-card-body-caption">
-                            {{$event->event_description}}
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-            </a>
-            @endforeach
+                </a>
+                @endforeach
 
-        </div>
+            </div>
+        @else
+            <div class="no-event-warning mx-auto">
+                Ainda não temos workshops para te mostrar
+            </div>
+        @endif
 
             <script>
                 setTimeout(function() { //items number only activates after window resize unless activated through timeout
@@ -205,6 +210,17 @@
         color: #4F4263;
         font-size: 160%;
         transition: .1s;
+    }
+
+    .event-slider-container {
+        display: flex;
+        min-height: 25rem;
+    }
+
+    .no-event-warning {
+        font-size: 1.3vw;
+        margin-top: 8%;
+        color: dimgrey;
     }
 
     .event-card {
