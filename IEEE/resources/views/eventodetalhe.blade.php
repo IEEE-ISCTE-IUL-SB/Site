@@ -325,7 +325,7 @@
 
     .slider-img {
         width: 100%;
-        height: 60vh;
+        height: 55vh;
         object-fit: cover;
     }
 
@@ -357,15 +357,15 @@
     }
 
     .RAS {
-        background-color: #001fb0;
+        background-color: #548195;
     }
 
     a.RAS:hover {
-        background-color: #00178a;
+        background-color: #548195;
     }
 
     .IMS {
-        background-color: #af1e2a;
+        background-color: #914249;
     }
 
     a.IMS:hover {
