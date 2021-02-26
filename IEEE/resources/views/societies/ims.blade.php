@@ -12,7 +12,7 @@
     <img src="{{asset('img/imsblack.png')}}" class="societylogo">
 </section>
 
-<section id="missionsection" class="showw">
+<section id="missionsection" class="showw pc">
     <div class="row mission-row">
 
         <div class="col">
@@ -24,6 +24,8 @@
 
     </div>
 </section>
+
+
 <style>
 
 .request{
@@ -71,18 +73,40 @@
             <img src="{{asset('img/ieee1.jpg')}}" style="-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);height:auto;width:100%;;margin-right:0.1%;">
         </div>
-
-        <div class="col-6 side2">
-            <div style="height:99.5%;
-                        --webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
-                        box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
-                        background-color:white;
-                        justify-content:center;">
-                <div style="padding-top: 23%; text-align:center;">
-                    <h1 class="letter2" style="color:#8B5148;font-size: 210%" >Tens curiosidade por esta área?</h1>
-                    <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
+        
+        <div class="pc">
+            <div class="col-6 side2">
+                <div style="height:99.5%;
+                            --webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+                            box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+                            background-color:white;
+                            justify-content:center;">
+                    <div style="padding-top: 23%; text-align:center;">
+                        <h1 class="letter2" style="color:#8B5148;font-size: 210%" >Tens curiosidade por esta área?</h1>
+                        <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="side2 mobile">
+        
+        <div class="mobile-who">
+            <img src="{{asset('img/ieee1.jpg')}}" style="-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+                        box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);height:auto;width:100%;;margin-right:0.1%;">
+        </div>
+      
+                <div style="height:99.5%;
+                            --webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+                            box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+                            background-color:white;
+                            justify-content:center;">
+                    <div style="padding-top: 23%; text-align:center;">
+                        <h1 class="letter2" style="color:#8B5148;font-size: 210%;margin-left: 10%;
+    margin-right: 10%;" >Tens curiosidade por esta área?</h1>
+                        <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
+                    </div>
+                </div>
+            
         </div>
     </div>
 
@@ -91,22 +115,55 @@
 
 
     <section id="description-section">
-    <div class="container">
-        <h2 class="letter2" style="font-size:280%;margin-left:0%;margin-top:5%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
-        <div class="row">
+    <div class="pc-who">
+    <div class="container m-auto">
+        <h2 class="letter2 who"  >Quem Somos?</h2>
+       
+            <div class="row">
 
-            <div class="column"style="width:55%;">
+                <div class="col who-side1">
+                    <p class="who-side1-p">
+                    A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos. 
+                    </p>
+                    <p class="who-side1-p">
+                     Os campos de interesse incluem metrologia, instrumentos eletrônicos analógicos e digitais, sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo), instrumentação e transdutores para medição de variáveis não elétricas, calibração e incerteza, instrumentos com controle automatizado e funções de análise, instrumentação de segurança e novas aplicações de tecnologia.
+                    </p>
+                </div>
 
-                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;margin-right:10vw;">A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos. Os campos de interesse incluem metrologia, instrumentos eletrônicos analógicos e digitais, sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo), instrumentação e transdutores para medição de variáveis não elétricas, calibração e incerteza, instrumentos com controle automatizado e funções de análise, instrumentação de segurança e novas aplicações de tecnologia.</p>
+                <div class="col-6 who-side2">
+                    <img style="width:100%;border-radius:30pc;" src="{{asset('img/imsmeet.jpg')}}" />
+                </div>
 
             </div>
-
-            <div class="column"style="display:block;
-            width:45%;margin-top:0vh;">
-                <img style="width:100%;border-radius:30pc;"src="{{asset('img/imsmeet.jpg')}}" />
-            </div>
+        </div>
+        </div>
+        <div class="mobile-who">
+        <div class="container m-auto">
+        <h2 class="letter2 who"  >Quem Somos?</h2>
+                <div class=""style="width:100%">
+                    <p style=" letter-spacing:0.7px;color:grey;width:100%;line-height:110%;font-size:90%;margin-top:10%;text-align:center;">
+                    A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos.
+                    </p>
+                </div>
 
         </div>
+        <div class="" style="width:100%;margin-top:10%;">
+                    <img style="width:100%;" src="{{asset('img/imsmeet.jpg')}}" />
+                </div>
+                <div class="container m-auto">
+
+<div class=""style="width:100%">
+<p style=" letter-spacing:0.7px;color:#333333;width:100%;line-height:110%;font-size:120%;margin-top:20%;text-align:center;">
+    Incide em vários campos como :
+    </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Metrologia </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo) </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Instrumentação e transdutores para medição de variáveis não elétricas </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Instrumentação de segurança e novas aplicações de tecnologia </p>
+
+</div>
+
+</div>
     </div>
 </section>
 
@@ -215,7 +272,7 @@
 
             .mission-link {
                 color:dimgrey;
-                font-size:145%;
+               
                 line-height: 28px;
                 transition: .1s;
             }
@@ -223,13 +280,13 @@
             .mission-link:hover {
                 text-decoration: none;
                 color:dimgrey;
-                font-size: 160%;
+            
                 transition: .1s;
             }
 
             .event-card {
                 overflow: hidden;
-                height:30rem;
+                height:26rem;
                 transition:0.6s;
                 border-radius:1px;
                 position:relative;
@@ -239,7 +296,7 @@
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-                width:90%;
+                width:80%;
             }
 
             .event-card:hover {
@@ -368,7 +425,20 @@
 
             @media only screen and (max-width: 900px) {
 
+                .who{
+                    font-size:190%;margin-left:auto;margin-top:5%;margin-right:auto;margin-bottom:5%;text-align:center;
+                }
 
+                .who-side1{
+                    width:100%
+                }
+
+                .who-side2{
+                  
+                    width:100%;margin-top:0vh;
+                }
+
+                
                 .societylogo {
                     display: block;
                     overflow:hidden;width:100%;
@@ -384,10 +454,38 @@
                     text-align:center;
                     font-size:135%;
                 }
+                .mission-link {
+                color:dimgrey;
+                font-size:192%;
+                line-height: 28px;
+                transition: .1s;
+            }
+
+            .mission-link:hover {
+                text-decoration: none;
+                color:dimgrey;
+                font-size: 160%;
+                transition: .1s;
+            }
             }
 
             @media only screen and (min-width: 900px) {
 
+                .who{
+                    font-size:240%;margin-left:0%;margin-top:5%;margin-right:auto;margin-bottom:5%;
+                }
+
+                .who-side1{
+                    width:55%
+                }
+                .who-side2{
+                    display:block;
+                    width:45%;margin-top:0vh;
+                }
+
+                .who-side1-p{
+                    letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;margin-right:10vw;
+                }
                 .sections-title{
                     overflow:hidden;
                     text-align:center;
@@ -477,9 +575,24 @@
             overflow:hidden;
         }
 
+        .pc{
+            display:none;
+        }
+
+        .mobile{
+            display:block;
+        }
+        .pc-who{
+            display:none;
+        }
+        .mobile-who{
+            display:block;
+        }
+
         .societylogo {
+            justify-content:center;
             text-align:center;
-            width:100%;
+            width:80%;
             display: block;
             margin-left:auto;
             overflow:hidden;
@@ -499,18 +612,28 @@
         .side1{
             display:none;
             overflow:hidden;
-            margin-right: -1.5%;
+            
         }
 
         .side2{
 
             width: 100%;
-            padding: 0px;
+            text-align:center;
+            justify-content:center;
             overflow:hidden;
         }
     }
 
     @media only screen and (min-width: 900px) {
+        .pc{
+            display:none;
+        }
+        .pc-who{
+            display:block;
+        }
+        .mobile-who{
+            display:none;
+        }
         .showw{
             display : inline ;
             margin-top: 2rem;

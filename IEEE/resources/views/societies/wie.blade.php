@@ -4,7 +4,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <section id="section1" style="overflow:hidden;margin-top:1%;margin-bottom:2%;       overflow:hidden;">
-<div class="row">
+
+<div class="pc-wie">
+<div class="row" >
 <h1 class="letter2"style="
         width:45%;
         padding-top:10%;
@@ -14,7 +16,34 @@
         font-size:330%;
         overflow:hidden;
         margin-left: auto;">Sê parte da mudança</h1>
-            <img class="societylogo"src="{{asset('img/wielogo2.png')}}" />
+            
+            <img style=" max-width: 40%;
+          width:26%;
+          display: block;
+          margin-right:11%;
+          overflow:hidden;
+          margin-left: auto;"src="{{asset('img/wielogo2.png')}}" />
+    </div>
+    </div>
+            <div class="mobile-wie">
+            <div class="row" >
+<h1 class="letter2"style="
+        width:90%;
+        text-align:center;
+        padding-top:10%;
+        padding-bottom:10%;
+        display: block;
+        color:#583e77;
+        font-size:240%;
+        overflow:hidden;
+        margin-right: auto;
+        margin-left: auto;">Sê parte da mudança</h1>
+            <div class="m-auto" style="width:50vw;margin-left:auto;margin-right:auto;margin-top:6vh;">
+            <img style="  display: block;
+          overflow:hidden;width:100%;
+          margin-top:10%;" src="{{asset('img/wielogo2.png')}}" />
+            </div>
+            </div>
             </div>
 </section>
 
@@ -214,18 +243,18 @@
     }
 
     .event-card {
-        overflow: hidden;
-        height:30rem;
-        transition:0.6s;
-        border-radius:1px;
-        position:relative;
-        display:block;
-        outline: none;
-        margin-bottom: 16%;
-        margin-top: 16%;
-        -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-        width:90%;
+                overflow: hidden;
+                height:26rem;
+                transition:0.6s;
+                border-radius:1px;
+                position:relative;
+                display:block;
+                outline: none;
+                margin-bottom: 16%;
+                margin-top: 16%;
+                -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+                box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+                width:80%;
     }
 
     .event-card:hover {
@@ -353,6 +382,13 @@
           overflow:hidden;overflow:hidden;width:100%;
       }
 
+      .pc-wie{
+          display:none;
+      }
+      .mobile-wie{
+          display:block;
+      }
+
       .societylogo {
           display: block;
           overflow:hidden;width:100%;
@@ -375,7 +411,12 @@
     }
 
     @media only screen and (min-width: 900px) {
-
+      .pc-wie{
+          display:block;
+      }
+      .mobile-wie{
+          display:none;
+      }
       .showw{
           display : inline ;
           margin-top: 0;

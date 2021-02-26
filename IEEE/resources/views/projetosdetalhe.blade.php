@@ -35,7 +35,7 @@ margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
                 </div>
                 <div style="padding-top:10%;padding-bottom:5%;"> 
                         <h2 class="card"style="color:#4D5965;margin-bottom:2%;margin-top:2%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:100%;letter-spacing:0.1px;">Informações</h2>
-                        <h2 class="card"style="color:grey;margin-bottom:2%;margin-top:4%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:95%;letter-spacing:0.1px;">jmspa3@iscte-iul.pt</h2>
+                        <h2 class="card"style="color:grey;margin-bottom:2%;margin-top:4%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:95%;letter-spacing:0.1px;">{{$project->mail}}</h2>
                
                 </div>
                 </div>
@@ -44,16 +44,12 @@ margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
                         <h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:144%;letter-spacing:0.1px;">Visão</h2>
                         <h2 class="card"style="margin-bottom:2%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:120%;letter-spacing:0.1px;">Introdução</h2>
                                 <h2 class="card"style="color:grey;font-family:'font-letter1';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;line-height:1.5pc;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
-                              
+                                {{$project->introducao}}
                                 </h2>
       
                         <h2 class="card"style="margin-bottom:2%;margin-top:6%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:120%;letter-spacing:0.1px;">Objetivo</h2>
                                 <h2 class="card"style="color:grey;font-family:'font-letter1';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;line-height:1.5pc;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
-
+                                {{$project->objetivos}}
                                 </h2>
                         </div>
                 </div>
