@@ -10909,6 +10909,13 @@ a.text-dark:focus {
   font-family:'font-letter3';
 }
 
+<<<<<<< HEAD
+=======
+.letter4{
+  font-family:'font-letter4';
+}
+
+>>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
 @font-face {
   font-family: "font-letter1";
   src:url("../fonts/NHaasGroteskTXPro-55Rg.ttf") format("truetype");
