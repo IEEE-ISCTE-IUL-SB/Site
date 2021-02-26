@@ -4,12 +4,13 @@
 
 <section id="result-section">
     <div class="container row title-row">
-        <div class="result-title col-12 col-lg-7"> Resultados da procura por "asdasdasd": </div>
+        <div class="result-title col-12 col-lg-7"> Resultados da procura por "{{$searchtext}}": </div>
         <div class="justify-content-center col-12 col-lg-5">
-            <form class="search-form">
+            <form class="search-form" id="search-form" method="post" action="/search">
+                @csrf
                 <div class="input-group search-group-align">
-                    <input type="text" class="search-input" id="search" placeholder="Workshops..." autocomplete="off">
-                    <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
+                    <input type="text" class="search-input" id="search" name="searchtext" placeholder="Eventos..." autocomplete="off">
+                    <label onclick="submitSearchForm()" class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
                 </div>
             </form>
         </div>
@@ -17,80 +18,32 @@
 
     <div class="container event-container row justify-content-center mx-auto">
 
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
+        @if(count($searchresults) != 0)
+            @foreach($searchresults as $event)
+                <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
+                    <a href="/evento/{{$event->id}}">
+                        <div class="event-card mx-auto">
+                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                            <div class="card-ellipse">
+                            </div>
+                            <div class="event-card-body">
+                                <div class="event-card-body-title">
+                                    {{$event->event_name}}
+                                </div>
+                                <div class="event-card-body-caption">
+                                    {{$event->event_description}}
+                                </div>
+                                <div class="event-card-body-seemore">
+                                    See more ⇀
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
-                </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
-                </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-            <div class="event-card mx-auto">
-                <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                <div class="card-ellipse">
-                </div>
-                <div class="event-card-body">
-                    <div class="event-card-body-title">
-                        Event1
-                    </div>
-                    <div class="event-card-body-caption">
-                        Event1 caption
-                    </div>
-                    <div class="event-card-body-seemore">
-                        See more ⇀
-                    </div>
-                </div>
-            </div>
-        </div>
-
+            @endforeach
+        @else
+            <div class="no-results-message">Sem resultados para a tua procura</div>
+        @endif
 
     </div>
 
@@ -137,8 +90,8 @@
         border: 2px solid rgba(0, 0, 0, 0.01);
         outline: none;
         font-size: 16px;
-        -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.35);
-        box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.35);
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.15);
         color: #A7A8A7;
         font-weight: bold;
         letter-spacing: 0.5px;
@@ -179,20 +132,27 @@
 
     .card-wrapper {
         padding: 3% 1%;
+        margin-bottom: 3%;
+    }
+
+    .no-results-message {
+        margin-top: 10%;
+        font-size: 25px;
     }
 
     .event-card {
-        overflow: hidden;
-        padding: 0;
-        height:24rem;
-        transition:0.6s;
-        border-radius:1px;
-        position:relative;
-        display:inline-block;
-        outline: none;
-        -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-        width:100%;
+                overflow: hidden; 
+                 height:26rem;
+     transition:0.6s;
+     border-radius:1px;
+     position:relative;
+     display:block;
+     outline: none;
+     margin-bottom: 16%;
+     margin-top: 16%;
+     -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+     width:80%;
     }
 
     .event-card:hover {
@@ -244,11 +204,14 @@
 
     .event-card:hover > .event-card-body > .event-card-body-seemore{
         transition: .3s;
-        padding-right: 3%;
+        margin-right: 3%;
         opacity:1;
     }
 
     .event-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         object-fit: cover;
         transition: .3s;
         height:65%;
@@ -267,18 +230,20 @@
 
     .event-card-body-title {
         text-align: left;
-        font-size: 40px;
+        font-size: 32px;
         font-weight: bold;
     }
 
     .event-card-body-caption {
         text-align: left;
-        font-size: 25px;
-        padding-bottom: 0.5rem;
-        padding-top: 1.5rem;
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        line-height: 21px;
+        height: 66px;
         opacity:0;
         transition: .3s;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         text-overflow: ellipsis;
         overflow : hidden;
         display: -webkit-box;
@@ -314,22 +279,11 @@
     @media (max-width: 1500px) {
 
         .event-container, .title-row{
-            max-width: 90%;
-        }
-    }
-
-    @media (min-width: 1200px) and (max-width: 1350px) {
-
-        .event-container, .title-row{
             max-width: 95%;
         }
     }
 
     @media (max-width: 1200px) {
-
-        .event-container, .title-row{
-            max-width:85%;
-        }
 
         .card-wrapper {
             padding: 3% 2%;
@@ -350,12 +304,28 @@
             padding: 3%;
         }
 
+        event-card {
+            height: 25rem;
+        }
+
+        .event-container {
+            max-width: 75%;
+        }
+
     }
 
     @media (max-width: 768px) {
 
         .event-container, .title-row{
             max-width:65%;
+        }
+    }
+
+    @media (max-width: 520px) {
+
+        .event-card:hover > .event-card-body > .event-card-body-caption{
+            height: 0;
+            opacity:0;
         }
     }
 
@@ -377,5 +347,19 @@
         }
     }
 
+    @media (max-width: 478px) {
+
+        .event-card:hover > .event-card-body > .event-card-body-caption{
+            height: 0;
+            opacity:0;
+        }
+    }
+
 </style>
+
+<script>
+    function submitSearchForm() {
+        document.getElementById("search-form").submit();
+    }
+</script>
 @endsection

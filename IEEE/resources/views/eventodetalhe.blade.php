@@ -5,37 +5,45 @@
 <section id="description-section">
     <div class="container">
         <div class="event-title letter3">
-            Workshop Git/Github
+            {{$event->event_name}}
         </div>
         <div class="event-tag-row row">
-            <btn class="event-tag-button wedge-tag" href=""> CS </btn>
-            <btn class="event-tag-button wedge-tag"> Workshop </btn>
-            <btn class="event-tag-button wedge-tag"> Git </btn>
+            @foreach ($event->tags as $tag)
+               <a class="event-tag-button wedge-tag" href="/search/{{$tag->tag_name}}">{{$tag->tag_name}}</a>
+            @endforeach
         </div>
-        <div class="event-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lobortis libero. Sed sodales faucibus diam, ut tristique urna pulvinar consequat. Mauris dui purus, gravida id urna in, pharetra sagittis ante. Quisque congue quam diam, vitae pharetra arcu eleifend quis. Vestibulum aliquam justo a tincidunt aliquam. Nullam porttitor nisi et elit dictum gravida. Cras feugiat, ex in varius sagittis, odio purus lobortis elit, eu rhoncus nunc tellus vel libero. Donec eleifend quam ut neque tristique iaculis. Duis nec tincidunt nisl. Proin id blandit odio. Vestibulum ullamcorper lorem in arcu bibendum tincidunt.
+        <div class="event-description"> {{$event->event_description}}
         </div>
     </div>
 </section>
 
-<section id="detail-section">
-    <div class="detail-row row">
-        <div class="detail-col col">
-            <div class="row" style="justify-content: center">
-                <div class="detail-title">
-                    <i class="fa fa-calendar-o"></i>
-                </div>
-                <div class="detail-info">
-                    Data1
+<section id="detail-section" >
+    <div class="container"  >
+        <div class="detail-row row" id="detail-row" >
+            <div class="detail-col col-12 col-lg-3">
+                <div class="row" style="justify-content: center">
+
+                    <div class="detail-info">
+                        <i class="fas fa-clock"></i>
+                        {{ date('H:i', strtotime($event->event_time)) }} GMT
+
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="detail-col col">
-            <div class="row" style="justify-content: center">
-                <div class="detail-title">
-                    <i class="fa fa-map icon"> </i>
+            <div class="detail-col col-12 col-lg-3">
+                <div class="row" style="justify-content: center">
+                    <div class="detail-info">
+                        <i class="far fa-calendar"></i>
+                        {{ date('d/m/y', strtotime($event->event_date)) }}
+                    </div>
                 </div>
-                <div class="detail-info">
-                    Localização
+            </div>
+            <div class="detail-col col-12 col-lg-6">
+                <div class="row" style="justify-content: center">
+                    <div class="detail-info">
+                        <i class="fas @if(strcasecmp($event->event_location, 'Online') != 0) fa-map-marker-alt @else fa-globe @endif icon"> </i>
+                        {{$event->event_location}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,52 +51,56 @@
 </section>
 
 <section id="banner-section">
-    <div class="container">
+    <div class="container" >
         <div>
-            <div class="col-xs-12">
+            <div class="col-xs-12" >
                 <ul class="slider slider-ul">
-                    <li class="slider-item">
-                        <div class=" vertical">
-                            <div class="col-xs-12 col-md-12 slider-item-col">
-                                <div class="image-holder">
-                                    <img class="slider-img" src="{{asset('img/ieee2.jpg')}}">
-                                </div>
-                                <div>
-                                    <div class="col-xs-9 col-md-9">
-                                        <p class="slider-description">Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                     <li class="slider-item active">
                         <div class=" vertical">
                             <div class="col-xs-12 col-md-12 slider-item-col">
                                 <div class="image-holder">
-                                    <img class="slider-img" src="{{asset('img/ieee1.jpg')}}">
+                                    <img class="slider-img" src="{{asset($event->image1)}}">
                                 </div>
                                 <div>
                                     <div class="col-xs-9 col-md-9">
-                                        <p class="slider-description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
+                                        <p class="slider-description">{{$event->image1_description}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    @if(!is_null($event->image2))
+                    <li class="slider-item">
+                        <div class=" vertical">
+                            <div class="col-xs-12 col-md-12 slider-item-col">
+                                <div class="image-holder">
+                                    <img class="slider-img" src="{{asset($event->image2)}}">
+                                </div>
+                                <div>
+                                    <div class="col-xs-9 col-md-9">
+                                        <p class="slider-description">{{$event->image2_description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    @endif
+                    @if(!is_null($event->image3))
                     <li class="slider-item">
                         <div class="vertical">
                             <div class="col-xs-12 col-md-12 slider-item-col">
                                 <div class="image-holder">
-                                    <img class="slider-img" src="{{asset('img/ieee3.jpg')}}">
+                                    <img class="slider-img" src="{{asset($event->image3)}}">
                                 </div>
                                 <div>
                                     <div class="col-xs-9 col-md-9">
-                                        <p class="slider-description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
+                                        <p class="slider-description">{{$event->image1_description}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    @endif
                 </ul>
 
                 <div class="row justify-content-end" style="margin: 0">
@@ -115,17 +127,18 @@
 
     #description-section {
         padding: 3% 15px 0;
+        overflow: hidden;
     }
 
     #detail-section {
-        background: whitesmoke;
-        padding: 1rem 15%;
+        margin-top: 1rem;
+        overflow: hidden;
     }
 
     #banner-section {
         height: auto;
-        background: whitesmoke;
         padding-bottom: 1rem;
+        overflow: hidden;
     }
 
     .event-title {
@@ -137,7 +150,7 @@
     }
 
     .event-tag-row {
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
         padding-left: 1rem;
     }
 
@@ -146,12 +159,19 @@
         padding: .5rem .6rem;
         margin: .3rem;
         color:white;
-        background: #ecac44;
+        background-color: #00629B;
         transition: .2s;
     }
 
+    a.event-tag-button{
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-decoration: none;
+        color: white;
+    }
+
     .event-tag-button:hover {
-        background: #cf9740;
         font-weight: bold;
         transition: .2s;
     }
@@ -164,14 +184,23 @@
         margin-bottom: 1.5rem;
     }
 
+    .detail-row {
+        color: white;
+        align-content: center;
+        padding: .8rem 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+        -webkit-clip-path: polygon(calc(100% - 15px) 0, 100% 0, 100% 100% , 0 100%,  100% 15px);
+        clip-path: polygon(15px 0, 100% 0, 100% 100% , 0 100%, 0 15px);
+    }
+
     .detail-col {
         font-size: 18px;
     }
 
-    .detail-title {
-        font-size: 120%;
-        margin-right: .5rem;
-        transition: .2s;
+    .detail-info {
+        text-align: center;
     }
 
     .wedge-tag {
@@ -207,6 +236,7 @@
 
     .slider-item-col {
         padding: 0;
+        background-color: whitesmoke;
     }
 
     .slider-item {
@@ -303,7 +333,7 @@
 
     .slider-description {
         font-size: 1.25rem;
-        margin: 1rem 0 0 0;
+        margin: 1rem 0 0 1rem;
     }
 
     .slider-previous, .slider-next {
@@ -320,6 +350,62 @@
         width: 1px;
     }
 
+    .CS {
+        background-color: #F1B759;
+    }
+
+    a.CS:hover {
+        background-color: #F1B759;
+    }
+
+    .RAS {
+        background-color: #548195;
+    }
+
+    a.RAS:hover {
+        background-color: #548195;
+    }
+
+    .IMS {
+        background-color: #914249;
+    }
+
+    a.IMS:hover {
+        background-color: #83161f;
+    }
+
+    .WIE {
+        background-color: #593f73;
+    }
+
+    a.WIE:hover {
+        background-color: #422d54;
+    }
+
+    .MAE {
+        background-color: #001fb0;
+    }
+
+    a.MAE:hover {
+        background-color: #00178a;
+    }
+
+    .defaultSociety {
+        background-color: #00629B;
+    }
+
+    a.defaultSociety:hover {
+        background-color: #004970;
+    }
+
+    @media (max-width: 992px) {
+
+        .detail-info {
+            margin-top: .5rem
+        }
+
+    }
+
     @media (max-width: 768px) {
 
         .slider-controls {
@@ -329,6 +415,7 @@
     }
 
 
+
 </style>
 
 <script>
@@ -336,8 +423,7 @@
     const itemCount = items.length;
     const nextItem = document.querySelector('.slider-next');
     const previousItem = document.querySelector('.slider-previous');
-    var count;
-    setTimeout( function() { let count = 0; }, 10);
+    var count = 0;
 
     nextItem.addEventListener('click', showNextItem);
     previousItem.addEventListener('click', showPreviousItem);
@@ -369,6 +455,34 @@
 
         items[count].classList.add('active');
     }
+
+    $(document).ready(function() {
+        const items = document.querySelectorAll('.event-tag-button');
+        var societyColor = "defaultSociety";
+        items.forEach(item => {
+            switch (item.textContent) {
+                case "CS":
+                    societyColor = "CS";
+                    break;
+                case "RAS":
+                    societyColor = "RAS";
+                    break;
+                case "IMS":
+                    societyColor = "IMS";
+                    break;
+                case "WIE":
+                    societyColor = "WIE";
+                    break;
+                case "MAE":
+                    societyColor = "MAE";
+                    break;
+            }
+        });
+        items.forEach(item => {
+            item.classList.add(societyColor);
+        });
+        document.getElementById("detail-row").classList.add(societyColor)
+    })
 
 
 </script>

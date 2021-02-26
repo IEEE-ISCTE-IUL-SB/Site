@@ -19,6 +19,7 @@
             font-size: 5vw;
             padding-left: 15vw;
             padding-top: 5vh;
+            letter-spacing: 3px;
             text-align: center;
             font-weight: bolder;
             display: inline-block;
@@ -59,7 +60,7 @@
         }
 
         #scrollButton {
-            font-size: 60px;
+            font-size: 3vw;
             color: #5e5e5e;
             transform: scale(1.1, 1);
             transition: .2s;
@@ -69,8 +70,6 @@
             transform: scale(1.2, 1.1) translateY(8px);
             transition: .2s;
         }
-
-        html { scroll-behavior: smooth; }
     </style>
 </section>
 
@@ -80,70 +79,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <h2 id="novidadesScreen" class="letter3">
-        Novidades
+        Em destaque
     </h2>
     <div class="highlighted-event-container">
         <div class="mx-auto">
             <div class="highlighted-event-slider owl-carousel mx-auto">
-                <div class="highlighted-event-card">
 
-                    <img class="highlighted-event-img" src="{{asset('img/ieee1.jpg')}}">
+                @foreach($highlights as $event)
+                <a class="highlighted-event-link" onclick="highlightedEventLink(this, {{$event->id}})">
+                    <div class="highlighted-event-card">
 
-                    <div class="highlighted-event-body-bg"></div>
+                        <img class="highlighted-event-img" src="{{$event->image1}}">
 
-                    <div class="highlighted-event-card-body">
-                        <div class="highlighted-event-body-title">
-                            Destaque1
-                        </div>
-                        <div class="highlighted-event-body-description text-wrap text-truncate">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique nulla eu mi pellentesque, eget placerat eros commodo. Fusce cursus ipsum ac vestibulum rhoncus. Morbi sed sollicitudin mi. Quisque placerat eros sit amet lorem interdum, nec facilisis tortor lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras hendrerit tellus elit. Nullam sit amet ante lectus. Etiam maximus tincidunt nibh vitae commodo. Donec placerat, elit in placerat tempus, libero risus tincidunt arcu, ac condimentum felis justo at risus. Etiam posuere erat vel vulputate placerat. Suspendisse nec aliquam nisl, et lacinia dolor. Vestibulum nisl ligula, gravida ac maximus vitae, egestas nec tellus.
-                        </div>
-                        <div class="date-time-location-carousel row">
-                            <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> Av. das Forças Armadas, 1649-026 Lisboa</div>
-                        </div>
-                        <div class="highlighted-event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
+                        <div class="highlighted-event-body-bg"></div>
 
-                <div class="highlighted-event-card">
-
-                    <img class="highlighted-event-img" src="{{asset('img/ieee2.jpg')}}">
-
-                    <div class="highlighted-event-body-bg"></div>
-
-                    <div class="highlighted-event-card-body">
-                        <div class="highlighted-event-body-title">
-                            Destaque2
-                        </div>
-                        <div class="highlighted-event-body-description text-wrap text-truncate">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique nulla eu mi pellentesque, eget placerat eros commodo. Fusce cursus ipsum ac vestibulum rhoncus. Morbi sed sollicitudin mi. Quisque placerat eros sit amet lorem interdum, nec facilisis tortor lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras hendrerit tellus elit. Nullam sit amet ante lectus. Etiam maximus tincidunt nibh vitae commodo. Donec placerat, elit in placerat tempus, libero risus tincidunt arcu, ac condimentum felis justo at risus. Etiam posuere erat vel vulputate placerat. Suspendisse nec aliquam nisl, et lacinia dolor. Vestibulum nisl ligula, gravida ac maximus vitae, egestas nec tellus.
-                        </div>
-                        <div class="date-time-location-carousel row">
-                            <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> Av. das Forças Armadas, 1649-026 Lisboa</div>
+                        <div class="highlighted-event-card-body">
+                            <div class="highlighted-event-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="highlighted-event-body-description text-wrap text-truncate">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="date-time-location-carousel row">
+                                <div class="date-time-col"><i class="fas fa-clock"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="far fa-calendar"></i> {{ date('d/m/y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fas @if(strcasecmp($event->event_location, 'Online') != 0) fa-map-marker-alt @else fa-globe @endif icon"> </i> {{$event->event_location}}</div>
+                            </div>
+                            <div class="highlighted-event-card-body-seemore">
+                                See more ⇀
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="highlighted-event-card">
-
-                    <img class="highlighted-event-img" src="{{asset('img/ieee3.jpg')}}">
-
-                    <div class="highlighted-event-body-bg"></div>
-
-                    <div class="highlighted-event-card-body">
-                        <div class="highlighted-event-body-title">
-                            Destaque3
-                        </div>
-                        <div class="highlighted-event-body-description text-wrap text-truncate">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique nulla eu mi pellentesque, eget placerat eros commodo. Fusce cursus ipsum ac vestibulum rhoncus. Morbi sed sollicitudin mi. Quisque placerat eros sit amet lorem interdum, nec facilisis tortor lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras hendrerit tellus elit. Nullam sit amet ante lectus. Etiam maximus tincidunt nibh vitae commodo. Donec placerat, elit in placerat tempus, libero risus tincidunt arcu, ac condimentum felis justo at risus. Etiam posuere erat vel vulputate placerat. Suspendisse nec aliquam nisl, et lacinia dolor. Vestibulum nisl ligula, gravida ac maximus vitae, egestas nec tellus.
-                        </div>
-                        <div class="date-time-location-carousel row">
-                            <div class="date-time-col"><i class="fa fa-clock-o"></i> 12:00</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> 12/12/2020</div> <div class="col location-carousel"><i class="fa fa-map icon"> </i> Av. das Forças Armadas, 1649-026 Lisboa</div>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
         </div>
     </div>
@@ -151,38 +117,6 @@
 
 
             <style>
-
-                .butpro{
-                    margin-top: 30px;
-                    color: white;
-                    -webkit-background-clip: text;
-                    background-size: cover;
-                    background-position: center;
-                    background: url(img/ieee3.jpg);
-                    font-size: 17px;
-                    width: 114px;
-                    border:1px solid white;
-                    padding-left: 19px;
-                    padding-right: 0px;
-                    padding-top: 11px;
-                    padding-bottom: 12px;
-                    transition:0.1s ease-in all;
-                    -moz-transition:    all 0.1s  ease-in;
-                  -webkit-transition: all 0.1s  ease-in;
-                  -o-transition:      all 0.1s  ease-in;
-                  -ms-transition:     all 0.1s  ease-in
-                }
-
-                .butpro:hover, .butpro:active{
-                    border:1px solid #585A5C;
-                    background:transparent;
-                    color: #585A5C;
-                    transition:0.15s ease-in all;
-                    -moz-transition:    all 0.15s  ease-in;
-                    -webkit-transition: all 0.15s ease-in;
-                    -o-transition:      all 0.15s  ease-in;
-                    -ms-transition:     all 0.15s  ease-in
-                }
 
                 .owl-carousel {
                     display: flex !important;
@@ -196,7 +130,7 @@
                 #novidadesScreen {
                     font-size:70px;
                     text-align:center;
-                    color:#26233C;
+                    color: #323239;
                     margin-bottom: 75px;
                 }
 
@@ -224,18 +158,18 @@
                     transition: .3s;
                 }
 
-                .center > .highlighted-event-card {
+                .center > a >.highlighted-event-card {
                     transform: scale(1, 1);
                     transition: .3s;
                 }
 
-                .center > .highlighted-event-card > .highlighted-event-body-bg,
-                .center > .highlighted-event-card > .highlighted-event-card-body {
+                .center > a > .highlighted-event-card > .highlighted-event-body-bg,
+                .center > a > .highlighted-event-card > .highlighted-event-card-body {
                     opacity: 1;
                     transition: .3s;
                 }
 
-                .center > .highlighted-event-card > .highlighted-event-img {
+                .center > a > .highlighted-event-card > .highlighted-event-img {
                     filter: brightness(1);
                     transition: .3s;
                 }
@@ -266,6 +200,9 @@
                 }
 
                 .highlighted-event-img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
                     filter: blur(2px) grayscale(25%);
                     width: 100%;
                     object-fit: cover;
@@ -278,7 +215,7 @@
 
                 .highlighted-event-body-title {
                     color:#fff;
-                    font-size: 48px;
+                    font-size: 38px;
                     height:10%;
                     font-weight: bold;
                     transition: .3s;
@@ -321,12 +258,12 @@
                 }
 
                 .highlighted-event-card:hover,  > .highlighted-event-card-body > .date-time-location-carousel > .location-carousel{
-                    width: 60%;
+                    width: 40%;
                     transition:.3s;
                 }
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .date-time-location-carousel > .date-time-col{
-                    width: 20%;
+                    width: 30%;
                     transition: .3s;
                 }
 
@@ -397,10 +334,16 @@
                     $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
                 });
 
-                $(document).on('click', '.owl-item>div', function() {
+                $(document).on('click', '.owl-item>a', function() {
                     // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
                     $eventSlider.trigger('to.owl.carousel', [$(this).data("position"), $eventSlider.smartSpeed] );
                 });
+
+                function highlightedEventLink(element, event_id) {
+                    if (element.parentElement.classList.contains("center")) {
+                        window.location.href = ("evento/".concat(event_id))
+                    }
+                }
 
             </script>
 
@@ -414,7 +357,7 @@
                     $('.entity1').addClass('animate__animated', 'animate__bounce');
 
             });
-        }));
+        }))
     </script>
 
 
@@ -434,75 +377,31 @@
 
     <div class="container event-container text-center">
         <h2 class="letter3 carousel-title">
-            Esta semana
+            Próximos Eventos
         </h2>
 
         <div>
             <div class="event-slider owl-carousel">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event1
+                @foreach($nextevents as $event)
+                    <a href="/evento/{{$event->id}}">
+                        <div class="event-card mx-auto">
+                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                            <div class="card-ellipse">
+                            </div>
+                            <div class="event-card-body">
+                                <div class="event-card-body-title">
+                                    {{$event->event_name}}
+                                </div>
+                                <div class="event-card-body-caption">
+                                    {{$event->event_description}}
+                                </div>
+                                <div class="event-card-body-seemore">
+                                    See more ⇀
+                                </div>
+                            </div>
                         </div>
-                        <div class="event-card-body-caption">
-                            Event1 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event2
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event2 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event3
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event3
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event4
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event4 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                @endforeach
             </div>
         </div>
 
@@ -511,21 +410,22 @@
 
 <section id="search-section" style="background: #23384f;padding-bottom:6%">
     <div class="container" style="text-align:center;">
-        <h1 class="letter2" style="font-size:44px;color:white;padding-top:10%;padding-bottom:10%;letter-spacing:1px;"> PROCURA POR MAIS EVENTOS </h1>
+        <h1 class="search-title"> PROCURA POR MAIS EVENTOS </h1>
 
             <div class="row justify-content-center">
 
-                <form class="search-form">
+                <form class="search-form" id="search-form" method="post" action="/search">
+                    @csrf
                     <div class="input-group search-group-align">
-                        <input type="text" class="search-input" id="search" placeholder="Workshops..." autocomplete="off">
-                        <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
+                        <input type="text" class="search-input" id="search" name="searchtext" placeholder="Workshops..." autocomplete="off">
+                        <label onclick="submitSearchForm()" class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
                     </div>
                 </form>
             </div>
             <div class="event-tag-row row">
-                <btn class="event-tag-button wedge-tag" href=""> CS </btn>
-                <btn class="event-tag-button wedge-tag"> Workshop </btn>
-                <btn class="event-tag-button wedge-tag"> Git </btn>
+                @foreach ($highlightedtags as $tag)
+                <a class="event-tag-button wedge-tag" href="/search/{{$tag->tag_name}}"> {{$tag->tag_name}} </a>
+                @endforeach
             </div>
 
     </div>
@@ -541,70 +441,28 @@
 
         <div>
             <div class="event-slider owl-carousel">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event1
+
+                @foreach($pastevents as $event)
+                <a href="/evento/{{$event->id}}">
+                    <div class="event-card mx-auto">
+                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <div class="card-ellipse">
                         </div>
-                        <div class="event-card-body-caption">
-                            Event1 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event2
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event2 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
+                        <div class="event-card-body">
+                            <div class="event-card-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="event-card-body-caption">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="event-card-body-seemore">
+                                See more ⇀
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event3
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event3
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event4
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event4 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            <a href="{{ url('/eventodetalhe') }}">See more ⇀</a>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                @endforeach
+
             </div>
         </div>
 
@@ -613,23 +471,21 @@
 
         <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
-
                 $(".event-slider").owlCarousel({
-                    loop: true,
                     smartSpeed: 1000,
                     autoplay: true,
                     autoplayTimeout: 9000, //2000ms = 2s;
                     autoplayHoverPause: true,
-                    loop: true,
                     margin: 25,
                     nav: false,
-                    items: 3,
                     responsive:{
                         0:{
                             items:1,
+                            loop: ( $('.owl-carousel > *').length > 1),
                         },
                         1024:{
                             items:3,
+                            loop: ( $('.owl-carousel > *').length > 3),
                         },
                     },
                 });
@@ -641,6 +497,11 @@
                 $("a.owl-next ").click(function() {
                     $("div.owl-next").click();
                 })
+
+
+            function submitSearchForm() {
+                document.getElementById("search-form").submit();
+            }
 
         </script>
 
@@ -670,6 +531,15 @@
 
             }
 
+            .search-title {
+                font-weight: bold;
+                color:white;
+                font-size:2.5vw;
+                padding-top:10%;
+                padding-bottom:10%;
+                letter-spacing:1px;
+            }
+
             .event-tag-row {
                 margin: .3rem 0 1.5rem;
                 justify-content: center;
@@ -689,6 +559,16 @@
                 transform: scale(1.1);
                 margin: .3rem .5rem;
                 transition: .2s;
+            }
+
+
+            a.event-tag-button{
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                appearance: button;
+
+                text-decoration: none;
+                color: white;
             }
 
             .wedge-tag {
@@ -752,15 +632,10 @@
                 margin-bottom:auto;
             }
 
-            .padding-10{
-                padding-right:10px;
-                padding-left:10px;
-            }
-
             .carousel-title {
                 text-align: left;
-                font-size:300%;
-                color:#26233C;
+                font-size:3.5vw;
+                color:#323239;
             }
 
             .event-container {
@@ -770,7 +645,7 @@
 
             .event-card {
                 overflow: hidden;
-                height:30rem;
+                height:26rem;
                 transition:0.6s;
                 border-radius:1px;
                 position:relative;
@@ -780,8 +655,8 @@
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-                width:90%;
-             }
+                width:80%;
+    }
 
             .event-card:hover {
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
@@ -832,7 +707,7 @@
 
             .event-card:hover > .event-card-body > .event-card-body-seemore{
                 transition: .3s;
-                padding-right: 3%;
+                margin-right: 3%;
                 opacity:1;
             }
 
@@ -847,26 +722,29 @@
                 color: black;
                 transition: .3s;
                 height:35%;
-                width:95%;
+                width:100%;
                 padding-left:2rem;
+                padding-right:2rem;
                 position:absolute;
                 bottom:0;
             }
 
             .event-card-body-title {
                 text-align: left;
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: bold;
             }
 
             .event-card-body-caption {
                 text-align: left;
-                font-size: 25px;
-                padding-bottom: 0.5rem;
-                padding-top: 1.5rem;
+                font-size: 20px;
+                margin-bottom: 0.5rem;
+                margin-top: 1.5rem;
+                line-height: 21px;
+                height: 66px;
                 opacity:0;
                 transition: .3s;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 text-overflow: ellipsis;
                 overflow : hidden;
                 display: -webkit-box;
@@ -877,36 +755,17 @@
                 text-align: right;
                 font-size: 18px;
                 margin-bottom: 1rem;
-                padding-top: 2rem;
+                padding-top: 1.8rem;
                 border-bottom: 1px solid black;
                 padding-bottom: 1px;
                 opacity:0;
                 transition: .3s;
-                -webkit-line-clamp: 2;
                 overflow : hidden;
-                text-overflow: ellipsis;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 position: absolute;
                 bottom: 0;
                 right: 0;
-            }
-
-           .owl-prev, .owl-next{
-               position: absolute !important;
-               outline:none !important;
-           }
-
-            .owl-prev{
-               top: 40%;
-               outline:none !important;
-               left: -30px;
-            }
-
-            .owl-next{
-               top: 40%;
-               outline:none !important;
-               right: -30px;
             }
 
             .cardDivider {
@@ -934,11 +793,15 @@
                     padding-left: 10vw;
                 }
 
+                .highlighted-event-body-title {
+                    font-size: 36px;
+                }
+
                 .event-container {
                     max-width: 100%;
                 }
 
-                .carousel-title {
+                .carousel-title, .search-title {
                     font-size: 5vw;
                 }
 
@@ -961,19 +824,29 @@
                     visibility: hidden;
                 }
 
+                .highlighted-event-body-title {
+                    font-size: 32px;
+                }
+
+                .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
+                    height: 4rem;
+                    margin-bottom: 0.5rem;
+                    padding-top: 1.5rem;
+                }
+
                 #section1 {
                     padding-top: 12%;
                 }
 
                 .event-card {
-                    height: 24rem;
+                    height: 25rem;
                 }
 
                 .event-container {
                     max-width: 75%;
                 }
 
-                .carousel-title {
+                .carousel-title, .search-title {
                     font-size: 6vw;
                 }
 
@@ -1015,7 +888,7 @@
                     padding-top: 15%;
                 }
 
-                .carousel-title {
+                .carousel-title, .search-title {
                     text-align: center;
                     font-size: 7vw;
                 }
@@ -1028,11 +901,6 @@
                     margin: 1rem;
                 }
 
-                .highlighted-event-body-title {
-                    margin-top: 1rem;
-                    font-size: 10vw;
-                }
-
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
                     opacity: 0;
                     height:0;
@@ -1040,7 +908,7 @@
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-card-body-seemore{
                     transition: .3s;
-                    padding-right: 3%;
+                    border-bottom: 1px solid white;
                     opacity:1;
                 }
 
@@ -1069,16 +937,24 @@
                     padding-left: 0;
                 }
 
-                .carousel-title {
-                    font-size: 11vw;
+                .carousel-title, .search-title {
+                    font-size: 10vw;
                 }
 
                 #novidadesScreen {
-                    font-size: 11vw;
+                    font-size: 10vw;
                 }
 
                 .main-title-container {
                     text-align: center;
+                }
+            }
+
+            @media (max-width: 478px) {
+
+                .event-card:hover > .event-card-body > .event-card-body-caption{
+                    height: 0;
+                    opacity:0;
                 }
             }
         </style>

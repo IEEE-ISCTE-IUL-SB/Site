@@ -14,158 +14,112 @@
 
 <section id="missionsection" class="showw">
     <div class="row mission-row">
+
         <div class="col">
-            <a class="letter2 ">Quem somos?<a>
+            <a href="#section3" class="letter2 mission-link">Quem somos?</a>
         </div>
         <div class="col">
-        <a class="letter2">Workshops<a>
-        </div>   
-        <div class="col">
-        <a class="letter2">  Repositório de Ideias <a>
-        
+            <a href="#section4" class="letter2 mission-link">Workshops</a>
         </div>
-        <div class="col">
-        <a class="letter2"> Media<a>
-        </div>
-     
+
     </div>
 </section>
 
-<section id="section2" class="py-5 section-2" style="overflow:hidden;">
+<section id="section2" class="section-2" style="overflow:hidden;">
 
- 
-    <div class="row" style="overflow:hidden;">
+
+    <div class="row" style="overflow:hidden;padding-top:1%;">
     <div class="column side1" >
-            
-                <div style="border-radius:10px;margin-left:4.5%;margin-right:2%;margin-top:1%;padding:center;height:96%;
-                -webkit-box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
-                        box-shadow:2px 2px 50px -23px rgba(0,0,0,0.45);
+
+                <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;height:99%;
+-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
+box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                         <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#333333;font-size: 250%" > kfkifviodksoskcdo</h1>
+                        <h1 class="letter2" style="color:#333333;font-size: 250%" >kfkifviodksoskcdo</h1>
                         <h1 class="letter2" style="color:#333333;font-size: 130%"> olal</h1>
                 </div>
-         
+
         </div>
         </div>
         <div class="column side2" >
-            <img src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.24);
-                box-shadow:0px 0px 16px 4px rgba(0,0,0,0.24);height:auto;width:100%">
+            <img src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
+                box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);height:auto;width:94%;">
         </div>
     </div>
-   
 
-
-    
-
-  
-  
 </section>
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title" >Quem Somos?</h2>
-    <div class="container py-5 text-center">
 
+<section id="section3">
+    <h2 class="letter2 sections-title" >Quem Somos?</h2>
+    <div class="container py-5 text-center">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-           
-                <p class="text-muted lead sections-description ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+
+                <p class="text-muted lead sections-description ">É um chapter da IEEE Portugal criado em 2005 cujos seus principais objetivos são promover pesquisa, educação, empreendedorismo e interesse público em Robótica e Automação em Portugal através  de organização de conferências e workshops científicos, competições de robôs educacionais e de pesquisa, reuniões entre empresas e academia e sessões de divulgação de Ciência e Tecnologia aos estudantes.</p>
             </div>
         </div>
     </div>
 </section>
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title" >Workshops</h2>
-    <div class="container py-5 text-center">
 
-    <div class="event-slider owl-carousel">
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event1
+<section id="section4"><h2 class="letter2 sections-title">Workshops</h2>
+    <div class="container py-5 text-center event-slider-container">
+
+        @if(count($events) > 0)
+            <div class="event-slider owl-carousel">
+
+                @foreach($events as $event)
+                <a href="/evento/{{$event->id}}">
+                    <div class="event-card mx-auto">
+                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <div class="card-ellipse">
                         </div>
-                        <div class="event-card-body-caption">
-                            Event1 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event2
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event2 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
+                        <div class="event-card-body">
+                            <div class="event-card-body-title">
+                                {{$event->event_name}}
+                            </div>
+                            <div class="event-card-body-caption">
+                                {{$event->event_description}}
+                            </div>
+                            <div class="event-card-body-seemore">
+                                See more ⇀
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee3.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event3
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event3
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
-                <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{asset('img/ieee2.jpg')}}">
-                    <div class="card-ellipse">
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-card-body-title">
-                            Event4
-                        </div>
-                        <div class="event-card-body-caption">
-                            Event4 caption
-                        </div>
-                        <div class="event-card-body-seemore">
-                            See more ⇀
-                        </div>
-                    </div>
-                </div>
+                </a>
+                @endforeach
+
             </div>
+        @else
+            <div class="no-event-warning mx-auto">
+                Ainda não temos workshops para te mostrar
+            </div>
+        @endif
+
+    </div>
 
             <script>
-            setTimeout(function() { //items number only activates after window resize unless activated through timeout
-                var halfCardWidth = document.getElementsByClassName('event-card').item(0).clientWidth / 2;
+                setTimeout(function() { //items number only activates after window resize unless activated through timeout
 
-                $(".event-slider").owlCarousel({
-                    loop: true,
-                    smartSpeed: 1000,
-                    autoplay: true,
-                    autoplayTimeout: 9000, //2000ms = 2s;
-                    autoplayHoverPause: true,
-                    loop: true,
-                    margin: 25,
-                    nav: false,
-                    items: 3,
-                    responsive:{
-                        0:{
-                            items:1,
+                    $(".event-slider").owlCarousel({
+                        smartSpeed: 1000,
+                        autoplay: true,
+                        autoplayTimeout: 9000, //2000ms = 2s;
+                        autoplayHoverPause: true,
+                        margin: 25,
+                        nav: false,
+                        responsive:{
+                            0:{
+                                items:1,
+                                loop: ( $('.owl-carousel > *').length > 1),
+                            },
+                            1024:{
+                                items:3,
+                                loop: ( $('.owl-carousel > *').length > 3),
+                            },
                         },
-                        1024:{
-                            items:3,
-                        },
-                    },
-                });
-            }, 10);
+                    });
+                }, 10);
 
             $("a.owl-prev ").click(function() {
                     $("div.owl-prev").click();
@@ -177,50 +131,44 @@
         </script>
 
         <style>
-            div.owl-next, div.owl-prev{
-                visibility: hidden;
-                outline:none !important;
-            }
 
-            #section2, #section3 {
+            #section2 {
+                padding-top: 3rem;
                 background: white;
             }
 
-            #section1 {
-                padding-top: 7%;
-                background: linear-gradient(0deg, rgba(248,248,255,1) 0%, rgba(248,248,255,1) 25%, rgba(255,255,255,1) 100%);
-                background-size: cover;
-                background-position: center;
-                padding-bottom:2rem;
+            #section3, #section4, section5 {
+                padding-top: 8rem;
+                background: white;
             }
 
-            #section2 {
-                padding-bottom: 60px;
+            .mission-link {
+                color:dimgrey;
+                line-height: 26px;
+                transition: .1s;
             }
 
-            #section3 {
-
+            .mission-link:hover {
+                color:dimgrey;
+                text-decoration: none;
+                font-size: 110%;
+                transition: .1s;
             }
 
-            .padding-10{
-                padding-right:10px;
-                padding-left:10px;
+            .event-slider-container {
+                display: flex;
+                min-height: 25rem;
             }
 
-            .carousel-title {
-                text-align: left;
-                font-size:300%;
-                color:#26233C;
-            }
-
-            .event-container {
-                max-width: 72%;
-                padding: 5%;
+            .no-event-warning {
+                font-size: 1.3vw;
+                margin-top: 8%;
+                color: dimgrey;
             }
 
             .event-card {
                 overflow: hidden;
-                height:30rem;
+                height:26rem;
                 transition:0.6s;
                 border-radius:1px;
                 position:relative;
@@ -230,8 +178,8 @@
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-                width:90%;
-             }
+                width:80%;
+            }
 
             .event-card:hover {
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
@@ -255,12 +203,6 @@
                 filter:brightness(50%);
             }
 
-            .event-card:hover > .event-card-body > .event-card-body-description{
-                transition: .3s;
-                transform:translateY(-50px);
-                opacity:1;
-            }
-
             .card-ellipse {
                 position: absolute;
                 transition: .3s;
@@ -281,7 +223,7 @@
 
             .event-card:hover > .event-card-body > .event-card-body-seemore{
                 transition: .3s;
-                padding-right: 3%;
+                margin-right: 3%;
                 opacity:1;
             }
 
@@ -296,26 +238,30 @@
                 color: black;
                 transition: .3s;
                 height:35%;
-                width:95%;
+                width:100%;
                 padding-left:2rem;
                 position:absolute;
                 bottom:0;
+                letter-spacing:1px;
             }
 
             .event-card-body-title {
                 text-align: left;
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: bold;
+
             }
 
             .event-card-body-caption {
                 text-align: left;
-                font-size: 25px;
-                padding-bottom: 0.5rem;
-                padding-top: 1.5rem;
+                font-size: 20px;
+                margin-bottom: 0.5rem;
+                margin-top: 1.5rem;
+                line-height: 21px;
+                height: 66px;
                 opacity:0;
                 transition: .3s;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 text-overflow: ellipsis;
                 overflow : hidden;
                 display: -webkit-box;
@@ -341,162 +287,25 @@
                 right: 0;
             }
 
-           .owl-prev, .owl-next{
-               position: absolute !important;
-               outline:none !important;
-           }
-
-            .owl-prev{
-               top: 40%;
-               outline:none !important;
-               left: -30px;
-            }
-
-            .owl-next{
-               top: 40%;
-               outline:none !important;
-               right: -30px;
-            }
-
-            .cardDivider {
-                box-sizing:border-box;
-                width:90%;
-                height:8px;
-                background: #26233C;
-            }
-
-            @media (max-width: 1500px) {
-
-                .event-container {
-                    max-width: 95%;
-                }
-            }
-
-            @media (max-width: 1200px) {
-
-                .highlighted-event-slider {
-                    padding: 0 8% 0 8%;
-                }
-
-                #mainEventTitle {
-                    font-size: 6vw;
-                    padding-left: 10vw;
-                }
-
-                .event-container {
-                    max-width: 100%;
-                }
-
-                .carousel-title {
-                    font-size: 5vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 5vw;
-                }
-            }
-
             @media (max-width: 1024px) {
-
-                #mainEventTitle {
-                    font-size: 8vw;
-                }
-
-                .event-title-block {
-                    padding-bottom: 20%;
-                }
-
-                .ellipse-transition {
-                    opacity: 0;
-                }
-
-                #section1 {
-                    padding-top: 12%;
-                }
-
                 .event-card {
-                    height: 24rem;
-                }
-
-                .event-container {
-                    max-width: 75%;
-                }
-
-                .carousel-title {
-                    font-size: 6vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 6vw;
+                    height: 25rem;
                 }
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 478px) {
 
-                .highlighted-event-slider {
-                    padding: 0 3% 0 3%;
-                }
-
-                .event-container {
-                    padding-top: 8%;
-                }
-
-                #section1 {
-                    padding-top: 15%;
-                }
-
-                .carousel-title {
-                    text-align: center;
-                    font-size: 7vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 7vw;
+                .event-card:hover > .event-card-body > .event-card-body-caption{
+                    height: 0;
+                    opacity:0;
                 }
             }
 
-            @media (max-width: 570px) {
-
-                .event-container {
-                    max-width: 95%;
-                }
-
-                .event-title-block::before {
-                    filter: brightness(0.6);
-                }
-
-                #mainEventTitle {
-                    font-size: 12vw;
-                    padding-left: 0;
-                }
-
-                .carousel-title {
-                    font-size: 11vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 11vw;
-                }
-
-                .main-title-container {
-                    text-align: center;
-                }
-            }
         </style>
     </div>
 </section>
 
-<section id="section2" class="py-5 section-2"><h2 class="letter2 sections-title">Repositório de ideias</h2>
-    <div class="container py-5 text-center">
 
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-           
-                <p class="text-muted lead sections-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <style>
     #societylogosection {
@@ -509,28 +318,18 @@
     }
 
 
- 
+
 
     .mission-row {
         text-align: center;
         overflow:hidden;
         font-size: 120%;
-        color:dimgrey;
         overflow:hidden;
-      
+
         margin-bottom: 1%;
     }
 
-    .banner {
-        height:100%;
-        background-color:red;
-        object-fit: cover;
 
-
-   
-    }
- 
-    
 
     @media only screen and (max-width: 900px) {
   .showw {
@@ -556,14 +355,14 @@
         overflow:hidden;text-align:center;font-size:120%;
     }
 
-    
+
     .side1{
         display:none;
         overflow:hidden;
     }
 
     .side2{
-       
+
   width: 100%;
   padding: 0px;
   overflow:hidden;
@@ -576,7 +375,7 @@
     margin-top: 2rem;
         overflow: hidden;
         margin-bottom: 2rem;
-    
+
   }
 
   .sections-title{
@@ -586,11 +385,11 @@
     .sections-description{
         overflow:hidden;text-align:center;font-size:120%;
     }
-  
+
   .side1{
     display:block;
   width: 50%;
-  
+
     }
 
     .side2{

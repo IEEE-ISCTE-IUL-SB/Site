@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -44,9 +44,9 @@
 
         <style>
             body {
-                font-family: 'Nunito';
-                width:100%;
 
+                width:100%;
+                font-family:'font-letter1';
             }
 
             .text-small {
@@ -68,7 +68,7 @@
     margin-left:0%;
     margin-top: 1.7pc;
     width:100%;
-    height: 22pc;
+    height: 10pc;
     border:none;
     box-shadow:0px 17px 20px 12px #00000024;
 
@@ -88,7 +88,7 @@
     margin-left:0%;
     margin-top: 1.7pc;
     width:100%;
-    height: 22pc;
+    height:10pc;
     border:none;
     box-shadow:0px 17px 20px 12px #00000024;
   }
@@ -97,7 +97,7 @@
   }
 
   .dropdownfont{
-      font-size:120%;
+      font-size:120%;font-family:'font-letter1';
   }
 }
 
@@ -120,18 +120,18 @@
   }
 
   .dropdownfont{
-    font-size:120%;
+    font-size:120%;font-family:'font-letter1';
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .phone {
-    width:34%;margin-top:-40px;margin-bottom:-40px;
+    width:40%;margin-top:-40px;margin-bottom:-40px;
     overflow:hidden;
   }
 
   .dropdownfont{
-    font-size:170%;
+    font-size:170%;font-family:'font-letter1';
 
 
   }
@@ -140,7 +140,7 @@
     margin-left: -15pc;
     margin-top: 1.7pc;
     width:480%;
-    height: 18pc;
+    height: 12pc;
     border:none;
     box-shadow:0px 17px 20px 12px #00000024;
   }
@@ -168,16 +168,16 @@
   </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item "><a class="nav-link  letter2" href="{{ url('/eventos') }}">Eventos</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link  letter2" href="{{ url('/projetos') }}">Projetos</a></li>
-                        <li class="nav-item dropdown">
-	    <a class="nav-link dropdown-toggle letter2" href="#" data-toggle="dropdown"> Societies  </a>
+                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Eventos</a></li>
+                    <li class="nav-item"style="margin:auto;">
+                        <a class="nav-link  letter2" style="margin:auto;transition:0.4s!important;"href="{{ url('/projetos') }}">Projetos</a></li>
+                        <li class="nav-item dropdown"style="margin:auto;">
+	    <a class="nav-link dropdown-toggle letter2" style="transition:0.4s!important;"href="#" data-toggle="dropdown"> Societies  </a>
 	    <div class="dropdown-menu dropdown-large dropdownH d">
             <div class="row" style="   margin-right: 24px;margin-left: 25px;margin-top:20px;" >
                 <div class="col dropi letter2" >
 
-                    <a style=" text-decoration-line: none;"href="{{ url('/RAS') }}">
+                    <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/RAS') }}">
                     <h1 class="soc2 dropdownfont" >RAS
                     <h1 style="color:#808080c7;">R&A Society</h1>
                     </h1>
@@ -185,50 +185,50 @@
                 </div>
 
                <div class="col dropi" >
-               <a style=" text-decoration-line: none;"href="{{ url('/IMS') }}">
+               <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/IMS') }}">
                     <h1 class="soc2 dropdownfont">IMS
                     <h1 style="color:#808080c7;">I&M Society</h1>
                     </a>
                 </div>
                  <div class="col dropi" >
-                 <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
+                 <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/WIE') }}">
                     <h1 class="soc2 dropdownfont" >WIE
                     <h1 style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
-                <div class="col dropi" >
-                <a style=" text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2 dropdownfont" >MAE
-                    <h1 style="color:#808080c7;">MAE Society</h1>
-                    </a>
-                </div>
                 <div class="col dropi " >
-                <a style=" text-decoration-line: none;"href="{{ url('/CS') }}">
+                <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/CS') }}">
                     <h1 class="soc2 dropdownfont" >CS
-                    <h1 style="color:#808080c7;">Computer Society</h1>
+                    <h1 style="width: 130%;color:#808080c7;">Computer Society</h1>
                     </a>
                 </div>
             </div>
 
 
             <style>
+
+
+                html {
+                    scroll-behavior: smooth;
+                }
+
             .soc{
-                color:grey;
+                color:grey;transition:0.4s;
                 text-decoration-line: none;
             }
 
             .soc:hover, .soc:active{
-                color:#808080c7;
+                color:#808080c7;transition:0.4s;
                 text-decoration-line: none;
             }
 
             .soc2{
-                color:#333333;
+                color:#333333;transition:0.4s;
                 text-decoration-line: none;
             }
 
             .soc2:hover, .soc2:active{
-                color:#808080c7;
+                color:#808080c7;transition:0.4s;
                 text-decoration-line: none;
             }
 
@@ -238,7 +238,7 @@
             .dropi{
 
     padding-left: 14px;
-    padding-right: 90px;
+    padding-right: 100px;
     padding-bottom: 23px;
     font-family:"font-letter1";
             }
@@ -269,7 +269,7 @@
                         @endguest
 
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="margin:auto;">
                         <a class="nav-link  letter2" href="{{ url('/sobrenos') }}">Sobre nós</a>
                     </li>
                 </ul>
