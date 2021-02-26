@@ -4,22 +4,12 @@
 
 <section id="result-section">
     <div class="container row title-row">
-<<<<<<< HEAD
         <div class="result-title col-12 col-lg-7"> Resultados da procura por "asdasdasd": </div>
         <div class="justify-content-center col-12 col-lg-5">
             <form class="search-form">
                 <div class="input-group search-group-align">
                     <input type="text" class="search-input" id="search" placeholder="Workshops..." autocomplete="off">
                     <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
-=======
-        <div class="result-title col-12 col-lg-7"> Resultados da procura por "{{$searchtext}}": </div>
-        <div class="justify-content-center col-12 col-lg-5">
-            <form class="search-form" id="search-form" method="post" action="/search">
-                @csrf
-                <div class="input-group search-group-align">
-                    <input type="text" class="search-input" id="search" name="searchtext" placeholder="Eventos..." autocomplete="off">
-                    <label onclick="submitSearchForm()" class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 </div>
             </form>
         </div>
@@ -27,7 +17,6 @@
 
     <div class="container event-container row justify-content-center mx-auto">
 
-<<<<<<< HEAD
         <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
             <div class="event-card mx-auto">
                 <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
@@ -102,34 +91,6 @@
             </div>
         </div>
 
-=======
-        @if(count($searchresults) != 0)
-            @foreach($searchresults as $event)
-                <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-                    <a href="/evento/{{$event->id}}">
-                        <div class="event-card mx-auto">
-                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
-                            <div class="card-ellipse">
-                            </div>
-                            <div class="event-card-body">
-                                <div class="event-card-body-title">
-                                    {{$event->event_name}}
-                                </div>
-                                <div class="event-card-body-caption">
-                                    {{$event->event_description}}
-                                </div>
-                                <div class="event-card-body-seemore">
-                                    See more ⇀
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            @endforeach
-        @else
-            <div class="no-results-message">Sem resultados para a tua procura</div>
-        @endif
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
 
     </div>
 
@@ -176,13 +137,8 @@
         border: 2px solid rgba(0, 0, 0, 0.01);
         outline: none;
         font-size: 16px;
-<<<<<<< HEAD
         -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.35);
         box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.35);
-=======
-        -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.15);
-        box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.15);
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         color: #A7A8A7;
         font-weight: bold;
         letter-spacing: 0.5px;
@@ -223,7 +179,6 @@
 
     .card-wrapper {
         padding: 3% 1%;
-<<<<<<< HEAD
     }
 
     .event-card {
@@ -238,29 +193,6 @@
         -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
         box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
         width:100%;
-=======
-        margin-bottom: 3%;
-    }
-
-    .no-results-message {
-        margin-top: 10%;
-        font-size: 25px;
-    }
-
-    .event-card {
-                overflow: hidden; 
-                 height:26rem;
-     transition:0.6s;
-     border-radius:1px;
-     position:relative;
-     display:block;
-     outline: none;
-     margin-bottom: 16%;
-     margin-top: 16%;
-     -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-     width:80%;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
     }
 
     .event-card:hover {
@@ -312,21 +244,11 @@
 
     .event-card:hover > .event-card-body > .event-card-body-seemore{
         transition: .3s;
-<<<<<<< HEAD
         padding-right: 3%;
-=======
-        margin-right: 3%;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         opacity:1;
     }
 
     .event-img {
-<<<<<<< HEAD
-=======
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         object-fit: cover;
         transition: .3s;
         height:65%;
@@ -345,33 +267,18 @@
 
     .event-card-body-title {
         text-align: left;
-<<<<<<< HEAD
         font-size: 40px;
-=======
-        font-size: 32px;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         font-weight: bold;
     }
 
     .event-card-body-caption {
         text-align: left;
-<<<<<<< HEAD
         font-size: 25px;
         padding-bottom: 0.5rem;
         padding-top: 1.5rem;
         opacity:0;
         transition: .3s;
         -webkit-line-clamp: 2;
-=======
-        font-size: 20px;
-        margin-bottom: 0.5rem;
-        margin-top: 1rem;
-        line-height: 21px;
-        height: 66px;
-        opacity:0;
-        transition: .3s;
-        -webkit-line-clamp: 3;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         text-overflow: ellipsis;
         overflow : hidden;
         display: -webkit-box;
@@ -407,7 +314,6 @@
     @media (max-width: 1500px) {
 
         .event-container, .title-row{
-<<<<<<< HEAD
             max-width: 90%;
         }
     }
@@ -415,21 +321,16 @@
     @media (min-width: 1200px) and (max-width: 1350px) {
 
         .event-container, .title-row{
-=======
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             max-width: 95%;
         }
     }
 
     @media (max-width: 1200px) {
 
-<<<<<<< HEAD
         .event-container, .title-row{
             max-width:85%;
         }
 
-=======
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         .card-wrapper {
             padding: 3% 2%;
         }
@@ -449,17 +350,6 @@
             padding: 3%;
         }
 
-<<<<<<< HEAD
-=======
-        event-card {
-            height: 25rem;
-        }
-
-        .event-container {
-            max-width: 75%;
-        }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
     }
 
     @media (max-width: 768px) {
@@ -469,17 +359,6 @@
         }
     }
 
-<<<<<<< HEAD
-=======
-    @media (max-width: 520px) {
-
-        .event-card:hover > .event-card-body > .event-card-body-caption{
-            height: 0;
-            opacity:0;
-        }
-    }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
     @media (max-width: 460px) {
 
         .event-container, .title-row{
@@ -498,23 +377,5 @@
         }
     }
 
-<<<<<<< HEAD
 </style>
-=======
-    @media (max-width: 478px) {
-
-        .event-card:hover > .event-card-body > .event-card-body-caption{
-            height: 0;
-            opacity:0;
-        }
-    }
-
-</style>
-
-<script>
-    function submitSearchForm() {
-        document.getElementById("search-form").submit();
-    }
-</script>
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
 @endsection

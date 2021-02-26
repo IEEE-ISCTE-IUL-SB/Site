@@ -19,10 +19,6 @@
             font-size: 5vw;
             padding-left: 15vw;
             padding-top: 5vh;
-<<<<<<< HEAD
-=======
-            letter-spacing: 3px;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             text-align: center;
             font-weight: bolder;
             display: inline-block;
@@ -63,11 +59,7 @@
         }
 
         #scrollButton {
-<<<<<<< HEAD
             font-size: 60px;
-=======
-            font-size: 3vw;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             color: #5e5e5e;
             transform: scale(1.1, 1);
             transition: .2s;
@@ -77,11 +69,8 @@
             transform: scale(1.2, 1.1) translateY(8px);
             transition: .2s;
         }
-<<<<<<< HEAD
 
         html { scroll-behavior: smooth; }
-=======
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
     </style>
 </section>
 
@@ -91,16 +80,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <h2 id="novidadesScreen" class="letter3">
-<<<<<<< HEAD
         Novidades
-=======
-        Em destaque
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
     </h2>
     <div class="highlighted-event-container">
         <div class="mx-auto">
             <div class="highlighted-event-slider owl-carousel mx-auto">
-<<<<<<< HEAD
                 <div class="highlighted-event-card">
 
                     <img class="highlighted-event-img" src="{{asset('img/ieee1.jpg')}}">
@@ -160,34 +144,6 @@
                         </div>
                     </div>
                 </div>
-=======
-
-                @foreach($highlights as $event)
-                <a class="highlighted-event-link" onclick="highlightedEventLink(this, {{$event->id}})">
-                    <div class="highlighted-event-card">
-
-                        <img class="highlighted-event-img" src="{{$event->image1}}">
-
-                        <div class="highlighted-event-body-bg"></div>
-
-                        <div class="highlighted-event-card-body">
-                            <div class="highlighted-event-body-title">
-                                {{$event->event_name}}
-                            </div>
-                            <div class="highlighted-event-body-description text-wrap text-truncate">
-                                {{$event->event_description}}
-                            </div>
-                            <div class="date-time-location-carousel row">
-                                <div class="date-time-col"><i class="fas fa-clock"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="far fa-calendar"></i> {{ date('d/m/y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fas @if(strcasecmp($event->event_location, 'Online') != 0) fa-map-marker-alt @else fa-globe @endif icon"> </i> {{$event->event_location}}</div>
-                            </div>
-                            <div class="highlighted-event-card-body-seemore">
-                                See more ⇀
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                @endforeach
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             </div>
         </div>
     </div>
@@ -196,7 +152,6 @@
 
             <style>
 
-<<<<<<< HEAD
                 .butpro{
                     margin-top: 30px;
                     color: white;
@@ -229,8 +184,6 @@
                     -ms-transition:     all 0.15s  ease-in
                 }
 
-=======
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 .owl-carousel {
                     display: flex !important;
                     align-items: center;
@@ -243,11 +196,7 @@
                 #novidadesScreen {
                     font-size:70px;
                     text-align:center;
-<<<<<<< HEAD
                     color:#26233C;
-=======
-                    color: #323239;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     margin-bottom: 75px;
                 }
 
@@ -275,31 +224,18 @@
                     transition: .3s;
                 }
 
-<<<<<<< HEAD
                 .center > .highlighted-event-card {
-=======
-                .center > a >.highlighted-event-card {
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     transform: scale(1, 1);
                     transition: .3s;
                 }
 
-<<<<<<< HEAD
                 .center > .highlighted-event-card > .highlighted-event-body-bg,
                 .center > .highlighted-event-card > .highlighted-event-card-body {
-=======
-                .center > a > .highlighted-event-card > .highlighted-event-body-bg,
-                .center > a > .highlighted-event-card > .highlighted-event-card-body {
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     opacity: 1;
                     transition: .3s;
                 }
 
-<<<<<<< HEAD
                 .center > .highlighted-event-card > .highlighted-event-img {
-=======
-                .center > a > .highlighted-event-card > .highlighted-event-img {
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     filter: brightness(1);
                     transition: .3s;
                 }
@@ -330,12 +266,6 @@
                 }
 
                 .highlighted-event-img {
-<<<<<<< HEAD
-=======
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     filter: blur(2px) grayscale(25%);
                     width: 100%;
                     object-fit: cover;
@@ -348,11 +278,7 @@
 
                 .highlighted-event-body-title {
                     color:#fff;
-<<<<<<< HEAD
                     font-size: 48px;
-=======
-                    font-size: 38px;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     height:10%;
                     font-weight: bold;
                     transition: .3s;
@@ -395,20 +321,12 @@
                 }
 
                 .highlighted-event-card:hover,  > .highlighted-event-card-body > .date-time-location-carousel > .location-carousel{
-<<<<<<< HEAD
                     width: 60%;
-=======
-                    width: 40%;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     transition:.3s;
                 }
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .date-time-location-carousel > .date-time-col{
-<<<<<<< HEAD
                     width: 20%;
-=======
-                    width: 30%;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     transition: .3s;
                 }
 
@@ -479,24 +397,11 @@
                     $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
                 });
 
-<<<<<<< HEAD
                 $(document).on('click', '.owl-item>div', function() {
-=======
-                $(document).on('click', '.owl-item>a', function() {
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
                     $eventSlider.trigger('to.owl.carousel', [$(this).data("position"), $eventSlider.smartSpeed] );
                 });
 
-<<<<<<< HEAD
-=======
-                function highlightedEventLink(element, event_id) {
-                    if (element.parentElement.classList.contains("center")) {
-                        window.location.href = ("evento/".concat(event_id))
-                    }
-                }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             </script>
 
         </div>
@@ -509,11 +414,7 @@
                     $('.entity1').addClass('animate__animated', 'animate__bounce');
 
             });
-<<<<<<< HEAD
         }));
-=======
-        }))
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
     </script>
 
 
@@ -533,16 +434,11 @@
 
     <div class="container event-container text-center">
         <h2 class="letter3 carousel-title">
-<<<<<<< HEAD
             Esta semana
-=======
-            Próximos Eventos
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         </h2>
 
         <div>
             <div class="event-slider owl-carousel">
-<<<<<<< HEAD
                 <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
                     <div class="card-ellipse">
@@ -607,28 +503,6 @@
                         </div>
                     </div>
                 </div>
-=======
-                @foreach($nextevents as $event)
-                    <a href="/evento/{{$event->id}}">
-                        <div class="event-card mx-auto">
-                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
-                            <div class="card-ellipse">
-                            </div>
-                            <div class="event-card-body">
-                                <div class="event-card-body-title">
-                                    {{$event->event_name}}
-                                </div>
-                                <div class="event-card-body-caption">
-                                    {{$event->event_description}}
-                                </div>
-                                <div class="event-card-body-seemore">
-                                    See more ⇀
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                @endforeach
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             </div>
         </div>
 
@@ -637,7 +511,6 @@
 
 <section id="search-section" style="background: #23384f;padding-bottom:6%">
     <div class="container" style="text-align:center;">
-<<<<<<< HEAD
         <h1 class="letter2" style="font-size:44px;color:white;padding-top:10%;padding-bottom:10%;letter-spacing:1px;"> PROCURA POR MAIS EVENTOS </h1>
 
             <div class="row justify-content-center">
@@ -646,30 +519,13 @@
                     <div class="input-group search-group-align">
                         <input type="text" class="search-input" id="search" placeholder="Workshops..." autocomplete="off">
                         <label class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
-=======
-        <h1 class="search-title"> PROCURA POR MAIS EVENTOS </h1>
-
-            <div class="row justify-content-center">
-
-                <form class="search-form" id="search-form" method="post" action="/search">
-                    @csrf
-                    <div class="input-group search-group-align">
-                        <input type="text" class="search-input" id="search" name="searchtext" placeholder="Workshops..." autocomplete="off">
-                        <label onclick="submitSearchForm()" class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     </div>
                 </form>
             </div>
             <div class="event-tag-row row">
-<<<<<<< HEAD
                 <btn class="event-tag-button wedge-tag" href=""> CS </btn>
                 <btn class="event-tag-button wedge-tag"> Workshop </btn>
                 <btn class="event-tag-button wedge-tag"> Git </btn>
-=======
-                @foreach ($highlightedtags as $tag)
-                <a class="event-tag-button wedge-tag" href="/search/{{$tag->tag_name}}"> {{$tag->tag_name}} </a>
-                @endforeach
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             </div>
 
     </div>
@@ -685,7 +541,6 @@
 
         <div>
             <div class="event-slider owl-carousel">
-<<<<<<< HEAD
                 <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{asset('img/ieee1.jpg')}}">
                     <div class="card-ellipse">
@@ -750,30 +605,6 @@
                         </div>
                     </div>
                 </div>
-=======
-
-                @foreach($pastevents as $event)
-                <a href="/evento/{{$event->id}}">
-                    <div class="event-card mx-auto">
-                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
-                        <div class="card-ellipse">
-                        </div>
-                        <div class="event-card-body">
-                            <div class="event-card-body-title">
-                                {{$event->event_name}}
-                            </div>
-                            <div class="event-card-body-caption">
-                                {{$event->event_description}}
-                            </div>
-                            <div class="event-card-body-seemore">
-                                See more ⇀
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                @endforeach
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             </div>
         </div>
 
@@ -782,18 +613,13 @@
 
         <script>
             setTimeout(function() { //items number only activates after window resize unless activated through timeout
-<<<<<<< HEAD
 
                 $(".event-slider").owlCarousel({
                     loop: true,
-=======
-                $(".event-slider").owlCarousel({
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     smartSpeed: 1000,
                     autoplay: true,
                     autoplayTimeout: 9000, //2000ms = 2s;
                     autoplayHoverPause: true,
-<<<<<<< HEAD
                     loop: true,
                     margin: 25,
                     nav: false,
@@ -804,18 +630,6 @@
                         },
                         1024:{
                             items:3,
-=======
-                    margin: 25,
-                    nav: false,
-                    responsive:{
-                        0:{
-                            items:1,
-                            loop: ( $('.owl-carousel > *').length > 1),
-                        },
-                        1024:{
-                            items:3,
-                            loop: ( $('.owl-carousel > *').length > 3),
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                         },
                     },
                 });
@@ -828,14 +642,6 @@
                     $("div.owl-next").click();
                 })
 
-<<<<<<< HEAD
-=======
-
-            function submitSearchForm() {
-                document.getElementById("search-form").submit();
-            }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         </script>
 
         <style>
@@ -864,18 +670,6 @@
 
             }
 
-<<<<<<< HEAD
-=======
-            .search-title {
-                font-weight: bold;
-                color:white;
-                font-size:2.5vw;
-                padding-top:10%;
-                padding-bottom:10%;
-                letter-spacing:1px;
-            }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             .event-tag-row {
                 margin: .3rem 0 1.5rem;
                 justify-content: center;
@@ -897,19 +691,6 @@
                 transition: .2s;
             }
 
-<<<<<<< HEAD
-=======
-
-            a.event-tag-button{
-                -webkit-appearance: button;
-                -moz-appearance: button;
-                appearance: button;
-
-                text-decoration: none;
-                color: white;
-            }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             .wedge-tag {
                 -webkit-clip-path: polygon(calc(100% - 10px) 0, 100% 0, 100% 100% , 0 100%,  100% 10px);
                 clip-path: polygon(10px 0, 100% 0, 100% 100% , 0 100%, 0 10px);
@@ -971,7 +752,6 @@
                 margin-bottom:auto;
             }
 
-<<<<<<< HEAD
             .padding-10{
                 padding-right:10px;
                 padding-left:10px;
@@ -981,12 +761,6 @@
                 text-align: left;
                 font-size:300%;
                 color:#26233C;
-=======
-            .carousel-title {
-                text-align: left;
-                font-size:3.5vw;
-                color:#323239;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             }
 
             .event-container {
@@ -996,11 +770,7 @@
 
             .event-card {
                 overflow: hidden;
-<<<<<<< HEAD
                 height:30rem;
-=======
-                height:26rem;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 transition:0.6s;
                 border-radius:1px;
                 position:relative;
@@ -1010,13 +780,8 @@
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-<<<<<<< HEAD
                 width:90%;
              }
-=======
-                width:80%;
-    }
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
 
             .event-card:hover {
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
@@ -1067,11 +832,7 @@
 
             .event-card:hover > .event-card-body > .event-card-body-seemore{
                 transition: .3s;
-<<<<<<< HEAD
                 padding-right: 3%;
-=======
-                margin-right: 3%;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 opacity:1;
             }
 
@@ -1086,47 +847,26 @@
                 color: black;
                 transition: .3s;
                 height:35%;
-<<<<<<< HEAD
                 width:95%;
                 padding-left:2rem;
-=======
-                width:100%;
-                padding-left:2rem;
-                padding-right:2rem;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 position:absolute;
                 bottom:0;
             }
 
             .event-card-body-title {
                 text-align: left;
-<<<<<<< HEAD
                 font-size: 40px;
-=======
-                font-size: 32px;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 font-weight: bold;
             }
 
             .event-card-body-caption {
                 text-align: left;
-<<<<<<< HEAD
                 font-size: 25px;
                 padding-bottom: 0.5rem;
                 padding-top: 1.5rem;
                 opacity:0;
                 transition: .3s;
                 -webkit-line-clamp: 2;
-=======
-                font-size: 20px;
-                margin-bottom: 0.5rem;
-                margin-top: 1.5rem;
-                line-height: 21px;
-                height: 66px;
-                opacity:0;
-                transition: .3s;
-                -webkit-line-clamp: 3;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 text-overflow: ellipsis;
                 overflow : hidden;
                 display: -webkit-box;
@@ -1137,22 +877,14 @@
                 text-align: right;
                 font-size: 18px;
                 margin-bottom: 1rem;
-<<<<<<< HEAD
                 padding-top: 2rem;
-=======
-                padding-top: 1.8rem;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 border-bottom: 1px solid black;
                 padding-bottom: 1px;
                 opacity:0;
                 transition: .3s;
-<<<<<<< HEAD
                 -webkit-line-clamp: 2;
                 overflow : hidden;
                 text-overflow: ellipsis;
-=======
-                overflow : hidden;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 position: absolute;
@@ -1160,7 +892,6 @@
                 right: 0;
             }
 
-<<<<<<< HEAD
            .owl-prev, .owl-next{
                position: absolute !important;
                outline:none !important;
@@ -1178,8 +909,6 @@
                right: -30px;
             }
 
-=======
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
             .cardDivider {
                 box-sizing:border-box;
                 width:90%;
@@ -1205,22 +934,11 @@
                     padding-left: 10vw;
                 }
 
-<<<<<<< HEAD
-=======
-                .highlighted-event-body-title {
-                    font-size: 36px;
-                }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 .event-container {
                     max-width: 100%;
                 }
 
-<<<<<<< HEAD
                 .carousel-title {
-=======
-                .carousel-title, .search-title {
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     font-size: 5vw;
                 }
 
@@ -1243,40 +961,19 @@
                     visibility: hidden;
                 }
 
-<<<<<<< HEAD
-=======
-                .highlighted-event-body-title {
-                    font-size: 32px;
-                }
-
-                .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
-                    height: 4rem;
-                    margin-bottom: 0.5rem;
-                    padding-top: 1.5rem;
-                }
-
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 #section1 {
                     padding-top: 12%;
                 }
 
                 .event-card {
-<<<<<<< HEAD
                     height: 24rem;
-=======
-                    height: 25rem;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 }
 
                 .event-container {
                     max-width: 75%;
                 }
 
-<<<<<<< HEAD
                 .carousel-title {
-=======
-                .carousel-title, .search-title {
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     font-size: 6vw;
                 }
 
@@ -1318,11 +1015,7 @@
                     padding-top: 15%;
                 }
 
-<<<<<<< HEAD
                 .carousel-title {
-=======
-                .carousel-title, .search-title {
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     text-align: center;
                     font-size: 7vw;
                 }
@@ -1335,14 +1028,11 @@
                     margin: 1rem;
                 }
 
-<<<<<<< HEAD
                 .highlighted-event-body-title {
                     margin-top: 1rem;
                     font-size: 10vw;
                 }
 
-=======
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-body-description {
                     opacity: 0;
                     height:0;
@@ -1350,11 +1040,7 @@
 
                 .highlighted-event-card:hover > .highlighted-event-card-body > .highlighted-event-card-body-seemore{
                     transition: .3s;
-<<<<<<< HEAD
                     padding-right: 3%;
-=======
-                    border-bottom: 1px solid white;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                     opacity:1;
                 }
 
@@ -1383,38 +1069,18 @@
                     padding-left: 0;
                 }
 
-<<<<<<< HEAD
                 .carousel-title {
                     font-size: 11vw;
                 }
 
                 #novidadesScreen {
                     font-size: 11vw;
-=======
-                .carousel-title, .search-title {
-                    font-size: 10vw;
-                }
-
-                #novidadesScreen {
-                    font-size: 10vw;
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
                 }
 
                 .main-title-container {
                     text-align: center;
                 }
             }
-<<<<<<< HEAD
-=======
-
-            @media (max-width: 478px) {
-
-                .event-card:hover > .event-card-body > .event-card-body-caption{
-                    height: 0;
-                    opacity:0;
-                }
-            }
->>>>>>> parent of 572fe22 (Revert "Merge branch 'david' into main")
         </style>
 
 </section>
