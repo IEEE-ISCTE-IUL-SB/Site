@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section id="section1">
+<section id="title-section">
 
         <div class="project-title-wrapper">
                 <h2 class="project-title">{{$project->project_name}}</h2>
@@ -13,14 +13,14 @@
 
 <style>
 
-    #section1 {
+    #title-section {
         padding-top:7.5%;
         padding-bottom:7.5%;
         position: relative;
         overflow: hidden;
     }
 
-    #section1:before {
+    #title-section:before {
         position: absolute;
         top: 0;
         left: 0;
