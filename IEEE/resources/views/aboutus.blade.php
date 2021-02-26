@@ -26,28 +26,13 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
                 <div class="members m-auto">
                 <div class="row mx-auto" style="align-content: center">
 
+                    @foreach($branches as $branch)
                     <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
-                        <div class="card branch mx-auto">
-                            <h1 class="branch-text letter2"> Universidade Nova de Lisboa </h1>
+                        <div class="card branch mx-auto" onclick="studentBranchLink('{{$branch->branch_url}}')" >
+                            <h1 class="branch-text letter2"> {{$branch->university_name}} </h1>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
-                        <div class="card branch mx-auto">
-                            <h1 class="branch-text letter2"> Instituto Superior Técnico </h1>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
-                        <div class="card branch mx-auto">
-                            <h1 class="branch-text letter2"> Instituto Politécnico de Cávado e Ave </h1>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
-                        <div class="card branch mx-auto">
-                            <h1 class="branch-text letter2"> Universidade da Beira Interior </h1>
-                        </div>
-                    </div>
-
-
+                    @endforeach
 
                 </div>
 
@@ -125,6 +110,7 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
         margin-bottom:1pc;
         transform: rotate(-45deg);
         text-align: center;
+        cursor: pointer;
         background-color: #36496d;
     }
 
@@ -173,7 +159,13 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 }
 </style>
 
+<script>
 
+    function studentBranchLink(branch_link) {
+        window.location.href = (branch_link)
+    }
+
+</script>
 
 
 
