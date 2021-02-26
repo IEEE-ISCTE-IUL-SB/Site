@@ -57,7 +57,8 @@ Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@sing
 
 
 Route::get('/sobrenos', function () {
-    return view('aboutus');
+    $branches = App\StudentBranch::all();
+    return view('aboutus')->with('branches', $branches);
 });
 
 

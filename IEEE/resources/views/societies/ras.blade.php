@@ -168,7 +168,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 
             .event-card {
                 overflow: hidden;
-                height:30rem;
+                height:26rem;
                 transition:0.6s;
                 border-radius:1px;
                 position:relative;
@@ -178,7 +178,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-                width:90%;
+                width:80%;
             }
 
             .event-card:hover {

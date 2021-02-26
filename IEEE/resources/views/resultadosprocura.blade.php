@@ -141,17 +141,18 @@
     }
 
     .event-card {
-        overflow: hidden;
-        padding: 0;
-        height:27rem;
-        transition:0.6s;
-        border-radius:1px;
-        position:relative;
-        display:inline-block;
-        outline: none;
-        -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-        width:100%;
+                overflow: hidden; 
+                 height:26rem;
+     transition:0.6s;
+     border-radius:1px;
+     position:relative;
+     display:block;
+     outline: none;
+     margin-bottom: 16%;
+     margin-top: 16%;
+     -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+     width:80%;
     }
 
     .event-card:hover {

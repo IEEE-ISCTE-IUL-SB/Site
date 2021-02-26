@@ -17,14 +17,16 @@
     </div>
 </section>
 
-<section id="detail-section">
-    <div class="container">
-        <div class="detail-row row" id="detail-row">
+<section id="detail-section" >
+    <div class="container"  >
+        <div class="detail-row row" id="detail-row" >
             <div class="detail-col col-12 col-lg-3">
                 <div class="row" style="justify-content: center">
+
                     <div class="detail-info">
                         <i class="fas fa-clock"></i>
                         {{ date('H:i', strtotime($event->event_time)) }} GMT
+
                     </div>
                 </div>
             </div>
@@ -49,9 +51,9 @@
 </section>
 
 <section id="banner-section">
-    <div class="container">
+    <div class="container" >
         <div>
-            <div class="col-xs-12">
+            <div class="col-xs-12" >
                 <ul class="slider slider-ul">
                     <li class="slider-item active">
                         <div class=" vertical">
@@ -349,11 +351,11 @@
     }
 
     .CS {
-        background-color: #fab23e;
+        background-color: #F1B759;
     }
 
     a.CS:hover {
-        background-color: #de9e38;
+        background-color: #F1B759;
     }
 
     .RAS {

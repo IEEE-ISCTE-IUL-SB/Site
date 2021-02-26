@@ -79,7 +79,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <h2 id="novidadesScreen" class="letter3">
-        Novidades
+        Em destaque
     </h2>
     <div class="highlighted-event-container">
         <div class="mx-auto">
@@ -130,7 +130,7 @@
                 #novidadesScreen {
                     font-size:70px;
                     text-align:center;
-                    color:#26233C;
+                    color: #323239;
                     margin-bottom: 75px;
                 }
 
@@ -635,7 +635,7 @@
             .carousel-title {
                 text-align: left;
                 font-size:3.5vw;
-                color:#26233C;
+                color:#323239;
             }
 
             .event-container {
@@ -645,7 +645,7 @@
 
             .event-card {
                 overflow: hidden;
-                height:30rem;
+                height:26rem;
                 transition:0.6s;
                 border-radius:1px;
                 position:relative;
@@ -655,8 +655,8 @@
                 margin-top: 16%;
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
                 box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-                width:90%;
-             }
+                width:80%;
+    }
 
             .event-card:hover {
                 -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
