@@ -110,24 +110,6 @@
 
 </section>
 
-<section id="idea-section">
-    <h2 class="letter2 sections-title">Repositório de ideias</h2>
-    <div class="container py-5 text-center">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-
-                <p class="text-muted sections-description" style="font-size: 18px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-            </div>
-        </div>
-
-        <div class="row justify-content-center description-row">
-            <div class="col-lg-6 col-md-8 col-sm-10 col-12 flex">
-                <button type="button" class="btn btn-csociety mx-auto">Junta-te a nós</button>
-            </div>
-        </div>
-    </div>
-</section>
-
 <style>
     #societylogosection {
         display:flex;
