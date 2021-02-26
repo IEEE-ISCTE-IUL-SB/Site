@@ -128,7 +128,7 @@
                 }
 
                 #novidadesScreen {
-                    font-size:70px;
+                    font-size:5vw;
                     text-align:center;
                     color: #323239;
                     margin-bottom: 75px;
