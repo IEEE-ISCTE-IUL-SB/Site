@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Membro extends Model
+class Member extends Model
 {
-    
+
 }

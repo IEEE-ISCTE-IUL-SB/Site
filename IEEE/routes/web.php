@@ -15,8 +15,8 @@ use Carbon\Carbon;
 |
 */
 Route::get('/', function () {
-    $membros = App\Membro::all();
-    return View::make('homepage')->with('membros', $membros);
+    $members = App\Member::all();
+    return View::make('homepage')->with('members', $members);
 });
 
 Route::get('/RAS', function () {

@@ -78,7 +78,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
 background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1) 100%);
         color: white;font-size: 17px;
         transition:0.2s;
-  
+
 }
 
     .butpro{
@@ -97,7 +97,7 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
         background:transparent;
         color:#585A5C;
         transition:0.2s ;
-       
+
 
 
 }
@@ -163,7 +163,7 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
 
 <section id="section1" style="background: rgb(94,97,103);
 background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, rgba(72,80,99,1) 50%, rgba(65,75,98,1) 97%, rgba(52,59,77,1) 100%);padding-bottom:15%;">
-    
+
 
     <div class="pc container" >
     <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explora as nossas societies</h1>
@@ -173,7 +173,7 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 
             <a href="{{ url('/CS') }}"> <img class="entity1" src="{{asset('img/cslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;"> </a>
         </div>
-     
+
         <div class="col-lg-2 share mx-auto ">
             <a href="{{ url('/RAS') }}"> <img class="entity" src="{{asset('img/raslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;"> </a>
 
@@ -200,7 +200,7 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
         <div class="col-lg-2 share mx-auto">
         <a href="{{ url('/CS') }}"> <img class="entity1" src="{{asset('img/cslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;"></a>
         </div>
-   
+
         <div class="col-lg-2 share mx-auto ">
         <a href="{{ url('/RAS') }}"><img class="entity" src="{{asset('img/raslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;"></a>
         </div>
@@ -219,36 +219,21 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="container" style="margin-bottom:10%; ">
-<h2 class="member-title">Membros</h2>
-  <div class="members">
+    <h2 class="member-title">Membros</h2>
+      <div class="members">
 
-  @foreach($membros as $membro)
-    <div class="member">
-      <img class="pc member-image" src="{{asset($membro->imagem)}}" >
-      <img class="mobile member-image" src="{{asset($membro->imagem)}}" >
-      <h2 class="member-name">{{$membro->nome}}</h2>
-      <span class="member-role">{{$membro->cargo}}</span>
-    </div>
-  @endforeach
+      @foreach($members as $member)
+        <div class="member">
+          <img class="pc member-image" src="{{asset($member->image)}}" >
+          <img class="mobile member-image" src="{{asset($member->image)}}" >
+          <h2 class="member-name">{{$member->member_name}}</h2>
+          <span class="member-role">{{$member->member_role}}</span>
+        </div>
+      @endforeach
 
 
-  </div>
+      </div>
 </div>
 
 <style>
@@ -282,10 +267,11 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 }
 
 .member-role {
-  font-style: normal;
-  font-size: 16px;
-  font-family:'font-letter4';
-  letter-spacing:1px;overflow:hidden;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 18px;
+    font-family:'font-letter4';
+    letter-spacing:1px;overflow:hidden;
 }
 </style>
 @endsection
