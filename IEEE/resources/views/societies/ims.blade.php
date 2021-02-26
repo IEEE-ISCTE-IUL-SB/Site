@@ -183,7 +183,7 @@
         </script>
 
         <style>
-        a{}
+            
             div.owl-next, div.owl-prev{
                 visibility: hidden;
                 outline:none !important;
