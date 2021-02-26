@@ -101,7 +101,7 @@
                                 {{$event->event_description}}
                             </div>
                             <div class="date-time-location-carousel row">
-                                <div class="date-time-col"><i class="fa fa-clock-o"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="fa fa-calendar-o"></i> {{ date('d/m/y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fa @if(strcasecmp($event->event_location, 'Online') != 0) fa-map @else fa-globe @endif icon"> </i> {{$event->event_location}}</div>
+                                <div class="date-time-col"><i class="fas fa-clock"></i> {{ date('H:i', strtotime($event->event_time)) }} GMT</div> <div class="date-time-col"><i class="far fa-calendar"></i> {{ date('d/m/y', strtotime($event->event_date))}} </div> <div class="col location-carousel"><i class="fas @if(strcasecmp($event->event_location, 'Online') != 0) fa-map-marker-alt @else fa-globe @endif icon"> </i> {{$event->event_location}}</div>
                             </div>
                             <div class="highlighted-event-card-body-seemore">
                                 See more ⇀

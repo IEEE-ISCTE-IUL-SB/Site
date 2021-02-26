@@ -22,24 +22,26 @@
         <div class="detail-row row" id="detail-row" >
             <div class="detail-col col-12 col-lg-3">
                 <div class="row" style="justify-content: center">
-                    <div class="detail-info" >
-                        <i class="fa fa-calendar-o"></i>
-                        {{ date('d/m/y', strtotime($event->event_date)) }}
+
+                    <div class="detail-info">
+                        <i class="fas fa-clock"></i>
+                        {{ date('H:i', strtotime($event->event_time)) }} GMT
+
                     </div>
                 </div>
             </div>
             <div class="detail-col col-12 col-lg-3">
                 <div class="row" style="justify-content: center">
                     <div class="detail-info">
-                        <i class="fa fa-clock-o"></i>
-                        {{ date('H:i', strtotime($event->event_time)) }} GMT
+                        <i class="far fa-calendar"></i>
+                        {{ date('d/m/y', strtotime($event->event_date)) }}
                     </div>
                 </div>
             </div>
             <div class="detail-col col-12 col-lg-6">
                 <div class="row" style="justify-content: center">
                     <div class="detail-info">
-                        <i class="fa @if(strcasecmp($event->event_location, 'Online') != 0) fa-map @else fa-globe @endif icon"> </i>
+                        <i class="fas @if(strcasecmp($event->event_location, 'Online') != 0) fa-map-marker-alt @else fa-globe @endif icon"> </i>
                         {{$event->event_location}}
                     </div>
                 </div>
