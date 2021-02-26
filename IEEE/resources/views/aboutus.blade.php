@@ -11,12 +11,51 @@
 Fundado a 31 de agosto de 2012, o Branch de Estudantes do IEEE ISCTE-IUL tem desempenhado um importante papel na promoção e divulgação dos cursos do DCTI e do ISTA, servindo de alavanca para o desenvolvimento técnico e profissional dos alunos do escola.
 Nos últimos anos, o student branch esteve representado em vários encontros internacionais e foi responsável pela organização de mais de uma dezena de eventos e workshops técnicos, colocando o ISCTE na vanguarda da tecnologia.
                 </p>
-         
+
         </div>
 
         <img  src="{{asset('img/ieee2.jpg')}}" style="width:60%;margin-left:20%;margin-top:10%;">
 
- 
+
+</section>
+
+
+<section id="section2" style="background:white;padding-bottom:20%;padding-top:10%;">
+        <div  style="color:white;width:80%;;margin-right:auto;margin-left:auto;">
+                <h2 style="margin-left:auto;margin-right:auto;font-family:'font-letter2';font-size:4pc;letter-spacing:0.1px;color:rgb(78 81 97);margin-bottom:10%;">Sobre Nós</h2>
+                <div class="members m-auto">
+                <div class="row mx-auto" style="align-content: center">
+
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
+                        <div class="card branch mx-auto">
+                            <h1 class="branch-text letter2"> Universidade Nova de Lisboa </h1>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
+                        <div class="card branch mx-auto">
+                            <h1 class="branch-text letter2"> Instituto Superior Técnico </h1>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
+                        <div class="card branch mx-auto">
+                            <h1 class="branch-text letter2"> Instituto Politécnico de Cávado e Ave </h1>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 m-auto rhombus-wrapper" style="width:50%;text-align:center;align-content:center;">
+                        <div class="card branch mx-auto">
+                            <h1 class="branch-text letter2"> Universidade da Beira Interior </h1>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+        </div>
+
+        </div>
+
+
 </section>
 
 
@@ -59,6 +98,43 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 </div>
 
 <style>
+.branches {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align:center;
+
+}
+
+    .rhombus-wrapper {
+        padding-right: 3vw;
+        padding-left: 3vw;
+    }
+
+    .branch {
+        -webkit-box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.4), inset 0px 0px 20px -3px rgba(0,0,0,0.4), 0px 0px 20px -3px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.4), inset 0px 0px 20px -3px rgba(0,0,0,0.4), 0px 0px 20px -3px rgba(0,0,0,0.4);
+        text-align: center;
+        width:11pc;
+        height:11pc;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        margin-left:2pc;
+        margin-right:2pc;
+        margin-top:5pc;
+        margin-bottom:1pc;
+        transform: rotate(-45deg);
+        text-align: center;
+        background-color: #36496d;
+    }
+
+    .branch-text {
+        transform: rotate(45deg);
+        color: white;
+        font-size: 24px;
+        margin: auto;
+    }
+
 
 .members {
   display: flex;

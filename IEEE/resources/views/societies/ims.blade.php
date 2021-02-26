@@ -80,7 +80,8 @@
                         justify-content:center;">
                 <div style="padding-top: 23%; text-align:center;">
                     <h1 class="letter2" style="color:#8B5148;font-size: 210%" >Tens curiosidade por esta área?</h1>
-                    <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
+
+                    <a><button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button></a>
                 </div>
 
             </div>
@@ -182,6 +183,7 @@
         </script>
 
         <style>
+        a{}
             div.owl-next, div.owl-prev{
                 visibility: hidden;
                 outline:none !important;

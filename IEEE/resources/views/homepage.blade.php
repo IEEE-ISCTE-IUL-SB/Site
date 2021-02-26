@@ -237,43 +237,17 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 <div class="container" style="margin-bottom:10%; ">
 <h2 class="member-title">Membros</h2>
   <div class="members">
-    <div class="member">
-      <img class="pc member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033344/itc-web-course-flexbox/richard.png">
-      <img class="mobile member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033344/itc-web-course-flexbox/richard.png">
-      <h2 class="member-name">Richard Hendricks</h2>
-      <span class="member-role">Founder & CEO</span>
-    </div>
-    <div class="member">
-      <img  class="pc member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033285/itc-web-course-flexbox/dinesh.png">
-      <img  class="mobile member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033285/itc-web-course-flexbox/dinesh.png">
-      <h2 class="member-name">Dinesh Chugtai</h2>
-      <span class="member-role">Senior Programmer</span>
-    </div>
-    <div class="member">
-      <img  class="pc member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033357/itc-web-course-flexbox/gilfoyle.png">
-      <img  class="mobile member-image " src="https://res.cloudinary.com/mlshv/image/upload/v1544033357/itc-web-course-flexbox/gilfoyle.png">
-      <h2 class="member-name">Bertram Gilfoyle</h2>
-      <span class="member-role">Chief Systems Architect</span>
-    </div>
-    <div class="member">
-        <img  class="pc member-image"  src="https://res.cloudinary.com/mlshv/image/upload/v1544033291/itc-web-course-flexbox/jared.png">
-        <img  class="mobile member-image "  src="https://res.cloudinary.com/mlshv/image/upload/v1544033291/itc-web-course-flexbox/jared.png">
-      <h2 class="member-name">Jared Dunn</h2>
-      <span class="member-role">Chief Operating Officer</span>
-    </div>
-    <div class="member">
-      <img  class="pc member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033291/itc-web-course-flexbox/monica.png">
-      <img  class="mobile member-image " src="https://res.cloudinary.com/mlshv/image/upload/v1544033291/itc-web-course-flexbox/monica.png">
-      <h2 class="member-name">Monica Hall</h2>
-      <span class="member-role">Chief Financial Officer</span>
-    </div>
-    <div class="member">
-      <img  class="pc member-image" src="https://res.cloudinary.com/mlshv/image/upload/v1544033300/itc-web-course-flexbox/big-head.png">
-      <img  class="mobile member-image " src="https://res.cloudinary.com/mlshv/image/upload/v1544033300/itc-web-course-flexbox/big-head.png">
-      <h2 class="member-name">Nelson Bighetti</h2>
-      <span class="member-role">Majority Investor</span>
 
+  @foreach($membros as $membro)
+    <div class="member">
+      <img class="pc member-image" src="{{asset($membro->imagem)}}" >
+      <img class="mobile member-image" src="{{asset($membro->imagem)}}" >
+      <h2 class="member-name">{{$membro->nome}}</h2>
+      <span class="member-role">{{$membro->cargo}}</span>
     </div>
+  @endforeach
+
+
   </div>
 </div>
 
