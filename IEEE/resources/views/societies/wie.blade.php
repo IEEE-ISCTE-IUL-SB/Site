@@ -16,7 +16,7 @@
         font-size:330%;
         overflow:hidden;
         margin-left: auto;">Sê parte da mudança</h1>
-            
+
             <img style=" max-width: 40%;
           width:26%;
           display: block;
@@ -65,11 +65,11 @@
 
 
     </div>
-    <div class="mobile-wie"style="position:absolute;justify-content:center;text-align:center;width:100%;margin-left:auto;margin-right:auto;margin-top:-12pc;margin-bottom:15pc;"> 
-    <a class="btn-wiesociety">Junta-te a nós</a>
+    <div class="mobile-wie"style="position:absolute;justify-content:center;text-align:center;width:100%;margin-left:auto;margin-right:auto;margin-top:-12pc;margin-bottom:15pc;">
+    <a href="https://ieee-imspt.org/" class="btn-wiesociety">Junta-te a nós</a>
 </div>
    <style>
-   
+
 
    .btn-wiesociety{
         font-size:160%;color:white!important;text-align:center;margin-top:80vh;border:2px solid white;padding:10px;
@@ -82,8 +82,8 @@
 
             font-size:160%;color:#333333!important;text-align:center;margin-top:80vh;background-color:white;padding:10px;
         }
-   
-   
+
+
    </style>
 </section>
 
@@ -109,7 +109,7 @@
     </div>
     <div class="container mobile-wie">
         <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
-       
+
             <div style="width:100%;">
 
                 <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">O WiE ISCTE-IUL (Mulheres em Engenharia do ISCTE-IUL, Lisboa) é um grupo sem fins lucrativos com afinidade WiE do Ramo de Estudantes do IEEE ISCTE-IUL. Este grupo nasceu oficialmente por iniciativa de um grupo de alunas do ISCTE-IUL, de diferentes áreas de estudo relacionadas à tecnologia.</p>
@@ -123,7 +123,7 @@
                 <img style="width:100%;margin-top:28%;"src="{{asset('img/wiebola.png')}}" />
             </div>
 
-      
+
     </div>
 </section>
 

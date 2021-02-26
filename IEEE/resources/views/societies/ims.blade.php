@@ -73,7 +73,7 @@
             <img src="{{asset('img/ieee1.jpg')}}" style="-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);height:auto;width:100%;;margin-right:0.1%;">
         </div>
-        
+
         <div class="pc">
             <div class="col-6 side2">
                 <div style="height:99.5%;
@@ -86,16 +86,16 @@
                         <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
                     </div>
                 </div>
-				
+
             </div>
         </div>
         <div class="side2 mobile">
-        
+
         <div class="mobile-who">
             <img src="{{asset('img/ieee1.jpg')}}" style="-webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);height:auto;width:100%;;margin-right:0.1%;">
         </div>
-      
+
                 <div style="height:99.5%;
                             --webkit-box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                             box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
@@ -104,10 +104,10 @@
                     <div style="padding-top: 23%; text-align:center;">
                         <h1 class="letter2" style="color:#8B5148;font-size: 210%;margin-left: 10%;
     margin-right: 10%;" >Tens curiosidade por esta área?</h1>
-                        <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
+                        <a href="https://ieee-imspt.org/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Junta-te a nós</button> </a>
                     </div>
                 </div>
-            
+
         </div>
     </div>
 
@@ -119,12 +119,12 @@
     <div class="pc-who">
     <div class="container m-auto">
         <h2 class="letter2 who"  >Quem Somos?</h2>
-       
+
             <div class="row">
 
                 <div class="col who-side1">
                     <p class="who-side1-p">
-                    A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos. 
+                    A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos.
                     </p>
                     <p class="who-side1-p">
                      Os campos de interesse incluem metrologia, instrumentos eletrônicos analógicos e digitais, sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo), instrumentação e transdutores para medição de variáveis não elétricas, calibração e incerteza, instrumentos com controle automatizado e funções de análise, instrumentação de segurança e novas aplicações de tecnologia.
@@ -239,7 +239,7 @@
         </script>
 
         <style>
-            
+
             div.owl-next, div.owl-prev{
                 visibility: hidden;
                 outline:none !important;
@@ -273,7 +273,7 @@
 
             .mission-link {
                 color:dimgrey;
-               
+
                 line-height: 28px;
                 transition: .1s;
             }
@@ -281,7 +281,7 @@
             .mission-link:hover {
                 text-decoration: none;
                 color:dimgrey;
-            
+
                 transition: .1s;
             }
 
@@ -435,11 +435,11 @@
                 }
 
                 .who-side2{
-                  
+
                     width:100%;margin-top:0vh;
                 }
 
-                
+
                 .societylogo {
                     display: block;
                     overflow:hidden;width:100%;
@@ -613,7 +613,7 @@
         .side1{
             display:none;
             overflow:hidden;
-            
+
         }
 
         .side2{
