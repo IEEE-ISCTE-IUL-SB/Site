@@ -28,7 +28,7 @@
 <section id="section2" class="section-2" style="overflow:hidden;">
 
 
-    <div class="row" style="overflow:hidden;padding-top:1%;">
+    <div class="row" style="overflow:hidden;padding-top:1%;padding-bottom:1%;">
     <div class="column side1" >
 
                 <div style="margin-left:5.5%;margin-right:0.1%;margin-top:0.1%;height:99%;
@@ -36,15 +36,17 @@
 box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                         <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#333333;font-size: 250%" >kfkifviodksoskcdo</h1>
-                        <h1 class="letter2" style="color:#333333;font-size: 130%"> olal</h1>
+                        <a href="/" style="font-size:260%;font-family:'font-letter2';" ><h1 class="letter2" style="color:#333333;font-size: 300%" ></h1>
+                     Descobre mais</h1> </a>
+                      
                 </div>
 
         </div>
         </div>
         <div class="column side2" >
-            <img src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
+            <img class="side1"src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
                 box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);height:auto;width:94%;">
+            <img class="mobile"src="{{asset('img/rasSplash.jpg')}}" style="width:100%;">
         </div>
     </div>
 
@@ -337,6 +339,10 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     overflow:hidden;
   }
 
+  .mobile{
+    display:block;
+  }
+
   .societylogo {
         max-width: 60%;
         width:100%;
@@ -377,6 +383,10 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
         margin-bottom: 2rem;
 
   }
+
+  .mobile{
+     display:none; 
+    }
 
   .sections-title{
         overflow:hidden;text-align:center;font-size:270%;
