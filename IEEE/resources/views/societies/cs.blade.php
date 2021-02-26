@@ -139,13 +139,9 @@
         padding: 4rem 4rem;
     }
 
-    #workshop-section, #idea-section {
+    #workshop-section {
         padding-top: 7rem;
         background: white;
-    }
-
-    #idea-section {
-        margin-bottom:5rem;
     }
 
     .societylogo {

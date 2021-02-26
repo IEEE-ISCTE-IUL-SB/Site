@@ -2,8 +2,7 @@
 
 @section('content')
 
-<section id="section1" style="
-margin-top:10%;margin-bottom:10%;height:100%;">
+<section id="section1">
 
         <div class="project-title-wrapper">
                 <h2 class="project-title">{{$project->project_name}}</h2>
@@ -14,16 +13,41 @@ margin-top:10%;margin-bottom:10%;height:100%;">
 
 <style>
 
+    #section1 {
+        padding-top:7.5%;
+        padding-bottom:7.5%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #section1:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('{{asset($project->image_background)}}');;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: brightness(0.6);
+    }
+
     .project-title-wrapper {
-        color:rgb(78 81 97);
+        color:white;
         margin-left:auto;
         margin-right:auto;
+        display: flex;
         text-align:center;
     }
 
     .project-title {
+        margin:auto;
         font-family:'font-letter2';
-        font-size:380%;
+        font-size:400%;
         letter-spacing:0.1px;
     }
 
@@ -40,8 +64,7 @@ margin-top:10%;margin-bottom:10%;height:100%;">
     }
 </style>
 
-<section id="section1" style="
-margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
+<section id="section2" style="margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
 <div class="row">
                 <div style="width:20%;margin-left:6.5%;margin-right:2%;">
                 <div style="padding-top:10%;padding-bottom:5%;border-bottom: 1px solid #e6e6e6;border-top: 1px solid #e6e6e6;">
