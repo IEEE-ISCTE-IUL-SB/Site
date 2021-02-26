@@ -36,12 +36,28 @@
 box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                         <div style="padding-top: 23%; text-align:center;">
-                        <a href="/" style="font-size:260%;font-family:'font-letter2';" ><h1 class="letter2" style="color:#333333;font-size: 300%" ></h1>
+                        <a href="/" class="descobre"style="font-size:260%;font-family:'font-letter2';" ><h1 class="letter2" style="color:#333333;font-size: 300%" ></h1>
                      Descobre mais</h1> </a>
                       
                 </div>
 
         </div>
+
+        <style>
+        .descobre{
+            color:#333333;
+            text-decoration: none;
+        }
+
+        .descobre:hover,
+   .descobre:active,
+   .descobre:focus,
+   .descobre.active{
+
+       color:grey;
+       text-decoration: none;
+        }
+        </style>
         </div>
         <div class="column side2" >
             <img class="side1"src="{{asset('img/rasSplash.jpg')}}" style="-webkit-box-shadow:7px 0px 12px 4px rgba(0,0,0,0.24);
