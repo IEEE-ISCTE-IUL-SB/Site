@@ -534,7 +534,7 @@
             .search-title {
                 font-weight: bold;
                 color:white;
-                font-size:2.5vw;
+                font-size:2vw;
                 padding-top:10%;
                 padding-bottom:10%;
                 letter-spacing:1px;
@@ -802,7 +802,7 @@
                 }
 
                 .carousel-title, .search-title {
-                    font-size: 5vw;
+                    font-size: 3vw;
                 }
 
                 #novidadesScreen {

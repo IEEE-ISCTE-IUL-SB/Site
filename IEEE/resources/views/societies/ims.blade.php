@@ -82,8 +82,8 @@
                             background-color:white;
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#8B5148;font-size: 210%" >Tens curiosidade por esta área?</h1>
-                        <a href="https://ieee-imspt.org/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
+                        <h1 class="letter2" style="color:#92353D;font-size: 210%" >Tens curiosidade por esta área?</h1>
+                        <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
                     </div>
                 </div>
 
@@ -102,7 +102,7 @@
                             background-color:white;
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#8B5148;font-size: 210%;margin-left: 10%;
+                        <h1 class="letter2" style="color: #92353D;;font-size: 210%;margin-left: 10%;
     margin-right: 10%;" >Tens curiosidade por esta área?</h1>
                         <a href="https://ieee-imspt.org/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
                     </div>
