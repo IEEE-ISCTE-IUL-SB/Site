@@ -270,7 +270,7 @@
 
             </li>
             <li class="nav-item" style="margin:auto;">
-                        <a class="nav-link  letter2" href="{{ url('/sobrenos') }}">Sobre nós</a>
+                        <a class="nav-link  letter2" style="transition:0.9s"href="{{ url('/sobrenos') }}">Sobre nós</a>
                     </li>
                 </ul>
             </div>
