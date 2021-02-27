@@ -1,2 +1,2 @@
-# IEEE-Student Branch
+# IEEE-ISCTE Student Branch
 
