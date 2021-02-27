@@ -14,6 +14,9 @@
         </div>
         <div class="event-description"> {{$event->event_description}}
         </div>
+        <div class="row mx-auto">
+            <a href="{{$event->registration_link}}" class="mx-auto"> <button id="btn-society" type="button" style="margin-top:5%;"class="btn mx-auto">Inscreve-te</button> </a>
+        </div>
     </div>
 </section>
 
@@ -175,6 +178,14 @@
         font-weight: bold;
         transition: .2s;
     }
+
+    #btn-society {
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        border-radius: 0.3rem;
+    }
+
 
     .event-description {
         font-size: 19px;
@@ -354,7 +365,7 @@
         background-color: #F1B759;
     }
 
-    a.CS:hover {
+    a.CS:hover, a>.CS:hover {
         background-color: #F1B759;
     }
 
@@ -362,7 +373,7 @@
         background-color: #548195;
     }
 
-    a.RAS:hover {
+    a.RAS:hover, a>.RAS:hover {
         background-color: #548195;
     }
 
@@ -370,7 +381,7 @@
         background-color: #914249;
     }
 
-    a.IMS:hover {
+    a.IMS:hover, a>.IMS:hover {
         background-color: #83161f;
     }
 
@@ -378,7 +389,7 @@
         background-color: #593f73;
     }
 
-    a.WIE:hover {
+    a.WIE:hover, a>.WIE:hover {
         background-color: #422d54;
     }
 
@@ -386,7 +397,7 @@
         background-color: #001fb0;
     }
 
-    a.MAE:hover {
+    a.MAE:hover, a>.MAE:hover {
         background-color: #00178a;
     }
 
@@ -394,7 +405,7 @@
         background-color: #00629B;
     }
 
-    a.defaultSociety:hover {
+    a.defaultSociety:hover, a>.defaultSociety:hover {
         background-color: #004970;
     }
 
@@ -481,7 +492,8 @@
         items.forEach(item => {
             item.classList.add(societyColor);
         });
-        document.getElementById("detail-row").classList.add(societyColor)
+        document.getElementById("detail-row").classList.add(societyColor);
+        document.getElementById("btn-society").classList.add(societyColor);
     })
 
 

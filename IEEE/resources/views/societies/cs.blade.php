@@ -38,6 +38,9 @@
 
                 Your ideas matter, and so does your help!            </div>
         </div>
+        <div class="row justify-content-center description-row">
+            <a href="https://www.computer.org/" > <button type="button" style="margin-top:5%;"class="btn btn-csociety mx-auto">Descobre mais</button> </a>
+        </div>
     </div>
 </section>
 
@@ -420,8 +423,6 @@
         .mission-row {
             font-size: 16px;
         }
-
-
 
         .sections-description{
             font-size:100%;
