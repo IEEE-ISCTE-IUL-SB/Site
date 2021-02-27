@@ -35,6 +35,10 @@ Route::get('/CS', function () {
     return View::make('societies/CS')->with('events', $events);
 });
 
+Route::get('/video', function () {
+    return view('video');
+});
+
 Route::get('/WIE', function () {
     $events = getSocietyEvents("WIE");
     return View::make('societies/wie')->with('events', $events);

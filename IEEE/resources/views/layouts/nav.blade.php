@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>IEEE</title>
+        <title>IEEE-ISCTE</title>
 
         <!-- Fonts -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -34,7 +34,7 @@
 
         <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
         <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic'>
-
+        <link rel = "icon" href ="{{ asset('img/logo_ieee.png') }}" type = "image/x-icon"> 
         <link rel="stylesheet" href="css/style.css">
 
         <!-- Styles -->
