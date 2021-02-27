@@ -19,7 +19,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
                         background-color: white;text-align:left;">
                                             <h1 style=" opacity:60%;padding-right:2vw;">Advancing Technology for Humanity</h1>
-                                            <a><p href="{{ url('/') }}" class="butpro letter2">Junta-te a nós</p></a>
+                                            <a href="https://forms.gle/dbWHcRAV9U2ZQqxH6"><p  class="butpro letter2">Junta-te a nós</p></a>
                             </div>
                         </div>
                     </div>
