@@ -37,7 +37,11 @@
     }
 
     .project-title-wrapper {
-        color:white;
+        @if(is_file(public_path($project->image_background)))
+            color:white;
+        @else
+            color: #2b2b2b;
+        @endif
         margin-left:auto;
         margin-right:auto;
         display: flex;
