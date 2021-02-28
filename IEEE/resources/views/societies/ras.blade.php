@@ -179,7 +179,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
             }
 
             .no-event-warning {
-                font-size: 1.3vw;
+                font-size: 1.2vw;
                 margin-top: 8%;
                 color: dimgrey;
             }
@@ -305,6 +305,12 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 right: 0;
             }
 
+            @media (max-width: 1200px) {
+                .no-event-warning {
+                    font-size: 2vw;
+                }
+            }
+
             @media (max-width: 1024px) {
                 .event-card {
                     height: 25rem;
@@ -387,6 +393,10 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
   padding: 0px;
   overflow:hidden;
     }
+
+        no-event-warning {
+            font-size: 3vw;
+        }
 }
 
 @media only screen and (min-width: 900px) {
@@ -434,6 +444,18 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 
 
 }
+
+    @media(max-width: 576px) {
+        .no-event-warning {
+            font-size: 4vw;
+        }
+    }
+
+    @media(max-width: 390px) {
+        .no-event-warning {
+            font-size: 5vw;
+        }
+    }
 </style>
 
 

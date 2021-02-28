@@ -171,7 +171,7 @@
     }
 
     .no-event-warning {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
         margin-top: 8%;
         color: dimgrey;
     }
@@ -340,6 +340,10 @@
         .mission-row {
             font-size: 18px;
         }
+
+        .no-event-warning {
+            font-size: 2vw;
+        }
     }
 
     @media (max-width: 1024px) {
@@ -375,6 +379,8 @@
             overflow:hidden;
         }
 
+
+
     }
 
     @media only screen and (max-width: 900px) {
@@ -399,6 +405,10 @@
             text-align:center;
             font-size:135%;
         }
+
+        .no-event-warning {
+            font-size: 3vw;
+        }
     }
 
     @media (max-width: 768px) {
@@ -416,6 +426,10 @@
             margin-top: 0;
             visibility: hidden;
         }
+
+        .no-event-warning {
+            font-size: 4vw;
+        }
     }
 
     @media (max-width: 480px) {
@@ -431,6 +445,12 @@
         .event-card:hover > .event-card-body > .event-card-body-caption{
             height: 0;
             opacity:0;
+        }
+    }
+
+    @media(max-width: 390px) {
+        .no-event-warning {
+            font-size: 5vw;
         }
     }
 </style>

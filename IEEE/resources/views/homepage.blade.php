@@ -252,7 +252,8 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
   flex-basis: 7%;
   box-sizing: border-box;
   margin-bottom: 30px;
-  margin:auto;text-align: center;
+  margin:auto;
+  text-align: center;
 
 }
 
