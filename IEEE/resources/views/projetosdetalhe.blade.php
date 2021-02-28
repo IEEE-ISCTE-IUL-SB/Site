@@ -37,7 +37,7 @@
     }
 
     .project-title-wrapper {
-        @if(is_file(public_path($project->image_background)))
+        @if(Storage::disk('public')->exists($project->image_background))
             color:white;
         @else
             color: #2b2b2b;
