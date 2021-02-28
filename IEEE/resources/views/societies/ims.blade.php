@@ -82,7 +82,7 @@
                             background-color:white;
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#92353D;font-size: 210%" >Tens curiosidade por esta área?</h1>
+                        <h1 class="letter2" style="color:#2b2b2b;font-size: 210%" >Tens curiosidade por esta área?</h1>
                         <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                             background-color:white;
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color: #92353D;;font-size: 210%;margin-left: 10%;
+                        <h1 class="letter2" style="color: #2b2b2b;font-size: 210%;margin-left: 10%;
     margin-right: 10%;" >Tens curiosidade por esta área?</h1>
                         <a href="https://ieee-imspt.org/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
                     </div>
@@ -273,15 +273,16 @@
 
             .mission-link {
                 color:dimgrey;
-
                 line-height: 28px;
+                font-size:145%;
+
                 transition: .1s;
             }
 
             .mission-link:hover {
                 text-decoration: none;
                 color:dimgrey;
-
+                font-size:160%;
                 transition: .1s;
             }
 
@@ -465,11 +466,12 @@
                     text-align:center;
                     font-size:135%;
                 }
+
                 .mission-link {
-                color:dimgrey;
-                font-size:192%;
-                line-height: 28px;
-                transition: .1s;
+                    color:dimgrey;
+                    font-size:192%;
+                    line-height: 28px;
+                    transition: .1s;
                 }
 
                 .mission-link:hover {
@@ -585,14 +587,6 @@
         margin-bottom: 1%;
     }
 
-    .banner {
-        height:100%;
-        background-color:red;
-        object-fit: cover;
-
-
-
-    }
 
 
 
