@@ -225,8 +225,8 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 
       @foreach($members as $member)
         <div class="member">
-          <img class="pc member-image" src="{{asset($member->image)}}" >
-          <img class="mobile member-image" src="{{asset($member->image)}}" >
+          <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
+          <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
           <h2 class="member-name">{{$member->member_name}}</h2>
           <span class="member-role">{{$member->member_role}}</span>
         </div>

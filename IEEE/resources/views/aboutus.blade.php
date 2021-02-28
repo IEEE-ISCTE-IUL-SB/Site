@@ -25,8 +25,8 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
         <div class="members">
             @foreach($members as $member)
             <div class="member">
-                <img class="pc member-image" src="{{asset($member->image)}}">
-                <img class="mobile member-image" src="{{asset($member->image)}}">
+                <img class="pc member-image" src="{{Voyager::image($member->image)}}">
+                <img class="mobile member-image" src="{{Voyager::image($member->image)}}">
                 <h2 class="member-name"> {{$member->member_name}} </h2>
                 <span class="member-role"> {{$member->member_role}} </span>
             </div>

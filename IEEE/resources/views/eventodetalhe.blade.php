@@ -62,7 +62,7 @@
                         <div class=" vertical">
                             <div class="col-xs-12 col-md-12 slider-item-col">
                                 <div class="image-holder">
-                                    <img class="slider-img" src="{{asset($event->image1)}}">
+                                    <img class="slider-img" src="{{Voyager::image($event->image1)}}">
                                 </div>
                                 <div>
                                     <div class="col-xs-9 col-md-9">
@@ -77,7 +77,7 @@
                         <div class=" vertical">
                             <div class="col-xs-12 col-md-12 slider-item-col">
                                 <div class="image-holder">
-                                    <img class="slider-img" src="{{asset($event->image2)}}">
+                                    <img class="slider-img" src="{{Voyager::image($event->image2)}}">
                                 </div>
                                 <div>
                                     <div class="col-xs-9 col-md-9">
@@ -93,7 +93,7 @@
                         <div class="vertical">
                             <div class="col-xs-12 col-md-12 slider-item-col">
                                 <div class="image-holder">
-                                    <img class="slider-img" src="{{asset($event->image3)}}">
+                                    <img class="slider-img" src="{{Voyager::image($event->image3)}}">
                                 </div>
                                 <div>
                                     <div class="col-xs-9 col-md-9">

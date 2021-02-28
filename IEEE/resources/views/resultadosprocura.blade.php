@@ -23,7 +23,7 @@
                 <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
                     <a href="/evento/{{$event->id}}">
                         <div class="event-card mx-auto">
-                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                            <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                             <div class="card-ellipse">
                             </div>
                             <div class="event-card-body">
@@ -141,7 +141,7 @@
     }
 
     .event-card {
-                overflow: hidden; 
+                overflow: hidden;
                  height:26rem;
      transition:0.6s;
      border-radius:1px;

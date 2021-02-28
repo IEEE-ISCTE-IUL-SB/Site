@@ -89,7 +89,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 @foreach($events as $event)
                 <a href="/evento/{{$event->id}}">
                     <div class="event-card mx-auto">
-                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                         <div class="card-ellipse">
                         </div>
                         <div class="event-card-body">

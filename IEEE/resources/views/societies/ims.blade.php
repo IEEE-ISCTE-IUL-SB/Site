@@ -179,7 +179,7 @@
             @foreach($events as $event)
             <a href="/evento/{{$event->id}}">
                 <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                    <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                     <div class="card-ellipse">
                     </div>
                     <div class="event-card-body">
