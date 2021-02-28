@@ -9,7 +9,7 @@ class Project extends Model
 {
 
     public function fases(){
-        return $this->hasMany('App\Fase');
+        return $this->hasMany('App\Fase')->orderBy('fase_number');
     }
 
     public function members(){

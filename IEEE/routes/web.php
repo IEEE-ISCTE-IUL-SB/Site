@@ -52,6 +52,7 @@ function getSocietyEvents($societyname) {
 }
 
 Route::get('/projetos', 'ProjectController@index');
+
 Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);
 
 
