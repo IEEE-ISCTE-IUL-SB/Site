@@ -233,7 +233,12 @@
     }
 
     .member-title{
-        font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;
+        font-family:'font-letter2';
+        letter-spacing:0.1px;
+        color:rgb(78 81 97);
+        text-align:center;
+        margin-bottom:10%;
+        margin-top:10%;
     }
 
 
@@ -284,7 +289,6 @@
 
         .project-title {
         margin-left:10%;
-        margin-right:auto;
         font-family:'font-letter2';
         font-size:300%;
         letter-spacing:0.1px;
