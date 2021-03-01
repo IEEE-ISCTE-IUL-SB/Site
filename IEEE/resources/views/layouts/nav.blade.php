@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>IEEE-ISCTE</title>
+        <title>IEEE-ISCTE SB</title>
 
         <!-- Fonts -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -97,7 +97,7 @@
   }
 
   .dropdownfont{
-      font-size:120%;font-family:'font-letter1';
+      font-size:170%;font-family:'font-letter3';font-weight:300;
   }
 }
 
@@ -120,7 +120,7 @@
   }
 
   .dropdownfont{
-    font-size:120%;font-family:'font-letter1';
+    font-size:130%;font-family:'font-letter1';
   }
 }
 
@@ -131,7 +131,7 @@
   }
 
   .dropdownfont{
-    font-size:170%;font-family:'font-letter1';
+    font-size:180%;font-family:'font-letter1';
 
 
   }
@@ -159,7 +159,7 @@
 
 <!-- Sticky navbar-->
 <header class="header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light py-3 " style="transition:0.2s;">
+    <nav class="navbar navbar-expand-lg navbar-light py-3 " style="transition:0.4s;">
         <div class="container">
 
         <a href="{{ url('/') }}" > <img class="phone" alt="Logo" src="{{asset('img/ieee.svg')}}" ></a>
@@ -171,15 +171,15 @@
                     <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Eventos</a></li>
                     <li class="nav-item"style="margin:auto;">
                         <a class="nav-link  letter2" style="margin:auto;transition:0.4s!important;"href="{{ url('/projetos') }}">Projetos</a></li>
-                        <li class="nav-item dropdown"style="margin:auto;">
+                        <li class="nav-item dropdown"style="margin:auto;transition:0.4s!important;">
 	    <a class="nav-link dropdown-toggle letter2" style="transition:0.4s!important;"href="#" data-toggle="dropdown"> Societies  </a>
-	    <div class="dropdown-menu dropdown-large dropdownH d">
-            <div class="row" style="   margin-right: 24px;margin-left: 25px;margin-top:20px;" >
-                <div class="col dropi letter2" >
+	    <div class="dropdown-menu dropdown-large dropdownH d" style="transition:0.4s!important;">
+            <div class="row" style="margin-right: 24px;margin-left: 25px;margin-top:20px;" >
+                <div class="col dropi " >
 
                     <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/RAS') }}">
                     <h1 class="soc2 dropdownfont" >RAS
-                    <h1 style="color:#808080c7;">R&A Society</h1>
+                    <h1 class="letter1"style="color:#808080c7;">R&A Society</h1>
                     </h1>
                     </a>
                 </div>
@@ -187,19 +187,19 @@
                <div class="col dropi" >
                <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/IMS') }}">
                     <h1 class="soc2 dropdownfont">IMS
-                    <h1 style="color:#808080c7;">I&M Society</h1>
+                    <h1 class="letter1"style="color:#808080c7;">I&M Society</h1>
                     </a>
                 </div>
                  <div class="col dropi" >
                  <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/WIE') }}">
                     <h1 class="soc2 dropdownfont" >WIE
-                    <h1 style="color:#808080c7;">WIE Society</h1>
+                    <h1 class="letter1"style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
                 <div class="col dropi " >
                 <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/CS') }}">
                     <h1 class="soc2 dropdownfont" >CS
-                    <h1 style="width: 130%;color:#808080c7;">Computer Society</h1>
+                    <h1 class="letter1" style="width: 130%;color:#808080c7;">Computer Society</h1>
                     </a>
                 </div>
             </div>
@@ -223,7 +223,7 @@
             }
 
             .soc2{
-                color:#333333;transition:0.4s;
+                color:#313131;transition:0.4s;
                 text-decoration-line: none;
             }
 
@@ -284,7 +284,7 @@
         <div class="container" >
             <div class="row text-light text-center py-4">
             <div class="container text-center">
-      <small>Copyright &copy; IEEE-ISCTE 2021</small>
+      <small>Copyright &copy; IEEE-ISCTE SB 2021</small>
     </div>
                 <div class="col-md-auto col-sm-12 ml-md-auto text-center">
            </div>

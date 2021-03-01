@@ -128,7 +128,7 @@
                 }
 
                 #novidadesScreen {
-                    font-size:5vw;
+                    font-size:4vw;
                     text-align:center;
                     color: #323239;
                     margin-bottom: 75px;
@@ -806,7 +806,7 @@
                 }
 
                 #novidadesScreen {
-                    font-size: 5vw;
+                    font-size: 4vw;
                 }
             }
 
@@ -851,7 +851,7 @@
                 }
 
                 #novidadesScreen {
-                    font-size: 6vw;
+                    font-size: 3vw;
                 }
 
                 .search-group-align {
@@ -917,7 +917,7 @@
                 }
 
                 #novidadesScreen {
-                    font-size: 7vw;
+                    font-size: 5vw;
                     margin-bottom: 30px;
                 }
             }

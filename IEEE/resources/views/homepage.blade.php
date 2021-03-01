@@ -42,10 +42,10 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                         <div style="width:100%;">
                             <div class="letter2 workshop" style="
                        padding-top:10%;padding-bottom:10%;
-                            padding-left:5%;padding-right:5%;font-size:310%;margin-left:0%;-webkit-background-clip: text;
+                            padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
                                             <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
-                                            <a href="https://forms.gle/dbWHcRAV9U2ZQqxH6" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junte-te a nós</p></a>
+                                            <a href="https://forms.gle/dbWHcRAV9U2ZQqxH6" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
                             </div>
                         </div>
 
@@ -194,7 +194,7 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 
 
     <div class="mobile container">
-    <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:20%;letter-spacing:1px;"> Explora as nossas societies</h1>
+    <h1 class="letter2" style="text-align:center;font-size:250%;color:white;padding-top:20%;letter-spacing:1px;"> Explora as nossas societies</h1>
     <div class="row mx-auto" style="padding-top:10%;text-align:center;">
 
         <div class="col-lg-2 share mx-auto">

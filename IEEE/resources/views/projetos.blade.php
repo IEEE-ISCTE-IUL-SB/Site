@@ -5,9 +5,10 @@
 <section id="section1" style="
 margin-top:10%;margin-bottom:20%;">
 
-        <div
-      style="color:rgb(78 81 97);margin-left:10%;">
-                <h2 style="font-family:'font-letter2';font-size:370%;letter-spacing:0.1px;">Projetos</h2>
+
+        
+        <div class="project-title">
+                <h2 style="font-family:'font-letter2';letter-spacing:0.1px;">Projetos</h2>
         </div>
 
 
@@ -18,8 +19,15 @@ margin-top:10%;margin-bottom:20%;">
         <div class="" style="clip-path: ellipse(68% 56% at 49% 97%);margin-top: -26.5%;padding-top: 26%;padding-bottom: -2%;background: linear-gradient( rgba(71,77,90,1) 35%, rgba(71,76,88,1) 42%, rgba(70,73,82,1) 66%, rgba(65,67,75,1) 81%);">
         </div>
 
+        <div class="pc">
+            <div style="color:white;position: relative;padding-top: 11%;margin-bottom: 5%;">
+                    <h2 style="margin-left: -2%;font-family:'font-letter2';font-size:270%;letter-spacing:1px;margin-top: -20%;text-align:center;position: relative;margin-bottom: -17%;">Descobre o que temos para ti</h2>
+            </div>
+        </div>
+        <div class="mobile">
         <div style="color:white;position: relative;padding-top: 11%;margin-bottom: 5%;">
-                <h2 style="margin-left: -2%;font-family:'font-letter2';font-size:270%;letter-spacing:1px;margin-top: -20%;text-align:center;position: relative;margin-bottom: -17%;">Descobre o que temos para ti</h2>
+                <h2 style="margin-left: %;font-family:'font-letter2';font-size:210%;letter-spacing:1px;margin-top: -10%;text-align:center;position: relative;margin-bottom: -7%;">Descobre o que temos para ti</h2>
+        </div>
         </div>
         <div class="container" style="text-align:center;justify-content:center;margin-top:0%;margin-bottom:10%; ">
 
@@ -117,14 +125,12 @@ transition:0.3s;
         display: none;
     }
 
+    .project-title {
+        color:rgb(78 81 97);
+        margin-left:10%;
+        font-size:370%;
+    }
 
-
-
-        .project {
-
-
-
-        }
     }
 
     @media (max-width: 1000px) {
@@ -142,8 +148,12 @@ transition:0.3s;
         }
 
 
-        .project {
-
+        .project-title {
+          margin-left:auto;
+          margin-right:auto;
+          text-align:center;
+          color:rgb(78 81 97);
+          font-size:310%;
         }
     }
 
@@ -175,12 +185,21 @@ transition:0.3s;
 </section>
 
 <section id="section3">
-      <div  style="color:white;margin-left:0%;margin-top:-10%;position: relative; ">
-                <h2 style="font-family:'font-letter2';font-size:2pc;text-align:center;letter-spacing:0.1px;color:rgb(78 81 97);">Tens alguma proposta ? <span style="color:#5E666E;font-size:1.8pc;padding-left:2vw;">   Envia mail para ieee@iscte-iul.pt </span></h2>
-                <p class="text-muted lead" style="margin-top:10%;"></p>
+    <div class="pc">
+        <div  style="color:white;margin-left:0%;margin-top:-10%;position: relative; ">
+                    <h2 style="font-family:'font-letter2';font-size:2pc;text-align:center;letter-spacing:0.1px;color:rgb(78 81 97);">Tens alguma proposta ? <span style="color:#5E666E;font-size:1.8pc;padding-left:2vw;">   Envia mail para ieee@iscte-iul.pt </span></h2>
+                    <p class="text-muted lead" style="margin-top:10%;"></p>
 
-        </div>
+            </div>
+    </div>
 
+    <div class="mobile">
+        <div style="color:white;margin-top:-5%;position: relative;justify-content:center;margin-left:5%;margin-right:5%; ">
+                    <h2 style="font-family:'font-letter2';font-size:140%;text-align:center;letter-spacing:0.1px;color:rgb(78 81 97);">Tens alguma proposta ? </h2>
+                    <h2 style="font-family:'font-letter2';color:grey;font-size:140%;text-align:center;letter-spacing:0.1px;justify-content:center;margin-top:10%;margin-bottom:10%;">Envia um mail para</h2>
+                    <h2 style="font-family:'font-letter1';color:#5E666E;font-size:190%;text-align:center;letter-spacing:0.1px;justify-content:center;margin-top:0%;margin-bottom:10%;">ieee@iscte-iul.pt </h2>
+            </div>
+    </div>
 </section>
 
 
