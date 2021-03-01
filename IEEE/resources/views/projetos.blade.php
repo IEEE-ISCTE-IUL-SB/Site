@@ -116,7 +116,7 @@ transition:0.3s;
 
 
 
-    @media  (min-width: 100px){
+    @media  (min-width: 1000px){
 
     .pc {
         display: block;

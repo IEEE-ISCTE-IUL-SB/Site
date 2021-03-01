@@ -115,7 +115,7 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
     }
 
 
-    @media  (min-width: 100px){
+    @media  (min-width: 1000px){
 
     .pc {
         display: block;
