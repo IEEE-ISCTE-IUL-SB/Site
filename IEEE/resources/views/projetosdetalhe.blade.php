@@ -7,8 +7,7 @@
         <div class="project-title-wrapper">
                 <h2 class="project-title">{{$project->project_name}}</h2>
         </div>
-
-
+ 
 </section>
 
 <style>
@@ -68,7 +67,8 @@
     }
 </style>
 
-<section id="section2" style="margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;">
+<section id="section2" style="margin-top:5%;margin-bottom:0%;height:100%;margin-left:5%;margin-right:5%;overflow:hidden;">
+<div class="pc">
 <div class="row">
                 <div style="width:20%;margin-left:6.5%;margin-right:2%;">
                 <div style="padding-top:10%;padding-bottom:5%;border-bottom: 1px solid #e6e6e6;border-top: 1px solid #e6e6e6;">
@@ -97,14 +97,38 @@
                         </div>
                 </div>
  </div>
+ </div>
+ <div class="mobile">
+ <div class="row">
+    
+    <div style="width:100%;overflow:hidden;">
+            <div style="color:rgb(78 81 97);margin-bottom:3%;margin-left:10%;margin-right:10%;">
+            <h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:144%;letter-spacing:0.1px;">Visão</h2>
+            <h2 class="card"style="margin-bottom:2%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:120%;letter-spacing:0.1px;">Introdução</h2>
+                    <h2 class="card"style="color:grey;font-family:'font-letter1';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;line-height:1.5pc;">
+                    {{$project->introduction}}
+                    </h2>
+
+            <h2 class="card"style="margin-bottom:2%;margin-top:6%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:120%;letter-spacing:0.1px;">Objetivo</h2>
+                    <h2 class="card"style="color:grey;font-family:'font-letter1';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;line-height:1.5pc;">
+                    {{$project->goals}}
+                    </h2>
+            </div>
+    </div>
+</div>
+</div>
 
 </section>
 
-<section id="fases-section" style="
-padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
+
+
+
+<section id="fases-section" style="padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
 
 <div class="row">
-    <div style="width:20%;margin-left:6.5%;margin-right:2%;"> </div>
+
+    <div class="pc"style="width:20%;margin-left:6.5%;margin-right:2%;"> </div>
+    <div class="mobile"style="width:5%;margin-left:2%;margin-right:2%;"> </div>
     <div style="width:60%;">
         <div style="color:rgb(78 81 97);margin-bottom:3%;margin-left:5%;margin-right:25%;">
         <h2 class="card"  style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:130%;letter-spacing:0.1px;">Fases</h2>
@@ -213,13 +237,20 @@ padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
     }
 
 
-    @media  (min-width: 100px){
+    @media  (min-width: 1000px){
 
     .pc {
         display: block;
     }
     .mobile {
         display: none;
+    }
+
+    .project-title {
+        margin:auto;
+        font-family:'font-letter2';
+        font-size:400%;
+        letter-spacing:0.1px;
     }
 
 
@@ -231,6 +262,8 @@ padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
             font-size:3.5pc;
         }
     }
+
+
 
     @media (max-width: 1000px) {
 
@@ -248,6 +281,14 @@ padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
         .member-title{
             font-size:2.5pc;
         }
+
+        .project-title {
+        margin-left:10%;
+        margin-right:auto;
+        font-family:'font-letter2';
+        font-size:300%;
+        letter-spacing:0.1px;
+    }
     }
 
 
