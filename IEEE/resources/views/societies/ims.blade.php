@@ -82,7 +82,7 @@
                             background-color:white;
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#92353D;font-size: 210%" >Tens curiosidade por esta área?</h1>
+                        <h1 class="letter2" style="color:#2b2b2b;font-size: 210%" >Tens curiosidade por esta área?</h1>
                         <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                             background-color:white;
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color: #92353D;;font-size: 210%;margin-left: 10%;
+                        <h1 class="letter2" style="color: #2b2b2b;font-size: 210%;margin-left: 10%;
     margin-right: 10%;" >Tens curiosidade por esta área?</h1>
                         <a href="https://ieee-imspt.org/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
                     </div>
@@ -179,7 +179,7 @@
             @foreach($events as $event)
             <a href="/evento/{{$event->id}}">
                 <div class="event-card mx-auto">
-                    <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                    <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                     <div class="card-ellipse">
                     </div>
                     <div class="event-card-body">
@@ -273,15 +273,16 @@
 
             .mission-link {
                 color:dimgrey;
-
                 line-height: 28px;
+                font-size:145%;
+
                 transition: .1s;
             }
 
             .mission-link:hover {
                 text-decoration: none;
                 color:dimgrey;
-
+                font-size:160%;
                 transition: .1s;
             }
 
@@ -406,10 +407,20 @@
                 right: 0;
             }
 
+            .no-event-warning {
+                font-size: 1.2vw;
+                margin-top: 8%;
+                color: dimgrey;
+            }
+
 
             @media (max-width:1200px) {
                 .mission-row {
                     font-size: 30px;
+                }
+
+                .no-event-warning {
+                    font-size: 2vw;
                 }
             }
 
@@ -455,19 +466,24 @@
                     text-align:center;
                     font-size:135%;
                 }
-                .mission-link {
-                color:dimgrey;
-                font-size:192%;
-                line-height: 28px;
-                transition: .1s;
-            }
 
-            .mission-link:hover {
-                text-decoration: none;
-                color:dimgrey;
-                font-size: 160%;
-                transition: .1s;
-            }
+                .mission-link {
+                    color:dimgrey;
+                    font-size:192%;
+                    line-height: 28px;
+                    transition: .1s;
+                }
+
+                .mission-link:hover {
+                    text-decoration: none;
+                    color:dimgrey;
+                    font-size: 160%;
+                    transition: .1s;
+                }
+
+                .no-event-warning {
+                    font-size: 3vw;
+                }
             }
 
             @media only screen and (min-width: 900px) {
@@ -521,6 +537,12 @@
                 }
             }
 
+            @media(max-width: 576px) {
+                .no-event-warning {
+                    font-size: 4vw;
+                }
+            }
+
             @media (max-width: 480px) {
                 .mission-row {
                     font-size: 18px;
@@ -529,6 +551,12 @@
                 .event-card:hover > .event-card-body > .event-card-body-caption{
                     height: 0;
                     opacity:0;
+                }
+            }
+
+            @media(max-width: 390px) {
+                .no-event-warning {
+                    font-size: 5vw;
                 }
             }
 
@@ -559,14 +587,6 @@
         margin-bottom: 1%;
     }
 
-    .banner {
-        height:100%;
-        background-color:red;
-        object-fit: cover;
-
-
-
-    }
 
 
 

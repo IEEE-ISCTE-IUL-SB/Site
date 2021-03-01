@@ -24,7 +24,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url('{{asset($project->image_background)}}');;
+        background-image: url('{{Voyager::image($project->image_background)}}');;
         background-size: 100%;
         background-repeat: no-repeat;
         background-position-y: 50%;
@@ -37,7 +37,11 @@
     }
 
     .project-title-wrapper {
-        color:white;
+        @if(Storage::disk('public')->exists($project->image_background))
+            color:white;
+        @else
+            color: #2b2b2b;
+        @endif
         margin-left:auto;
         margin-right:auto;
         display: flex;
@@ -126,8 +130,8 @@ padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
 
         @foreach($project->members as $member)
         <div class="member">
-            <img class="pc member-image" src="{{asset($member->image)}}">
-            <img class="mobile member-image" src="{{asset($member->image)}}">
+            <img class="pc member-image" src="{{Voyager::image($member->image)}}">
+            <img class="mobile member-image" src="{{Voyager::image($member->image)}}">
             <h2 class="member-name"> {{$member->member_name}} </h2>
             <span class="member-role"> {{$member->member_role}} </span>
         </div>

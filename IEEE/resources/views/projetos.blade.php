@@ -56,7 +56,7 @@ margin-top:10%;margin-bottom:20%;">
 
                 background-size: cover;
 
-                background-image: url('{{asset($project->image_card)}}');  "></div>
+                background-image: url('{{Voyager::image($project->image_card)}}');  "></div>
                     <h2 class="card project-name" style="">{{$project->project_name}}</h2>
                 </div>
             </div>

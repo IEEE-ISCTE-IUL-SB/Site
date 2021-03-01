@@ -137,7 +137,7 @@
                 @foreach($events as $event)
                 <a href="/evento/{{$event->id}}">
                     <div class="event-card mx-auto">
-                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                         <div class="card-ellipse">
                         </div>
                         <div class="event-card-body">
@@ -278,7 +278,7 @@
     }
 
     .no-event-warning {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
         margin-top: 8%;
         color: dimgrey;
     }
@@ -404,6 +404,12 @@
         right: 0;
     }
 
+    @media (max-width: 1200px) {
+        .no-event-warning {
+            font-size: 2vw;
+        }
+    }
+
     @media (max-width: 1024px) {
 
       #section1 {
@@ -430,12 +436,6 @@
           display:block;
       }
 
-      .societylogo {
-          display: block;
-          overflow:hidden;width:100%;
-          margin-top:10%;
-      }
-
       .sections-title{
           overflow:hidden;
           text-align:center;
@@ -444,11 +444,11 @@
           width:100%;
       }
 
-      .sections-description{
-          overflow:hidden;
-          text-align:center;
-          font-size:120%;
-      }
+
+        .no-event-warning {
+            font-size: 3vw;
+        }
+
     }
 
     @media only screen and (min-width: 900px) {
@@ -471,21 +471,6 @@
           font-size:270%;
       }
 
-      .sections-description{
-          overflow:hidden;
-          text-align:center;
-          font-size:120%
-      }
-
-      .societylogo {
-          max-width: 40%;
-          width:26%;
-          display: block;
-          margin-right:11%;
-          overflow:hidden;
-          margin-left: auto;
-      }
-
     }
 
     @media (max-width: 768px) {
@@ -496,11 +481,23 @@
 
     }
 
+    @media(max-width: 576px) {
+        .no-event-warning {
+            font-size: 4vw;
+        }
+    }
+
     @media (max-width: 478px) {
 
         .event-card:hover > .event-card-body > .event-card-body-caption{
             height: 0;
             opacity:0;
+        }
+    }
+
+    @media(max-width: 390px) {
+        .no-event-warning {
+            font-size: 5vw;
         }
     }
 

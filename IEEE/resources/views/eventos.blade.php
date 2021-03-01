@@ -89,7 +89,7 @@
                 <a class="highlighted-event-link" onclick="highlightedEventLink(this, {{$event->id}})">
                     <div class="highlighted-event-card">
 
-                        <img class="highlighted-event-img" src="{{$event->image1}}">
+                        <img class="highlighted-event-img" src="{{Voyager::image($event->image1)}}">
 
                         <div class="highlighted-event-body-bg"></div>
 
@@ -385,7 +385,7 @@
                 @foreach($nextevents as $event)
                     <a href="/evento/{{$event->id}}">
                         <div class="event-card mx-auto">
-                            <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                            <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                             <div class="card-ellipse">
                             </div>
                             <div class="event-card-body">
@@ -445,7 +445,7 @@
                 @foreach($pastevents as $event)
                 <a href="/evento/{{$event->id}}">
                     <div class="event-card mx-auto">
-                        <img class="event-card-img-top event-img" src="{{$event->image1}}">
+                        <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                         <div class="card-ellipse">
                         </div>
                         <div class="event-card-body">
