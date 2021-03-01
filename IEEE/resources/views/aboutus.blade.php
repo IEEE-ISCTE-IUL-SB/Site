@@ -6,15 +6,16 @@
 <section id="section1" style="background:white;padding-bottom:20%;padding-top:10%;">
         <div  style="color:white;width:70%;margin-right:auto;margin-left:auto;">
                 <h2 class="about-us-title" style="font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);">Sobre Nós</h2>
-                <p class="text-muted lead" style="letter-spacing:0.1px;line-height:1.6pc;font-family:'font-letter1';width:95%;margin-top:10%;">
+                <p class="text-muted lad " >
                 Com mais de 400.000 membros em todo o mundo, o IEEE é a maior associação de engenharia do mundo. Um mundo no qual estudantes, pesquisadores e profissionais colaboram para um objetivo comum, o avanço tecnológico para a humanidade.
 Fundado a 31 de agosto de 2012, o Branch de Estudantes do IEEE ISCTE-IUL tem desempenhado um importante papel na promoção e divulgação dos cursos do DCTI e do ISTA, servindo de alavanca para o desenvolvimento técnico e profissional dos alunos do escola.
 Nos últimos anos, o student branch esteve representado em vários encontros internacionais e foi responsável pela organização de mais de uma dezena de eventos e workshops técnicos, colocando o ISCTE na vanguarda da tecnologia.
                 </p>
 
         </div>
-
-        <img  src="{{asset('img/ieee2.jpg')}}" style="width:60%;margin-left:20%;margin-top:10%;">
+        
+        <img class="pc"  src="{{asset('img/ieee2.jpg')}}" style="width:60%;margin-left:20%;margin-top:10%;">
+        <img class="mobile" src="{{asset('img/ieee2.jpg')}}" style="margin-top:10%;width:100%">
 
 
 </section>
@@ -149,7 +150,7 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
         font-size: 60px;
     }
 
-    @media  (min-width: 100px){
+    @media  (min-width: 1000px){
 
         .pc {
             display: block;
@@ -163,6 +164,11 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
             width: 10pc;
 
         }
+
+        .lad{
+            letter-spacing:0.1px;line-height:1.6pc;font-family:'font-letter1';width:95%;margin-top:10%;
+            font-size:2vh;
+        }
     }
 
     @media (max-width: 1000px) {
@@ -170,6 +176,10 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
         .pc {
             display: none;
 
+        }
+        .lad{
+            letter-spacing:0.1px;line-height:1.6pc;font-family:'font-letter1';width:95%;margin-top:10%;
+            font-size:2vh;
         }
         .mobile {
             display: block;

@@ -97,7 +97,7 @@
   }
 
   .dropdownfont{
-      font-size:170%;font-family:'font-letter3';font-weight:300;
+    font-size:130%;font-family:'font-letter1';
   }
 }
 
@@ -158,7 +158,7 @@
 
 
 <!-- Sticky navbar-->
-<header class="header sticky-top"  style="overflow:hidden;">
+<header class="header sticky-top" >
     <nav class="navbar navbar-expand-lg navbar-light py-3 " style="transition:0.4s;">
         <div class="container">
 
