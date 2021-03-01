@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section id="title-section">
+<section id="title-section" style="overflow:hidden;">
 
         <div class="project-title-wrapper">
                 <h2 class="project-title">{{$project->project_name}}</h2>
@@ -123,7 +123,7 @@
 
 
 
-<section id="fases-section" style="padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;">
+<section id="fases-section" style="padding-top:10%;margin-bottom:5%;height:100%;margin-left:5%;margin-right:5%;overflow:hidden;">
 
 <div class="row">
 
@@ -148,7 +148,7 @@
 
 
 </section>
-<div id="colaboradores-section"class="container" style="margin-bottom:10%;padding-top:10% ">
+<div id="colaboradores-section"class="container" style="margin-bottom:10%;padding-top:10%;overflow:hidden; ">
     <h2 class="member-title">Colaboradores</h2>
     <div class="members">
 
@@ -233,12 +233,7 @@
     }
 
     .member-title{
-        font-family:'font-letter2';
-        letter-spacing:0.1px;
-        color:rgb(78 81 97);
-        text-align:center;
-        margin-bottom:10%;
-        margin-top:10%;
+        font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;
     }
 
 
@@ -289,6 +284,7 @@
 
         .project-title {
         margin-left:10%;
+        margin-right:auto;
         font-family:'font-letter2';
         font-size:300%;
         letter-spacing:0.1px;

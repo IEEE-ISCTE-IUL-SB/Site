@@ -158,7 +158,7 @@
 
 
 <!-- Sticky navbar-->
-<header class="header sticky-top">
+<header class="header sticky-top"  style="overflow:hidden;">
     <nav class="navbar navbar-expand-lg navbar-light py-3 " style="transition:0.4s;">
         <div class="container">
 
