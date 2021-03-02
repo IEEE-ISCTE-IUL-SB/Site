@@ -40,6 +40,10 @@ Route::get('/WIE', function () {
     return View::make('societies/wie')->with('events', $events);
 });
 
+Route::get('/workshopSubmit', function () {
+    return View::make('addWorkshop');
+});
+
 function getSocietyEvents($societyname) {
     $events = App\Event::all()->filter(function($event) use($societyname) {
         foreach($event->tags as $tag) {
