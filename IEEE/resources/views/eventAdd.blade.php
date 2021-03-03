@@ -65,7 +65,7 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
   
   <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;" >
-  <input id="" name="" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" type="text" placeholder="Nº de telemóvel" >
+  <input id="" name="" class="inputstyle" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;" type="text" placeholder="Nº de telemóvel" >
     
   </div>
 </div>
@@ -74,7 +74,7 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
   
   <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="textinput" type="text" placeholder="Email" class="inputstyle">
+  <input id="textinput" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;" name="textinput" type="text" placeholder="Email" class="inputstyle">
     
   </div>
 </div>
@@ -83,7 +83,7 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
   
   <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" style="border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
+  <input id="" name="" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
     
   </div>
 </div>

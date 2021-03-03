@@ -3,7 +3,7 @@
 @section('content')
 
 
-<form style="width:100%;">
+<form style="width:100%;background-color:#616877;padding-bottom:20vh;">
 
 
 <!-- Form Name -->
@@ -32,7 +32,7 @@ Preparado/a?
 <!-- Text input-->
 <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
   <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" class="inputstyle"style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;"type="text" placeholder="Nome Próprio">
+  <input id="" name="" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Próprio">
     
   </div>
 </div>
@@ -41,7 +41,7 @@ Preparado/a?
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
   
   <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;" >
-  <input id="" name="" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" type="text" placeholder="Nº de telemóvel" >
+  <input id="" name="" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" type="text" placeholder="Nº de telemóvel" >
     
   </div>
 </div>
@@ -50,7 +50,7 @@ Preparado/a?
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
   
   <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="textinput" type="text" placeholder="Email" class="inputstyle">
+  <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="textinput" type="text" placeholder="Email" class="inputstyle">
     
   </div>
 </div>
@@ -59,25 +59,26 @@ Preparado/a?
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
   
   <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;"type="text" placeholder="Organização" class="inputstyle">
+  <input id="" name="" style="border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
     
   </div>
 </div>
 
 <!-- Select Basic -->
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:10%;">
-  <label class="col-md-6 control-label" style="font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="selectbasic">Tema do evento</label>
+  <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="selectbasic">Tema do evento</label>
   <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
+    <select id="selectbasic" name="selectbasic" style="border-color:white;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3); 
+box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);background-color:white;color:#616877;"class="form-control-lg form-control">
+      <option value="1"><h1 style="padding-top:30vw!important;padding-bottom:20vw!important;font-size:20vw;"> Option2</h1></option>
+      <option style="margin-top:30vw;padding-bottom:20vw;"value="2">Option two</option>
     </select>
   </div>
 </div>
 
 <!-- Textarea -->
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento</label>
+  <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento</label>
   <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
     <textarea class="txtarea" id="textarea" name="textarea">default text</textarea>
   </div>
@@ -99,16 +100,20 @@ Preparado/a?
     border-style: none none outset none;
     border-color: whitesmoke;
     font-size: 2.1vh;
+    color:white;
     width: 100%;
     padding-bottom: 2vh;
     outline: none;
+    background-color:#616877;
 }
 
 .txtarea{
-    border: 2px solid  #333333;
+    border: 2px solid  white;
     outline: none;
     font-size: 20px;
     width: 100%;
+    color:white;
+    background-color:#616877;
     border-style: none none outset none;
     overflow: auto;
     padding-bottom: 5%;
@@ -116,26 +121,30 @@ Preparado/a?
 
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #333333;
+  color: white;
+  background-color:#616877;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #333333;
+  color: white;
+  background-color:#616877;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #333333;
+  color: white;
+  background-color:#616877;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #333333;
+  color: white;
+  background-color:#616877;
 }
 
 
 .butpro:hover, .butpro:active{
-        border:2px solid  #333333;
-        background:  #333333;
-        color: white;font-size: 17px;
+     
+        font-size: 17px;
         transition:0.2s;
         outline:none;
-
+      background:white;
+ color:#616877; border:2px solid white;
 }
 
     .butpro{
@@ -150,12 +159,12 @@ Preparado/a?
         padding-top: 1.3vh;
         padding-bottom: 1.3vh;
         text-align:center;
-        border:2px solid #585A5C;
-        background:transparent;
-        color:#333333;
+       
+        color: white;
+          border:2px solid white;
         outline:none;
         transition:0.2s;
-
+  background-color:#616877;
 
 
 }
