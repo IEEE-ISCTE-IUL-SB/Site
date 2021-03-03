@@ -7,7 +7,7 @@
 
 
 <!-- Form Name -->
-<section style="background-color:white;padding-bottom:3vh;margin-bottom:10vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3); 
+<section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:3vh;margin-bottom:10vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3); 
 box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 <h1 class="criar-title">Cria um evento</h1>
 <div class="roulette-wrapper">
@@ -92,7 +92,8 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:10%;">
   <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="selectbasic">Tema do evento</label>
   <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-    <select id="selectbasic" name="selectbasic" class="form-control">
+    <select id="selectbasic" name="selectbasic" style="border-color:white;-webkit-box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.16); 
+box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.16);background-color:white;color:#616877;"class="form-control">
       <option value="1">Option one</option>
       <option value="2">Option two</option>
     </select>
