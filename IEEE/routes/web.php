@@ -40,9 +40,18 @@ Route::get('/WIE', function () {
     return View::make('societies/wie')->with('events', $events);
 });
 
-Route::get('/workshopSubmit', function () {
-    return View::make('addWorkshop');
+Route::get('/marcação', function () {
+    return View::make('eventAdd');
 });
+
+Route::get('/inscrição', function () {
+    return View::make('eventInsc');
+});
+
+Route::get('/candidatura', function () {
+    return View::make('memberAdd');
+});
+
 
 function getSocietyEvents($societyname) {
     $events = App\Event::all()->filter(function($event) use($societyname) {

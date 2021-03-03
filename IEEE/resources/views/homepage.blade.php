@@ -171,7 +171,7 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 
         <div class="col-lg-2 share mx-auto ">
 
-            <a href="{{ url('/CS') }}"> <img class="entity1" src="{{asset('img/cslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;"> </a>
+            <a href="{{ url('/CS') }}"> <img class="entity" src="{{asset('img/cslogo.png')}}" style="width:95%;margin-top:-40px;margin-bottom:-40px;"> </a>
         </div>
 
         <div class="col-lg-2 share mx-auto ">
@@ -198,7 +198,7 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
     <div class="row mx-auto" style="padding-top:10%;text-align:center;">
 
         <div class="col-lg-2 share mx-auto">
-        <a href="{{ url('/CS') }}"> <img class="entity1" src="{{asset('img/cslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;"></a>
+        <a href="{{ url('/CS') }}"> <img class="entity" src="{{asset('img/cslogo.png')}}" style="text-align:center;width:50%;margin-top:10%;margin-bottom:10%;"></a>
         </div>
 
         <div class="col-lg-2 share mx-auto ">
