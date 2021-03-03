@@ -132,3 +132,24 @@ Route::get('/search/{searchtext}', function ($searchtext) {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::post('/memberapplication', function (Request $request) {
+    $new_application = new App\MemberApplication;
+
+    $new_application->member_name = $request->member_name;
+    $new_application->phone_number = $request->phone_number;
+    $new_application->email = $request->email;
+    $new_application->student_number = $request->student_number;
+    $new_application->student_degree = $request->student_degree;
+    $new_application->what_is_ieee = $request->what_is_ieee;
+    $new_application->how_did_you_find_us = $request->how_did_you_find_us;
+    $new_application->reason_to_join = $request->reason_to_join;
+    $new_application->availability = $request->availability;
+    $new_application->value_add = $request->value_add;
+    $new_application->when_to_start = $request->when_to_start;
+
+    $new_application->save();
+    $members = App\Member::all();
+    return View::make('homepage')->with('members', $members);
+});
+

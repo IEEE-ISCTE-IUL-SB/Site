@@ -19,7 +19,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
                         background-color: white;text-align:left;">
                                             <h1 style=" opacity:60%;padding-right:2vw;">Advancing Technology for Humanity</h1>
-                                            <a style="  text-decoration: none;"href="https://forms.gle/dbWHcRAV9U2ZQqxH6"><p  class="butpro letter2">Junta-te a nós</p></a>
+                                            <a style="  text-decoration: none;"href="/candidatura"><p  class="butpro letter2">Junta-te a nós</p></a>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
                                             <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
-                                            <a href="https://forms.gle/dbWHcRAV9U2ZQqxH6" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
+                                            <a href="/candidatura" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
                             </div>
                         </div>
 
