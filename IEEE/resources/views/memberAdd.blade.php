@@ -213,9 +213,8 @@ Preparado/a?
         outline:none;
         transition:0.2s;
   background-color:#616877;
-
-
 }
+
 </style>
 
 @endsection

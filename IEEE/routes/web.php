@@ -40,17 +40,6 @@ Route::get('/WIE', function () {
     return View::make('societies/wie')->with('events', $events);
 });
 
-Route::get('/marcação', function () {
-    return View::make('eventAdd');
-});
-
-Route::get('/inscrição', function () {
-    return View::make('eventInsc');
-});
-
-Route::get('/candidatura', function () {
-    return View::make('memberAdd');
-});
 
 
 function getSocietyEvents($societyname) {
@@ -133,6 +122,10 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('/candidatura', function () {
+    return View::make('memberAdd');
+});
+
 Route::post('/memberapplication', function (Request $request) {
     $new_application = new App\MemberApplication;
 
@@ -149,7 +142,64 @@ Route::post('/memberapplication', function (Request $request) {
     $new_application->when_to_start = $request->when_to_start;
 
     $new_application->save();
-    $members = App\Member::all();
-    return View::make('homepage')->with('members', $members);
+
+    return redirect('/');
 });
+
+Route::post('/eventregistration/{id}', function (Request $request, $id) {
+    $new_attendant = new App\EventRegistration;
+
+    $new_attendant->insc_name = $request->insc_name;
+    $new_attendant->insc_email = $request->insc_email;
+    $attendant_university = $request->insc_uni;
+    if (strcmp($attendant_university, "") == 0)
+    {
+        $attendant_university = $request->insc_uni_other;
+    }
+    $new_attendant->insc_university = $attendant_university;
+    $attendant_degree = $request->insc_degree;
+    if (strcmp($attendant_degree, "") == 0)
+    {
+        $attendant_degree = $request->insc_degree_other;
+    }
+    $new_attendant->insc_degree = $attendant_degree;
+    $new_attendant->insc_year = $request->insc_year;
+    $new_attendant->event_id = $id;
+
+    $new_attendant->save();
+
+    return redirect('/evento/'.$id);
+});
+
+Route::get('/inscricao/{id}', function ($id) {
+    $event = App\Event::all()->where('id', $id)->first();
+    return View::make('eventInsc')->with('event', $event);
+});
+
+
+Route::get('/propostaevento', function () {
+    return View::make('eventAdd');
+});
+
+Route::post('/eventsuggestion', function (Request $request) {
+    $suggested_event = new App\EventSuggestion;
+
+    $suggested_event->contact_name = $request->contact_name;
+    $suggested_event->contact_email = $request->contact_email;
+    $suggested_event->contact_org = $request->contact_org;
+
+    $new_event_type = $request->event_type;
+    if (strcmp($new_event_type, "") == 0)
+    {
+        $new_event_type = $request->event_type_other;
+    }
+    $suggested_event->event_type = $new_event_type;
+
+    $suggested_event->event_description = $request->event_description;
+
+    $suggested_event->save();
+
+    return redirect('/eventos');
+});
+
 

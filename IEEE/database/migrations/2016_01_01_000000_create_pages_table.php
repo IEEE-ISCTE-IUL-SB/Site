@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use TCG\Voyager\Models\Page;
 
-class CreatePostsTable extends Migration
+class CreatePagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,18 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        // Create table for storing roles
+        Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('author_id');
-            $table->integer('category_id')->nullable();
             $table->string('title');
-            $table->string('seo_title')->nullable();
             $table->text('excerpt')->nullable();
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->string('slug')->unique();
             $table->text('meta_description')->nullable();
             $table->text('meta_keywords')->nullable();
-            $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('\\\'DRAFT\\\'');
-            $table->tinyInteger('featured')->default(0);
+            $table->enum('status', Page::$statuses)->default(Page::STATUS_INACTIVE);
             $table->timestamps();
         });
     }
@@ -38,6 +36,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::drop('pages');
     }
 }

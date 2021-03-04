@@ -2,19 +2,15 @@
 
 @section('content')
 
-<div style="background-color:#8d8c81;padding-bottom:10%;">
-<form style="width:100%;background-color:#8d8c81;">
-
 
 <!-- Form Name -->
-<section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:3vh;margin-bottom:10vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3); 
-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
+<section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:3vh;margin-bottom:10vh;">
 <h1 class="criar-title">Cria um evento</h1>
 <div class="roulette-wrapper">
 
-<h1 class="roulette"><span id="menjase"><span> Queres divulgar uma nova linguagem de programação através de um workshop?<span></span></h1>
+<h1 class="roulette"><span id="menjase"><span> Queres divulgar uma nova linguagem de programação através de um workshop? <span></span></h1>
 
-  
+
 </div>
 </section>
 <style>
@@ -52,121 +48,178 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 
 
 
-<section style="justify-content:center;">
-<!-- Text input-->
-<div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
-  <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Próprio">
-    
-  </div>
-</div>
+<section style="justify-content:center;background-color:#616877;padding-top:4%;padding-bottom:2%;-webkit-box-shadow: inset 0px 19px 25px -5px rgba(0,0,0,0.3);box-shadow: inset 0px 19px 25px -5px rgba(0,0,0,0.3);"">
+    <form style="width:100%;" action={{url("/eventsuggestion")}} method="post">
+        @csrf
+        <!-- Text input-->
+        <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
+          <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
+            <input id="" name="contact_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Completo">
+          </div>
+        </div>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;" >
-  <input id="" name="" class="inputstyle" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;" type="text" placeholder="Nº de telemóvel" >
-    
-  </div>
-</div>
+        <!-- Text input-->
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="textinput" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;" name="textinput" type="text" placeholder="Email" class="inputstyle">
-    
-  </div>
-</div>
+          <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+            <input id="textinput" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;" name="contact_email" type="text" placeholder="Email" class="inputstyle">
+          </div>
+        </div>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
-    
-  </div>
-</div>
+        <!-- Text input-->
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
-<!-- Select Basic -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:10%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="selectbasic">Tema do evento</label>
-  <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-    <select id="selectbasic" name="selectbasic" style="border-color:white;-webkit-box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.16); 
-box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.16);background-color:white;color:#616877;"class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-    </select>
-  </div>
-</div>
+          <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+          <input id="" name="contact_org" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
 
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" style="background-color:#8d8c81;color:white"name="textarea">default text</textarea>
-  </div>
-</div>
+          </div>
+        </div>
 
-<!-- Button -->
-<div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-    <button id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">Submit</button>
-  </div>
-</div>
+        <!-- Select Basic -->
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
+            <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
+                <label for="group1" class="radio-group-label">Tipo de Evento</label>
+                <fieldset id="group1" class="inputstyle">
+                    <div class="row radio-row">
+                        <input type="radio" value="Workshop" name="event_type" id="radio1-1" class="radio-item"><label for="radio1-1">Workshop</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="Palestra" name="event_type" id="radio1-2" class="radio-item"><label for="radio1-2">Palestra</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="" name="event_type" id="radio1-2" class="radio-item">
+                        <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="event_type_other" type="text" placeholder="Outro..." class="inputstyle radio-other-text-field">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-bottom:4%;">
+          <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento</label>
+          <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+            <textarea class="txtarea" id="textarea" style="background-color: transparent;"name="event_description" placeholder="Descrição..."></textarea>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+          <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
+          <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+            <input type="submit" id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">
+          </div>
+        </div>
+    </form>
 </section>
 
-</form>
 
 <style>
- .inputstyle {
-    border-style: none none outset none;
-    border-color: white;
-    font-size: 2.1vh;
-    width: 100%;
-    padding-bottom: 2vh;
-    outline: none;
-    background-color:#8d8c81;
-}
+    .inputstyle {
+        border-style: none none outset none;
+        border-color: white;
+        font-size: 2.1vh;
+        width: 100%;
+        padding-bottom: 2vh;
+        outline: none;
+        background-color:#616877;
+    }
 
-.txtarea{
-    border: 2px solid white;
-    outline: none;
-    font-size: 20px;
-    width: 100%;
-    border-style: none none outset none;
-    overflow: auto;
-    padding-bottom: 5%;
-}
+    .txtarea{
+        border: 2px solid white;
+        outline: none;
+        font-size: 20px;
+        width: 100%;
+        border-style: none none outset none;
+        overflow: auto;
+        padding-bottom: 5%;
+    }
 
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: white;
-  background-color:#8d8c81;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: white;
-  background-color:#8d8c81;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: white;
-  background-color:#8d8c81;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: white;
-  background-color:#8d8c81;
-}
+    .txtarea::placeholder {
+        color: lightgrey;
+    }
 
 
-.butpro:hover, .butpro:active{
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: white;
+        background-color:#616877;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: white;
+        background-color:#616877;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: white;
+        background-color:#616877;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: white;
+        background-color:#616877;
+    }
+
+
+    .butpro:hover, .butpro:active{
         border:2px solid white;
         background:  white;
-        color: #8d8c81;font-size: 17px;
+        color: #616877;
+        font-size: 17px;
         transition:0.2s;
         outline:none;
 
-}
+    }
+
+    .radio-group-label {
+         margin-bottom: 1.5rem;
+         font-size: 2.1vh;
+         color: white;
+    }
+
+    .radio-other-text-field {
+         width: auto;
+         padding-bottom: 0.5rem;
+    }
+
+    .radio-row {
+         margin-bottom: 1.3rem;
+         margin-left: 0.1rem;
+         color: white;
+    }
+
+    .radio-item {
+         margin: auto 1rem;
+    }
+
+    .radio-item:after {
+         width: 15px;
+         height: 15px;
+         border-radius: 15px;
+         top: -2px;
+         left: -1px;
+         position: relative;
+         border: solid transparent 3px;
+         box-shadow: 0 0 0 2pt white;
+         background-color: #616877;
+         content: '';
+         display: inline-block;
+         visibility: visible;
+         transition: .2s;
+    }
+
+    .radio-item:checked:after {
+         width: 15px;
+         height: 15px;
+         border-radius: 15px;
+         top: -2px;
+         left: -1px;
+         position: relative;
+         background-color: white;
+         border: solid #616877 3px;
+         box-shadow: 0 0 0 2pt white;
+         content: '';
+         display: inline-block;
+         visibility: visible;
+         transition: .2s;
+    }
 
     .butpro{
         margin-top: 30px;
@@ -277,13 +330,11 @@ $.fn.sloganRoulette = function(options) {
 (function($) {
 $(document).ready(function() {
     $('#menjase').sloganRoulette({
-        slogans: [" Queres fazer uma palestra sobre o teu projeto? ", " Queres divulgar uma nova linguagem de programação através de um workshop?"]
+        slogans: [" Queres fazer uma palestra sobre o teu projeto? ", " Queres divulgar uma nova linguagem de programação com um workshop?"]
     });
 })
 
 })(jQuery);
 
 </script>
-
-</div>
 @endsection
