@@ -28,7 +28,7 @@ class CreateEventsTable extends Migration
             $table->time('event_time');
             $table->string('event_location');
             $table->tinyInteger('highlighted')->default(0);
-            $table->string('registration_link', 500);
+            $table->string('event_registration_description', 1500)->nullable();
         });
     }
 
