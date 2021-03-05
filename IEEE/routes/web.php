@@ -53,7 +53,7 @@ function getSocietyEvents($societyname) {
     return $events;
 }
 
-Route::get('/projetos', 'ProjectController@index');
+//Route::get('/projetos', 'ProjectController@index');
 
 Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);
 
@@ -78,6 +78,8 @@ Route::get('/eventos', function () {
     foreach($highlights as $event) {
         $highlightedtags = $highlightedtags->merge($event->tags);
     }
+
+    $highlightedtags = $highlightedtags->unique('tag_name');
 
     return View::make('eventos')->with('highlights', $highlights)->with('nextevents', $nextevents)->with('pastevents', $pastevents)->with('highlightedtags', $highlightedtags);
 });

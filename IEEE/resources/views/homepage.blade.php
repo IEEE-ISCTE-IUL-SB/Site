@@ -220,7 +220,7 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 
 
 <div class="container" style="margin-bottom:10%; ">
-    <h2 class="member-title">Membros</h2>
+    <h2 class="member-title">Colaboradores</h2>
       <div class="members">
 
       @foreach($members as $member)

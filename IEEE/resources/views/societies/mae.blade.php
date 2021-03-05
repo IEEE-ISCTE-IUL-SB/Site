@@ -177,7 +177,7 @@
                 overflow: hidden;
                 height:30rem;
                 transition:0.6s;
-                border-radius:1px;
+                border-radius:15px;
                 position:relative;
                 display:block;
                 outline: none;

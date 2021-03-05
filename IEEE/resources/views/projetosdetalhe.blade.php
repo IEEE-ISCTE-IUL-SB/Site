@@ -7,7 +7,7 @@
         <div class="project-title-wrapper">
                 <h2 class="project-title">{{$project->project_name}}</h2>
         </div>
- 
+
 </section>
 
 <style>
@@ -100,7 +100,7 @@
  </div>
  <div class="mobile">
  <div class="row">
-    
+
     <div style="width:100%;overflow:hidden;">
             <div style="color:rgb(78 81 97);margin-bottom:3%;margin-left:10%;margin-right:10%;">
             <h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:144%;letter-spacing:0.1px;">Visão</h2>
@@ -149,7 +149,7 @@
 
 </section>
 <div id="colaboradores-section"class="container" style="margin-bottom:10%;padding-top:10%;overflow:hidden; ">
-    <h2 class="member-title">Colaboradores</h2>
+    <h2 class="member-title">Equipa</h2>
     <div class="members">
 
         @foreach($project->members as $member)

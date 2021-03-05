@@ -206,7 +206,7 @@
         $(window).on('scroll', function () {
 
                 var pixs = $(document).scrollTop()
-                pixs =7 * (240-pixs)/240;
+                pixs =7 * (350-pixs)/350;
                 $('.banner-bg').css({'webkit-filter':"blur("+pixs+"px)", 'filter':"blur("+pixs+"px) brightness(0.7) saturate(1.3)"});
 
 

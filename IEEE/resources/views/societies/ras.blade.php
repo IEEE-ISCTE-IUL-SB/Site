@@ -188,7 +188,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 overflow: hidden;
                 height:26rem;
                 transition:0.6s;
-                border-radius:1px;
+                border-radius:15px;
                 position:relative;
                 display:block;
                 outline: none;

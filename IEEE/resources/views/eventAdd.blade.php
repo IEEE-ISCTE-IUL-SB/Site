@@ -301,7 +301,7 @@ $.fn.sloganRoulette = function(options) {
             autoplay: true,
             repeat: true,
             startDelay: 200,
-            interval: 7000,
+            interval: 5000,
             outClass: "fadeOutDown",
             inClass: "fadeInDown",
             slogans: ["one", "two", "three"]

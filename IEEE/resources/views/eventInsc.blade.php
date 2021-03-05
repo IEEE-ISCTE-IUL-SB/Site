@@ -30,11 +30,11 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 
 <section style="justify-content:center;">
 <!-- Text input-->
-    <form style="width:100%;" action={{url("/eventregistration/" . $event->id)}} method="post">
+    <form style="width:100%;" id="main-form" action={{url("/eventregistration/" . $event->id)}} method="post">
         @csrf
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
           <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-          <input id="" name="insc_name" class="inputstyle"style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;"type="text" placeholder="Nome Completo">
+          <input id="" name="insc_name" class="inputstyle"style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;"type="text" placeholder="Nome Completo*" required>
 
           </div>
         </div>
@@ -43,7 +43,7 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-          <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_email" type="text" placeholder="Email" class="inputstyle">
+          <input type="email" id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_email"placeholder="Email*" class="inputstyle" required>
 
           </div>
         </div>
@@ -52,13 +52,13 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
           <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-              <label for="group1" class="radio-group-label">És de que Universidade?</label>
+              <legend for="group1" class="radio-group-label">És de que Universidade?*</legend>
               <fieldset id="group1" class="inputstyle">
                   <div class="row radio-row">
-                    <input type="radio" value="Iscte" name="insc_uni" id="radio1-1" class="radio-item"><label for="radio1-1">Iscte</label>
+                    <input type="radio" value="Iscte" name="insc_uni" id="radio1-1" class="radio-item" required><label for="radio1-1">Iscte</label>
                   </div>
                   <div class="row radio-row">
-                      <input type="radio" value="" name="insc_uni" id="radio1-2" class="radio-item">
+                      <input type="radio" value="" name="insc_uni" id="radio1-2" class="radio-item" required>
                       <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_uni_other" type="text" placeholder="Outra..." class="inputstyle radio-other-text-field">
                   </div>
               </fieldset>
@@ -68,31 +68,31 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
             <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-                <label for="group1" class="radio-group-label">Em que curso estás?</label>
-                <fieldset id="group1" class="inputstyle">
+                <legend for="group2" class="radio-group-label">Em que curso estás?*</legend>
+                <fieldset id="group2" class="inputstyle">
                     <div class="row radio-row">
-                        <input type="radio" value="LEI" name="insc_degree" id="radio2-1" class="radio-item"><label for="radio2-1">LEI</label>
+                        <input type="radio" value="LEI" name="insc_degree" id="radio2-1" class="radio-item" required><label for="radio2-1">LEI</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="MEI" name="insc_degree" id="radio2-2" class="radio-item"><label for="radio2-2">MEI</label>
+                        <input type="radio" value="MEI" name="insc_degree" id="radio2-2" class="radio-item" required><label for="radio2-2">MEI</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="LETI" name="insc_degree" id="radio2-3" class="radio-item"><label for="radio2-3">LETI</label>
+                        <input type="radio" value="LETI" name="insc_degree" id="radio2-3" class="radio-item" required><label for="radio2-3">LETI</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="METI" name="insc_degree" id="radio2-4" class="radio-item"><label for="radio2-4">METI</label>
+                        <input type="radio" value="METI" name="insc_degree" id="radio2-4" class="radio-item" required><label for="radio2-4">METI</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="LIGE" name="insc_degree" id="radio2-5" class="radio-item"><label for="radio2-5">LIGE</label>
+                        <input type="radio" value="LIGE" name="insc_degree" id="radio2-5" class="radio-item" required><label for="radio2-5">LIGE</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="MIG" name="insc_degree" id="radio2-6" class="radio-item"><label for="radio2-6">MIG</label>
+                        <input type="radio" value="MIG" name="insc_degree" id="radio2-6" class="radio-item" required><label for="radio2-6">MIG</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="LCD" name="insc_degree" id="radio2-7" class="radio-item"><label for="radio2-7">LCD</label>
+                        <input type="radio" value="LCD" name="insc_degree" id="radio2-7" class="radio-item" required><label for="radio2-7">LCD</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="" name="insc_degree" id="radio2-8" class="radio-item">
+                        <input type="radio" value="" name="insc_degree" id="radio2-8" class="radio-item" required>
                         <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_degree_other" type="text" placeholder="Outra..." class="inputstyle radio-other-text-field">
                     </div>
                 </fieldset>
@@ -102,25 +102,25 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
             <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-                <label for="group1" class="radio-group-label">Em que ano estás?</label>
-                <fieldset id="group1" class="inputstyle">
+                <legend for="group3" class="radio-group-label">Em que ano estás?*</legend>
+                <fieldset id="group3" class="inputstyle">
                     <div class="row radio-row">
-                        <input type="radio" value="1Ano" name="insc_year" id="radio3-1" class="radio-item"><label for="radio3-1">1º Ano</label>
+                        <input type="radio" value="1Ano" name="insc_year" id="radio3-1" class="radio-item" required><label for="radio3-1">1º Ano</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="2Ano" name="insc_year" id="radio3-2" class="radio-item"><label for="radio3-2">2º Ano</label>
+                        <input type="radio" value="2Ano" name="insc_year" id="radio3-2" class="radio-item" required><label for="radio3-2">2º Ano</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="3Ano" name="insc_year" id="radio3-3" class="radio-item"><label for="radio3-3">3º Ano</label>
+                        <input type="radio" value="3Ano" name="insc_year" id="radio3-3" class="radio-item" required><label for="radio3-3">3º Ano</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="4Ano" name="insc_year" id="radio3-4" class="radio-item"><label for="radio3-4">4º Ano</label>
+                        <input type="radio" value="4Ano" name="insc_year" id="radio3-4" class="radio-item" required><label for="radio3-4">4º Ano</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="5Ano" name="insc_year" id="radio3-5" class="radio-item"><label for="radio3-5">5º Ano</label>
+                        <input type="radio" value="5Ano" name="insc_year" id="radio3-5" class="radio-item" required><label for="radio3-5">5º Ano</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="NA" name="insc_year" id="radio3-6" class="radio-item"><label for="radio3-6">Não Aplicável</label>
+                        <input type="radio" value="NA" name="insc_year" id="radio3-6" class="radio-item" required><label for="radio3-6">Não Aplicável</label>
                     </div>
                 </fieldset>
             </div>
@@ -132,7 +132,7 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
           <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-            <input type="submit" id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">
+            <input onclick="validateInscForm()" type="submit" id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">
           </div>
         </div>
     </form>
@@ -171,10 +171,10 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
  .radio-item:after {
      width: 15px;
      height: 15px;
-     border-radius: 15px;
      top: -2px;
      left: -1px;
      position: relative;
+     border-radius: 15px;
      border: solid white 3px;
      box-shadow: 0 0 0 2pt #2b2b2b;
      background-color: white;
@@ -257,6 +257,62 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 
 
 }
+
+    .required-field {
+        border-color: red!important;
+    }
+
+     .required-field::placeholder {
+         color: red!important;
+     }
+
+     .required-radio-field {
+         color: red;
+     }
+
+     .required-radio-item:after {
+         box-shadow: 0 0 0 2pt red!important;
+     }
+
 </style>
+
+<script>
+    const form_items = document.querySelectorAll('.inputstyle');
+
+    form_items.forEach(el => el.addEventListener('focusout', event => {
+        if (el.hasAttribute('required') && !el.value) {
+            el.classList.add('required-field')
+        } else {
+            el.classList.remove('required-field')
+        }
+    }));
+
+    function validateInscForm() {
+        const form_items = document.querySelectorAll('.inputstyle, .radio-item');
+        form_items.forEach(el => {
+            if (el.hasAttribute('required')) {
+                if (el.getAttribute('type') === 'radio') {
+                    var isCheckedFlag;
+                    const radio_items = document.getElementsByName(el.getAttribute('name'))
+                    radio_items.forEach(x => {if (x.checked) isCheckedFlag = true;});
+                    if (!isCheckedFlag) {
+                        el.parentElement.parentElement.previousElementSibling.classList.add('required-radio-field');
+                        el.classList.add('required-radio-item');
+                    }
+                    else {
+                        el.parentElement.parentElement.previousElementSibling.classList.remove('required-radio-field');
+                        el.classList.remove('required-radio-item');
+                    }
+                }
+                else if (!el.value) {
+                    el.classList.add('required-field')
+                } else {
+                    el.classList.remove('required-field')
+                }
+            }
+        });
+    };
+
+</script>
 
 @endsection
