@@ -6,26 +6,25 @@
 
 
 <!-- Form Name -->
-<section style="background-color:white;padding-bottom:3vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);
-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
-<h1 style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:4vw;font-family:'font-letter2';"> Inscrição em {{$event->event_name}}</h1>
-<div style="margin-top:2vh;margin-bottom:5vh;width:60%;margin:auto;text-align:center;justify-content:center;">
-<h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
+<section style="background-color:white;padding-bottom:3vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
+    <h1 style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:4vw;font-family:'font-letter2';"> Inscrição em {{$event->event_name}}</h1>
+    <div style="margin-top:2vh;margin-bottom:5vh;width:60%;margin:auto;text-align:center;justify-content:center;">
+    <h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
 
-    {{$event->event_description}}
-    <br> {{$event->event_registration_description}}
-*Obrigatório
+        {{$event->event_description}}
+        <br> {{$event->event_registration_description}}
+    *Obrigatório
 
-</h1>
-  <div class="row" style="margin-top:4vh;margin-bottom:3vh;">
-  <div style="width:50%;">
-      <h1 style="font-family:'font-letter2';font-size:4vh;">{{ date('H:i', strtotime($event->event_time)) }} GMT</h1>
+    </h1>
+      <div class="row" style="margin-top:4vh;margin-bottom:3vh;">
+      <div style="width:50%;">
+          <h1 style="font-family:'font-letter2';font-size:4vh;">{{ date('H:i', strtotime($event->event_time)) }} GMT</h1>
+        </div>
+        <div style="width:50%;">
+          <h1 style="font-family:'font-letter2';font-size:4vh;">{{ date('d/m/y', strtotime($event->event_date)) }}</h1>
+        </div>
+      </div>
     </div>
-    <div style="width:50%;">
-      <h1 style="font-family:'font-letter2';font-size:4vh;">{{ date('d/m/y', strtotime($event->event_date)) }}</h1>
-    </div>
-  </div>
-</div>
 </section>
 
 <section style="justify-content:center;">
@@ -40,10 +39,8 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 
         <!-- Text input-->
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-          <input type="email" id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_email"placeholder="Email*" class="inputstyle" required>
-
+            <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_email" placeholder="Email*" type="email" class="inputstyle" required>
           </div>
         </div>
 
@@ -131,7 +128,7 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
           <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-            <input onclick="validateInscForm()" type="submit" id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">
+              <input type="submit" onclick="validateInscForm()" id="singlebutton" name="singlebutton" style="width:90%;" class="butpro">
           </div>
         </div>
     </form>
@@ -310,6 +307,7 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
                 }
             }
         });
+        var form = document.getElementById('main-form');
     };
 
 </script>
