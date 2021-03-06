@@ -15,7 +15,7 @@
         <div class="event-description"> {{$event->event_description}}
         </div>
         <div class="row mx-auto">
-            <a href={{url("/inscricao/" . $event->id)}} style="margin-bottom:10vh;"> <button id="btn-society" type="button" style="margin-top:5%;"class="btn mx-auto">Inscreve-te</button> </a>
+            <a href="/inscricao/{{$event->id}}" style="margin-bottom:10vh;"> <button id="btn-society" type="button" style="margin-top:5%;"class="btn mx-auto">Inscreve-te</button> </a>
         </div>
     </div>
 </section>

@@ -30,12 +30,11 @@ box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
 
 <section style="justify-content:center;">
 <!-- Text input-->
-    <form style="width:100%;" id="main-form" action={{url("/eventregistration/" . $event->id)}} method="post">
+    <form style="width:100%;" id="main-form" action="/eventregistration/{{$event->id}}" method="post">
         @csrf
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
           <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-          <input id="" name="insc_name" class="inputstyle"style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;"type="text" placeholder="Nome Completo*" required>
-
+            <input id="" name="insc_name" class="inputstyle" style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;" type="text" placeholder="Nome Completo*" required>
           </div>
         </div>
 
