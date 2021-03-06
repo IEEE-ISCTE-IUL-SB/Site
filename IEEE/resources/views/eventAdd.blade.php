@@ -5,7 +5,7 @@
 
 <!-- Form Name -->
 <section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:3vh;margin-bottom:10vh;">
-<h1 class="criar-title">Cria um evento</h1>
+<h1 class="criar-title">Propõe um evento</h1>
 <div class="roulette-wrapper">
 
 <h1 class="roulette"><span id="menjase"><span> Queres divulgar uma nova linguagem de programação através de um workshop? <span></span></h1>
@@ -49,12 +49,12 @@
 
 
 <section style="justify-content:center;background-color:#616877;padding-top:4%;padding-bottom:2%;-webkit-box-shadow: inset 0px 19px 25px -5px rgba(0,0,0,0.3);box-shadow: inset 0px 19px 25px -5px rgba(0,0,0,0.3);"">
-    <form style="width:100%;" action={{url("/eventsuggestion")}} method="post">
+    <form style="width:100%;" id="main-form" action={{url("/eventsuggestion")}} method="post">
         @csrf
         <!-- Text input-->
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
           <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-            <input id="" name="contact_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Completo">
+            <input id="" name="contact_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Completo*" required>
           </div>
         </div>
 
@@ -62,7 +62,7 @@
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-            <input id="textinput" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;" name="contact_email" type="text" placeholder="Email" class="inputstyle">
+            <input id="textinput" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;" name="contact_email" type="email" placeholder="Email*" class="inputstyle" required>
           </div>
         </div>
 
@@ -70,7 +70,7 @@
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-          <input id="" name="contact_org" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
+            <input id="" name="contact_org" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
 
           </div>
         </div>
@@ -78,16 +78,16 @@
         <!-- Select Basic -->
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
             <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-                <label for="group1" class="radio-group-label">Tipo de Evento</label>
+                <label for="group1" class="radio-group-label">Tipo de Evento*</label>
                 <fieldset id="group1" class="inputstyle">
                     <div class="row radio-row">
-                        <input type="radio" value="Workshop" name="event_type" id="radio1-1" class="radio-item"><label for="radio1-1">Workshop</label>
+                        <input type="radio" value="Workshop" name="event_type" id="radio1-1" class="radio-item" required><label for="radio1-1">Workshop</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="Palestra" name="event_type" id="radio1-2" class="radio-item"><label for="radio1-2">Palestra</label>
+                        <input type="radio" value="Palestra" name="event_type" id="radio1-2" class="radio-item" required><label for="radio1-2">Palestra</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="" name="event_type" id="radio1-2" class="radio-item">
+                        <input type="radio" value="" name="event_type" id="radio1-2" class="radio-item" required>
                         <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="event_type_other" type="text" placeholder="Outro..." class="inputstyle radio-other-text-field">
                     </div>
                 </fieldset>
@@ -96,9 +96,9 @@
 
         <!-- Textarea -->
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-bottom:4%;">
-          <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento</label>
+          <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento*</label>
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-            <textarea class="txtarea" id="textarea" style="background-color: transparent;"name="event_description" placeholder="Descrição..."></textarea>
+            <textarea class="txtarea" id="textarea" style="background-color: transparent;"name="event_description" placeholder="Descrição..." required></textarea>
           </div>
         </div>
 
@@ -106,7 +106,7 @@
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
           <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-            <input type="submit" id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">
+            <input type="submit" onclick="validateForm()" id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">
           </div>
         </div>
     </form>
@@ -117,6 +117,7 @@
     .inputstyle {
         border-style: none none outset none;
         border-color: white;
+        color:white;
         font-size: 2.1vh;
         width: 100%;
         padding-bottom: 2vh;
@@ -126,6 +127,7 @@
 
     .txtarea{
         border: 2px solid white;
+        color: white;
         outline: none;
         font-size: 20px;
         width: 100%;
@@ -242,6 +244,22 @@
 
 
 }
+
+    .required-field {
+        border-color: white !important; /*TODO*/
+    }
+
+    /*.required-field::placeholder {
+        color: white !important;
+    }
+
+    .required-radio-field {
+        color: white;
+    }*/
+
+    .required-radio-item:after {
+        box-shadow: 0 0 0 2pt white!important; /*TODO*/
+    }
 </style>
 
 <script>
@@ -335,6 +353,42 @@ $(document).ready(function() {
 })
 
 })(jQuery);
+
+const form_items = document.querySelectorAll('.inputstyle');
+
+form_items.forEach(el => el.addEventListener('focusout', event => {
+    if (el.hasAttribute('required') && !el.value) {
+        el.classList.add('required-field')
+    } else {
+        el.classList.remove('required-field')
+    }
+}));
+
+function validateForm() {
+    const form_items = document.querySelectorAll('.inputstyle, .radio-item, .txtarea');
+    form_items.forEach(el => {
+        if (el.hasAttribute('required')) {
+            if (el.getAttribute('type') === 'radio') {
+                var isCheckedFlag;
+                const radio_items = document.getElementsByName(el.getAttribute('name'))
+                radio_items.forEach(x => {if (x.checked) isCheckedFlag = true;});
+                if (!isCheckedFlag) {
+                    el.parentElement.parentElement.previousElementSibling.classList.add('required-radio-field');
+                    el.classList.add('required-radio-item');
+                }
+                else {
+                    el.parentElement.parentElement.previousElementSibling.classList.remove('required-radio-field');
+                    el.classList.remove('required-radio-item');
+                }
+            }
+            else if (!el.value) {
+                el.classList.add('required-field')
+            } else {
+                el.classList.remove('required-field')
+            }
+        }
+    });
+};
 
 </script>
 @endsection

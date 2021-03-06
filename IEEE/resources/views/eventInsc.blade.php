@@ -128,7 +128,7 @@
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
           <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-              <input type="submit" onclick="validateInscForm()" id="singlebutton" name="singlebutton" style="width:90%;" class="butpro">
+              <input type="submit" onclick="validateForm()" id="singlebutton" name="singlebutton" style="width:90%;" class="butpro">
           </div>
         </div>
     </form>
@@ -258,13 +258,13 @@
         border-color: red!important;
     }
 
-     .required-field::placeholder {
+     /*.required-field::placeholder {
          color: red!important;
      }
 
      .required-radio-field {
          color: red;
-     }
+     }*/
 
      .required-radio-item:after {
          box-shadow: 0 0 0 2pt red!important;
@@ -283,7 +283,7 @@
         }
     }));
 
-    function validateInscForm() {
+    function validateForm() {
         const form_items = document.querySelectorAll('.inputstyle, .radio-item');
         form_items.forEach(el => {
             if (el.hasAttribute('required')) {
@@ -307,7 +307,6 @@
                 }
             }
         });
-        var form = document.getElementById('main-form');
     };
 
 </script>
