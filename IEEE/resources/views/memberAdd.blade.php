@@ -50,7 +50,7 @@ Preparado/a?
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="email" type="email" placeholder="Email*" class="inputstyle" required>
+      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="email" pattern="^\S+@\S+[\.][0-9a-z]+$" type="email" placeholder="Email*" class="inputstyle" required>
 
       </div>
     </div>
@@ -219,20 +219,20 @@ Preparado/a?
   background-color:#616877;
 }
 
- .required-field {
-     border-color: white !important; /*TODO*/
+ .touched-field:invalid {
+     border-color: red!important;
  }
 
- /*.required-field::placeholder {
-     color: white !important;
+ /*.touched-field::placeholder {
+     color: red!important;
  }
 
- .required-radio-field {
-     color: white;
+ .touched-radio-field {
+     color: red;
  }*/
 
- .required-radio-item:after {
-     box-shadow: 0 0 0 2pt white!important; /*TODO*/
+ .touched-radio-item:invalid:after {
+     box-shadow: 0 0 0 2pt red!important;
  }
 </style>
 
@@ -240,11 +240,7 @@ Preparado/a?
     const form_items = document.querySelectorAll('.inputstyle');
 
     form_items.forEach(el => el.addEventListener('focusout', event => {
-        if (el.hasAttribute('required') && !el.value) {
-            el.classList.add('required-field')
-        } else {
-            el.classList.remove('required-field')
-        }
+        el.classList.add('touched-field')
     }));
 
     function validateForm() {
@@ -256,18 +252,12 @@ Preparado/a?
                     const radio_items = document.getElementsByName(el.getAttribute('name'))
                     radio_items.forEach(x => {if (x.checked) isCheckedFlag = true;});
                     if (!isCheckedFlag) {
-                        el.parentElement.parentElement.previousElementSibling.classList.add('required-radio-field');
-                        el.classList.add('required-radio-item');
-                    }
-                    else {
-                        el.parentElement.parentElement.previousElementSibling.classList.remove('required-radio-field');
-                        el.classList.remove('required-radio-item');
+                        el.parentElement.parentElement.previousElementSibling.classList.add('touched-radio-field');
+                        el.classList.add('touched-radio-item');
                     }
                 }
-                else if (!el.value) {
-                    el.classList.add('required-field')
-                } else {
-                    el.classList.remove('required-field')
+                else {
+                    el.classList.add('touched-field')
                 }
             }
         });

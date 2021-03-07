@@ -93,7 +93,8 @@ Route::get('/eventos', function () {
 
 Route::get('/evento/{id}', function ($id) {
     $event = App\Event::all()->where('id', $id)->first();
-    return View::make('eventodetalhe')->with('event', $event);
+    $openregistrations = $event->event_date . $event->event_time > Carbon::now();
+    return View::make('eventodetalhe')->with('event', $event)->with('openregistrations', $openregistrations);
 });
 
 
@@ -159,28 +160,32 @@ Route::post('/memberapplication', function (Request $request) {
 });
 
 Route::post('/eventregistration/{id}', function (Request $request, $id) {
-    $new_attendant = new App\EventRegistration;
+    $event = App\Event::all()->where('id', $id)->first();
+    if ($event->event_date . $event->event_time > Carbon::now()) {
+        $new_attendant = new App\EventRegistration;
 
-    $new_attendant->insc_name = $request->insc_name;
-    $new_attendant->insc_email = $request->insc_email;
-    $attendant_university = $request->insc_uni;
-    if (strcmp($attendant_university, "") == 0)
-    {
-        $attendant_university = $request->insc_uni_other;
+        $new_attendant->insc_name = $request->insc_name;
+        $new_attendant->insc_email = $request->insc_email;
+        $attendant_university = $request->insc_uni;
+        if (strcmp($attendant_university, "") == 0)
+        {
+            $attendant_university = $request->insc_uni_other;
+        }
+        $new_attendant->insc_university = $attendant_university;
+        $attendant_degree = $request->insc_degree;
+        if (strcmp($attendant_degree, "") == 0)
+        {
+            $attendant_degree = $request->insc_degree_other;
+        }
+        $new_attendant->insc_degree = $attendant_degree;
+        $new_attendant->insc_year = $request->insc_year;
+        $new_attendant->event_id = $id;
+
+        $new_attendant->save();
+        return redirect('/evento/'.$id);
     }
-    $new_attendant->insc_university = $attendant_university;
-    $attendant_degree = $request->insc_degree;
-    if (strcmp($attendant_degree, "") == 0)
-    {
-        $attendant_degree = $request->insc_degree_other;
-    }
-    $new_attendant->insc_degree = $attendant_degree;
-    $new_attendant->insc_year = $request->insc_year;
-    $new_attendant->event_id = $id;
-
-    $new_attendant->save();
-
-    return redirect('/evento/'.$id);
+    else
+        return redirect('/eventos');
 });
 
 Route::get('/inscricao/{id}', function ($id) {
