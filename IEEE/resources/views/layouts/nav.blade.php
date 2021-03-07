@@ -281,18 +281,54 @@
 
 @yield('content')
 
-<footer class="footer" style="background-color:#333333;">
-        <div class="container" >
-            <div class="row text-light text-center py-4">
+<footer class="footer" style="background-color:#333;">
+    <div class="container" >
+        <div class="row text-light text-center py-4">
+
             <div class="container text-center">
-      <small>Copyright &copy; IEEE-ISCTE SB 2021</small>
-    </div>
-                <div class="col-md-auto col-sm-12 ml-md-auto text-center">
-           </div>
+                <small>Copyright &copy; IEEE-ISCTE SB 2021</small>
+            </div>
+            <div class="mx-auto text-center social-row row">
+                <div class="social-col col-12 col-md-3">
+                    <a class="social-link" href="mailto: ieee@iscte-iul.pt"><i class="fas fa-envelope social-icon"></i> ieee@iscte-iul.pt </a>
+                </div>
+                <div class="social-col col-12 col-md-3">
+                    <a class="social-link" href="https://www.facebook.com/IEEEISCTEIULSB"><i class="fab fa-facebook-square social-icon"></i> IEEE Iscte IUL SB </a>
+                </div>
+                <div class="social-col col-12 col-md-3">
+                    <a class="social-link" href="https://www.instagram.com/ieee.iscte/"><i class="fab fa-instagram social-icon"></i> @IEEE.Iscte </a>
+                </div>
+                <div class="social-col col-12 col-md-3">
+                    <a class="social-link" href="https://www.linkedin.com/company/ieee-iscte-iul-student-branch/"><i class="fab fa-linkedin social-icon"></i> IEEE Iscte IUL</a>
+                </div>
             </div>
         </div>
-        </div>
-    </footer>
+    </div>
+</footer>
+
+<style>
+
+    .social-row
+    {
+        margin-top: 1rem;
+    }
+
+    .social-col {
+        margin-top:.2rem;
+        min-width: 17rem;
+    }
+
+    .social-link:hover {
+        color: white;
+    }
+
+    .social-icon {
+        font-size: 130%;
+        margin: 0 0.6rem;
+    }
+</style>
+
+
 <script>
 
 $(function () {
@@ -305,8 +341,6 @@ $(function () {
     });
 });
 
-</script>
-<script>
         if ($('#app').height() < $(window).height()) {
             $('footer').addClass('fixed-bottom');
         } else {
