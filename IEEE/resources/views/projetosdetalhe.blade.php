@@ -153,12 +153,14 @@
     <div class="members">
 
         @foreach($project->members as $member)
-        <div class="member">
-            <img class="pc member-image" src="{{Voyager::image($member->image)}}">
-            <img class="mobile member-image" src="{{Voyager::image($member->image)}}">
-            <h2 class="member-name"> {{$member->member_name}} </h2>
-            <span class="member-role"> {{$member->member_role}} </span>
-        </div>
+        <a href="{{$member->linkedin_url}}" class="mx-auto no-hover">
+            <div class="member">
+                <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
+                <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
+                <h2 class="member-name">{{$member->member_name}}</h2>
+                <span class="member-role">{{$member->member_role}}</span>
+            </div>
+        </a>
         @endforeach
 
     </div>
@@ -229,7 +231,19 @@
         border-radius: 100px;
         padding: 16px;
         width: 10pc;
-        margin:auto;text-align: center;
+        margin:auto;
+        text-align: center;
+        transition: .2s;
+    }
+
+    .no-hover:hover {
+        text-decoration: none;
+        color:initial;
+    }
+
+    .no-hover:hover > .member > .member-image {
+        transform: scale(1.1);
+        transition: .2s;
     }
 
     .member-title{

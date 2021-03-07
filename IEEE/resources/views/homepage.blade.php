@@ -163,12 +163,14 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
     <div class="members">
 
         @foreach($members as $member)
-        <div class="member">
-            <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
-            <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
-            <h2 class="member-name">{{$member->member_name}}</h2>
-            <span class="member-role">{{$member->member_role}}</span>
-        </div>
+        <a href="{{$member->linkedin_url}}" class="mx-auto no-hover">
+            <div class="member">
+                <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
+                <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
+                <h2 class="member-name">{{$member->member_name}}</h2>
+                <span class="member-role">{{$member->member_role}}</span>
+            </div>
+        </a>
         @endforeach
 
 
@@ -273,6 +275,20 @@ background: linear-gradient(180deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%
     line-height: 18px;
     font-family:'font-letter4';
     letter-spacing:1px;overflow:hidden;
+}
+
+.member-image {
+    transition: .2s;
+}
+
+.no-hover:hover {
+    text-decoration: none;
+    color:initial;
+}
+
+.no-hover:hover > .member > .member-image {
+    transform: scale(1.1);
+    transition: .2s;
 }
 </style>
 @endsection

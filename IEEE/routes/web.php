@@ -25,10 +25,10 @@ Route::get('/RAS', function () {
     return View::make('societies/ras')->with('events', $events);
 });
 
-Route::get('/MAE', function () {
+/*Route::get('/MAE', function () {
     $events = getSocietyEvents("MAE");
     return View::make('societies/mae')->with('events', $events);
-});
+});*/
 
 
 Route::get('/IMS', function () {
@@ -59,9 +59,9 @@ function getSocietyEvents($societyname) {
     return $events;
 }
 
-Route::get('/projetos', 'ProjectController@index');
+/*Route::get('/projetos', 'ProjectController@index');
 
-Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);
+Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);*/
 
 
 

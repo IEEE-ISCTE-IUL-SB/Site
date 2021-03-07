@@ -25,12 +25,14 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
         <h2 class="about-us-title" style="font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;">Colaboradores</h2>
         <div class="members">
             @foreach($members as $member)
-            <div class="member">
-                <img class="pc member-image" src="{{Voyager::image($member->image)}}">
-                <img class="mobile member-image" src="{{Voyager::image($member->image)}}">
-                <h2 class="member-name"> {{$member->member_name}} </h2>
-                <span class="member-role"> {{$member->member_role}} </span>
-            </div>
+            <a href="{{$member->linkedin_url}}" class="mx-auto no-hover">
+                <div class="member">
+                    <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
+                    <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
+                    <h2 class="member-name">{{$member->member_name}}</h2>
+                    <span class="member-role">{{$member->member_role}}</span>
+                </div>
+            </a>
         @endforeach
         </div>
     </div>
@@ -144,10 +146,21 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
         padding: 16px;
         width: 10pc;
         margin:auto;text-align: center;
+        transition: .2s;
     }
 
     .about-us-title {
         font-size: 60px;
+    }
+
+    .no-hover:hover {
+        text-decoration: none;
+        color:initial;
+    }
+
+    .no-hover:hover > .member > .member-image {
+        transform: scale(1.1);
+        transition: .2s;
     }
 
     @media  (min-width: 1000px){
