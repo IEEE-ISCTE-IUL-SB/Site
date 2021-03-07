@@ -362,11 +362,11 @@
     }
 
     .CS {
-        background-color: #F1B759;
+        background-color: #e39739;
     }
 
     a.CS:hover, a>.CS:hover {
-        background-color: #F1B759;
+        background-color: #deab52;
     }
 
     .RAS {

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 
 /*
@@ -22,6 +23,11 @@ Route::get('/', function () {
 Route::get('/RAS', function () {
     $events = getSocietyEvents("RAS");
     return View::make('societies/ras')->with('events', $events);
+});
+
+Route::get('/MAE', function () {
+    $events = getSocietyEvents("MAE");
+    return View::make('societies/mae')->with('events', $events);
 });
 
 
@@ -53,7 +59,7 @@ function getSocietyEvents($societyname) {
     return $events;
 }
 
-//Route::get('/projetos', 'ProjectController@index');
+Route::get('/projetos', 'ProjectController@index');
 
 Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);
 
@@ -144,6 +150,10 @@ Route::post('/memberapplication', function (Request $request) {
     $new_application->when_to_start = $request->when_to_start;
 
     $new_application->save();
+
+    /*$emailcontent = "test email";
+    Mail::raw($emailcontent, function ($message) {
+        $message->from('cod.cod.321@gmail.com')->to('davefernans@gmail.com')->subject('test subject'); // assuming text/plain});*/
 
     return redirect('/');
 });

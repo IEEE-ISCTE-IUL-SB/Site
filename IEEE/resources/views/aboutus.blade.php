@@ -13,7 +13,7 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
                 </p>
 
         </div>
-        
+
         <img class="pc"  src="{{asset('img/ieee2.jpg')}}" style="width:60%;margin-left:20%;margin-top:10%;">
         <img class="mobile" src="{{asset('img/ieee2.jpg')}}" style="margin-top:10%;width:100%">
 
@@ -22,7 +22,7 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 
 <section id="section2">
     <div class="container" style="margin-bottom:10%;">
-        <h2 class="about-us-title" style="font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;">Membros</h2>
+        <h2 class="about-us-title" style="font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;">Colaboradores</h2>
         <div class="members">
             @foreach($members as $member)
             <div class="member">

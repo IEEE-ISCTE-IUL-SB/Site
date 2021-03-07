@@ -158,11 +158,28 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
 
 
 
+<div class="container" style="margin-bottom:10%; ">
+    <h2 class="member-title">Colaboradores</h2>
+    <div class="members">
+
+        @foreach($members as $member)
+        <div class="member">
+            <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
+            <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
+            <h2 class="member-name">{{$member->member_name}}</h2>
+            <span class="member-role">{{$member->member_role}}</span>
+        </div>
+        @endforeach
+
+
+    </div>
+</div>
+
 
 
 
 <section id="section1" style="background: rgb(94,97,103);
-background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, rgba(72,80,99,1) 50%, rgba(65,75,98,1) 97%, rgba(52,59,77,1) 100%);padding-bottom:15%;">
+background: linear-gradient(180deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, rgba(72,80,99,1) 50%, rgba(65,75,98,1) 97%, rgba(52,59,77,1) 100%);padding-bottom:15%;">
 
 
     <div class="pc container" >
@@ -218,23 +235,6 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 </section>
 
 
-
-<div class="container" style="margin-bottom:10%; ">
-    <h2 class="member-title">Colaboradores</h2>
-      <div class="members">
-
-      @foreach($members as $member)
-        <div class="member">
-          <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
-          <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
-          <h2 class="member-name">{{$member->member_name}}</h2>
-          <span class="member-role">{{$member->member_role}}</span>
-        </div>
-      @endforeach
-
-
-      </div>
-</div>
 
 <style>
 
