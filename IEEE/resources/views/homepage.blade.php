@@ -19,7 +19,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
                         background-color: white;text-align:left;">
                                             <h1 style=" opacity:60%;padding-right:2vw;">Advancing Technology for Humanity</h1>
-                                            <a style="  text-decoration: none;"href="https://forms.gle/dbWHcRAV9U2ZQqxH6"><p  class="butpro letter2">Junta-te a nós</p></a>
+                                            <a style="  text-decoration: none;"href="/candidatura"><p  class="butpro letter2">Junta-te a nós</p></a>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
                                             <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
-                                            <a href="https://forms.gle/dbWHcRAV9U2ZQqxH6" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
+                                            <a href="/candidatura" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
                             </div>
                         </div>
 
@@ -158,11 +158,30 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
 
 
 
+<div class="container" style="margin-bottom:10%; ">
+    <h2 class="member-title">Colaboradores</h2>
+    <div class="members">
+
+        @foreach($members as $member)
+        <a href="{{$member->linkedin_url}}" class="mx-auto no-hover">
+            <div class="member">
+                <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
+                <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
+                <h2 class="member-name">{{$member->member_name}}</h2>
+                <span class="member-role">{{$member->member_role}}</span>
+            </div>
+        </a>
+        @endforeach
+
+
+    </div>
+</div>
+
 
 
 
 <section id="section1" style="background: rgb(94,97,103);
-background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, rgba(72,80,99,1) 50%, rgba(65,75,98,1) 97%, rgba(52,59,77,1) 100%);padding-bottom:15%;">
+background: linear-gradient(180deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, rgba(72,80,99,1) 50%, rgba(65,75,98,1) 97%, rgba(52,59,77,1) 100%);padding-bottom:15%;">
 
 
     <div class="pc container" >
@@ -219,23 +238,6 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
 
 
 
-<div class="container" style="margin-bottom:10%; ">
-    <h2 class="member-title">Membros</h2>
-      <div class="members">
-
-      @foreach($members as $member)
-        <div class="member">
-          <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
-          <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
-          <h2 class="member-name">{{$member->member_name}}</h2>
-          <span class="member-role">{{$member->member_role}}</span>
-        </div>
-      @endforeach
-
-
-      </div>
-</div>
-
 <style>
 
 .members {
@@ -273,6 +275,20 @@ background: linear-gradient(0deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, 
     line-height: 18px;
     font-family:'font-letter4';
     letter-spacing:1px;overflow:hidden;
+}
+
+.member-image {
+    transition: .2s;
+}
+
+.no-hover:hover {
+    text-decoration: none;
+    color:initial;
+}
+
+.no-hover:hover > .member > .member-image {
+    transform: scale(1.1);
+    transition: .2s;
 }
 </style>
 @endsection

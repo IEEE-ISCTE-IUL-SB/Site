@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 
 /*
@@ -24,6 +25,11 @@ Route::get('/RAS', function () {
     return View::make('societies/ras')->with('events', $events);
 });
 
+/*Route::get('/MAE', function () {
+    $events = getSocietyEvents("MAE");
+    return View::make('societies/mae')->with('events', $events);
+});*/
+
 
 Route::get('/IMS', function () {
     $events = getSocietyEvents("IMS");
@@ -40,17 +46,6 @@ Route::get('/WIE', function () {
     return View::make('societies/wie')->with('events', $events);
 });
 
-Route::get('/marcação', function () {
-    return View::make('eventAdd');
-});
-
-Route::get('/inscrição', function () {
-    return View::make('eventInsc');
-});
-
-Route::get('/candidatura', function () {
-    return View::make('memberAdd');
-});
 
 
 function getSocietyEvents($societyname) {
@@ -64,9 +59,9 @@ function getSocietyEvents($societyname) {
     return $events;
 }
 
-Route::get('/projetos', 'ProjectController@index');
+/*Route::get('/projetos', 'ProjectController@index');
 
-Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);
+Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@single']);*/
 
 
 
@@ -90,13 +85,16 @@ Route::get('/eventos', function () {
         $highlightedtags = $highlightedtags->merge($event->tags);
     }
 
+    $highlightedtags = $highlightedtags->unique('tag_name');
+
     return View::make('eventos')->with('highlights', $highlights)->with('nextevents', $nextevents)->with('pastevents', $pastevents)->with('highlightedtags', $highlightedtags);
 });
 
 
 Route::get('/evento/{id}', function ($id) {
     $event = App\Event::all()->where('id', $id)->first();
-    return View::make('eventodetalhe')->with('event', $event);
+    $openregistrations = $event->event_date . $event->event_time > Carbon::now();
+    return View::make('eventodetalhe')->with('event', $event)->with('openregistrations', $openregistrations);
 });
 
 
@@ -132,3 +130,93 @@ Route::get('/search/{searchtext}', function ($searchtext) {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/candidatura', function () {
+    return View::make('memberAdd');
+});
+
+Route::post('/memberapplication', function (Request $request) {
+    $new_application = new App\MemberApplication;
+
+    $new_application->member_name = $request->member_name;
+    $new_application->phone_number = $request->phone_number;
+    $new_application->email = $request->email;
+    $new_application->student_number = $request->student_number;
+    $new_application->student_degree = $request->student_degree;
+    $new_application->what_is_ieee = $request->what_is_ieee;
+    $new_application->how_did_you_find_us = $request->how_did_you_find_us;
+    $new_application->reason_to_join = $request->reason_to_join;
+    $new_application->availability = $request->availability;
+    $new_application->value_add = $request->value_add;
+    $new_application->when_to_start = $request->when_to_start;
+
+    $new_application->save();
+
+    /*$emailcontent = "test email";
+    Mail::raw($emailcontent, function ($message) {
+        $message->from('cod.cod.321@gmail.com')->to('davefernans@gmail.com')->subject('test subject'); // assuming text/plain});*/
+
+    return redirect('/');
+});
+
+Route::post('/eventregistration/{id}', function (Request $request, $id) {
+    $event = App\Event::all()->where('id', $id)->first();
+    if ($event->event_date . $event->event_time > Carbon::now()) {
+        $new_attendant = new App\EventRegistration;
+
+        $new_attendant->insc_name = $request->insc_name;
+        $new_attendant->insc_email = $request->insc_email;
+        $attendant_university = $request->insc_uni;
+        if (strcmp($attendant_university, "") == 0)
+        {
+            $attendant_university = $request->insc_uni_other;
+        }
+        $new_attendant->insc_university = $attendant_university;
+        $attendant_degree = $request->insc_degree;
+        if (strcmp($attendant_degree, "") == 0)
+        {
+            $attendant_degree = $request->insc_degree_other;
+        }
+        $new_attendant->insc_degree = $attendant_degree;
+        $new_attendant->insc_year = $request->insc_year;
+        $new_attendant->event_id = $id;
+
+        $new_attendant->save();
+        return redirect('/evento/'.$id);
+    }
+    else
+        return redirect('/eventos');
+});
+
+Route::get('/inscricao/{id}', function ($id) {
+    $event = App\Event::all()->where('id', $id)->first();
+    return View::make('eventInsc')->with('event', $event);
+});
+
+
+Route::get('/propostaevento', function () {
+    return View::make('eventAdd');
+});
+
+Route::post('/eventsuggestion', function (Request $request) {
+    $suggested_event = new App\EventSuggestion;
+
+    $suggested_event->contact_name = $request->contact_name;
+    $suggested_event->contact_email = $request->contact_email;
+    $suggested_event->contact_org = $request->contact_org;
+
+    $new_event_type = $request->event_type;
+    if (strcmp($new_event_type, "") == 0)
+    {
+        $new_event_type = $request->event_type_other;
+    }
+    $suggested_event->event_type = $new_event_type;
+
+    $suggested_event->event_description = $request->event_description;
+
+    $suggested_event->save();
+
+    return redirect('/eventos');
+});
+
+

@@ -3,143 +3,145 @@
 @section('content')
 
 
-<form style="width:100%;background-color:#616877;padding-bottom:20vh;">
 
 
 <!-- Form Name -->
-<section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:6vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3); 
-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
+<section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:6vh;">
 <h1 style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';"> Candidatura IEEE ISCTE-IUL Student Branch</h1>
 <div style="margin-top:2vh;margin-bottom:10vh;width:60%;margin:auto;text-align:center;justify-content:center;">
 <h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
 
-Parabéns! 
+Parabéns!
 
 Deste o primeiro passo desta que pode muito bem ser a tua melhor aventura de sempre!
 
-Responde às perguntas que se seguem e espera por um contacto nosso. 
+Responde às perguntas que se seguem e espera por um contacto nosso.
 
 Depois de falarmos um bocadinho, daremos a notícia se conseguiste entrar neste núcleo de estudantes.
 
 Preparado/a?
 
 </h1>
- 
+
 </div>
 </section>
 
-<section style="justify-content:center;">
+<section style="justify-content:center;background-color:#616877;padding-top:4%;-webkit-box-shadow: inset 0px 19px 25px -5px rgba(0,0,0,0.3);box-shadow: inset 0px 19px 25px -5px rgba(0,0,0,0.3);">
 <!-- Text input-->
-<div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
-  <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Próprio">
-    
-  </div>
-</div>
+<form style="width:100%;padding-bottom:20vh;" action={{url("/memberapplication")}} method="post">
+    @csrf
+    <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-bottom:1%;">
+      <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
+      <input id="" name="member_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Completo*" required>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;" >
-  <input id="" name="" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" type="text" placeholder="Nº de telemóvel" >
-    
-  </div>
-</div>
+      </div>
+    </div>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="textinput" type="text" placeholder="Email" class="inputstyle">
-    
-  </div>
-</div>
+    <!-- Text input-->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;" >
+      <input id="" name="phone_number" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" type="tel" placeholder="Nº de telemóvel*" required>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="textinput" type="text" placeholder="Número de Aluno" class="inputstyle">
-    
-  </div>
-</div>
+      </div>
+    </div>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" style="border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Curso que frequentas atualmente" class="inputstyle">
-    
-  </div>
-</div>
+    <!-- Text input-->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
+
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="email" pattern="^\S+@\S+[\.][0-9a-z]+$" type="email" placeholder="Email*" class="inputstyle" required>
+
+      </div>
+    </div>
 
 
+    <!-- Text input-->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Em poucas palavras, descreve-nos o que é para ti o IEEE.</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" name="textarea">Escreve aqui</textarea>
-  </div>
-</div>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="student_number" type="text" placeholder="Número de Aluno*" class="inputstyle" required>
 
+      </div>
+    </div>
 
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Como tiveste conhecimento do nosso núcleo de estudantes do IEEE?</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" name="textarea">Escreve aqui</textarea>
-  </div>
-</div>
+    <!-- Text input-->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+      <input id="" name="student_degree" style="border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Curso que frequentas atualmente*" class="inputstyle" required>
 
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Porque gostarias de fazer parte desta organização? O que gostarias de fazer connosco?</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" name="textarea">Escreve aqui</textarea>
-  </div>
-</div>
-
-
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Qual a tua disponibilidade semanal para te dedicares ao IEEE ISCTE-IUL SB?</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" name="textarea">Escreve aqui</textarea>
-  </div>
-</div>
-
-
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Onde sentes que poderás acrescentar valor?</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" name="textarea">Escreve aqui</textarea>
-  </div>
-</div>
-
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Quando estarias pronto/a para começar?</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" name="textarea">Escreve aqui</textarea>
-  </div>
-</div>
+      </div>
+    </div>
 
 
 
-<!-- Button -->
-<div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-    <button id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">Submit</button>
-  </div>
-</div>
-</section>
+    <!-- Textarea -->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Em poucas palavras, descreve-nos o que é para ti o IEEE.*</label>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+        <textarea class="txtarea" id="textarea" name="what_is_ieee" placeholder="Escreve aqui..." required></textarea>
+      </div>
+    </div>
+
+
+    <!-- Textarea -->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Como tiveste conhecimento do nosso núcleo de estudantes do IEEE?*</label>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+        <textarea class="txtarea" id="textarea" name="how_did_you_find_us" placeholder="Escreve aqui..." required></textarea>
+      </div>
+    </div>
+
+
+    <!-- Textarea -->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Porque gostarias de fazer parte desta organização? O que gostarias de fazer connosco?*</label>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+        <textarea class="txtarea" id="textarea" name="reason_to_join" placeholder="Escreve aqui..." required></textarea>
+      </div>
+    </div>
+
+
+    <!-- Textarea -->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Qual a tua disponibilidade semanal para te dedicares ao IEEE ISCTE-IUL SB?*</label>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+        <textarea class="txtarea" id="textarea" name="availability" placeholder="Escreve aqui..." required></textarea>
+      </div>
+    </div>
+
+
+    <!-- Textarea -->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Onde sentes que poderás acrescentar valor?*</label>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+        <textarea class="txtarea" id="textarea" name="value_add" placeholder="Escreve aqui..." required></textarea>
+      </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Quando estarias pronto/a para começar?*</label>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+        <textarea class="txtarea" id="textarea" name="when_to_start" placeholder="Escreve aqui..." required></textarea>
+      </div>
+    </div>
+
+
+
+    <!-- Button -->
+    <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+      <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
+      <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+        <input type="submit" onclick="validateForm()" id="singlebutton" value="Submit" name="submitbutton" style="width:90%;" class="butpro">
+      </div>
+    </div>
 
 </form>
+
+</section>
+
 
 <style>
  .inputstyle {
@@ -165,6 +167,10 @@ Preparado/a?
     padding-bottom: 5%;
 }
 
+.txtarea::placeholder {
+    color: white;
+}
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: white;
@@ -185,7 +191,7 @@ Preparado/a?
 
 
 .butpro:hover, .butpro:active{
-     
+
         font-size: 17px;
         transition:0.2s;
         outline:none;
@@ -205,15 +211,56 @@ Preparado/a?
         padding-top: 1.3vh;
         padding-bottom: 1.3vh;
         text-align:center;
-       
+
         color: white;
           border:2px solid white;
         outline:none;
         transition:0.2s;
   background-color:#616877;
-
-
 }
+
+ .touched-field:invalid {
+     border-color: red!important;
+ }
+
+ /*.touched-field::placeholder {
+     color: red!important;
+ }
+
+ .touched-radio-field {
+     color: red;
+ }*/
+
+ .touched-radio-item:invalid:after {
+     box-shadow: 0 0 0 2pt red!important;
+ }
 </style>
 
+<script>
+    const form_items = document.querySelectorAll('.inputstyle');
+
+    form_items.forEach(el => el.addEventListener('focusout', event => {
+        el.classList.add('touched-field')
+    }));
+
+    function validateForm() {
+        const form_items = document.querySelectorAll('.inputstyle, .radio-item, .txtarea');
+        form_items.forEach(el => {
+            if (el.hasAttribute('required')) {
+                if (el.getAttribute('type') === 'radio') {
+                    var isCheckedFlag;
+                    const radio_items = document.getElementsByName(el.getAttribute('name'))
+                    radio_items.forEach(x => {if (x.checked) isCheckedFlag = true;});
+                    if (!isCheckedFlag) {
+                        el.parentElement.parentElement.previousElementSibling.classList.add('touched-radio-field');
+                        el.classList.add('touched-radio-item');
+                    }
+                }
+                else {
+                    el.classList.add('touched-field')
+                }
+            }
+        });
+    };
+</script>
 @endsection

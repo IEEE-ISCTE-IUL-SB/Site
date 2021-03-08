@@ -7,7 +7,7 @@
         <div class="project-title-wrapper">
                 <h2 class="project-title">{{$project->project_name}}</h2>
         </div>
- 
+
 </section>
 
 <style>
@@ -100,7 +100,7 @@
  </div>
  <div class="mobile">
  <div class="row">
-    
+
     <div style="width:100%;overflow:hidden;">
             <div style="color:rgb(78 81 97);margin-bottom:3%;margin-left:10%;margin-right:10%;">
             <h2 class="card"style="margin-bottom:5%;margin-top:1%;font-family:'font-letter2';justify-content:center;border:none;text-align:justify;font-size:144%;letter-spacing:0.1px;">Visão</h2>
@@ -149,16 +149,18 @@
 
 </section>
 <div id="colaboradores-section"class="container" style="margin-bottom:10%;padding-top:10%;overflow:hidden; ">
-    <h2 class="member-title">Colaboradores</h2>
+    <h2 class="member-title">Equipa</h2>
     <div class="members">
 
         @foreach($project->members as $member)
-        <div class="member">
-            <img class="pc member-image" src="{{Voyager::image($member->image)}}">
-            <img class="mobile member-image" src="{{Voyager::image($member->image)}}">
-            <h2 class="member-name"> {{$member->member_name}} </h2>
-            <span class="member-role"> {{$member->member_role}} </span>
-        </div>
+        <a href="{{$member->linkedin_url}}" class="mx-auto no-hover">
+            <div class="member">
+                <img class="pc member-image" src="{{Voyager::image($member->image)}}" >
+                <img class="mobile member-image" src="{{Voyager::image($member->image)}}" >
+                <h2 class="member-name">{{$member->member_name}}</h2>
+                <span class="member-role">{{$member->member_role}}</span>
+            </div>
+        </a>
         @endforeach
 
     </div>
@@ -229,7 +231,19 @@
         border-radius: 100px;
         padding: 16px;
         width: 10pc;
-        margin:auto;text-align: center;
+        margin:auto;
+        text-align: center;
+        transition: .2s;
+    }
+
+    .no-hover:hover {
+        text-decoration: none;
+        color:initial;
+    }
+
+    .no-hover:hover > .member > .member-image {
+        transform: scale(1.1);
+        transition: .2s;
     }
 
     .member-title{

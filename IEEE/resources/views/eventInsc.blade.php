@@ -3,107 +3,137 @@
 @section('content')
 
 
-<form style="width:100%;">
 
 
 <!-- Form Name -->
-<section style="background-color:white;padding-bottom:3vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3); 
-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
-<h1 style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:4vw;font-family:'font-letter2';"> Inscrição num evento</h1>
-<div style="margin-top:2vh;margin-bottom:5vh;width:60%;margin:auto;text-align:center;justify-content:center;">
-<h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
+<section style="background-color:white;padding-bottom:3vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
+    <h1 style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:4vw;font-family:'font-letter2';"> Inscrição em {{$event->event_name}}</h1>
+    <div style="margin-top:2vh;margin-bottom:5vh;width:60%;margin:auto;text-align:center;justify-content:center;">
+    <h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
 
-Ainda és daquelas pessoas que partilha o código pelo WeTransfer?
+        {{$event->event_description}}
+        <br> {{$event->event_registration_description}}
+    *Obrigatório
 
-Isso já não se faz! 
-
-Neste workshop vamos te apresentar a melhor ferramenta para trabalho colaborativo! 
-Estamos a falar de Git e Github, uma ferramenta gratuita que te permite controlares as versões do teu programa, construíres um portfólio de projetos académicos que acrescenta valor ao teu currículo e, não menos importante, que te dá a capacidade de mostrares ao mundo o teu trabalho!
-
-Marca já na tua agenda, 17 de fevereiro às 17h50 temos encontro marcado! 
-
-Contamos contigo!
-
-O link da sessão do zoom será enviado para o teu e-mail de registo na véspera da sessão. 
-*Obrigatório
-
-</h1>
-  <div class="row" style="margin-top:4vh;margin-bottom:3vh;">
-  <div style="width:50%;">
-      <h1 style="font-family:'font-letter2';font-size:4vh;">17.02.13</h1>
+    </h1>
+      <div class="row" style="margin-top:4vh;margin-bottom:3vh;">
+      <div style="width:50%;">
+          <h1 style="font-family:'font-letter2';font-size:4vh;">{{ date('H:i', strtotime($event->event_time)) }} GMT</h1>
+        </div>
+        <div style="width:50%;">
+          <h1 style="font-family:'font-letter2';font-size:4vh;">{{ date('d/m/y', strtotime($event->event_date)) }}</h1>
+        </div>
+      </div>
     </div>
-    <div style="width:50%;">
-      <h1 style="font-family:'font-letter2';font-size:4vh;">17h50</h1>
-    </div>
-  </div>
-</div>
 </section>
 
 <section style="justify-content:center;">
 <!-- Text input-->
-<div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
-  <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" class="inputstyle"style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;"type="text" placeholder="Nome Próprio">
-    
-  </div>
-</div>
+    <form style="width:100%;" id="main-form" action="/eventregistration/{{$event->id}}" method="post">
+        @csrf
+        <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
+          <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
+            <input id="" name="insc_name" class="inputstyle" style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;" type="text" placeholder="Nome Completo*" required>
+          </div>
+        </div>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;" >
-  <input id="" name="" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" type="text" placeholder="Nº de telemóvel" >
-    
-  </div>
-</div>
+        <!-- Text input-->
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
+          <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+            <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_email" pattern="^\S+@\S+[\.][0-9a-z]+$" placeholder="Email*" type="email" class="inputstyle" required>
+          </div>
+        </div>
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="textinput" type="text" placeholder="Email" class="inputstyle">
-    
-  </div>
-</div>
+        <!-- Text input-->
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
-<!-- Text input-->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
-  
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-  <input id="" name="" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;"type="text" placeholder="Organização" class="inputstyle">
-    
-  </div>
-</div>
+          <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
+              <legend for="group1" class="radio-group-label">És de que Universidade?*</legend>
+              <fieldset id="group1" class="inputstyle">
+                  <div class="row radio-row">
+                    <input type="radio" value="Iscte" name="insc_uni" id="radio1-1" class="radio-item" required><label for="radio1-1">Iscte</label>
+                  </div>
+                  <div class="row radio-row">
+                      <input type="radio" value="" name="insc_uni" id="radio1-2" class="radio-item" required>
+                      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_uni_other" type="text" placeholder="Outra..." class="inputstyle radio-other-text-field">
+                  </div>
+              </fieldset>
+          </div>
+        </div>
 
-<!-- Select Basic -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:10%;">
-  <label class="col-md-6 control-label" style="font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="selectbasic">Tema do evento</label>
-  <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-    </select>
-  </div>
-</div>
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
-<!-- Textarea -->
-<div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento</label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">                     
-    <textarea class="txtarea" id="textarea" name="textarea">default text</textarea>
-  </div>
-</div>
+            <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
+                <legend for="group2" class="radio-group-label">Em que curso estás?*</legend>
+                <fieldset id="group2" class="inputstyle">
+                    <div class="row radio-row">
+                        <input type="radio" value="LEI" name="insc_degree" id="radio2-1" class="radio-item" required><label for="radio2-1">LEI</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="MEI" name="insc_degree" id="radio2-2" class="radio-item" required><label for="radio2-2">MEI</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="LETI" name="insc_degree" id="radio2-3" class="radio-item" required><label for="radio2-3">LETI</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="METI" name="insc_degree" id="radio2-4" class="radio-item" required><label for="radio2-4">METI</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="LIGE" name="insc_degree" id="radio2-5" class="radio-item" required><label for="radio2-5">LIGE</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="MIG" name="insc_degree" id="radio2-6" class="radio-item" required><label for="radio2-6">MIG</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="LCD" name="insc_degree" id="radio2-7" class="radio-item" required><label for="radio2-7">LCD</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="" name="insc_degree" id="radio2-8" class="radio-item" required>
+                        <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_degree_other" type="text" placeholder="Outra..." class="inputstyle radio-other-text-field">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
 
-<!-- Button -->
-<div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-  <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
-  <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-    <button id="singlebutton" name="singlebutton" style="width:90%;"class="butpro">Submit</button>
-  </div>
-</div>
+        <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
+
+            <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
+                <legend for="group3" class="radio-group-label">Em que ano estás?*</legend>
+                <fieldset id="group3" class="inputstyle">
+                    <div class="row radio-row">
+                        <input type="radio" value="1Ano" name="insc_year" id="radio3-1" class="radio-item" required><label for="radio3-1">1º Ano</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="2Ano" name="insc_year" id="radio3-2" class="radio-item" required><label for="radio3-2">2º Ano</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="3Ano" name="insc_year" id="radio3-3" class="radio-item" required><label for="radio3-3">3º Ano</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="4Ano" name="insc_year" id="radio3-4" class="radio-item" required><label for="radio3-4">4º Ano</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="5Ano" name="insc_year" id="radio3-5" class="radio-item" required><label for="radio3-5">5º Ano</label>
+                    </div>
+                    <div class="row radio-row">
+                        <input type="radio" value="NA" name="insc_year" id="radio3-6" class="radio-item" required><label for="radio3-6">Não Aplicável</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+
+        <!-- Button -->
+        <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
+          <label class="col-md-6 control-label" style="margin:auto;text-align:center;justify-content:center;"for="singlebutton"></label>
+          <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
+              <input type="submit" onclick="validateForm()" id="singlebutton" name="singlebutton" style="width:90%;" class="butpro">
+          </div>
+        </div>
+    </form>
 </section>
 
-</form>
 
 <style>
  .inputstyle {
@@ -111,9 +141,62 @@ O link da sessão do zoom será enviado para o teu e-mail de registo na véspera
     border-color: whitesmoke;
     font-size: 2.1vh;
     width: 100%;
-    padding-bottom: 2vh;
+    padding-bottom: 1rem;
     outline: none;
 }
+
+ .radio-group-label {
+     margin-bottom: 1.5rem;
+     font-size: 2.1vh;
+ }
+
+ .radio-other-text-field {
+     width: auto;
+     padding-bottom: 0.5rem;
+ }
+
+ .radio-row {
+     margin-bottom: 1.3rem;
+     margin-left: 0.1rem;
+ }
+
+ .radio-item {
+     margin: auto 1rem;
+ }
+
+ .radio-item:after {
+     width: 15px;
+     height: 15px;
+     top: -2px;
+     left: -1px;
+     position: relative;
+     border-radius: 15px;
+     border: solid white 3px;
+     box-shadow: 0 0 0 2pt #2b2b2b;
+     background-color: white;
+     content: '';
+     display: inline-block;
+     visibility: visible;
+     transition: .2s;
+ }
+
+ .radio-item:checked:after {
+     width: 15px;
+     height: 15px;
+     border-radius: 15px;
+     top: -2px;
+     left: -1px;
+     position: relative;
+     background-color: #380e99;
+     border: solid white 3px;
+     box-shadow: 0 0 0 2pt #2b2b2b;
+     content: '';
+     display: inline-block;
+     visibility: visible;
+     transition: .2s;
+ }
+
+
 
 .txtarea{
     border: 2px solid  #333333;
@@ -170,6 +253,52 @@ O link da sessão do zoom será enviado para o teu e-mail de registo na véspera
 
 
 }
+
+    .touched-field:invalid {
+        border-color: red!important;
+    }
+
+     /*.touched-field::placeholder {
+         color: red!important;
+     }
+
+     .touched-radio-field {
+         color: red;
+     }*/
+
+     .touched-radio-item:invalid:after {
+         box-shadow: 0 0 0 2pt red!important;
+     }
+
 </style>
+
+<script>
+    const form_items = document.querySelectorAll('.inputstyle');
+
+    form_items.forEach(el => el.addEventListener('focusout', event => {
+        el.classList.add('touched-field')
+    }));
+
+    function validateForm() {
+        const form_items = document.querySelectorAll('.inputstyle, .radio-item');
+        form_items.forEach(el => {
+            if (el.hasAttribute('required')) {
+                if (el.getAttribute('type') === 'radio') {
+                    var isCheckedFlag;
+                    const radio_items = document.getElementsByName(el.getAttribute('name'))
+                    radio_items.forEach(x => {if (x.checked) isCheckedFlag = true;});
+                    if (!isCheckedFlag) {
+                        el.parentElement.parentElement.previousElementSibling.classList.add('touched-radio-field');
+                        el.classList.add('touched-radio-item');
+                    }
+                }
+                else {
+                    el.classList.add('touched-field')
+                }
+            }
+        });
+    };
+
+</script>
 
 @endsection
