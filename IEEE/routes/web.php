@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use \Mailjet\Resources;
 use Carbon\Carbon;
 
 /*
@@ -152,10 +152,6 @@ Route::post('/memberapplication', function (Request $request) {
 
     $new_application->save();
 
-    /*$emailcontent = "test email";
-    Mail::raw($emailcontent, function ($message) {
-        $message->from('cod.cod.321@gmail.com')->to('davefernans@gmail.com')->subject('test subject'); // assuming text/plain});*/
-
     return redirect('/');
 });
 
@@ -215,6 +211,17 @@ Route::post('/eventsuggestion', function (Request $request) {
     $suggested_event->event_description = $request->event_description;
 
     $suggested_event->save();
+
+
+    $emailcontent = [
+        'contact_name' => $suggested_event->contact_name,
+        'contact_email' => $suggested_event->contact_email,
+        'contact_org' => $suggested_event->contact_org,
+        'event_type' => $suggested_event->event_type,
+        'event_description' => $suggested_event->event_description,
+        ];
+
+    Mail::to('josempereira141@gmail.com')->send(new \App\Mail\NewEventSuggestion($emailcontent));
 
     return redirect('/eventos');
 });
