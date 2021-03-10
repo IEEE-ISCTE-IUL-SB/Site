@@ -15,13 +15,14 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                     <div style="margin-top:0%;width:40%;">
                         <div style="width:100%;">
                             <div class="letter2 workshop" style="
-                       padding-top:30%;
-                            padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
-                        background-color: white;text-align:left;">
-                                            <h1 style=" opacity:60%;padding-right:2vw;">Advancing Technology for Humanity</h1>
-                                            <a style="  text-decoration: none;"href="/candidatura"><p  class="butpro letter2">Join us</p></a>
+                       padding-top:30%;padding-bottom:10%;
+                            padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
+                        background-color: white;text-align:center;">
+                                            <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
+                                            <a href="/candidatura" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
                             </div>
                         </div>
+
                     </div>
                     <div style="width:60%;">
                         <img src="{{asset('img/ieee3.jpg')}}"  style="
@@ -61,7 +62,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
 
             </div>
 
-         </div>
+        </div>
 
 
 </section>
