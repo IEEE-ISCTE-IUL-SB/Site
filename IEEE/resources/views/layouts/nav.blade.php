@@ -341,9 +341,9 @@
         <div class="row mx-auto">
             <div class="i3E-wrap" style="margin-top:3vw;margin-bottom:2vw;margin-left:auto;margin-right:auto;">
          
-               <p class="col-md-5" style="margin:auto;text-align:center;font-size:190%;font-family:'font-letter2';color:white;">Contacts</p>
+               <p class="col-md-5 footer-contacts" >Location</p>
                
-               <div class="col-md-8" style="justify-content:'center';font-size:90%;margin-top:1.5vw;margin-right:auto;margin-left:auto;">
+               <div class="col-md-8" style="justify-content:'center';font-size:80%;margin-top:1.5vw;margin-right:auto;margin-left:auto;">
                <h1 style="text-align:center;color:white;">Iscte – Instituto Universitário de Lisboa Avenida das Forças Armadas, 1649-026 Lisboa</h1>
                </div>
 
@@ -412,8 +412,16 @@
 
         .i3E-wrap{
             margin:auto;
+            padding-bottom:6%;
             
             
+           
+        }
+        .footer-contacts{
+           margin:auto;
+           margin-top:10vw;
+           margin-bottom:4vw;
+           text-align:center;font-size:140%;font-family:'font-letter2';color:white;
            
         }
     }
@@ -436,6 +444,13 @@
 
     
 }
+.footer-contacts{
+           margin:auto;
+           margin-top:10vw;
+           margin-bottom:4vw;
+           text-align:center;font-size:140%;font-family:'font-letter2';color:white;
+           
+        }
 }
 
 
@@ -453,6 +468,13 @@
         .i3E-wrap{
            justify-content:center;
 margin:auto;
+        }
+        .footer-contacts{
+            margin:auto;text-align:center;font-size:190%;font-family:'font-letter2';color:white;
+         
+            
+            
+           
         }
 }
 
