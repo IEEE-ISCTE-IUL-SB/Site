@@ -169,7 +169,7 @@
   </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Eventos</a></li>
+                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Events</a></li>
                     <li class="nav-item"style="margin:auto;">
 <!--                        <a class="nav-link  letter2" style="margin:auto;transition:0.4s!important;"href="{{ url('/projetos') }}">Projetos</a></li>-->
                         <li class="nav-item dropdown"style="margin:auto;transition:0.4s!important;">
@@ -271,7 +271,7 @@
 
             </li>
             <li class="nav-item" style="margin:auto;">
-                        <a class="nav-link  letter2" style="transition:0.9s"href="{{ url('/sobrenos') }}">Sobre nós</a>
+                        <a class="nav-link  letter2" style="transition:0.9s"href="{{ url('/sobrenos') }}">About us</a>
                     </li>
                 </ul>
             </div>
@@ -300,17 +300,7 @@
 
     <style>
     
-    .inputstyle {
-        border-style: none none outset none;
-        border-color: white;
-        color:white;
-        font-size: 2.1vh;
-        width: 100%;
-        padding-bottom: 2vh;
-        outline: none;
-        background-color:#616877;
-        
-    }
+
     
     </style>
     <div class="col-md-3" style="justify-content:center;" >
@@ -341,7 +331,7 @@
         <div class="row mx-auto">
             <div class="i3E-wrap" style="margin-top:3vw;margin-bottom:2vw;margin-left:auto;margin-right:auto;">
          
-               <p class="col-md-5 footer-contacts" >Location</p>
+               <p class="col-md-5 footer-contacts" >Address</p>
                
                <div class="col-md-8" style="justify-content:'center';font-size:80%;margin-top:1.5vw;margin-right:auto;margin-left:auto;">
                <h1 style="text-align:center;color:white;">Iscte – Instituto Universitário de Lisboa Avenida das Forças Armadas, 1649-026 Lisboa</h1>

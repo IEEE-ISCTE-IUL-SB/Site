@@ -19,7 +19,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
                         background-color: white;text-align:left;">
                                             <h1 style=" opacity:60%;padding-right:2vw;">Advancing Technology for Humanity</h1>
-                                            <a style="  text-decoration: none;"href="/candidatura"><p  class="butpro letter2">Junta-te a nós</p></a>
+                                            <a style="  text-decoration: none;"href="/candidatura"><p  class="butpro letter2">Join us</p></a>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
 
 
 <div class="container" style="margin-bottom:10%; ">
-    <h2 class="member-title">Colaboradores</h2>
+    <h2 class="member-title">Team</h2>
     <div class="members">
 
         @foreach($members as $member)
@@ -191,7 +191,7 @@ box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6);padding-bottom:20%;
 
 
     <div class="pc container" >
-    <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explora as nossas societies</h1>
+    <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explore our societies</h1>
     <div class="row mx-auto" style="padding-top:10%;padding-left:-10px;">
 
         <div class="col-lg-2 share mx-auto ">

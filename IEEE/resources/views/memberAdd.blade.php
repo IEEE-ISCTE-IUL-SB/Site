@@ -7,9 +7,9 @@
 
 <!-- Form Name -->
 <section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:6vh;">
-<h1 style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';"> Candidatura IEEE ISCTE-IUL Student Branch</h1>
-<div style="margin-top:2vh;margin-bottom:10vh;width:60%;margin:auto;text-align:center;justify-content:center;">
-<h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
+<h1 class="cand-title"> Candidatura IEEE ISCTE-IUL Student Branch</h1>
+<div style="margin-top:2vh;margin-bottom:10vh;width:70%;margin:auto;text-align:center;justify-content:center;">
+<h1 style="line-height:3vh;font-size:1.9vh;text-align:center;justify-content:center;">
 
 Parabéns!
 
@@ -144,16 +144,7 @@ Preparado/a?
 
 
 <style>
- .inputstyle {
-    border-style: none none outset none;
-    border-color: whitesmoke;
-    font-size: 2.1vh;
-    color:white;
-    width: 100%;
-    padding-bottom: 2vh;
-    outline: none;
-    background-color:#616877;
-}
+
 
 .txtarea{
     border: 2px solid  white;
@@ -217,6 +208,39 @@ Preparado/a?
         outline:none;
         transition:0.2s;
   background-color:#616877;
+}
+
+@media  (min-width:900px){
+
+  .inputstyle {
+    border-style: none none outset none;
+    border-color: whitesmoke;
+    font-size: 2.1vh;
+    color:white;
+    width: 100%;
+    padding-bottom: 2vh;
+    outline: none;
+    background-color:#616877;
+}
+
+  .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';}
+}
+
+@media  (max-width:900px){
+  .inputstyle {
+    border-style: none none outset none;
+    border-color: whitesmoke;
+    font-size: 2.5vh;
+    color:white;
+    width: 100%;
+    margin-top:5vh;
+    padding-bottom: 5vh;
+    outline: none;
+    background-color:#616877;
+    
+}
+
+  .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:2%;margin-right:2%;font-size:8vw;font-family:'font-letter2';}
 }
 
  .touched-field:invalid {
