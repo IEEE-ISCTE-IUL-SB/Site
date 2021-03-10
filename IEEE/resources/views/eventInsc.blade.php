@@ -7,7 +7,7 @@
 
 <!-- Form Name -->
 <section style="background-color:white;padding-bottom:3vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
-    <h1 style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:4vw;font-family:'font-letter2';"> Inscrição em {{$event->event_name}}</h1>
+    <h1 class="cand-title"style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-family:'font-letter2';"> Inscrição em {{$event->event_name}}</h1>
     <div style="margin-top:2vh;margin-bottom:5vh;width:60%;margin:auto;text-align:center;justify-content:center;">
     <h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
 
@@ -136,13 +136,73 @@
 
 
 <style>
- .inputstyle {
-    border-style: none none outset none;
-    border-color: whitesmoke;
-    font-size: 2.1vh;
-    width: 100%;
-    padding-bottom: 1rem;
-    outline: none;
+
+
+
+@media  (min-width:900px){
+
+.inputstyle {
+  border-style: none none outset none;
+  border-color: whitesmoke;
+  font-size: 2.1vh;
+  color:#333333;
+  width: 100%;
+  padding-bottom: 2vh;
+  outline: none;
+  background-color:white;
+}
+
+.cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';}
+
+
+.txtarea{
+  
+    font-size: 20px;
+
+}
+
+.radio-group-label {
+         margin-bottom: 1.9rem;
+         margin-top: 1.5rem;
+         font-size: 2.5vh;
+         color: white;
+    }
+
+}
+
+
+
+@media  (max-width:900px){
+.inputstyle {
+  border-style: none none outset none;
+  border-color: whitesmoke;
+  font-size: 2.9vh;
+  color:#333333;
+  width: 100%;
+  margin-top:5vh;
+  padding-bottom: 5vh;
+  outline: none;
+  background-color:white;
+  
+}
+
+.cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:2%;margin-right:2%;font-size:8vw;font-family:'font-letter2';}
+
+
+.radio-group-label {
+         margin-top:1.4rem;
+         margin-bottom: 1.5rem;
+         font-size: 4vh;
+         color: white;
+    }
+
+
+.txtarea{
+    margin-top:1vh;
+    font-size: 2.9vh;
+    
+}
+
 }
 
  .radio-group-label {
