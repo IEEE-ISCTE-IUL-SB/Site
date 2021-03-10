@@ -281,11 +281,11 @@
 
 @yield('content')
 
-<footer class="footer" style="padding-bottom:1.9%;background-color:#454648;border:7px solid #444548">
+<footer class="footer" style="padding-bottom:1.6%;background-color:#454648;border:7px solid #444548">
    
     <div class="">
    <div class="row mx-auto">
-   <div class="col-md-4" style="justify-content:center;margin:auto;padding-top:2%;">
+   <div class="col-md-4" style="justify-content:center;margin:auto;padding-top:1%;">
         <div class="row mx-auto" style="justify-content:center;margin:auto;">
             <div class="i3E-wrap "  >
 
@@ -304,7 +304,7 @@
     
     </style>
     <div class="col-md-3" style="justify-content:center;" >
-        <div class="row mx-auto" style="padding-top:4.5vw;width:60%;">
+        <div class="row mx-auto" style="padding-top:16%;width:60%;">
             
 
                 <div class="social-col mx-auto">
@@ -329,7 +329,7 @@
         
     <div class="col-md-5" style="">
         <div class="row mx-auto">
-            <div class="i3E-wrap" style="margin-top:3vw;margin-bottom:2vw;margin-left:auto;margin-right:auto;">
+            <div class="i3E-wrap" style="margin-top:2vw;margin-bottom:1vw;margin-left:auto;margin-right:auto;">
          
                <p class="col-md-5 footer-contacts" >Address</p>
                
