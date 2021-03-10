@@ -180,8 +180,14 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
 
 
 
-<section id="section1" style="background: rgb(94,97,103);
-background: linear-gradient(180deg, rgba(94,97,103,1) 14%, rgba(81,87,101,1) 31%, rgba(72,80,99,1) 50%, rgba(65,75,98,1) 97%, rgba(52,59,77,1) 100%);padding-bottom:15%;">
+<section id="section1" style="
+
+background-image: linear-gradient(to top, #4b5262, #4b5367, #4c536c, #4d5470, #4f5475, #525779, #55597d, #585c81, #5c6286, #5f678b, #636d8f, #677394);
+
+padding-bottom:15%;
+-webkit-box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6); 
+box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6);padding-bottom:20%;
+">
 
 
     <div class="pc container" >
