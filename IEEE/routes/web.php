@@ -221,7 +221,7 @@ Route::post('/eventsuggestion', function (Request $request) {
         'event_description' => $suggested_event->event_description,
         ];
 
-    Mail::to('josempereira141@gmail.com')->send(new \App\Mail\NewEventSuggestion($emailcontent));
+    Mail::to('cod.cod.321@gmail.com')->send(new \App\Mail\NewEventSuggestion($emailcontent));
 
     return redirect('/eventos');
 });
