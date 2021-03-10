@@ -3,7 +3,7 @@
 @section('content')
 
 
-<section id="section1" style="background:white;padding-bottom:20%;padding-top:10%;">
+<section id="section1" style="background:white;padding-bottom:10%;padding-top:10%;">
         <div  style="color:white;width:70%;margin-right:auto;margin-left:auto;">
                 <h2 class="about-us-title" style="font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);">Sobre Nós</h2>
                 <p class="text-muted lad " >
@@ -20,8 +20,34 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 
 </section>
 
+<div class="container faq-w">
+    <div class="faq-header">Frequently Asked Questions</div>
+        <div class="faq-content">
+        <div class="faq-question">
+            <input id="q1" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q1" class="panel-title">What is the meaning of life?</label>
+            <div class="panel-content">42</div>
+        </div>
+        
+        <div class="faq-question">
+            <input id="q2" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q2" class="panel-title">How much wood would a woodchuck chuck?</label>
+            <div class="panel-content">A woodchuck would chuck all the wood he could chuck, if a woodchuck could chuck wood!</div>
+        </div>
+        
+        <div class="faq-question">
+            <input id="q3" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q3" class="panel-title">What happens if Pinocchio says, "my nose will grow now"?</label>
+            <div class="panel-content">Certain questions are better left &nbsp; <a href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a></div>
+        </div>
+    </div>
+</div>
+
 <section id="section2">
-    <div class="container" style="margin-bottom:10%;">
+    <div class="container" style="margin-top:16%;margin-bottom:10%;">
         <h2 class="about-us-title" style="font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;">Colaboradores</h2>
         <div class="members">
             @foreach($members as $member)
@@ -172,6 +198,10 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
             display: none;
         }
 
+        .faq-w{
+            width:50%;
+        }
+
 
         .member-image{
             width: 10pc;
@@ -211,6 +241,85 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
             font-size: 32px;
         }
     }
+
+    .faq-header{
+  font-size: 37px;
+  color:rgb(58 63 86);
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+  font-family:'font-letter2';
+}
+
+.faq-content {
+  margin: 0 auto;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.panel-title {
+    color:rgb(58 63 86);
+  font-size: 19px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+
+.panel-content {
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  -moz-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.panel:checked ~ .panel-content{
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+    color:rgb(58 63 86);
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 2px;
+  z-index: 5;
+  font-size: 30px;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.panel:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
+}
 </style>
 
 <script>
