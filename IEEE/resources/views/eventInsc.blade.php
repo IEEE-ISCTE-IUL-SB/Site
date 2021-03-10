@@ -13,7 +13,7 @@
 
         {{$event->event_description}}
         <br> {{$event->event_registration_description}}
-    *Obrigatório
+    *Required
 
     </h1>
       <div class="row" style="margin-top:4vh;margin-bottom:3vh;">
@@ -33,7 +33,7 @@
         @csrf
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
           <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-            <input id="" name="insc_name" class="inputstyle" style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;" type="text" placeholder="Nome Completo*" required>
+            <input id="" name="insc_name" class="inputstyle" style="color:#333333;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid #333333;" type="text" placeholder="Full Name*" required>
           </div>
         </div>
 
@@ -48,14 +48,14 @@
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
           <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-              <legend for="group1" class="radio-group-label">És de que Universidade?*</legend>
+              <legend for="group1" class="radio-group-label">What University are you attending?*</legend>
               <fieldset id="group1" class="inputstyle">
                   <div class="row radio-row">
                     <input type="radio" value="Iscte" name="insc_uni" id="radio1-1" class="radio-item" required><label for="radio1-1">Iscte</label>
                   </div>
                   <div class="row radio-row">
                       <input type="radio" value="" name="insc_uni" id="radio1-2" class="radio-item" required>
-                      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_uni_other" type="text" placeholder="Outra..." class="inputstyle radio-other-text-field">
+                      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_uni_other" type="text" placeholder="Other..." class="inputstyle radio-other-text-field">
                   </div>
               </fieldset>
           </div>
@@ -64,7 +64,7 @@
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
             <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-                <legend for="group2" class="radio-group-label">Em que curso estás?*</legend>
+                <legend for="group2" class="radio-group-label">What degree do you study?*</legend>
                 <fieldset id="group2" class="inputstyle">
                     <div class="row radio-row">
                         <input type="radio" value="LEI" name="insc_degree" id="radio2-1" class="radio-item" required><label for="radio2-1">LEI</label>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="row radio-row">
                         <input type="radio" value="" name="insc_degree" id="radio2-8" class="radio-item" required>
-                        <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_degree_other" type="text" placeholder="Outra..." class="inputstyle radio-other-text-field">
+                        <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_degree_other" type="text" placeholder="Other..." class="inputstyle radio-other-text-field">
                     </div>
                 </fieldset>
             </div>
@@ -98,25 +98,25 @@
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
             <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-                <legend for="group3" class="radio-group-label">Em que ano estás?*</legend>
+                <legend for="group3" class="radio-group-label">How far are you into your degree?*</legend>
                 <fieldset id="group3" class="inputstyle">
                     <div class="row radio-row">
-                        <input type="radio" value="1Ano" name="insc_year" id="radio3-1" class="radio-item" required><label for="radio3-1">1º Ano</label>
+                        <input type="radio" value="1Ano" name="insc_year" id="radio3-1" class="radio-item" required><label for="radio3-1">1st Year</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="2Ano" name="insc_year" id="radio3-2" class="radio-item" required><label for="radio3-2">2º Ano</label>
+                        <input type="radio" value="2Ano" name="insc_year" id="radio3-2" class="radio-item" required><label for="radio3-2">2nd Year</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="3Ano" name="insc_year" id="radio3-3" class="radio-item" required><label for="radio3-3">3º Ano</label>
+                        <input type="radio" value="3Ano" name="insc_year" id="radio3-3" class="radio-item" required><label for="radio3-3">3rd Year</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="4Ano" name="insc_year" id="radio3-4" class="radio-item" required><label for="radio3-4">4º Ano</label>
+                        <input type="radio" value="4Ano" name="insc_year" id="radio3-4" class="radio-item" required><label for="radio3-4">4th Year</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="5Ano" name="insc_year" id="radio3-5" class="radio-item" required><label for="radio3-5">5º Ano</label>
+                        <input type="radio" value="5Ano" name="insc_year" id="radio3-5" class="radio-item" required><label for="radio3-5">5th Year</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="NA" name="insc_year" id="radio3-6" class="radio-item" required><label for="radio3-6">Não Aplicável</label>
+                        <input type="radio" value="NA" name="insc_year" id="radio3-6" class="radio-item" required><label for="radio3-6">Not Applicable</label>
                     </div>
                 </fieldset>
             </div>

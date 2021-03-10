@@ -14,17 +14,17 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                 <div class="row">
                     <div style="margin-top:0%;width:40%;">
                         <div style="width:100%;">
-                            <div class="letter2 workshop" style="
+                            <div class="letter2 workshop block" style="
                        padding-top:30%;
                             padding-left:10%;;font-size:340%;margin-left:3%;-webkit-background-clip: text;
                         background-color: white;text-align:left;">
                                             <h1 style=" opacity:60%;padding-right:2vw;">Advancing Technology for Humanity</h1>
-                                            <a style="  text-decoration: none;"href="/candidatura"><p  class="butpro letter2">Join us</p></a>
+                                            <a style="text-decoration: none;"href="/application" class="butpro letter2 mx-auto"> Join us </a>
                             </div>
                         </div>
                     </div>
                     <div style="width:60%;">
-                        <img src="{{asset('img/ieee3.jpg')}}"  style="
+                        <img src="{{asset('img/landingpagepc.png')}}"  style="
                     height:auto;
                         width:100%;;
                         border-radius:0px;
@@ -45,13 +45,13 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                             padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
                                             <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
-                                            <a href="/candidatura" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
+                                            <a href="/application" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Join us</p></a>
                             </div>
                         </div>
 
 
 
-                        <img src="{{asset('img/ieee3.jpg')}}"
+                        <img src="{{asset('img/landingpagepc.png')}}"
                         style="
                              height:auto;
                             width:100%;
@@ -75,7 +75,7 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
     .butpro:hover, .butpro:active{
         border:1px solid  rgb(133,133,133);
         background: rgb(133,133,133);
-background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1) 100%);
+        background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1) 100%);
         color: white;font-size: 17px;
         transition:0.2s;
 
@@ -84,7 +84,8 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
     .butpro{
         margin-top: 30px;
         -webkit-background-clip: text;
-        background-size: cover;background-position: center;
+        background-size: cover;
+        background-position: center;
         font-size: 17px;
         font-family:'font-letter2';
         width: 10pc;
@@ -111,7 +112,12 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
     }
 
     .member-title{
-        font-family:'font-letter2';letter-spacing:0.1px;color:rgb(78 81 97);text-align:center;margin-bottom:10%;margin-top:10%;
+        font-family:'font-letter2';
+        letter-spacing:0.1px;
+        color:rgb(78 81 97);
+        text-align:center;
+        margin-bottom:10%;
+        margin-top:10%;
     }
 
 
@@ -159,7 +165,7 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
 
 
 <div class="container" style="margin-bottom:10%; ">
-    <h2 class="member-title">Team</h2>
+    <h2 class="member-title">Collaborators</h2>
     <div class="members">
 
         @foreach($members as $member)
@@ -185,13 +191,13 @@ background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1)
 background-image: linear-gradient(to top, #4b5262, #4b5367, #4c536c, #4d5470, #4f5475, #525779, #55597d, #585c81, #5c6286, #5f678b, #636d8f, #677394);
 
 padding-bottom:15%;
--webkit-box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6); 
+-webkit-box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6);
 box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6);padding-bottom:20%;
 ">
 
 
     <div class="pc container" >
-    <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explore our societies</h1>
+    <h1 class="letter2" style="text-align:center;font-size:45px;color:white;padding-top:10%;letter-spacing:1px;"> Explore our societies </h1>
     <div class="row mx-auto" style="padding-top:10%;padding-left:-10px;">
 
         <div class="col-lg-2 share mx-auto ">
@@ -219,7 +225,7 @@ box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6);padding-bottom:20%;
 
 
     <div class="mobile container">
-    <h1 class="letter2" style="text-align:center;font-size:250%;color:white;padding-top:20%;letter-spacing:1px;"> Explora as nossas societies</h1>
+    <h1 class="letter2" style="text-align:center;font-size:250%;color:white;padding-top:20%;letter-spacing:1px;"> Explore our societies </h1>
     <div class="row mx-auto" style="padding-top:10%;text-align:center;">
 
         <div class="col-lg-2 share mx-auto">

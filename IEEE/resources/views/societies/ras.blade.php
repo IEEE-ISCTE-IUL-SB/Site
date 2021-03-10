@@ -16,7 +16,7 @@
     <div class="row mission-row">
 
         <div class="col">
-            <a href="#section3" class="letter2 mission-link">Quem somos?</a>
+            <a href="#section3" class="letter2 mission-link">What is RAS?</a>
         </div>
         <div class="col">
             <a href="#section4" class="letter2 mission-link">Workshops</a>
@@ -37,7 +37,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                         background-color:white;justify-content:center;">
                         <div style="padding-top: 23%; text-align:center;">
                         <a href="http://www.ieee-ras.org/" class="descobre" style="transition:0.7s;font-size:260%;font-family:'font-letter2';" ><h1 class="letter2" style="color:#333333;font-size: 300%" ></h1>
-                     Descobre mais</h1> </a>
+                     Learn more...</h1> </a>
 
                 </div>
 
@@ -69,12 +69,12 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 </section>
 
 <section id="section3">
-    <h2 class="letter2 sections-title" >Quem Somos?</h2>
+    <h2 class="letter2 sections-title" >What is RAS?</h2>
     <div class="container py-5 text-center">
         <div class="row">
             <div class="col-lg-8 mx-auto">
 
-                <p class="text-muted lead sections-description ">É um chapter da IEEE Portugal criado em 2005 cujos seus principais objetivos são promover pesquisa, educação, empreendedorismo e interesse público em Robótica e Automação em Portugal através  de organização de conferências e workshops científicos, competições de robôs educacionais e de pesquisa, reuniões entre empresas e academia e sessões de divulgação de Ciência e Tecnologia aos estudantes.</p>
+                <p class="text-muted lead sections-description "> RAS is a IEEE Portugal chapter, created in 2005, whose main goals are promoting research, education, entrepreneurship and public interest in Robotics and Automation in Portugal by organizing conferences, workshops, education and research focused robot competitions, meetings between academia and companies and events to show Science and Technology to students.</p>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
             <div class="event-slider owl-carousel">
 
                 @foreach($events as $event)
-                <a href="/evento/{{$event->id}}">
+                <a href="/event/{{$event->id}}">
                     <div class="event-card mx-auto">
                         <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                         <div class="card-ellipse">
@@ -110,7 +110,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
             </div>
         @else
             <div class="no-event-warning mx-auto">
-                Ainda não temos workshops para te mostrar
+                We don't have any workshops to show you yet...
             </div>
         @endif
 

@@ -16,7 +16,7 @@
     <div class="row mission-row">
 
         <div class="col">
-            <a href="#description-section" class="letter2 mission-link">Quem somos?</a>
+            <a href="#description-section" class="letter2 mission-link">What is IMS?</a>
         </div>
         <div class="col">
             <a href="#workshop-section" class="letter2 mission-link">Workshops</a>
@@ -82,8 +82,8 @@
                             background-color:white;
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
-                        <h1 class="letter2" style="color:#2b2b2b;font-size: 210%" >Tens curiosidade por esta área?</h1>
-                        <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
+                        <h1 class="letter2" style="color:#2b2b2b;font-size: 210%" >Are you curious about Intrumentation and Measurement?</h1>
+                        <a href="/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Learn more</button> </a>
                     </div>
                 </div>
 
@@ -103,8 +103,8 @@
                             justify-content:center;">
                     <div style="padding-top: 23%; text-align:center;">
                         <h1 class="letter2" style="color: #2b2b2b;font-size: 210%;margin-left: 10%;
-    margin-right: 10%;" >Tens curiosidade por esta área?</h1>
-                        <a href="https://ieee-imspt.org/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Descobre mais</button> </a>
+    margin-right: 10%;" >Are you curious about Intrumentation and Measurement?</h1>
+                        <a href="https://ieee-imspt.org/" > <button type="button" style="margin-top:5%;"class="btn btn-imsociety mx-auto">Learn more</button> </a>
                     </div>
                 </div>
 
@@ -118,17 +118,16 @@
     <section id="description-section">
     <div class="pc-who">
     <div class="container m-auto">
-        <h2 class="letter2 who"  >Quem Somos?</h2>
+        <h2 class="letter2 who">What is IMS?</h2>
 
             <div class="row">
 
                 <div class="col who-side1">
                     <p class="who-side1-p">
-                    A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos.
+                        The IEEE Instrumentation and Measurement Society is dedicated to the development and use of electrical and electronic instruments and equipment to measure, monitor and/or record physical phenomena.
                     </p>
                     <p class="who-side1-p">
-                     Os campos de interesse incluem metrologia, instrumentos eletrônicos analógicos e digitais, sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo), instrumentação e transdutores para medição de variáveis não elétricas, calibração e incerteza, instrumentos com controle automatizado e funções de análise, instrumentação de segurança e novas aplicações de tecnologia.
-                    </p>
+                        The fields of interest include metrology, analog and digital electronic instruments, systems and standards for measuring and recording electrical quantities (in both frequency and time domains), instrumentation and transducers for measurement of non-electrical variables, calibration and uncertainty, instruments with automated control and analysis functions, safety instrumentation, and new technology applications.                    </p>
                 </div>
 
                 <div class="col-6 who-side2">
@@ -140,10 +139,10 @@
         </div>
         <div class="mobile-who">
         <div class="container m-auto">
-        <h2 class="letter2 who"  >Quem Somos?</h2>
+        <h2 class="letter2 who"  >What is IMS?</h2>
                 <div class=""style="width:100%">
                     <p style=" letter-spacing:0.7px;color:grey;width:100%;line-height:110%;font-size:90%;margin-top:10%;text-align:center;">
-                    A IEEE Instrumentation & Measurement Society dedica-se ao desenvolvimento e uso de instrumentos e equipamentos elétricos e eletrônicos para medir, monitorar e / ou registrar fenômenos físicos.
+                        The IEEE Instrumentation & Measurement Society focuses on the development and use of electric and electronic instruments and other equipments to measure, monitor and register physical phenomena.
                     </p>
                 </div>
 
@@ -155,12 +154,12 @@
 
 <div class=""style="width:100%">
 <p style=" letter-spacing:0.7px;color:#333333;width:100%;line-height:110%;font-size:120%;margin-top:20%;text-align:center;">
-    Incide em vários campos como :
+    I&M touches on fields like:
     </p>
-    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Metrologia </p>
-    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Sistemas e padrões para medição e registro de grandezas elétricas (em ambos os domínios de frequência e tempo) </p>
-    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Instrumentação e transdutores para medição de variáveis não elétricas </p>
-    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Instrumentação de segurança e novas aplicações de tecnologia </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Metrology </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Systems and standards for measuring and recording electrical quantities (in both frequency and time domains) </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Instrumentation and transducers for measurement of non-electrical variables </p>
+    <p style=" color:grey;width:100%;margin-top:13%;line-height:110%;display: list-item;list-style-type: disc;font-size:90%;list-style-position: inside;"> Safety instrumentation, and new technology applications </p>
 
 </div>
 
@@ -177,7 +176,7 @@
         <div class="event-slider owl-carousel">
 
             @foreach($events as $event)
-            <a href="/evento/{{$event->id}}">
+            <a href="/event/{{$event->id}}">
                 <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                     <div class="card-ellipse">
@@ -200,7 +199,7 @@
         </div>
         @else
         <div class="no-event-warning mx-auto">
-            Ainda não temos workshops para te mostrar
+            We don't have any workshops to show you yet...
         </div>
         @endif
 

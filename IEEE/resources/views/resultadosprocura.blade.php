@@ -4,12 +4,12 @@
 
 <section id="result-section">
     <div class="container row title-row">
-        <div class="result-title col-12 col-lg-7"> Resultados da procura por "{{$searchtext}}": </div>
+        <div class="result-title col-12 col-lg-7"> Results for the search for "{{$searchtext}}": </div>
         <div class="justify-content-center col-12 col-lg-5">
             <form class="search-form" id="search-form" method="post" action="/search">
                 @csrf
                 <div class="input-group search-group-align">
-                    <input type="text" class="search-input" id="search" name="searchtext" placeholder="Eventos..." autocomplete="off">
+                    <input type="text" class="search-input" id="search" name="searchtext" placeholder="Events..." autocomplete="off">
                     <label onclick="submitSearchForm()" class="search-label" for="search"><i class="fa fa-search" style="margin-left:-160%;margin-top:20%;"></i></label>
                 </div>
             </form>
@@ -21,7 +21,7 @@
         @if(count($searchresults) != 0)
             @foreach($searchresults as $event)
                 <div class="card-wrapper mx-auto col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3">
-                    <a href="/evento/{{$event->id}}">
+                    <a href="/event/{{$event->id}}">
                         <div class="event-card mx-auto">
                             <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                             <div class="card-ellipse">
@@ -42,7 +42,7 @@
                 </div>
             @endforeach
         @else
-            <div class="no-results-message">Sem resultados para a tua procura</div>
+            <div class="no-results-message">No results for your query...</div>
         @endif
 
     </div>

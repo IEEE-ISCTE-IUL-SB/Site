@@ -65,14 +65,14 @@ Route::get('/projetos/{id}',['as' => 'single', 'uses' => 'ProjectController@sing
 
 
 
-Route::get('/sobrenos', function () {
+Route::get('/aboutus', function () {
     $branches = App\StudentBranch::all();
     $members = App\Member::all();
     return view('aboutus')->with('branches', $branches)->with('members', $members);
 });
 
 
-Route::get('/eventos', function () {
+Route::get('/events', function () {
     $highlights = App\Event::all()->where('highlighted', 1);
 
     $nextevents = App\Event::whereDate('event_date', '>', Carbon::yesterday())->get();
@@ -91,7 +91,7 @@ Route::get('/eventos', function () {
 });
 
 
-Route::get('/evento/{id}', function ($id) {
+Route::get('/event/{id}', function ($id) {
     $event = App\Event::all()->where('id', $id)->first();
     $openregistrations = $event->event_date . $event->event_time > Carbon::now();
     return View::make('eventodetalhe')->with('event', $event)->with('openregistrations', $openregistrations);
@@ -131,7 +131,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/candidatura', function () {
+Route::get('/application', function () {
     return View::make('memberAdd');
 });
 
@@ -178,19 +178,19 @@ Route::post('/eventregistration/{id}', function (Request $request, $id) {
         $new_attendant->event_id = $id;
 
         $new_attendant->save();
-        return redirect('/evento/'.$id);
+        return redirect('/event/'.$id);
     }
     else
-        return redirect('/eventos');
+        return redirect('/events');
 });
 
-Route::get('/inscricao/{id}', function ($id) {
+Route::get('/registration/{id}', function ($id) {
     $event = App\Event::all()->where('id', $id)->first();
     return View::make('eventInsc')->with('event', $event);
 });
 
 
-Route::get('/propostaevento', function () {
+Route::get('/eventproposal', function () {
     return View::make('eventAdd');
 });
 
@@ -223,7 +223,7 @@ Route::post('/eventsuggestion', function (Request $request) {
 
     Mail::to('cod.cod.321@gmail.com')->send(new \App\Mail\NewEventSuggestion($emailcontent));
 
-    return redirect('/eventos');
+    return redirect('/events');
 });
 
 

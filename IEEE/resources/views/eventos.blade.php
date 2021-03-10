@@ -5,7 +5,7 @@
 <section class="event-title-block">
     <div class="main-title-container">
         <div id="mainEventTitle">
-            Eventos
+            Events
         </div>
     </div>
 
@@ -79,7 +79,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <h2 id="novidadesScreen" class="letter3">
-        Em destaque
+        Highlights
     </h2>
     <div class="highlighted-event-container">
         <div class="mx-auto">
@@ -341,7 +341,7 @@
 
                 function highlightedEventLink(element, event_id) {
                     if (element.parentElement.classList.contains("center")) {
-                        window.location.href = ("evento/".concat(event_id))
+                        window.location.href = ("event/".concat(event_id))
                     }
                 }
 
@@ -377,13 +377,13 @@
 
     <div class="container event-container text-center">
         <h2 class="letter3 carousel-title">
-            Próximos Eventos
+            Upcoming events...
         </h2>
 
         <div>
             <div class="event-slider owl-carousel">
                 @foreach($nextevents as $event)
-                    <a href="/evento/{{$event->id}}">
+                    <a href="/event/{{$event->id}}">
                         <div class="event-card mx-auto">
                             <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                             <div class="card-ellipse">
@@ -410,7 +410,7 @@
 
 <section id="search-section" style="background: #23384f;padding-bottom:6%">
     <div class="container" style="text-align:center;">
-        <h1 class="search-title"> PROCURA POR MAIS EVENTOS </h1>
+        <h1 class="search-title"> LOOKING FOR MORE? </h1>
 
             <div class="row justify-content-center">
 
@@ -436,14 +436,14 @@
 
     <div class="container event-container text-center">
         <h2 class="letter3 carousel-title">
-            Últimos eventos
+            Past events...
         </h2>
 
         <div>
             <div class="event-slider owl-carousel">
 
                 @foreach($pastevents as $event)
-                <a href="/evento/{{$event->id}}">
+                <a href="/event/{{$event->id}}">
                     <div class="event-card mx-auto">
                         <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                         <div class="card-ellipse">

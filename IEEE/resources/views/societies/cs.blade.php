@@ -16,7 +16,7 @@
     <div class="row mission-row" >
 
         <div class="col">
-            <a class="letter2 mission-link" href="#description-section">Quem somos?</a>
+            <a class="letter2 mission-link" href="#description-section">What is CS?</a>
         </div>
         <div class="col">
             <a class="letter2 mission-link" href="#workshop-section">Workshops</a>
@@ -27,7 +27,7 @@
 
 <section id="description-section">
     <div class="description-title sections-title letter2">
-        Quem somos?
+        What is CS?
     </div>
     <div class="description-group">
         <div class="row justify-content-center description-row">
@@ -39,7 +39,7 @@
                 Your ideas matter, and so does your help!            </div>
         </div>
         <div class="row justify-content-center description-row">
-            <a href="https://www.computer.org/" > <button type="button" style="margin-top:5%;"class="btn btn-csociety mx-auto">Descobre mais</button> </a>
+            <a href="https://www.computer.org/" > <button type="button" style="margin-top:5%;"class="btn btn-csociety mx-auto">Learn more...</button> </a>
         </div>
     </div>
 </section>
@@ -51,7 +51,7 @@
         <div class="event-slider owl-carousel">
 
             @foreach($events as $event)
-            <a href="/evento/{{$event->id}}">
+            <a href="/event/{{$event->id}}">
                 <div class="event-card mx-auto">
                     <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                     <div class="card-ellipse">
@@ -74,7 +74,7 @@
         </div>
         @else
         <div class="no-event-warning mx-auto">
-            Ainda não temos workshops para te mostrar
+            We don't have any workshops to show you yet...
         </div>
         @endif
     </div>
