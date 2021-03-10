@@ -16,7 +16,7 @@
         </div>
         @if($openregistrations)
             <div class="row mx-auto">
-                <a href="/inscricao/{{$event->id}}" style="margin-bottom:10vh;"> <button id="btn-society" type="button" style="margin-top:5%;"class="btn mx-auto">Inscreve-te</button> </a>
+                <a href="/registration/{{$event->id}}" style="margin-bottom:10vh;"> <button id="btn-society" type="button" style="margin-top:5%;"class="btn mx-auto">Sign up!</button> </a>
             </div>
         @endif
     </div>
@@ -364,11 +364,11 @@
     }
 
     .CS {
-        background-color: #e39739;
+        background-color: #ff9e43;
     }
 
     a.CS:hover, a>.CS:hover {
-        background-color: #deab52;
+        background-color: #ff9e43;
     }
 
     .RAS {

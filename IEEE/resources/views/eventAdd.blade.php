@@ -5,10 +5,10 @@
 
 <!-- Form Name -->
 <section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:3vh;margin-bottom:10vh;">
-<h1 class="criar-title">Propõe um evento</h1>
+<h1 class="criar-title">Suggest an event</h1>
 <div class="roulette-wrapper">
 
-<h1 class="roulette"><span id="menjase"><span> Queres divulgar uma nova linguagem de programação através de um workshop? <span></span></h1>
+<h1 class="roulette"><span id="menjase"><span> Do you want to share a new programming language through a workshop? <span></span></h1>
 
 
 </div>
@@ -54,7 +54,7 @@
         <!-- Text input-->
         <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-top:2%;margin-bottom:1%;">
           <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-            <input id="" name="contact_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Completo*" required>
+            <input id="" name="contact_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Full Name*" required>
           </div>
         </div>
 
@@ -70,7 +70,7 @@
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-            <input id="" name="contact_org" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organização" class="inputstyle">
+            <input id="" name="contact_org" style="color:white;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Organization" class="inputstyle">
 
           </div>
         </div>
@@ -84,11 +84,11 @@
                         <input type="radio" value="Workshop" name="event_type" id="radio1-1" class="radio-item" required><label for="radio1-1">Workshop</label>
                     </div>
                     <div class="row radio-row">
-                        <input type="radio" value="Palestra" name="event_type" id="radio1-2" class="radio-item" required><label for="radio1-2">Palestra</label>
+                        <input type="radio" value="Lecture" name="event_type" id="radio1-2" class="radio-item" required><label for="radio1-2">Lecture</label>
                     </div>
                     <div class="row radio-row">
                         <input type="radio" value="" name="event_type" id="radio1-2" class="radio-item" required>
-                        <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="event_type_other" type="text" placeholder="Outro..." class="inputstyle radio-other-text-field">
+                        <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="event_type_other" type="text" placeholder="Other..." class="inputstyle radio-other-text-field">
                     </div>
                 </fieldset>
             </div>
@@ -96,9 +96,9 @@
 
         <!-- Textarea -->
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-bottom:4%;">
-          <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Descrição do evento*</label>
+          <label class="col-md-6 control-label" style="color:white;font-size:3.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Event description*</label>
           <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-            <textarea class="txtarea" id="textarea" style="background-color: transparent;"name="event_description" placeholder="Descrição..." required></textarea>
+            <textarea class="txtarea" id="textarea" style="background-color: transparent;"name="event_description" placeholder="What will your event be about..." required></textarea>
           </div>
         </div>
 
@@ -404,7 +404,7 @@ $.fn.sloganRoulette = function(options) {
 (function($) {
 $(document).ready(function() {
     $('#menjase').sloganRoulette({
-        slogans: [" Queres fazer uma palestra sobre o teu projeto? ", " Queres divulgar uma nova linguagem de programação com um workshop?"]
+        slogans: [" Do you want to organize a lecture about your project ", " Do you want to share a new programming language through a workshop"]
     });
 })
 

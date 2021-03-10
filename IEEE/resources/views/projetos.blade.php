@@ -6,9 +6,9 @@
 margin-top:10%;margin-bottom:20%;">
 
 
-        
+
         <div class="project-title">
-                <h2 style="font-family:'font-letter2';letter-spacing:0.1px;">Projetos</h2>
+                <h2 style="font-family:'font-letter2';letter-spacing:0.1px;">Projects</h2>
         </div>
 
 

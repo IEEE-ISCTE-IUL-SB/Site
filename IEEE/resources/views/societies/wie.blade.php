@@ -15,7 +15,7 @@
         color:#583e77;
         font-size:330%;
         overflow:hidden;
-        margin-left: auto;">Sê parte da mudança</h1>
+        margin-left: auto;">Be part of the progress</h1>
 
             <img style=" max-width: 40%;
           width:26%;
@@ -27,7 +27,7 @@
     </div>
             <div class="mobile-wie">
             <div class="row" >
-<h1 class="letter2"style="
+                    <h1 class="letter2"style="
         width:90%;
         text-align:center;
         padding-top:10%;
@@ -37,7 +37,7 @@
         font-size:240%;
         overflow:hidden;
         margin-right: auto;
-        margin-left: auto;">Sê parte da mudança</h1>
+        margin-left: auto;">Be part of the progress</h1>
             <div class="m-auto" style="width:50vw;margin-left:auto;margin-right:auto;margin-top:6vh;">
             <img style="  display: block;
           overflow:hidden;width:100%;
@@ -51,7 +51,7 @@
     <div class="row mission-row">
 
         <div class="col">
-            <a class="letter2 mission-link" href="#section2">Quem somos?</a>
+            <a class="letter2 mission-link" href="#section2">What is WIE?</a>
         </div>
         <div class="col">
             <a class="letter2 mission-link" href="#section3">Workshops</a>
@@ -66,7 +66,7 @@
 
     </div>
     <div class="mobile-wie"style="position:absolute;justify-content:center;text-align:center;width:100%;margin-left:auto;margin-right:auto;margin-top:-12pc;margin-bottom:15pc;">
-    <a href="https://ieee-imspt.org/" class="btn-wiesociety">Junta-te a nós</a>
+    <a href="https://ieee-imspt.org/" class="btn-wiesociety">Join us</a>
 </div>
    <style>
 
@@ -90,14 +90,14 @@
 
 <section id="section2" class="" style="margin-bottom:10%;">
     <div class="container pc-wie">
-        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
+        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >What is WIE?</h2>
         <div class="row">
             <div style="width:47%;margin-left:0.25%;">
 
-                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">O WiE ISCTE-IUL (Mulheres em Engenharia do ISCTE-IUL, Lisboa) é um grupo sem fins lucrativos com afinidade WiE do Ramo de Estudantes do IEEE ISCTE-IUL. Este grupo nasceu oficialmente por iniciativa de um grupo de alunas do ISCTE-IUL, de diferentes áreas de estudo relacionadas à tecnologia.</p>
-                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">Tivemos a aprovação oficial para criá-lo em 1º de janeiro de 2013. A missão do IEEE WIE é facilitar o recrutamento e retenção global de mulheres em disciplinas técnicas.</p>
-                 <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">No ISCTE-IUL, desejamos promover o papel das mulheres como engenheiras e inspirar e cativar as mulheres ao redor do mundo a abraçar um carreira em ciência e engenharia.</p>
-                 <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">WiE não é apenas para mulheres, é para todos que acreditam na igualdade de direitos, independentemente do gênero e que as mulheres também podem ser grandes engenheiras.</p>
+                <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">WiE ISCTE-IUL (Women In Engineering from ISCTE-IUL, Lisbon) is a non-profit affinity WiE group of the IEEE ISCTE-IUL Student Branch. This group was officially born from the initiative of a group of ISCTE-IUL female students, from different study areas related to technology.</p>
+                <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">We had the official approval to create it on January 1st 2013. The mission of IEEE WIE is to facilitate the global recruitment and retention of women in technical disciplines.IEEE WIE envisions a vibrant community of IEEE women and men collectively using their diverse talents to innovate for the benefit of humanity.</p>
+                <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">At ISCTE-IUL we wish to promote the role of women as engineers, and inspire and captivate women around the world to embrace a career in science and engineering. WiE isn’t only for women it is for everyone that believes in equal rights independent of gender and that women can be great engineers too.</p>
+                <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">We also want to try to make society and employers understand that women deserve the same rights that men have. So if you believe women deserve to have exactly the same rights as men, career evolution and respect for their intellect then you belong with us.</p>
 
             </div>
 
@@ -108,14 +108,14 @@
         </div>
     </div>
     <div class="container mobile-wie">
-        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >Quem Somos?</h2>
+        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >What is WIE?</h2>
 
             <div style="width:100%;">
 
-                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">O WiE ISCTE-IUL (Mulheres em Engenharia do ISCTE-IUL, Lisboa) é um grupo sem fins lucrativos com afinidade WiE do Ramo de Estudantes do IEEE ISCTE-IUL. Este grupo nasceu oficialmente por iniciativa de um grupo de alunas do ISCTE-IUL, de diferentes áreas de estudo relacionadas à tecnologia.</p>
-                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">Tivemos a aprovação oficial para criá-lo em 1º de janeiro de 2013. A missão do IEEE WIE é facilitar o recrutamento e retenção global de mulheres em disciplinas técnicas.</p>
-                 <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">No ISCTE-IUL, desejamos promover o papel das mulheres como engenheiras e inspirar e cativar as mulheres ao redor do mundo a abraçar um carreira em ciência e engenharia.</p>
-                 <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">WiE não é apenas para mulheres, é para todos que acreditam na igualdade de direitos, independentemente do gênero e que as mulheres também podem ser grandes engenheiras.</p>
+                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">WiE ISCTE-IUL (Women In Engineering from ISCTE-IUL, Lisbon) is a non-profit affinity WiE group of the IEEE ISCTE-IUL Student Branch. This group was officially born from the initiative of a group of ISCTE-IUL female students, from different study areas related to technology.</p>
+                <p  style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">We had the official approval to create it on January 1st 2013. The mission of IEEE WIE is to facilitate the global recruitment and retention of women in technical disciplines.IEEE WIE envisions a vibrant community of IEEE women and men collectively using their diverse talents to innovate for the benefit of humanity.</p>
+                <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">At ISCTE-IUL we wish to promote the role of women as engineers, and inspire and captivate women around the world to embrace a career in science and engineering. WiE isn’t only for women it is for everyone that believes in equal rights independent of gender and that women can be great engineers too.</p>
+                <p style="letter-spacing:0.7px;color:grey;line-height:120%;font-size:110%;margin-top:2%;">We also want to try to make society and employers understand that women deserve the same rights that men have. So if you believe women deserve to have exactly the same rights as men, career evolution and respect for their intellect then you belong with us.</p>
 
             </div>
 
@@ -135,7 +135,7 @@
             <div class="event-slider owl-carousel">
 
                 @foreach($events as $event)
-                <a href="/evento/{{$event->id}}">
+                <a href="/event/{{$event->id}}">
                     <div class="event-card mx-auto">
                         <img class="event-card-img-top event-img" src="{{Voyager::image($event->image1)}}">
                         <div class="card-ellipse">
@@ -158,7 +158,7 @@
             </div>
         @else
             <div class="no-event-warning mx-auto">
-                Ainda não temos workshops para te mostrar
+                We don't have any workshops to show you yet...
             </div>
         @endif
 

@@ -169,7 +169,7 @@
   </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Events</a></li>
+                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/events') }}">Events</a></li>
                     <li class="nav-item"style="margin:auto;">
 <!--                        <a class="nav-link  letter2" style="margin:auto;transition:0.4s!important;"href="{{ url('/projetos') }}">Projetos</a></li>-->
                         <li class="nav-item dropdown"style="margin:auto;transition:0.4s!important;">
@@ -271,7 +271,7 @@
 
             </li>
             <li class="nav-item" style="margin:auto;">
-                        <a class="nav-link  letter2" style="transition:0.9s"href="{{ url('/sobrenos') }}">About us</a>
+                        <a class="nav-link  letter2" style="transition:0.9s"href="{{ url('/aboutus') }}">About us</a>
                     </li>
                 </ul>
             </div>
@@ -282,7 +282,6 @@
 @yield('content')
 
 <footer class="footer" style="padding-bottom:1.6%;background-color:#454648;border:7px solid #444548">
-   
     <div class="">
    <div class="row mx-auto">
    <div class="col-md-4" style="justify-content:center;margin:auto;padding-top:1%;">
@@ -299,13 +298,12 @@
     </div>
 
     <style>
-    
 
-    
+
+
     </style>
     <div class="col-md-3" style="justify-content:center;" >
         <div class="row mx-auto" style="padding-top:16%;width:60%;">
-            
 
                 <div class="social-col mx-auto">
                     <a class="social-link" href="mailto: ieee@iscte-iul.pt"><i class="fas fa-envelope social-icon"></i></a>
@@ -319,28 +317,27 @@
                 <div class="social-col mx-auto">
                     <a class="social-link" href="https://www.linkedin.com/company/ieee-iscte-iul-student-branch/"><i class="fab fa-linkedin social-icon"></i></a>
                 </div>
-            
+
                </div>
-               
-               
-         
+
+
+
         </div>
 
-        
+
     <div class="col-md-5" style="">
         <div class="row mx-auto">
             <div class="i3E-wrap" style="margin-top:2vw;margin-bottom:1vw;margin-left:auto;margin-right:auto;">
-         
                <p class="col-md-5 footer-contacts" >Address</p>
-               
-               <div class="col-md-8" style="justify-content:'center';font-size:80%;margin-top:1.5vw;margin-right:auto;margin-left:auto;">
+
+               <div class="col-md-8" style="justify-content:center;font-size:80%;margin-top:1.5vw;margin-right:auto;margin-left:auto;">
                <h1 style="text-align:center;color:white;">Iscte – Instituto Universitário de Lisboa Avenida das Forças Armadas, 1649-026 Lisboa</h1>
                </div>
 
-              
 
-               
-               
+
+
+
              </div>
         </div>
     </div>
@@ -349,9 +346,9 @@
 
 
     </div>
-      
-   
-      
+
+
+
          </div>
       </div>
    </div>
@@ -368,7 +365,7 @@
 
     .social-col {
         margin-top:.2rem;
-  
+
     }
 
 
@@ -386,7 +383,7 @@
     }
 
 
-       
+
 
 
     @media  (max-width: 700px) {
@@ -403,21 +400,21 @@
         .i3E-wrap{
             margin:auto;
             padding-bottom:6%;
-            
-            
-           
+
+
+
         }
         .footer-contacts{
            margin:auto;
            margin-top:10vw;
            margin-bottom:4vw;
            text-align:center;font-size:140%;font-family:'font-letter2';color:white;
-           
+
         }
     }
 
 
-    
+
     @media  (max-width: 900px) and (min-width: 700px) {
 
 .i3E-img{
@@ -432,14 +429,14 @@
 .i3E-wrap{
     margin:auto;
 
-    
+
 }
 .footer-contacts{
            margin:auto;
            margin-top:10vw;
            margin-bottom:4vw;
            text-align:center;font-size:140%;font-family:'font-letter2';color:white;
-           
+
         }
 }
 
@@ -461,10 +458,10 @@ margin:auto;
         }
         .footer-contacts{
             margin:auto;text-align:center;font-size:190%;font-family:'font-letter2';color:white;
-         
-            
-            
-           
+
+
+
+
         }
 }
 
@@ -499,4 +496,4 @@ $(function () {
 
 
     </body>
-</html>     
+</html>

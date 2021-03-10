@@ -7,19 +7,19 @@
 
 <!-- Form Name -->
 <section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:6vh;">
-<h1 class="cand-title"> Candidatura IEEE ISCTE-IUL Student Branch</h1>
+<h1 class="cand-title">Member Application for the IEEE ISCTE-IUL Student Branch</h1>
 <div style="margin-top:2vh;margin-bottom:10vh;width:70%;margin:auto;text-align:center;justify-content:center;">
 <h1 style="line-height:3vh;font-size:1.9vh;text-align:center;justify-content:center;">
 
-Parabéns!
+Congratulations!
 
-Deste o primeiro passo desta que pode muito bem ser a tua melhor aventura de sempre!
+You've taken the very first step in what might be your best adventure yet!
 
-Responde às perguntas que se seguem e espera por um contacto nosso.
+Answer the following questions and wait for us to contact you.
 
-Depois de falarmos um bocadinho, daremos a notícia se conseguiste entrar neste núcleo de estudantes.
+After we speak a little, we'll let you know if you were accepted to our Student Branch.
 
-Preparado/a?
+Are you ready?
 
 </h1>
 
@@ -32,7 +32,7 @@ Preparado/a?
     @csrf
     <div class="form-group" style="margin:auto;text-align:center;justify-content:center;margin-bottom:1%;">
       <div class="col-md-6" style="margin:auto;text-align:center;justify-content:center;">
-      <input id="" name="member_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Nome Completo*" required>
+      <input id="" name="member_name" class="inputstyle"style="color:white;text-decoration-line:none;border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Full Name*" required>
 
       </div>
     </div>
@@ -41,7 +41,7 @@ Preparado/a?
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;" >
-      <input id="" name="phone_number" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" type="tel" placeholder="Nº de telemóvel*" required>
+      <input id="" name="phone_number" class="inputstyle" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" type="tel" placeholder="Phone Number*" required>
 
       </div>
     </div>
@@ -60,7 +60,7 @@ Preparado/a?
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="student_number" type="text" placeholder="Número de Aluno*" class="inputstyle" required>
+      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid white;" name="student_number" type="text" placeholder="Student Number*" class="inputstyle" required>
 
       </div>
     </div>
@@ -69,7 +69,7 @@ Preparado/a?
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-      <input id="" name="student_degree" style="border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="Curso que frequentas atualmente*" class="inputstyle" required>
+      <input id="" name="student_degree" style="border:0px;border-radius:0px;border-bottom: 3px solid white;"type="text" placeholder="What degree are you attending*" class="inputstyle" required>
 
       </div>
     </div>
@@ -78,53 +78,53 @@ Preparado/a?
 
     <!-- Textarea -->
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Em poucas palavras, descreve-nos o que é para ti o IEEE.*</label>
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Briefly explain what IEEE means to you*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-        <textarea class="txtarea" id="textarea" name="what_is_ieee" placeholder="Escreve aqui..." required></textarea>
+        <textarea class="txtarea" id="textarea" name="what_is_ieee" placeholder="Answer here..." required></textarea>
       </div>
     </div>
 
 
     <!-- Textarea -->
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Como tiveste conhecimento do nosso núcleo de estudantes do IEEE?*</label>
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">How did you learn about our IEEE Student Branch*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-        <textarea class="txtarea" id="textarea" name="how_did_you_find_us" placeholder="Escreve aqui..." required></textarea>
+        <textarea class="txtarea" id="textarea" name="how_did_you_find_us" placeholder="Answer here..." required></textarea>
       </div>
     </div>
 
 
     <!-- Textarea -->
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Porque gostarias de fazer parte desta organização? O que gostarias de fazer connosco?*</label>
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Why do you want to join this organization? What would you like to do with us?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-        <textarea class="txtarea" id="textarea" name="reason_to_join" placeholder="Escreve aqui..." required></textarea>
+        <textarea class="txtarea" id="textarea" name="reason_to_join" placeholder="Answer here..." required></textarea>
       </div>
     </div>
 
 
     <!-- Textarea -->
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Qual a tua disponibilidade semanal para te dedicares ao IEEE ISCTE-IUL SB?*</label>
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">What's your weekly availability to work with the IEEE ISCTE-IUL SB?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-        <textarea class="txtarea" id="textarea" name="availability" placeholder="Escreve aqui..." required></textarea>
+        <textarea class="txtarea" id="textarea" name="availability" placeholder="Answer here..." required></textarea>
       </div>
     </div>
 
 
     <!-- Textarea -->
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Onde sentes que poderás acrescentar valor?*</label>
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">In what areas do you think you can help us?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-        <textarea class="txtarea" id="textarea" name="value_add" placeholder="Escreve aqui..." required></textarea>
+        <textarea class="txtarea" id="textarea" name="value_add" placeholder="Answer here..." required></textarea>
       </div>
     </div>
 
     <!-- Textarea -->
     <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Quando estarias pronto/a para começar?*</label>
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">When are you be able to start?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
-        <textarea class="txtarea" id="textarea" name="when_to_start" placeholder="Escreve aqui..." required></textarea>
+        <textarea class="txtarea" id="textarea" name="when_to_start" placeholder="Answer here..." required></textarea>
       </div>
     </div>
 
@@ -223,7 +223,7 @@ Preparado/a?
 }
 
 .txtarea{
-  
+
     font-size: 20px;
 
 }
@@ -235,7 +235,7 @@ Preparado/a?
   .txtarea{
     margin-top:1vh;
     font-size: 2.3vh;
-    
+
 }
   .inputstyle {
     border-style: none none outset none;
@@ -247,7 +247,7 @@ Preparado/a?
     padding-bottom: 5vh;
     outline: none;
     background-color:#616877;
-    
+
 }
 
   .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:2%;margin-right:2%;font-size:8vw;font-family:'font-letter2';}
