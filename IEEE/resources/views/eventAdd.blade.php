@@ -114,16 +114,40 @@
 
 
 <style>
-    .inputstyle {
-        border-style: none none outset none;
-        border-color: white;
-        color:white;
-        font-size: 2.1vh;
-        width: 100%;
-        padding-bottom: 2vh;
-        outline: none;
-        background-color:#616877;
-    }
+
+
+    @media  (min-width:900px){
+
+.inputstyle {
+  border-style: none none outset none;
+  border-color: whitesmoke;
+  font-size: 2.1vh;
+  color:white;
+  width: 100%;
+  padding-bottom: 2vh;
+  outline: none;
+  background-color:#616877;
+}
+
+.cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';}
+}
+
+@media  (max-width:900px){
+.inputstyle {
+  border-style: none none outset none;
+  border-color: whitesmoke;
+  font-size: 2.9vh;
+  color:white;
+  width: 100%;
+  margin-top:5vh;
+  padding-bottom: 5vh;
+  outline: none;
+  background-color:#616877;
+  
+}
+
+.cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:2%;margin-right:2%;font-size:8vw;font-family:'font-letter2';}
+}
 
     .txtarea{
         border: 2px solid white;

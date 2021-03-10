@@ -77,8 +77,8 @@ Preparado/a?
 
 
     <!-- Textarea -->
-    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Em poucas palavras, descreve-nos o que é para ti o IEEE.*</label>
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Em poucas palavras, descreve-nos o que é para ti o IEEE.*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
         <textarea class="txtarea" id="textarea" name="what_is_ieee" placeholder="Escreve aqui..." required></textarea>
       </div>
@@ -86,8 +86,8 @@ Preparado/a?
 
 
     <!-- Textarea -->
-    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Como tiveste conhecimento do nosso núcleo de estudantes do IEEE?*</label>
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Como tiveste conhecimento do nosso núcleo de estudantes do IEEE?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
         <textarea class="txtarea" id="textarea" name="how_did_you_find_us" placeholder="Escreve aqui..." required></textarea>
       </div>
@@ -95,8 +95,8 @@ Preparado/a?
 
 
     <!-- Textarea -->
-    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Porque gostarias de fazer parte desta organização? O que gostarias de fazer connosco?*</label>
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Porque gostarias de fazer parte desta organização? O que gostarias de fazer connosco?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
         <textarea class="txtarea" id="textarea" name="reason_to_join" placeholder="Escreve aqui..." required></textarea>
       </div>
@@ -104,8 +104,8 @@ Preparado/a?
 
 
     <!-- Textarea -->
-    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Qual a tua disponibilidade semanal para te dedicares ao IEEE ISCTE-IUL SB?*</label>
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Qual a tua disponibilidade semanal para te dedicares ao IEEE ISCTE-IUL SB?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
         <textarea class="txtarea" id="textarea" name="availability" placeholder="Escreve aqui..." required></textarea>
       </div>
@@ -113,16 +113,16 @@ Preparado/a?
 
 
     <!-- Textarea -->
-    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Onde sentes que poderás acrescentar valor?*</label>
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Onde sentes que poderás acrescentar valor?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
         <textarea class="txtarea" id="textarea" name="value_add" placeholder="Escreve aqui..." required></textarea>
       </div>
     </div>
 
     <!-- Textarea -->
-    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:8%;margin-bottom:8%;">
-      <label class="col-md-6 control-label" style="color:white;font-size:2.5vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Quando estarias pronto/a para começar?*</label>
+    <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:9%;margin-bottom:9%;">
+      <label class="col-md-6 control-label" style="color:white;font-size:2.7vh;margin:auto;text-align:left;justify-content:center;margin-bottom:2%;"for="textarea">Quando estarias pronto/a para começar?*</label>
       <div class="col-md-6"style="margin:auto;text-align:center;justify-content:center;">
         <textarea class="txtarea" id="textarea" name="when_to_start" placeholder="Escreve aqui..." required></textarea>
       </div>
@@ -149,7 +149,6 @@ Preparado/a?
 .txtarea{
     border: 2px solid  white;
     outline: none;
-    font-size: 20px;
     width: 100%;
     color:white;
     background-color:#616877;
@@ -223,14 +222,25 @@ Preparado/a?
     background-color:#616877;
 }
 
+.txtarea{
+  
+    font-size: 20px;
+
+}
+
   .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';}
 }
 
 @media  (max-width:900px){
+  .txtarea{
+    margin-top:1vh;
+    font-size: 2.3vh;
+    
+}
   .inputstyle {
     border-style: none none outset none;
     border-color: whitesmoke;
-    font-size: 2.5vh;
+    font-size: 2.9vh;
     color:white;
     width: 100%;
     margin-top:5vh;
