@@ -9,7 +9,7 @@
 <section style="background-color:white;padding-bottom:3vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
     <h1 class="cand-title"style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-family:'font-letter2';"> Inscrição em {{$event->event_name}}</h1>
     <div style="margin-top:2vh;margin-bottom:5vh;width:60%;margin:auto;text-align:center;justify-content:center;">
-    <h1 style="line-height:3vh;font-size:1.7vh;text-align:center;justify-content:center;">
+    <h1 class="w-desc" style="line-height:3vh;text-align:center;justify-content:center;">
 
         {{$event->event_description}}
         <br> {{$event->event_registration_description}}
@@ -168,7 +168,14 @@
          color: white;
     }
 
+    .w-desc{
+        font-size:1.7vh;
+    
 }
+
+}
+
+
 
 
 
@@ -186,6 +193,10 @@
   
 }
 
+.w-desc{
+    font-size:2.7vh;
+
+}
 .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:2%;margin-right:2%;font-size:8vw;font-family:'font-letter2';}
 
 
