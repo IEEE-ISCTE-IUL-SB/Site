@@ -169,7 +169,7 @@
   </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Eventos</a></li>
+                    <li class="nav-item " style="margin:auto;"><a class="nav-link  letter2" style="transition:0.4s!important;"href="{{ url('/eventos') }}">Events</a></li>
                     <li class="nav-item"style="margin:auto;">
 <!--                        <a class="nav-link  letter2" style="margin:auto;transition:0.4s!important;"href="{{ url('/projetos') }}">Projetos</a></li>-->
                         <li class="nav-item dropdown"style="margin:auto;transition:0.4s!important;">
@@ -271,7 +271,7 @@
 
             </li>
             <li class="nav-item" style="margin:auto;">
-                        <a class="nav-link  letter2" style="transition:0.9s"href="{{ url('/sobrenos') }}">Sobre nós</a>
+                        <a class="nav-link  letter2" style="transition:0.9s"href="{{ url('/sobrenos') }}">About us</a>
                     </li>
                 </ul>
             </div>
@@ -281,29 +281,82 @@
 
 @yield('content')
 
-<footer class="footer" style="background-color:#333;">
-    <div class="container" >
-        <div class="row text-light text-center py-4">
+<footer class="footer" style="padding-bottom:1.9%;background-color:#454648;border:7px solid #444548">
+   
+    <div class="">
+   <div class="row mx-auto">
+   <div class="col-md-4" style="justify-content:center;margin:auto;padding-top:2%;">
+        <div class="row mx-auto" style="justify-content:center;margin:auto;">
+            <div class="i3E-wrap "  >
 
-            <div class="container text-center">
-                <small>Copyright &copy; IEEE-ISCTE SB 2021</small>
+               <img src="{{asset('img/ieeew.png')}}" class="i3E-img" style="margin:auto;margin-top:4%;margin-left:13%;margin-right:13%;" >
+               <div class="i3E-copy" style="margin:auto;margin-top:4%;margin-bottom:1vw;margin-left:4%;margin-right:4%;">
+               <h1 style="font-size:70%;color:whitesmoke;text-align:center;">Copyright &copy; IEEE-ISCTE SB 2021</h1>
+               </div>
+
             </div>
-            <div class="mx-auto text-center social-row row">
-                <div class="social-col col-12 col-md-3">
-                    <a class="social-link" href="mailto: ieee@iscte-iul.pt"><i class="fas fa-envelope social-icon"></i> ieee@iscte-iul.pt </a>
-                </div>
-                <div class="social-col col-12 col-md-3">
-                    <a class="social-link" href="https://www.facebook.com/IEEEISCTEIULSB"><i class="fab fa-facebook-square social-icon"></i> IEEE Iscte IUL SB </a>
-                </div>
-                <div class="social-col col-12 col-md-3">
-                    <a class="social-link" href="https://www.instagram.com/ieee.iscte/"><i class="fab fa-instagram social-icon"></i> @IEEE.Iscte </a>
-                </div>
-                <div class="social-col col-12 col-md-3">
-                    <a class="social-link" href="https://www.linkedin.com/company/ieee-iscte-iul-student-branch/"><i class="fab fa-linkedin social-icon"></i> IEEE Iscte IUL</a>
-                </div>
             </div>
+    </div>
+
+    <style>
+    
+
+    
+    </style>
+    <div class="col-md-3" style="justify-content:center;" >
+        <div class="row mx-auto" style="padding-top:4.5vw;width:60%;">
+            
+
+                <div class="social-col mx-auto">
+                    <a class="social-link" href="mailto: ieee@iscte-iul.pt"><i class="fas fa-envelope social-icon"></i></a>
+                </div>
+                <div class="social-col mx-auto ">
+                    <a class="social-link" href="https://www.facebook.com/IEEEISCTEIULSB"><i class="fab fa-facebook-square social-icon"></i></a>
+                </div>
+                <div class="social-col mx-auto">
+                    <a class="social-link" href="https://www.instagram.com/ieee.iscte/"><i class="fab fa-instagram social-icon"></i></a>
+                </div>
+                <div class="social-col mx-auto">
+                    <a class="social-link" href="https://www.linkedin.com/company/ieee-iscte-iul-student-branch/"><i class="fab fa-linkedin social-icon"></i></a>
+                </div>
+            
+               </div>
+               
+               
+         
+        </div>
+
+        
+    <div class="col-md-5" style="">
+        <div class="row mx-auto">
+            <div class="i3E-wrap" style="margin-top:3vw;margin-bottom:2vw;margin-left:auto;margin-right:auto;">
+         
+               <p class="col-md-5 footer-contacts" >Address</p>
+               
+               <div class="col-md-8" style="justify-content:'center';font-size:80%;margin-top:1.5vw;margin-right:auto;margin-left:auto;">
+               <h1 style="text-align:center;color:white;">Iscte – Instituto Universitário de Lisboa Avenida das Forças Armadas, 1649-026 Lisboa</h1>
+               </div>
+
+              
+
+               
+               
+             </div>
         </div>
     </div>
+    </div>
+
+
+
+    </div>
+      
+   
+      
+         </div>
+      </div>
+   </div>
+</div>
+</div>
 </footer>
 
 <style>
@@ -315,17 +368,106 @@
 
     .social-col {
         margin-top:.2rem;
-        min-width: 17rem;
+  
     }
 
-    .social-link:hover {
+
+
+    .social-link {
         color: white;
+    }
+    .social-link:hover {
+        color: grey;
     }
 
     .social-icon {
-        font-size: 130%;
-        margin: 0 0.6rem;
+        font-size: 160%;
+        margin: 0.2rem 0.2rem;
     }
+
+
+       
+
+
+    @media  (max-width: 700px) {
+
+        .i3E-img{
+            width:30vw;
+        }
+
+        .i3E-copy{
+            width:45vw;
+            margin:auto;
+        }
+
+        .i3E-wrap{
+            margin:auto;
+            padding-bottom:6%;
+            
+            
+           
+        }
+        .footer-contacts{
+           margin:auto;
+           margin-top:10vw;
+           margin-bottom:4vw;
+           text-align:center;font-size:140%;font-family:'font-letter2';color:white;
+           
+        }
+    }
+
+
+    
+    @media  (max-width: 900px) and (min-width: 700px) {
+
+.i3E-img{
+    width:20vw;
+}
+
+.i3E-copy{
+            width:25vw;
+            margin:auto;
+        }
+
+.i3E-wrap{
+    margin:auto;
+
+    
+}
+.footer-contacts{
+           margin:auto;
+           margin-top:10vw;
+           margin-bottom:4vw;
+           text-align:center;font-size:140%;font-family:'font-letter2';color:white;
+           
+        }
+}
+
+
+@media  (min-width: 900px) {
+
+
+    .i3E-img{
+            width:11vw;
+    }
+
+        .i3E-copy{
+            width:16vw;
+        }
+
+        .i3E-wrap{
+           justify-content:center;
+margin:auto;
+        }
+        .footer-contacts{
+            margin:auto;text-align:center;font-size:190%;font-family:'font-letter2';color:white;
+         
+            
+            
+           
+        }
+}
+
 </style>
 
 
@@ -357,4 +499,4 @@ $(function () {
 
 
     </body>
-</html>
+</html>     
