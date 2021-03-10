@@ -252,6 +252,7 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 
 .faq-content {
   margin: 0 auto;
+
 }
 
 .faq-question {
@@ -260,8 +261,9 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 }
 
 .panel-title {
-    color:rgb(58 63 86);
+    color:rgb(66 70 90);
   font-size: 19px;
+  font-family:'font-letter2';
   width: 100%;
   position: relative;
   margin: 0;
@@ -271,7 +273,7 @@ Nos últimos anos, o student branch esteve representado em vários encontros int
 }
 
 .panel-content {
-  font-size: 20px;
+  font-size: 16px;
   padding: 0px 14px;
   margin: 0 40px;
   height: 0;
