@@ -78,7 +78,7 @@
         <!-- Select Basic -->
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
             <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
-                <label for="group1" class="radio-group-label">Tipo de Evento*</label>
+                <label for="group1" class="radio-group-label ">Tipo de Evento*</label>
                 <fieldset id="group1" class="inputstyle">
                     <div class="row radio-row">
                         <input type="radio" value="Workshop" name="event_type" id="radio1-1" class="radio-item" required><label for="radio1-1">Workshop</label>
@@ -130,7 +130,25 @@
 }
 
 .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';}
+
+
+
+.txtarea{
+  
+    font-size: 20px;
+
 }
+
+.radio-group-label {
+         margin-bottom: 1.9rem;
+         margin-top: 1.5rem;
+         font-size: 2.5vh;
+         color: white;
+    }
+
+}
+
+
 
 @media  (max-width:900px){
 .inputstyle {
@@ -146,14 +164,28 @@
   
 }
 
+.radio-group-label {
+         margin-top:1.4rem;
+         margin-bottom: 1.5rem;
+         font-size: 4vh;
+         color: white;
+    }
+
 .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:2%;margin-right:2%;font-size:8vw;font-family:'font-letter2';}
+
+.txtarea{
+    margin-top:1vh;
+    font-size: 2.9vh;
+    
+}
+
 }
 
     .txtarea{
         border: 2px solid white;
         color: white;
         outline: none;
-        font-size: 20px;
+  
         width: 100%;
         border-style: none none outset none;
         overflow: auto;
@@ -196,7 +228,7 @@
 
     .radio-group-label {
          margin-bottom: 1.5rem;
-         font-size: 2.1vh;
+    
          color: white;
     }
 

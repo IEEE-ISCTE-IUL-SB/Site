@@ -187,7 +187,7 @@ background-image: linear-gradient(to top, #4b5262, #4b5367, #4c536c, #4d5470, #4
 
 padding-bottom:15%;
 -webkit-box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6); 
-box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6);padding-bottom:20%;
+box-shadow: 0px 29px 5px -9px rgba(0,0,0,0.6);padding-bottom:16%;
 ">
 
 
