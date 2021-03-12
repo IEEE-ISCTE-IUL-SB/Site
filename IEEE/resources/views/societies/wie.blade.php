@@ -9,13 +9,13 @@
 <div class="row" >
 <h1 class="letter2"style="
         width:45%;
-        padding-top:10%;
+        padding-top:8%;
         display: block;
         margin-right:0%;
         color:#583e77;
-        font-size:330%;
+        font-size:350%;
         overflow:hidden;
-        margin-left: auto;">Be part of the progress</h1>
+        margin-left: auto;">Innovate for the humanity's benefit</h1>
 
             <img style=" max-width: 40%;
           width:26%;
