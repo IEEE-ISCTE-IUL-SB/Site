@@ -255,7 +255,7 @@
             }
 
             .soc-cs:hover,.soc-cs:active {
-                color:#928776;transition:0.4s;
+                color:#B29D54;transition:0.4s;
                 text-decoration-line: none;
             }
 
@@ -265,7 +265,7 @@
             }
 
             .soc-ims:hover,.soc-ims:active {
-                color:#78595A;transition:0.4s;
+                color:#94585F;transition:0.4s;
                 text-decoration-line: none;
             }
             

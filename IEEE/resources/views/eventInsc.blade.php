@@ -8,7 +8,7 @@
 <!-- Form Name -->
 <section style="background-color:white;padding-bottom:3vh;margin-bottom:8vh;-webkit-box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);box-shadow: 0px 24px 27px -3px rgba(0,0,0,0.3);">
     <h1 class="cand-title"style="margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-family:'font-letter2';"> Inscrição em {{$event->event_name}}</h1>
-    <div style="margin-top:2vh;margin-bottom:5vh;width:60%;margin:auto;text-align:center;justify-content:center;">
+    <div style="margin-top:2vh;margin-bottom:5vh;width:80%;margin:auto;text-align:center;justify-content:center;">
     <h1 class="w-desc" style="line-height:3vh;text-align:center;justify-content:center;">
 
         {{$event->event_description}}
@@ -54,13 +54,22 @@
                     <input type="radio" value="Iscte" name="insc_uni" id="radio1-1" class="radio-item" required><label for="radio1-1">Iscte</label>
                   </div>
                   <div class="row radio-row">
-                      <input type="radio" value="" name="insc_uni" id="radio1-2" class="radio-item" required>
-                      <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_uni_other" type="text" placeholder="Other..." class="inputstyle radio-other-text-field">
+                    
+                        <input type="radio" value="" name="insc_uni" id="radio1-2" class="radio-item radio-item2" required>
+                      
+                        <input id="textinput" style="margin-top: 4px;border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_uni_other" type="text" placeholder="Other..." class="inputstyle radio-other-text-field">
+             
                   </div>
               </fieldset>
           </div>
         </div>
-
+        <style>
+        
+        .radio-item2{
+            box-sizing: border-box;
+            padding: 0;
+        }
+        </style>
         <div class="form-group"style="margin:auto;text-align:center;justify-content:center;margin-top:4%;margin-bottom:4%;">
 
             <div class="col-md-6"style="margin:auto;text-align:left;justify-content:center;">
@@ -89,7 +98,7 @@
                     </div>
                     <div class="row radio-row">
                         <input type="radio" value="" name="insc_degree" id="radio2-8" class="radio-item" required>
-                        <input id="textinput" style="border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_degree_other" type="text" placeholder="Other..." class="inputstyle radio-other-text-field">
+                        <input id="textinput" style="margin-top: 4px;border:0px;border-radius:0px;border-bottom: 3px solid #333333;" name="insc_degree_other" type="text" placeholder="Other..." class="inputstyle radio-other-text-field">
                     </div>
                 </fieldset>
             </div>
@@ -169,7 +178,7 @@
     }
 
     .w-desc{
-        font-size:1.7vh;
+        font-size:2vh;
     
 }
 
@@ -194,7 +203,7 @@
 }
 
 .w-desc{
-    font-size:2.7vh;
+    font-size:2.4vh;
 
 }
 .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:2%;margin-right:2%;font-size:8vw;font-family:'font-letter2';}
