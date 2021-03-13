@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <div class="pc" >
-            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);
-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;
+            
+            -webkit-box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02); 
+box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02);
+
+overflow:hidden;">
                 <div class="row">
                     <div style="margin-top:0%;width:40%;">
                         <div style="width:100%;">
