@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <div class="pc" >
-            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;-webkit-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);
-box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;
+
+            -webkit-box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02);
+box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02);
+
+overflow:hidden;">
                 <div class="row">
                     <div style="margin-top:0%;width:40%;">
                         <div style="width:100%;">
                             <div class="letter2 workshop" style="
                        padding-top:30%;padding-bottom:10%;
-                            padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
+                            padding-left:5%;padding-right:5%;font-size:320%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
-                                            <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
+                                            <h1 style="margin-bottom:10%;opacity:60%;width:70%;text-align:center;justify-content:center;margin-left:auto;margin-right:auto;">Advancing Technology for Humanity</h1>
                                             <a href="/application" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Join us</p></a>
                             </div>
                         </div>
