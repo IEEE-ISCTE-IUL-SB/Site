@@ -10,8 +10,8 @@
 
     <div class="pc" >
             <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;
-            
-            -webkit-box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02); 
+
+            -webkit-box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02);
 box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02);
 
 overflow:hidden;">

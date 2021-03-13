@@ -158,6 +158,18 @@
                     transition: .3s;
                 }
 
+                .highlighted-event-link {
+                    height: 0;
+                    display: block;
+                    transition: .3s;
+                }
+
+                .center > .highlighted-event-link {
+                    height: auto;
+                    cursor: pointer;
+                    transition: .3s;
+                }
+
                 .center > a >.highlighted-event-card {
                     transform: scale(1, 1);
                     transition: .3s;
@@ -304,6 +316,8 @@
             </style>
 
             <script>
+
+
                 var $eventSlider = $(".highlighted-event-slider");
 
                 setTimeout(function() {
@@ -329,21 +343,10 @@
                     });
                 }, 10);
 
-
-                $eventSlider.children().each( function( index ) {
-                    $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
-                });
-
-                $(document).on('click', '.owl-item>a', function() {
-                    // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
-                    $eventSlider.trigger('to.owl.carousel', [$(this).data("position"), $eventSlider.smartSpeed] );
-                });
-
-                function highlightedEventLink(element, event_id) {
-                    if (element.parentElement.classList.contains("center")) {
-                        window.location.href = ("event/".concat(event_id))
-                    }
-                }
+                function highlightedEventLink(el ,eventId) {
+                    if(el.parentElement.classList.contains('center'))
+                        window.location.href = "/event/" + eventId;
+                };
 
             </script>
 
@@ -356,8 +359,8 @@
                 if ( $(window).scrollTop() > 400 ) {
                     $('.entity1').addClass('animate__animated', 'animate__bounce');
 
-            });
-        }))
+            }
+        })});
     </script>
 
 
