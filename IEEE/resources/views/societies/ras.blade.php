@@ -15,10 +15,10 @@
 <section id="missionsection" class="showw">
     <div class="row mission-row">
 
-        <div class="col">
-            <a href="#section3" class="letter2 mission-link">What is RAS?</a>
+        <div class="col-sm-4" style="overflow:hidden;margin:auto;">
+            <a href="#section3" class="letter2 mission-link" >What is RAS?</a>
         </div>
-        <div class="col">
+        <div class="col-sm-4" style="overflow:hidden;margin:auto;">
             <a href="#section4" class="letter2 mission-link">Workshops</a>
         </div>
 
@@ -164,12 +164,13 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
                 color:dimgrey;
                 line-height: 26px;
                 transition: .1s;
+                font-size: 115%;
             }
 
             .mission-link:hover {
                 color:dimgrey;
                 text-decoration: none;
-                font-size: 110%;
+                font-size: 125%;
                 transition: .1s;
             }
 

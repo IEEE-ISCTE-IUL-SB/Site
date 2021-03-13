@@ -37,7 +37,7 @@
         font-size:240%;
         overflow:hidden;
         margin-right: auto;
-        margin-left: auto;">Be part of the progress</h1>
+        margin-left: auto;">Innovate for the humanity's benefit</h1>
             <div class="m-auto" style="width:50vw;margin-left:auto;margin-right:auto;margin-top:6vh;">
             <img style="  display: block;
           overflow:hidden;width:100%;
@@ -54,7 +54,7 @@
             <a class="letter2 mission-link" href="#section2">What is WIE?</a>
         </div>
         <div class="col">
-            <a class="letter2 mission-link" href="#section3">Workshops</a>
+            <a class="letter2 mission-link"  href="#section3">Workshops</a>
         </div>
 
     </div>
@@ -66,13 +66,13 @@
 
     </div>
     <div class="mobile-wie"style="position:absolute;justify-content:center;text-align:center;width:100%;margin-left:auto;margin-right:auto;margin-top:-12pc;margin-bottom:15pc;">
-    <a href="https://ieee-imspt.org/" class="btn-wiesociety">Join us</a>
+    <a href="https://wie.ieee.org/" class="btn-wiesociety">Join us</a>
 </div>
    <style>
 
 
    .btn-wiesociety{
-        font-size:160%;color:white!important;text-align:center;margin-top:80vh;border:2px solid white;padding:10px;
+        font-size:160%;color:white!important;text-decoration:none;text-align:center;margin-top:80vh;border:2px solid white;padding:12px 35px 12px 35px;
 
    }
    .btn-wiesociety:hover,
@@ -80,7 +80,7 @@
    .btn-wiesociety:focus,
    .btn-wiesociety.active {
 
-            font-size:160%;color:#333333!important;text-align:center;margin-top:80vh;background-color:white;padding:10px;
+            font-size:160%;color:#333333!important;text-decoration:none;text-align:center;margin-top:80vh;background-color:white;padding:12px 35px 12px 35px;
         }
 
 
@@ -90,7 +90,7 @@
 
 <section id="section2" class="" style="margin-bottom:10%;">
     <div class="container pc-wie">
-        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >What is WIE?</h2>
+        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;color:#484d71;" >What is WIE?</h2>
         <div class="row">
             <div style="width:47%;margin-left:0.25%;">
 
@@ -108,7 +108,7 @@
         </div>
     </div>
     <div class="container mobile-wie">
-        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;" >What is WIE?</h2>
+        <h2 class="letter2" style="font-size:260%;margin-left:2%;margin-top:2%;margin-right:auto;margin-bottom:5%;color:#484d71;" >What is WIE?</h2>
 
             <div style="width:100%;">
 
@@ -129,7 +129,7 @@
 
 
 
-<section id="section3"><h2 class="letter2 sections-title">Workshops</h2>
+<section id="section3"><h2 class="letter2 sections-title" style="color:#5c4a73">Workshops</h2>
     <div class="container py-5 text-center event-slider-container">
         @if(count($events) > 0)
             <div class="event-slider owl-carousel">

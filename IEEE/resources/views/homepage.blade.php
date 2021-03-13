@@ -18,8 +18,8 @@ box-shadow: 0px 12px 18px 6px rgba(0,0,0,0.08);overflow:hidden;">
                        padding-top:30%;padding-bottom:10%;
                             padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
-                                            <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
-                                            <a href="/application" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Junta-te a nós</p></a>
+                                            <h1 style="margin-bottom:10%;opacity:60%;width:70%;text-align:center;justify-content:center;margin-left:auto;margin-right:auto;">Advancing Technology for Humanity</h1>
+                                            <a href="/application" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Join us</p></a>
                             </div>
                         </div>
 

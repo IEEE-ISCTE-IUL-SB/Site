@@ -175,11 +175,14 @@
                         <li class="nav-item dropdown"style="margin:auto;transition:0.4s!important;">
 	    <a class="nav-link dropdown-toggle letter2" style="transition:0.4s!important;"href="#" data-toggle="dropdown"> Societies  </a>
 	    <div class="dropdown-menu dropdown-large dropdownH d" style="transition:0.4s!important;">
+
+
+
             <div class="row" style="margin-right: 24px;margin-left: 25px;margin-top:20px;" >
                 <div class="col dropi " >
 
                     <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/RAS') }}">
-                    <h1 class="soc2 dropdownfont" >RAS
+                    <h1 class="soc-ras dropdownfont" >RAS
                     <h1 class="letter1"style="color:#808080c7;">R&A Society</h1>
                     </h1>
                     </a>
@@ -187,19 +190,19 @@
 
                <div class="col dropi" >
                <a style=" transition:0.9s;text-decoration-line: none;"href="{{ url('/IMS') }}">
-                    <h1 class="soc2 dropdownfont">IMS
+                    <h1 class="soc-ims dropdownfont">IMS
                     <h1 class="letter1"style="color:#808080c7;">I&M Society</h1>
                     </a>
                 </div>
                  <div class="col dropi" >
                  <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/WIE') }}">
-                    <h1 class="soc2 dropdownfont" >WIE
+                    <h1 class="soc-wie dropdownfont" >WIE
                     <h1 class="letter1"style="color:#808080c7;">WIE Society</h1>
                     </a>
                 </div>
                 <div class="col dropi " >
                 <a style="transition:0.9s; text-decoration-line: none;"href="{{ url('/CS') }}">
-                    <h1 class="soc2 dropdownfont" >CS
+                    <h1 class="soc-cs dropdownfont" >CS
                     <h1 class="letter1" style="width: 130%;color:#808080c7;">Computer Society</h1>
                     </a>
                 </div>
@@ -223,15 +226,49 @@
                 text-decoration-line: none;
             }
 
-            .soc2{
+
+
+
+            .soc-wie{
                 color:#313131;transition:0.4s;
                 text-decoration-line: none;
             }
 
-            .soc2:hover, .soc2:active{
+            .soc-wie:hover,.soc-wie:active {
+                color:#877699;transition:0.4s;
+                text-decoration-line: none;
+            }
+
+            .soc-ras{
+                color:#313131;transition:0.4s;
+                text-decoration-line: none;
+            }
+
+            .soc-ras:hover, .soc-ras:active  {
                 color:#808080c7;transition:0.4s;
                 text-decoration-line: none;
             }
+
+            .soc-cs{
+                color:#313131;transition:0.4s;
+                text-decoration-line: none;
+            }
+
+            .soc-cs:hover,.soc-cs:active {
+                color:#928776;transition:0.4s;
+                text-decoration-line: none;
+            }
+
+            .soc-ims{
+                color:#313131;transition:0.4s;
+                text-decoration-line: none;
+            }
+
+            .soc-ims:hover,.soc-ims:active {
+                color:#78595A;transition:0.4s;
+                text-decoration-line: none;
+            }
+            
 
 
 
@@ -465,6 +502,7 @@ margin:auto;
         }
 }
 
+
 </style>
 
 
@@ -472,7 +510,7 @@ margin:auto;
 
 $(function () {
     $(window).on('scroll', function () {
-        if ( $(window).scrollTop() < 50 ) {
+        if ( $(window).scrollTop() < 25 ) {
             $('.navbar').removeClass('shadow-sm bg-white ');
         } else {
             $('.navbar').addClass('shadow-sm bg-white ');
@@ -492,6 +530,8 @@ $(function () {
                 $('footer').removeClass('fixed-bottom');
             }
         });
+
+        
     </script>
 
 
