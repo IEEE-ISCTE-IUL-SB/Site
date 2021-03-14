@@ -26,21 +26,27 @@
         <div class="faq-question">
             <input id="q1" type="checkbox" class="panel">
             <div class="plus">+</div>
-            <label for="q1" class="panel-title">What is the meaning of life?</label>
-            <div class="panel-content">42</div>
+            <label for="q1" class="panel-title">How can i become a member?</label>
+            <div class="panel-content">Easy, just applied </div>
         </div>
 
         <div class="faq-question">
             <input id="q2" type="checkbox" class="panel">
             <div class="plus">+</div>
-            <label for="q2" class="panel-title">How much wood would a woodchuck chuck?</label>
-            <div class="panel-content">A woodchuck would chuck all the wood he could chuck, if a woodchuck could chuck wood!</div>
+            <label for="q2" class="panel-title">What are the benefits of being a member?</label>
+            <div class="panel-content"></div>
         </div>
 
         <div class="faq-question">
             <input id="q3" type="checkbox" class="panel">
             <div class="plus">+</div>
-            <label for="q3" class="panel-title">What happens if Pinocchio says, "my nose will grow now"?</label>
+            <label for="q3" class="panel-title">Do student branches usually meet?</label>
+            <div class="panel-content">Certain questions are better left &nbsp; <a href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a></div>
+        </div>
+        <div class="faq-question">
+            <input id="q4" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q4" class="panel-title">How often do they meet?</label>
             <div class="panel-content">Certain questions are better left &nbsp; <a href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a></div>
         </div>
     </div>
@@ -198,6 +204,10 @@
             display: none;
         }
 
+        .faq-header{
+  font-size: 43px;
+    }
+
         .faq-w{
             width:50%;
         }
@@ -220,6 +230,13 @@
             display: none;
 
         }
+
+        
+    .faq-header{
+  font-size: 28px;
+  margin:auto;
+  text-align:center;
+    }
         .lad{
             letter-spacing:0.1px;line-height:1.6pc;font-family:'font-letter1';width:95%;margin-top:10%;
             font-size:2vh;
@@ -232,18 +249,18 @@
         }
 
         .about-us-title {
-            font-size: 44px;
+            font-size: 50px;
         }
     }
 
     @media (max-width: 568px) {
         .about-us-title {
-            font-size: 32px;
+            font-size: 38px;
         }
     }
 
     .faq-header{
-  font-size: 37px;
+
   color:rgb(58 63 86);
   border-bottom: 1px dotted #ccc;
   padding: 24px;
@@ -261,8 +278,8 @@
 }
 
 .panel-title {
-    color:rgb(66 70 90);
-  font-size: 19px;
+ color:rgb(66 70 90);
+  font-size: 20px;
   font-family:'font-letter2';
   width: 100%;
   position: relative;
@@ -273,14 +290,16 @@
 }
 
 .panel-content {
-  font-size: 16px;
+  font-size: 17px;
   padding: 0px 14px;
   margin: 0 40px;
   height: 0;
+  color:#5b5d7a;
   overflow: hidden;
   z-index: -1;
   position: relative;
   opacity: 0;
+  font-family:'font-letter2';
   -webkit-transition: .4s ease;
   -moz-transition: .4s ease;
   -o-transition: .4s ease;
