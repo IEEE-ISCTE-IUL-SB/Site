@@ -24,7 +24,7 @@ overflow:hidden;">
                         background-color: white;text-align:center;">
                                             <h1 style="
                                             height:10pc;
-                                            background: linear-gradient( 
+                                            background: linear-gradient(
 0deg
  , rgb(64 64 86) 20%, rgb(90 98 109) 100%);
                                                 -webkit-background-clip: text;
@@ -58,13 +58,13 @@ overflow:hidden;">
                         background-color: white;text-align:center;">
                                             <h1 style="margin-bottom:10%;opacity:60%;
                                    height:10pc;
-                                   background: linear-gradient( 
+                                   background: linear-gradient(
 0deg
  , rgb(64 64 86) 20%, rgb(90 98 109) 100%);
                                                 -webkit-background-clip: text;
                                                 -webkit-text-fill-color: transparent;
-                                                                                        
-                                            
+
+
                                             ">Advancing Technology for Humanity</h1>
                                             <a href="/application" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Join us</p></a>
                             </div>
@@ -183,15 +183,14 @@ overflow:hidden;">
 <div style="width:70%;margin:auto;">
 <h1 class="m-auto" style="font-family:'font-letter1';font-size:1.3vw;color:grey;line-height:2vw;">
 
-As the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity, IEEE is the trusted “voice” for engineering, computing, and technology information around the world.  
-
+&nbsp &nbsp &nbsp As the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity, IEEE is the trusted “voice” for engineering, computing, and technology information around the world.
 
 
 </h1>
 
 <h1 class="mx-auto" style="font-family:'font-letter1';font-size:1.3vw;color:grey;line-height:2vw;margin-top:4vw;">
 
-The IEEE Student Branch (SB) of ISCTE – Instituto Universitário de Lisboa (ISCTE-IUL) has the main focus of providing our members and the general student community several networking opportunities to meet and learn from fellow students, as well as from faculty members and professionals in the field of Engineering, Computer Science, Information Technology and other IEEE designated fields. Through the organization of several projects and events throughout the year, including workshops, meetings and conferences, we offer our student community the chance to enhance their knowledge and improve technical and interpersonal skills. 
+&nbsp &nbsp &nbsp The IEEE Student Branch (SB) of ISCTE – Instituto Universitário de Lisboa (ISCTE-IUL) has the main focus of providing our members and the general student community several networking opportunities to meet and learn from fellow students, as well as from faculty members and professionals in the field of Engineering, Computer Science, Information Technology and other IEEE designated fields. Through the organization of several projects and events throughout the year, including workshops, meetings and conferences, we offer our student community the chance to enhance their knowledge and improve technical and interpersonal skills.
 
 </h1>
 

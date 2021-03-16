@@ -27,7 +27,7 @@
             <input id="q1" type="checkbox" class="panel">
             <div class="plus">+</div>
             <label for="q1" class="panel-title">How can i become a member?</label>
-            <div class="panel-content">Easy, just applied </div>
+            <div class="panel-content">Easy, just <a href="/application"> apply! </a> </div>
         </div>
 
         <div class="faq-question">
@@ -231,7 +231,7 @@
 
         }
 
-        
+
     .faq-header{
   font-size: 28px;
   margin:auto;
