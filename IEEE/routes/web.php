@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Container\Container;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use \Mailjet\Resources;
@@ -225,5 +228,44 @@ Route::post('/eventsuggestion', function (Request $request) {
 
     return redirect('/events');
 });
+
+Route::get('/admin/exporttables', function () {
+    $tables = getModels();
+    $tables = $tables->reject(function($item) {
+        return strcmp($item, 'users') == 0;
+    });
+    return View::make('admin/exporttables')->with('tables', $tables);
+})->middleware('admin.user');
+
+function getModels(): Collection
+{
+    $models = collect(File::allFiles(app_path()))
+        ->map(function ($item) {
+            $path = $item->getRelativePathName();
+            $class = sprintf('\%s%s',
+                Container::getInstance()->getNamespace(),
+                strtr(substr($path, 0, strrpos($path, '.')), '/', '\\'));
+
+            return $class;
+        })
+        ->filter(function ($class) {
+            $valid = false;
+
+            if (class_exists($class)) {
+                $reflection = new \ReflectionClass($class);
+                $valid = $reflection->isSubclassOf(Model::class) &&
+                    !$reflection->isAbstract();
+            }
+
+            return $valid;
+        });
+    $models_names = $models->values()->map(function($item) {
+        $temp = new $item;
+        return $temp->getTable();
+    });
+    return $models_names;
+};
+
+Route::get('/admin/exporttable/{tablename}', ['uses' =>'ExcelExportController@downloadTableXLSX'])->middleware('admin.user');
 
 
