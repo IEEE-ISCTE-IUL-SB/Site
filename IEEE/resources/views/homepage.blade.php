@@ -179,9 +179,25 @@ overflow:hidden;">
     }
     </style>
 
+<div style="background:white;margin-top:2vw;padding-top:7vw;padding-bottom:7vw;box-shadow:#e2e2e2 0px 3px 12px 0px;">
+<div style="width:70%;margin:auto;">
+<h1 class="m-auto" style="font-family:'font-letter1';font-size:1.3vw;color:grey;line-height:2vw;">
+
+As the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity, IEEE is the trusted “voice” for engineering, computing, and technology information around the world.  
 
 
 
+</h1>
+
+<h1 class="mx-auto" style="font-family:'font-letter1';font-size:1.3vw;color:grey;line-height:2vw;margin-top:4vw;">
+
+The IEEE Student Branch (SB) of ISCTE – Instituto Universitário de Lisboa (ISCTE-IUL) has the main focus of providing our members and the general student community several networking opportunities to meet and learn from fellow students, as well as from faculty members and professionals in the field of Engineering, Computer Science, Information Technology and other IEEE designated fields. Through the organization of several projects and events throughout the year, including workshops, meetings and conferences, we offer our student community the chance to enhance their knowledge and improve technical and interpersonal skills. 
+
+</h1>
+
+
+</div>
+</div>
 
 
 <div class="container" style="margin-bottom:10%; ">
