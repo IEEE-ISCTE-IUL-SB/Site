@@ -17,8 +17,8 @@ class CreateEventSuggestionsTable extends Migration
             $table->increments('id');
             $table->string('contact_name');
             $table->string('contact_email');
-            $table->string('contact_org');
-            $table->string('event_type');
+            $table->string('contact_org')->nullable();
+            $table->string('event_type')->default('NA');
             $table->text('event_description');
             $table->timestamps();
         });

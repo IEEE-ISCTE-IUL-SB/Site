@@ -19,6 +19,7 @@ class CreateMembersTable extends Migration
             $table->string('member_role')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
+            $table->string('linkedin_url')->nullable();
         });
     }
 

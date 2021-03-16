@@ -17,9 +17,9 @@ class CreateEventRegistrationsTable extends Migration
             $table->increments('id');
             $table->string('insc_name');
             $table->string('insc_email');
-            $table->string('insc_university');
-            $table->string('insc_degree');
-            $table->string('insc_year');
+            $table->string('insc_university')->default('NA');
+            $table->string('insc_degree')->default('NA');
+            $table->string('insc_year')->default('NA');
             $table->integer('event_id');
             $table->timestamps();
         });
