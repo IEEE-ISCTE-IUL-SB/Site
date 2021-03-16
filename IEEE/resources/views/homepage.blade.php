@@ -3,13 +3,13 @@
 @section('content')
 
 
-<section style="margin-bottom:0%;background:white;padding-top:0%;padding-bottom:5.2%;background-size: cover;background-position: center;" id="companiesStories" >
+<section style="margin-bottom:0%;background:white;padding-top:0%;padding-bottom:1.2%;background-size: cover;background-position: center;" id="companiesStories" >
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <div class="pc" >
-            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#F9F9F9;
+            <div class="mx-auto " style="  margin-bottom:0%;width:100%;background-color:#fdfdfd;
 
             -webkit-box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02);
 box-shadow: 0px 11px 11px 0px rgba(0,0,0,0.13), inset 0px 11px 11px 0px rgba(0,0,0,0.02);
@@ -22,7 +22,14 @@ overflow:hidden;">
                        padding-top:30%;padding-bottom:10%;
                             padding-left:5%;padding-right:5%;font-size:320%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
-                                            <h1 style="margin-bottom:10%;opacity:60%;width:70%;text-align:center;justify-content:center;margin-left:auto;margin-right:auto;">Advancing Technology for Humanity</h1>
+                                            <h1 style="
+                                            height:10pc;
+                                            background: linear-gradient( 
+0deg
+ , rgb(64 64 86) 20%, rgb(90 98 109) 100%);
+                                                -webkit-background-clip: text;
+                                                -webkit-text-fill-color: transparent;
+                                            ;margin-bottom:10%;opacity:60%;width:70%;text-align:center;justify-content:center;margin-left:auto;margin-right:auto;">Advancing Technology for Humanity</h1>
                                             <a href="/application" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Join us</p></a>
                             </div>
                         </div>
@@ -47,9 +54,18 @@ overflow:hidden;">
                         <div style="width:100%;">
                             <div class="letter2 workshop" style="
                        padding-top:10%;padding-bottom:10%;
-                            padding-left:5%;padding-right:5%;font-size:290%;margin-left:0%;-webkit-background-clip: text;
+                            padding-left:5%;padding-right:5%;font-size:260%;margin-left:0%;-webkit-background-clip: text;
                         background-color: white;text-align:center;">
-                                            <h1 style="margin-bottom:10%;opacity:60%;">Advancing Technology for Humanity</h1>
+                                            <h1 style="margin-bottom:10%;opacity:60%;
+                                   height:10pc;
+                                   background: linear-gradient( 
+0deg
+ , rgb(64 64 86) 20%, rgb(90 98 109) 100%);
+                                                -webkit-background-clip: text;
+                                                -webkit-text-fill-color: transparent;
+                                                                                        
+                                            
+                                            ">Advancing Technology for Humanity</h1>
                                             <a href="/application" style=" text-decoration: none;text-align:center !important;margin:auto !important;"><p href="{{ url('/') }}"style="text-align:center !important;margin:auto !important;" class="butpro">Join us</p></a>
                             </div>
                         </div>
@@ -78,9 +94,8 @@ overflow:hidden;">
 
 
     .butpro:hover, .butpro:active{
-        border:1px solid  rgb(133,133,133);
-        background: rgb(133,133,133);
-        background: linear-gradient(180deg, rgba(133,133,133,1) 39%, rgba(133,133,133,1) 100%);
+        border:1px solid  #8b8b99;
+        background:#8b8b99;
         color: white;font-size: 17px;
         transition:0.2s;
 
@@ -99,9 +114,9 @@ overflow:hidden;">
         padding-top: 1.3vh;
         padding-bottom: 1.3vh;
         text-align:center;
-        border:1px solid #585A5C;
+        border:1px solid #8b8b99;
         background:transparent;
-        color:#585A5C;
+        color:#8b8b99;
         transition:0.2s ;
 
 
@@ -164,9 +179,25 @@ overflow:hidden;">
     }
     </style>
 
+<div style="background:white;margin-top:2vw;padding-top:7vw;padding-bottom:7vw;box-shadow:#e2e2e2 0px 3px 12px 0px;">
+<div style="width:70%;margin:auto;">
+<h1 class="m-auto" style="font-family:'font-letter1';font-size:1.3vw;color:grey;line-height:2vw;">
+
+As the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity, IEEE is the trusted “voice” for engineering, computing, and technology information around the world.  
 
 
 
+</h1>
+
+<h1 class="mx-auto" style="font-family:'font-letter1';font-size:1.3vw;color:grey;line-height:2vw;margin-top:4vw;">
+
+The IEEE Student Branch (SB) of ISCTE – Instituto Universitário de Lisboa (ISCTE-IUL) has the main focus of providing our members and the general student community several networking opportunities to meet and learn from fellow students, as well as from faculty members and professionals in the field of Engineering, Computer Science, Information Technology and other IEEE designated fields. Through the organization of several projects and events throughout the year, including workshops, meetings and conferences, we offer our student community the chance to enhance their knowledge and improve technical and interpersonal skills. 
+
+</h1>
+
+
+</div>
+</div>
 
 
 <div class="container" style="margin-bottom:10%; ">

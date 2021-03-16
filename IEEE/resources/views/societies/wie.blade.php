@@ -101,8 +101,14 @@
 
             </div>
 
-            <div style="margin:auto;width:46%;">
-                <img style="width:110%;margin-top:-28%;"src="{{asset('img/wiebola.png')}}" />
+            <div style="width: 51%;
+    text-align: center;
+    justify-content: center; ">
+                <img style="margin: auto;
+        width: 89%;
+    justify-content: center;
+    margin: auto;
+    margin-top: -7%;"src="{{asset('img/wiebola.png')}}" />
             </div>
 
         </div>

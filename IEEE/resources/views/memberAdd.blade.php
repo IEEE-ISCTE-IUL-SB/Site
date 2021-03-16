@@ -9,7 +9,7 @@
 <section style="padding-top:3vh;border:5px solid white;background-color:white;padding-bottom:6vh;">
 <h1 class="cand-title">Member Application for the IEEE ISCTE-IUL Student Branch</h1>
 <div style="margin-top:2vh;margin-bottom:10vh;width:70%;margin:auto;text-align:center;justify-content:center;">
-<h1 style="line-height:3vh;font-size:1.9vh;text-align:center;justify-content:center;">
+<h1 class="m-desc">
 
 Congratulations!
 
@@ -228,6 +228,10 @@ Are you ready?
 
 }
 
+.m-desc{
+  line-height:3vh;font-size:2.4vh;text-align:center;justify-content:center;
+}
+
   .cand-title{margin-top:6%;text-align:center;color:#333333;margin-bottom:4%;margin-left:auto;margin-right:auto;font-size:3vw;font-family:'font-letter2';}
 }
 
@@ -236,6 +240,11 @@ Are you ready?
     margin-top:1vh;
     font-size: 2.3vh;
 
+}
+
+
+.m-desc{
+  line-height:3vh;font-size:2.3vh;text-align:center;justify-content:center;
 }
   .inputstyle {
     border-style: none none outset none;

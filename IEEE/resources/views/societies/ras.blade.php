@@ -13,7 +13,7 @@
 </section>
 
 <section id="missionsection" class="showw">
-    <div class="row mission-row">
+    <div class="row mission-row" style="width: 100%;">
 
         <div class="col-sm-4" style="overflow:hidden;margin:auto;">
             <a href="#section3" class="letter2 mission-link" >What is RAS?</a>
@@ -69,7 +69,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
 </section>
 
 <section id="section3">
-    <h2 class="letter2 sections-title" >What is RAS?</h2>
+    <h2 class="letter2 sections-title" style="color:#695f5f;" >What is RAS?</h2>
     <div class="container py-5 text-center">
         <div class="row">
             <div class="col-lg-8 mx-auto">
@@ -80,7 +80,7 @@ box-shadow: -3px 0px 19px 5px rgba(0,0,0,0.13);
     </div>
 </section>
 
-<section id="section4"><h2 class="letter2 sections-title">Workshops</h2>
+<section id="section4"><h2 class="letter2 sections-title" style="color:#695f5f;">Workshops</h2>
     <div class="container py-5 text-center event-slider-container">
 
         @if(count($events) > 0)
