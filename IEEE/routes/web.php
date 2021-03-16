@@ -18,6 +18,8 @@ use Carbon\Carbon;
 | contains the "web" middleware group. Now create something great!
 |
 */
+const emailRecipient = 'cod.cod.321@gmail.com';
+
 Route::get('/', function () {
     $members = App\Member::all();
     return View::make('homepage')->with('members', $members);
@@ -155,6 +157,8 @@ Route::post('/memberapplication', function (Request $request) {
 
     $new_application->save();
 
+    Mail::to(emailRecipient)->send(new \App\Mail\NewMemberApplication(1));
+
     return redirect('/');
 });
 
@@ -224,7 +228,7 @@ Route::post('/eventsuggestion', function (Request $request) {
         'event_description' => $suggested_event->event_description,
         ];
 
-    Mail::to('cod.cod.321@gmail.com')->send(new \App\Mail\NewEventSuggestion($emailcontent));
+    Mail::to(emailRecipient)->send(new \App\Mail\NewEventSuggestion($emailcontent));
 
     return redirect('/events');
 });

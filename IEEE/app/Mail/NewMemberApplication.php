@@ -30,7 +30,7 @@ class NewMemberApplication extends Mailable
     public function build()
     {
         if ($this->newmembernumber > 1) $subject = 'Today there were '. $this->newmembernumber . ' new member applications for the IEEE Iscte Student Branch!';
-        else $subject = 'Today there was '. $this->newmembernumber . ' new member application for the IEEE Iscte Student Branch!';
+        else $subject = 'Today there was a new member application for the IEEE Iscte Student Branch!';
 
         return $this->from('drenandoeguilierme@gmail.com')->subject($subject)->view('emails/newmemberapplicationemail');
     }
