@@ -27,27 +27,34 @@
             <input id="q1" type="checkbox" class="panel">
             <div class="plus">+</div>
             <label for="q1" class="panel-title">How can i become a member?</label>
-            <div class="panel-content">Easy, just <button onClick="{{ url('/') }}"> apply! </button> </div>
+            <div class="panel-content">Easy, just <a href="{{ url('/RAS') }}" class="apply"> apply! </a> </div>
         </div>
+
+        <style>
+        
+        .apply{
+            background:white;color:#333333;text-decoration:none;
+        }
+
+        .apply:hover, .apply:active{
+            background:white;color:#6E7398;text-decoration:none;
+        }
+
+        </style>
 
         <div class="faq-question">
             <input id="q2" type="checkbox" class="panel">
             <div class="plus">+</div>
             <label for="q2" class="panel-title">What are the benefits of being a member?</label>
-            <div class="panel-content"></div>
+
+            <div class="panel-content">As student, you have the guidance and support of IEEE Section's members to develop your projects and theses, access to conferences and  discounts in IEEE courses</div>
         </div>
 
         <div class="faq-question">
             <input id="q3" type="checkbox" class="panel">
             <div class="plus">+</div>
             <label for="q3" class="panel-title">Do student branches usually meet?</label>
-            <div class="panel-content">Certain questions are better left &nbsp; <a href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a></div>
-        </div>
-        <div class="faq-question">
-            <input id="q4" type="checkbox" class="panel">
-            <div class="plus">+</div>
-            <label for="q4" class="panel-title">How often do they meet?</label>
-            <div class="panel-content">Certain questions are better left &nbsp; <a href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a></div>
+            <div class="panel-content">Each year, we have two meetings where we meet new members, discuss projects and share ideas; <a href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a></div>
         </div>
     </div>
 </div>
