@@ -27,7 +27,7 @@
             <input id="q1" type="checkbox" class="panel">
             <div class="plus">+</div>
             <label for="q1" class="panel-title">How can i become a member?</label>
-            <div class="panel-content">Easy, just <a href="{{ url('/RAS') }}" class="apply"> apply! </a> </div>
+            <div class="panel-content">Easy, just <a href="{{ url('/') }}" class="apply"> apply! </a> </div>
         </div>
 
         <style>
