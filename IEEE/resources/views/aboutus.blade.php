@@ -27,7 +27,7 @@
             <input id="q1" type="checkbox" class="panel">
             <div class="plus">+</div>
             <label for="q1" class="panel-title">How can i become a member?</label>
-            <div class="panel-content">Easy, just <a href="/application"> apply! </a> </div>
+            <div class="panel-content">Easy, just <button onClick="{{ url('/') }}"> apply! </button> </div>
         </div>
 
         <div class="faq-question">
@@ -296,7 +296,7 @@
   height: 0;
   color:#5b5d7a;
   overflow: hidden;
-  z-index: -1;
+  
   position: relative;
   opacity: 0;
   font-family:'font-letter2';

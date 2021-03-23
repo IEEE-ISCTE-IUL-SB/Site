@@ -18,7 +18,7 @@ use Carbon\Carbon;
 | contains the "web" middleware group. Now create something great!
 |
 */
-const emailRecipient = 'cod.cod.321@gmail.com';
+const emailRecipient = 'josempereira141@gmail.com';
 
 Route::get('/', function () {
     $members = App\Member::all();
@@ -157,7 +157,7 @@ Route::post('/memberapplication', function (Request $request) {
 
     $new_application->save();
 
-    Mail::to(emailRecipient)->send(new \App\Mail\NewMemberApplication(1));
+    //Mail::to(emailRecipient)->send(new \App\Mail\NewMemberApplication(1));
 
     return redirect('/');
 });
