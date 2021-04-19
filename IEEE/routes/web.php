@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use \Mailjet\Resources;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,11 @@ Route::get('/', function () {
     return View::make('homepage')->with('members', $members);
 });
 
-Route::get('/RAS', function () {
-    $events = getSocietyEvents("RAS");
-    return View::make('societies/ras')->with('events', $events);
-});
+Route::get('/RAS', 'MainController@ras');
+Route::get('/IMS', 'MainController@ims');
+Route::get('/CS', 'MainController@cs');
+Route::get('/WIE', 'MainControl@wie');
+
 
 /*Route::get('/MAE', function () {
     $events = getSocietyEvents("MAE");
@@ -36,24 +38,10 @@ Route::get('/RAS', function () {
 });*/
 
 
-Route::get('/IMS', function () {
-    $events = getSocietyEvents("IMS");
-    return View::make('societies/ims')->with('events', $events);
-});
-
-Route::get('/CS', function () {
-    $events = getSocietyEvents("CS");
-    return View::make('societies/CS')->with('events', $events);
-});
-
-Route::get('/WIE', function () {
-    $events = getSocietyEvents("WIE");
-    return View::make('societies/wie')->with('events', $events);
-});
 
 
 
-function getSocietyEvents($societyname) {
+ /* function getSocietyEvents($societyname) {
     $events = App\Event::all()->filter(function($event) use($societyname) {
         foreach($event->tags as $tag) {
                 if (strcmp(strtolower($tag->tag_name), strtolower($societyname)) == 0) {
@@ -62,7 +50,7 @@ function getSocietyEvents($societyname) {
         }
     });
     return $events;
-}
+} */
 
 /*Route::get('/projetos', 'ProjectController@index');
 
